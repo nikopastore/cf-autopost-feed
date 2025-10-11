@@ -1,0 +1,41 @@
+name: Build X-only RSS
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'rss.xml'
+  workflow_dispatch:
+
+jobs:
+  build-x-feed:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Ensure script is present
+        run: |
+          test -f scripts/make_x_feed.py || (echo "scripts/make_x_feed.py missing" && exit 1)
+
+      - name: Build X-only RSS (rss_x.xml)
+        run: python scripts/make_x_feed.py
+
+      - name: Commit rss_x.xml if changed
+        run: |
+          if git diff --quiet rss_x.xml; then
+            echo "No changes to rss_x.xml"
+          else
+            git config user.name "cf-bot"
+            git config user.email "cf-bot@users.noreply.github.com"
+            git add rss_x.xml
+            git commit -m "Build/Update rss_x.xml [skip ci]" || echo "Nothing to commit"
+            git push
+          fi

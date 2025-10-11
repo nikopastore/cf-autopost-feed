@@ -37,10 +37,73 @@ jobs:
           SITE_URL: "https://nikopastore.github.io/cf-autopost-feed/"
         run: python build_rss.py
 
+      - name: Strip timestamps from titles/descriptions and ensure GUIDs
+        run: |
+          python - <<'PY'
+          import xml.etree.ElementTree as ET
+          import re, hashlib
+
+          FEED = "rss.xml"
+
+          STAMP_PATTERNS = [
+              r"\s*[—\-|]\s*\d{4}-\d{2}-\d{2}.*$",  # e.g., " — 2025-10-11 13:45"
+              r"\s*\[\d{4}-\d{2}-\d{2}.*?\]\s*$",   # e.g., " [2025-10-11 13:45]"
+          ]
+
+          def strip_stamp(s: str | None) -> str | None:
+              if s is None:
+                  return None
+              out = s
+              for pat in STAMP_PATTERNS:
+                  out = re.sub(pat, "", out).strip()
+              return out
+
+          tree = ET.parse(FEED)
+          root = tree.getroot()
+          channel = root.find("channel")
+          if channel is None:
+              raise SystemExit("No <channel> found in rss.xml")
+
+          changed = False
+
+          for item in channel.findall("item"):
+              # Clean title
+              t = item.find("title")
+              if t is not None and t.text:
+                  new_t = strip_stamp(t.text)
+                  if new_t != t.text:
+                      t.text = new_t
+                      changed = True
+
+              # Clean description (keep HTML if present; we only remove trailing timestamp patterns)
+              d = item.find("description")
+              if d is not None and d.text:
+                  new_d = strip_stamp(d.text)
+                  if new_d != d.text:
+                      d.text = new_d
+                      changed = True
+
+              # Ensure GUID exists (stable, non-permalink) if missing
+              g = item.find("guid")
+              has_guid = g is not None and (g.text or "").strip() != ""
+              if not has_guid:
+                  base = (item.findtext("link") or "") + "|" + (item.findtext("title") or "") + "|" + (item.findtext("pubDate") or "")
+                  digest = hashlib.sha1(base.encode("utf-8", errors="ignore")).hexdigest()
+                  g = ET.SubElement(item, "guid", attrib={"isPermaLink": "false"})
+                  g.text = digest
+                  changed = True
+
+          if changed:
+              tree.write(FEED, encoding="utf-8", xml_declaration=True)
+              print("rss.xml updated: timestamps removed and/or GUIDs added")
+          else:
+              print("No timestamp patterns found; rss.xml unchanged")
+          PY
+
       - name: Commit & push
         run: |
           git config user.name "cf-bot"
           git config user.email "cf-bot@users.noreply.github.com"
           git add rss.xml
-          git commit -m "Add RSS item [skip ci]" || echo "No changes"
+          git commit -m "Add RSS item (no timestamps) [skip ci]" || echo "No changes"
           git push
