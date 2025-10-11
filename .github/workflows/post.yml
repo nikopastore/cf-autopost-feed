@@ -1,8 +1,10 @@
 name: Generate and publish RSS item (AM/PM)
 
+permissions:
+  contents: write
+
 on:
   schedule:
-    # Phoenix is UTC-7 year-round: 07:40 AZ = 14:40 UTC; 14:10 AZ = 21:10 UTC
     - cron: "40 14 * * *"
     - cron: "10 21 * * *"
   workflow_dispatch:
@@ -13,6 +15,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+          fetch-depth: 0
+
+      - name: Mark repo safe for git
+        run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
 
       - name: Set up Python
         uses: actions/setup-python@v5
