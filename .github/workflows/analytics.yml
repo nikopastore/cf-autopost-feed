@@ -1,0 +1,40 @@
+name: Build Analytics Hub
+
+permissions:
+  contents: write
+
+on:
+  schedule:
+    - cron: "5 15 * * *"   # 15:05 UTC -> 08:05 America/Phoenix (after your 07:40 post)
+    - cron: "35 21 * * *"  # 21:35 UTC -> 14:35 America/Phoenix (after your 14:10 post)
+  workflow_dispatch:
+
+jobs:
+  analytics:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+          fetch-depth: 0
+
+      - name: Mark repo safe for git
+        run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Build analytics
+        run: |
+          python scripts/build_analytics.py
+
+      - name: Commit & push analytics
+        run: |
+          git config user.name "cf-bot"
+          git config user.email "cf-bot@users.noreply.github.com"
+          git add analytics/posts_features.csv analytics/feature_summary.csv analytics/latest_report.md analytics/for_chatgpt.md
+          git commit -m "analytics: update daily reports [skip ci]" || echo "No changes"
+          git push
