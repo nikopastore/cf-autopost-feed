@@ -1,35 +1,30 @@
-#!/usr/bin/env python3
-# scripts/make_x_feed.py
 import xml.etree.ElementTree as ET
 import re, hashlib, html, sys, os
 
-# =============== CONFIG ==================
-IN_FEED = "rss.xml"        # existing feed at repo root
-OUT_FEED = "rss_x.xml"     # new, X-only feed at repo root
+# =================== CONFIG ===================
+IN_FEED = "rss.xml"        # your existing feed at repo root
+OUT_FEED = "rss_x.xml"     # new X-only feed at repo root
 
-# If your poster (Buffer/Zapier) automatically attaches the <link>, keep False.
-# If it does NOT, set True so we append the URL into the post text.
+# If your X action/app attaches the URL separately (Buffer, or Zapier X action with a Link field),
+# keep this False. If your action does NOT have a separate Link field, set True and we'll append
+# the link into the post text (and reserve space for it).
 APPEND_LINK_IN_TEXT = False
 
-# If you always prepend/append fixed text in the post, reserve space here
+# If you ALWAYS add fixed text (prefix/hashtags) in your X post, put it here so we reserve space.
 RESERVED_PREFIX = ""       # e.g., "CF: "
 RESERVED_SUFFIX = ""       # e.g., " #CareerForge"
 
-BASE_LIMIT = 280
-URL_RESERVE = 25           # ~23 chars for t.co + margin
-# We ALWAYS reserve URL space because most tools append the link.
-# If you KNOW your tool won't attach it, set URL_RESERVE = 0.
+BASE_LIMIT   = 280
+URL_RESERVE  = 28  # ultra-safe t.co reserve (approx 23), covers any tool extras
+# =================================================
 
-# Robust trailing timestamp remover (after HTML is stripped):
-# accepts separators (—, –, -, |, :), optional ()/[], and date formats.
 STAMP_RE = re.compile(r"""(?isx)
     \s*
     (?:—|–|-|\||:)?\s*                 # optional separator
     (?:\(|\[)?\s*                      # optional open paren/bracket
     (?:
        \d{4}[-/]\d{2}[-/]\d{2}         # 2025-10-11 or 2025/10/11
-       (?:[ T]\d{1,2}:\d{2}(?::\d{2})?\s?(?:AM|PM)?)?  # optional time
-       (?:\s?[A-Z]{2,4})?              # optional TZ like UTC/PST/PT
+       (?:[ T]\d{1,2}:\d{2}(?::\d{2})?\s?(?:AM|PM)?)?(?:\s?[A-Z]{2,4})?  # optional time/TZ
      |
        \d{1,2}/\d{1,2}/\d{2,4}         # 10/11/2025
     )
@@ -37,25 +32,22 @@ STAMP_RE = re.compile(r"""(?isx)
     \s*$
 """)
 
-# =========================================
-
 def strip_stamp(s: str) -> str:
     return STAMP_RE.sub("", s or "").strip()
 
 def collapse_ws(s: str) -> str:
-    """Remove HTML tags/entities, collapse whitespace, unescape entities."""
-    # strip HTML tags
+    """Strip HTML, normalize entities/dashes, collapse whitespace."""
     s = re.sub(r"<[^>]+>", "", s or "")
-    # normalize common entities/dashes
     s = (s.replace("&nbsp;", " ")
            .replace("&mdash;", "—").replace("&#8212;", "—")
            .replace("&ndash;", "–").replace("&#8211;", "–"))
-    # unescape and collapse whitespace
     s = html.unescape(s)
     s = re.sub(r"\s+", " ", s).strip()
     return s
 
 def smart_truncate(s: str, limit: int) -> str:
+    if limit <= 0:
+        return ""
     if len(s) <= limit:
         return s
     cut = max(0, limit - 1)
@@ -90,36 +82,38 @@ for tag in ["title", "link", "description", "language", "lastBuildDate", "pubDat
 
 # Transform items
 for item in channel.findall("item"):
+    # Clean content
     title = strip_stamp(collapse_ws(item.findtext("title") or ""))
     desc  = strip_stamp(collapse_ws(item.findtext("description") or ""))
     link  = (item.findtext("link") or "").strip()
 
-    # prefer title text; fall back to description
+    # Choose base body
     body = title if title else desc
 
-    # compute reserve (URL + any prefix/suffix you plan to add)
+    # Reserve space: URL + fixed prefix/suffix
     reserve = URL_RESERVE + len(RESERVED_PREFIX) + len(RESERVED_SUFFIX)
     max_body = max(0, BASE_LIMIT - reserve)
 
+    # Build text
     text = smart_truncate(body, max_body)
-
-    # put prefix/suffix around truncated text
     if RESERVED_PREFIX:
         text = f"{RESERVED_PREFIX}{text}"
     if RESERVED_SUFFIX:
         text = f"{text}{RESERVED_SUFFIX}"
-
-    # append link if your tool won't attach it automatically
     if APPEND_LINK_IN_TEXT and link:
-        # if we append here, we already reserved URL_RESERVE above
         text = f"{text} {link}"
 
+    # Final safety cap
+    if len(text) > BASE_LIMIT:
+        text = smart_truncate(text, BASE_LIMIT)
+
+    # Build item
     nitem = ET.SubElement(new_channel, "item")
-    ET.SubElement(nitem, "title").text = text
-    ET.SubElement(nitem, "description").text = text
+    ET.SubElement(nitem, "title").text = text        # short, clean post text
+    ET.SubElement(nitem, "description").text = text  # mirror title for simplicity
     ET.SubElement(nitem, "link").text = link
 
-    # Stable GUID so timestamps aren't needed anywhere
+    # Stable GUID (so no timestamps needed)
     orig_guid = item.findtext("guid") or ""
     base = (orig_guid or link or title or desc).encode("utf-8", errors="ignore")
     guid = hashlib.sha1(base).hexdigest()

@@ -28,23 +28,6 @@ jobs:
       - name: Build X-only RSS (rss_x.xml)
         run: python scripts/make_x_feed.py
 
-      # Optional: keep temporarily while dialing in length reserves
-      - name: Debug: show length of latest X item
-        run: |
-          python - <<'PY'
-          import xml.etree.ElementTree as ET
-          t=ET.parse('rss_x.xml')
-          ch=t.getroot().find('channel')
-          items=ch.findall('item')
-          if not items:
-              print("No items in X feed"); raise SystemExit
-          it=items[0]  # latest is typically first; adjust if your order differs
-          title=(it.findtext('title') or '')
-          print("TITLE LEN:", len(title))
-          print("TITLE TEXT:", title[:220] + ('...' if len(title)>220 else ''))
-          print("LINK:", (it.findtext('link') or ''))
-          PY
-
       - name: Commit rss_x.xml if changed
         run: |
           if git diff --quiet rss_x.xml; then
