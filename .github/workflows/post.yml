@@ -5,8 +5,8 @@ permissions:
 
 on:
   schedule:
-    - cron: "40 14 * * *"   # 14:40 UTC  -> 07:40 America/Phoenix
-    - cron: "10 21 * * *"   # 21:10 UTC  -> 14:10 America/Phoenix
+    - cron: "40 14 * * *"   # 14:40 UTC -> 07:40 America/Phoenix
+    - cron: "10 21 * * *"   # 21:10 UTC -> 14:10 America/Phoenix
   workflow_dispatch:
 
 jobs:
@@ -37,6 +37,7 @@ jobs:
           SITE_URL: "https://nikopastore.github.io/cf-autopost-feed/"
         run: python build_rss.py
 
+      # (Optional) Strip timestamps in the main feed too; safe to keep.
       - name: Strip timestamps from titles/descriptions and ensure GUIDs
         run: |
           python - <<'PY'
@@ -45,33 +46,27 @@ jobs:
 
           FEED = "rss.xml"
 
-          # Normalize common HTML entities seen in feeds
           def norm_entities(s: str) -> str:
               return (s or "") \
                 .replace("&nbsp;", " ") \
                 .replace("&mdash;", "—").replace("&#8212;", "—") \
                 .replace("&ndash;", "–").replace("&#8211;", "–")
 
-          # Robust trailing timestamp remover:
-          # - accepts separators (—, –, -, |, :)
-          # - handles optional (), [] wrappers
-          # - tolerates inline tags near the end
-          # - supports YYYY-MM-DD[ time AM/PM TZ] and M/D/YYYY
           STAMP_RE = re.compile(r"""(?isx)
               \s*
-              (?:</?(?:em|i|strong|b|span)[^>]*>\s*)*   # optional inline tags
-              (?:—|–|-|\||:)?\s*                        # optional separator
-              (?:\(|\[)?\s*                             # optional open paren/bracket
+              (?:</?(?:em|i|strong|b|span)[^>]*>\s*)*
+              (?:—|–|-|\||:)?\s*
+              (?:\(|\[)?\s*
               (?:
-                 \d{4}[-/]\d{2}[-/]\d{2}                # 2025-10-11 or 2025/10/11
-                 (?:[ T]\d{1,2}:\d{2}(?::\d{2})?\s?(?:AM|PM)?)? # optional time
-                 (?:\s?[A-Z]{2,4})?                     # optional TZ like PT/UTC
+                 \d{4}[-/]\d{2}[-/]\d{2}
+                 (?:[ T]\d{1,2}:\d{2}(?::\d{2})?\s?(?:AM|PM)?)?
+                 (?:\s?[A-Z]{2,4})?
                |
-                 \d{1,2}/\d{1,2}/\d{2,4}                # 10/11/2025
+                 \d{1,2}/\d{1,2}/\d{2,4}
               )
-              \s*(?:\)|\])?                              # optional close paren/bracket
+              \s*(?:\)|\])?
               \s*
-              (?:</?(?:em|i|strong|b|span)[^>]*>\s*)*   # optional inline tags
+              (?:</?(?:em|i|strong|b|span)[^>]*>\s*)*
               \s*$
           """)
 
@@ -83,28 +78,23 @@ jobs:
           try:
               tree = ET.parse(FEED)
           except Exception as e:
-              print(f"Failed to parse {FEED}: {e}", file=sys.stderr)
-              sys.exit(1)
+              print(f"Failed to parse {FEED}: {e}", file=sys.stderr); sys.exit(1)
 
           root = tree.getroot()
           ch = root.find("channel")
           if ch is None:
-              print("No <channel> found in rss.xml", file=sys.stderr)
-              sys.exit(1)
+              print("No <channel> found in rss.xml", file=sys.stderr); sys.exit(1)
 
           changed = False
-
           for item in ch.findall("item"):
-              # Clean trailing stamps on title/description
               for tag in ("title", "description"):
-                  node = item.find(tag)
-                  if node is not None and (node.text or "").strip():
-                      new_text = strip_tail(node.text)
-                      if new_text != node.text:
-                          node.text = new_text
+                  n = item.find(tag)
+                  if n is not None and (n.text or "").strip():
+                      new_text = strip_tail(n.text)
+                      if new_text != n.text:
+                          n.text = new_text
                           changed = True
 
-              # Ensure GUID exists and is not blank
               guid = item.find("guid")
               if guid is None or not (guid.text or "").strip():
                   base = (item.findtext("link") or "") + "|" + (item.findtext("title") or "") + "|" + (item.findtext("pubDate") or "")
@@ -113,21 +103,32 @@ jobs:
                   guid.text = digest
                   changed = True
               else:
-                  # Ensure isPermaLink is false unless it already points to a real permalink
                   if guid.get("isPermaLink") is None:
                       guid.set("isPermaLink", "false")
 
           if changed:
-              tree.write(FEED, encoding="utf-8", xml_parsed=True) if hasattr(ET, "xml_parsed") else tree.write(FEED, encoding="utf-8", xml_declaration=True)
+              tree.write(FEED, encoding="utf-8", xml_declaration=True)
               print("rss.xml updated")
           else:
               print("No changes detected by stripper")
           PY
 
-      - name: Commit & push
+      - name: Commit & push main RSS
         run: |
           git config user.name "cf-bot"
           git config user.email "cf-bot@users.noreply.github.com"
           git add rss.xml
           git commit -m "Add RSS item (no timestamps) [skip ci]" || echo "No changes"
+          git push
+
+      # NEW: Build and commit the X-only feed
+      - name: Build X-only RSS (rss_x.xml)
+        run: python scripts/make_x_feed.py
+
+      - name: Commit & push X RSS
+        run: |
+          git config user.name "cf-bot"
+          git config user.email "cf-bot@users.noreply.github.com"
+          git add rss_x.xml
+          git commit -m "Build/Update rss_x.xml [skip ci]" || echo "No changes"
           git push
