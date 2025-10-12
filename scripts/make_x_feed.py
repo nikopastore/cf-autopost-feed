@@ -8,15 +8,14 @@ import re, hashlib, html, sys, os
 IN_FEED = "rss.xml"
 OUT_FEED = "rss_x.xml"
 
-# For X we’ll post the line itself (no link in text).
+# For X we post the line itself (no link in text).
 APPEND_LINK_IN_TEXT = False
-RESERVED_PREFIX = ""                  # e.g., "CF: "
+RESERVED_PREFIX = ""
 RESERVED_SUFFIX = " #careerforge"     # small brand tag
 BASE_LIMIT = 280
 URL_RESERVE = 0                       # no link in text on X
 # =========================================
 
-# Remove any trailing timestamp if it sneaks in
 STAMP_RE = re.compile(r"""(?isx)
     \s*
     (?:—|–|-|\||:)?\s*
@@ -43,7 +42,7 @@ def collapse_ws(s: str) -> str:
     s = re.sub(r"\s+", " ", s).strip()
     return s
 
-# --- Emoji/glyph safe truncation (avoid cutting ZWJ/VS/modifiers/flags) ---
+# --- Emoji/glyph safe truncation ---
 ZWJ = "\u200d"
 def is_vs(ch):  # variation selectors
     o = ord(ch)
@@ -65,7 +64,6 @@ def emoji_safe_truncate(text: str, limit: int) -> str:
     cut = max(0, limit - 1)
     s = text[:cut]
 
-    # Back up if we ended on a joiner/selector/modifier/half-flag/keycap
     def unsafe_tail(chrs):
         return (
             chrs.endswith(ZWJ)
@@ -77,29 +75,19 @@ def emoji_safe_truncate(text: str, limit: int) -> str:
     while s and unsafe_tail(s):
         s = s[:-1]
 
-    # Prefer not to split a word if we can help it
     if " " in s:
         s = s.rsplit(" ", 1)[0]
     return s + "…"
-# -------------------------------------------------------------------------
+# -----------------------------------
 
 def smart_text(body: str) -> str:
-    # compute budget
     reserve = URL_RESERVE + len(RESERVED_PREFIX) + len(RESERVED_SUFFIX)
     max_body = max(0, BASE_LIMIT - reserve)
-
     text = emoji_safe_truncate(body, max_body)
-
     if RESERVED_PREFIX:
         text = f"{RESERVED_PREFIX}{text}"
     if RESERVED_SUFFIX:
         text = f"{text}{RESERVED_SUFFIX}"
-
-    if APPEND_LINK_IN_TEXT:
-        # We don't append links for X, but keep logic here for completeness
-        pass
-
-    # final safety cap
     if len(text) > BASE_LIMIT:
         text = emoji_safe_truncate(text, BASE_LIMIT)
     return text
