@@ -12,7 +12,7 @@ APPEND_LINK_IN_TEXT = False
 
 # If you ALWAYS add fixed text (prefix/hashtags) in your X post, put it here so we reserve space.
 RESERVED_PREFIX = ""       # e.g., "CF: "
-RESERVED_SUFFIX = ""       # e.g., " #CareerForge"
+RESERVED_SUFFIX = " #careerforge"       # e.g., " #CareerForge"
 
 BASE_LIMIT   = 280
 URL_RESERVE  = 28  # ultra-safe t.co reserve (approx 23), covers any tool extras

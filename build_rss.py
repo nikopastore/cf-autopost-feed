@@ -1,104 +1,169 @@
-import os, json, uuid, random, time
+#!/usr/bin/env python3
+"""
+build_rss.py — Career Forge: meaningful, viral-ready posts
+
+Creates/updates rss.xml by generating 1 new <item> per run:
+- Title = crisp hook (X-friendly; our X feed will truncate if needed)
+- Description = value-packed mini post + explicit CTA question
+- Link = stable GUID-backed link to your SITE_URL (no extra pages needed)
+Requires env: OPENAI_API_KEY, BRAND, SITE_URL
+"""
+
+import os, re, json, hashlib, random
 from datetime import datetime, timezone
 import xml.etree.ElementTree as ET
-from openai import OpenAI
 
-OPENAI_API_KEY = os.environ["OPENAI_API_KEY"]
-BRAND = os.environ.get("BRAND", "Career Forge")
-FEED_PATH = "rss.xml"
-SITE_URL = os.environ.get("SITE_URL", "https://example.com")  # set to your Pages URL
+# ----------------- Config -----------------
+MODEL = os.getenv("MODEL", "gpt-4o-mini")
+BRAND = os.getenv("BRAND", "Career Forge")
+SITE_URL = os.getenv("SITE_URL", "https://example.com/")
 
-SEED_TOPICS = [
-    "emerging skills employers value in 2025",
-    "AI’s impact on hiring and job design",
-    "how to recession-proof your career",
-    "negotiating remote-work benefits",
-    "reskilling vs. upskilling",
-    "leadership traits companies seek now",
-    "navigating layoffs with resilience",
-    "future of hybrid work",
-    "career pivots after 40",
-    "how Gen Z reshapes the workplace",
-    "resume experiments: skills-first vs chronology",
-    "ATS myths vs reality",
-    "manager hiring: what’s changed post-2024",
-    "portfolio careers and side gigs",
-    "from IC to manager: signals of readiness",
-]
+TOPICS_FILE = "content/seeds_topics.txt"
+FEED_FILE = "rss.xml"
+CHANNEL_TITLE = f"{BRAND} — Daily Career Post"
+CHANNEL_DESC = f"{BRAND} — actionable career tactics, AI shortcuts, and systems."
+CHANNEL_LANG = "en-us"
+# ------------------------------------------
 
-def pick_topic():
-    return random.choice(SEED_TOPICS)
+def read_topics(path):
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            topics = [ln.strip() for ln in f if ln.strip()]
+        return topics
+    except FileNotFoundError:
+        return ["AI shortcuts for job search", "Interview frameworks that land offers"]
 
-def stamp(text: str) -> str:
-    t = time.strftime("%Y%m%d-%H%M", time.gmtime())  # UTC stamp
-    rnd = uuid.uuid4().hex[:4].upper()
-    return f"{text.strip()} — CF {t}-{rnd}"
+def choose_topic(topics):
+    # deterministic daily pick so AM/PM runs can differ slightly
+    day_seed = int(datetime.now(timezone.utc).strftime("%Y%m%d%H"))
+    random.seed(day_seed)
+    return random.choice(topics)
 
-def generate_post(topic: str) -> tuple[str, str]:
-    client = OpenAI(api_key=OPENAI_API_KEY)
-    sys = f"You are {BRAND}'s senior social copywriter. Keep it nonpartisan, practical, optimistic."
-    usr = (
-        "Write ONE LinkedIn-friendly paragraph about: "
-        f"{topic}. Length 70–120 words. End with a question inviting replies. "
-        "Return ONLY valid JSON like: "
-        '{"caption":"...","hashtags":["jobsearch","careeradvice","jobmarket"]}'
-    )
+def slugify(text, n=60):
+    text = re.sub(r"[^\w\s-]", "", text).strip().lower()
+    text = re.sub(r"[\s_-]+", "-", text)
+    return text[:n] or "post"
+
+def call_openai(topic):
+    from openai import OpenAI
+    client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+    sys_msg = {
+        "role": "system",
+        "content": (
+            "You are a social writing expert for a career-growth brand. "
+            "Write scroll-stopping, useful, *non-cringe* copy. "
+            "Voice: confident, clear, practical, kind. No fluff. "
+            "Goal: trigger saves/comments by giving 1 valuable idea users can apply today."
+        ),
+    }
+    user_msg = {
+        "role": "user",
+        "content": f"""
+Produce STRICT JSON with keys:
+- hook: a compelling 1-line hook (<= 130 chars), no emojis.
+- value: 2–4 punchy bullets (max 65 chars each) with a micro-how-to.
+- cta: 1 question that invites replies with concrete options (<= 110 chars).
+- tags: 2 short hashtags (no more than 16 chars each, lowercase).
+
+Topic: "{topic}"
+
+Constraints:
+- Be specific. Avoid generic advice.
+- Use numbers, scripts, or mini-templates where possible.
+- Do NOT repeat the topic text verbatim.
+- No emojis, no ALL CAPS, no spammy hype.
+Return ONLY JSON.
+""",
+    }
     resp = client.chat.completions.create(
-        model="gpt-4o-mini",
-        temperature=0.7,
-        response_format={"type": "json_object"},
-        messages=[{"role":"system","content":sys},{"role":"user","content":usr}],
+        model=MODEL,
+        temperature=0.6,
+        messages=[sys_msg, user_msg]
     )
-    raw = resp.choices[0].message.content or "{}"
+    txt = resp.choices[0].message.content.strip()
+    # Extract JSON robustly
     try:
-        obj = json.loads(raw)
+        start = txt.find("{"); end = txt.rfind("}")
+        payload = json.loads(txt[start:end+1])
     except Exception:
-        obj = {}
-    caption = (obj.get("caption") or f"Quick take from {BRAND}: {topic}. What’s your take?").strip()
-    tags = obj.get("hashtags", [])
-    hashtags = " ".join("#" + str(t).lstrip("#").replace(" ", "") for t in tags if str(t).strip())
-    return stamp(caption), hashtags
+        # Fallback minimal payload
+        payload = {
+            "hook": f"{topic}: 3 tactics that actually work",
+            "value": ["Cut fluff: show numbers.", "Use scripts, not wishes.", "Ship weekly proof of work."],
+            "cta": "Which tactic would you try first — 1, 2, or 3?",
+            "tags": ["careerforge", "jobsearch"]
+        }
+    return payload
 
-def load_feed():
-    try:
-        tree = ET.parse(FEED_PATH)
-        return tree
-    except Exception:
-        root = ET.Element("rss", version="2.0")
-        channel = ET.SubElement(root, "channel")
-        ET.SubElement(channel, "title").text = f"{BRAND} Autopost Feed"
-        ET.SubElement(channel, "link").text = SITE_URL
-        ET.SubElement(channel, "description").text = "Auto-generated career content"
-        return ET.ElementTree(root)
+def ensure_channel():
+    if not os.path.exists(FEED_FILE):
+        # create new RSS
+        rss = ET.Element("rss", attrib={"version": "2.0"})
+        ch = ET.SubElement(rss, "channel")
+        ET.SubElement(ch, "title").text = CHANNEL_TITLE
+        ET.SubElement(ch, "link").text = SITE_URL
+        ET.SubElement(ch, "description").text = CHANNEL_DESC
+        ET.SubElement(ch, "language").text = CHANNEL_LANG
+        now = datetime.now(timezone.utc).strftime("%a, %d %b %Y %H:%M:%S %z")
+        ET.SubElement(ch, "lastBuildDate").text = now
+        ET.SubElement(ch, "pubDate").text = now
+        ET.ElementTree(rss).write(FEED_FILE, encoding="utf-8", xml_declaration=True)
 
-def add_item(tree: ET.ElementTree, title: str, description: str, guid: str):
-    root = tree.getroot()
-    channel = root.find("channel")
-    if channel is None:
-        channel = ET.SubElement(root, "channel")
+    tree = ET.parse(FEED_FILE)
+    return tree
+
+def make_item(payload, topic):
+    hook = payload.get("hook", "").strip()
+    bullets = [b.strip(" •-") for b in payload.get("value", []) if b.strip()]
+    cta = payload.get("cta", "").strip()
+    tags = payload.get("tags", [])[:2]
+
+    # Title: hook + subtle benefit (keep X-friendly; our X feed truncates if needed)
+    title = hook
+
+    # Description: mini post with bullets + explicit CTA
+    bullets_fmt = "\n".join([f"• {b}" for b in bullets])
+    tag_str = " ".join([f"#{t}" for t in tags]) if tags else ""
+    description = f"{hook}\n\n{bullets_fmt}\n\n{cta}"
+    if tag_str:
+        description += f"\n{tag_str}"
+
+    # Stable link & GUID
+    now = datetime.now(timezone.utc)
+    slug = slugify(hook)
+    base = f"{slug}-{now.strftime('%Y%m%d%H%M%S')}"
+    guid = hashlib.sha1(base.encode("utf-8")).hexdigest()
+    link = f"{SITE_URL}?p={guid}"
 
     item = ET.Element("item")
-    ET.SubElement(item, "title").text = title[:140]
-    ET.SubElement(item, "link").text = SITE_URL
-    ET.SubElement(item, "guid").text = guid
-    ET.SubElement(item, "pubDate").text = datetime.now(timezone.utc).strftime("%a, %d %b %Y %H:%M:%S GMT")
+    ET.SubElement(item, "title").text = title
     ET.SubElement(item, "description").text = description
+    ET.SubElement(item, "link").text = link
+    ET.SubElement(item, "guid", attrib={"isPermaLink": "false"}).text = guid
+    ET.SubElement(item, "pubDate").text = now.strftime("%a, %d %b %Y %H:%M:%S %z")
+    return item
 
-    # Prepend newest
-    items = channel.findall("item")
-    channel.insert(0, item)
-    # Keep last 50
-    for old in items[49:]:
-        channel.remove(old)
+def prepend_item(tree, item):
+    root = tree.getroot()
+    ch = root.find("channel")
+    # prepend as first item
+    items = ch.findall("item")
+    if items:
+        ch.insert(list(ch).index(items[0]), item)
+    else:
+        ch.append(item)
+    # update build date
+    ch.find("lastBuildDate").text = datetime.now(timezone.utc).strftime("%a, %d %b %Y %H:%M:%S %z")
+    tree.write(FEED_FILE, encoding="utf-8", xml_declaration=True)
 
-def save_feed(tree: ET.ElementTree):
-    tree.write(FEED_PATH, encoding="utf-8", xml_declaration=True)
+def main():
+    topics = read_topics(TOPICS_FILE)
+    topic = choose_topic(topics)
+    payload = call_openai(topic)
+    tree = ensure_channel()
+    item = make_item(payload, topic)
+    prepend_item(tree, item)
+    print("Generated new RSS item:", payload.get("hook"))
 
 if __name__ == "__main__":
-    topic = pick_topic()
-    caption, hashtags = generate_post(topic)
-    text = caption + (" " + hashtags if hashtags else "")
-    tree = load_feed()
-    add_item(tree, title=topic, description=text, guid=str(uuid.uuid4()))
-    save_feed(tree)
-    print("Wrote rss.xml with new item:", topic)
+    main()
