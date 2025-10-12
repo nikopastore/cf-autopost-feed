@@ -1,33 +1,65 @@
+#!/usr/bin/env python3
 # scripts/make_x_feed.py
 import xml.etree.ElementTree as ET
 import re, hashlib, html, sys, os
 
-IN_FEED = "rss.xml"        # your existing feed, already generated upstream
-OUT_FEED = "rss_x.xml"     # new, X-only feed
-MAX_BODY = 240             # leave room for tools that auto-append links/UTMs
-APPEND_LINK_IN_TEXT = False  # set True if your tool does NOT auto-attach <link>
+# =============== CONFIG ==================
+IN_FEED = "rss.xml"        # existing feed at repo root
+OUT_FEED = "rss_x.xml"     # new, X-only feed at repo root
 
-STAMP_PATTERNS = [
-    r"\s*[—\-|]\s*\d{4}-\d{2}-\d{2}.*$",     # " — 2025-10-11 13:45"
-    r"\s*\[\d{4}-\d{2}-\d{2}.*?\]\s*$",      # " [2025-10-11 13:45]"
-]
+# If your poster (Buffer/Zapier) automatically attaches the <link>, keep False.
+# If it does NOT, set True so we append the URL into the post text.
+APPEND_LINK_IN_TEXT = False
+
+# If you always prepend/append fixed text in the post, reserve space here
+RESERVED_PREFIX = ""       # e.g., "CF: "
+RESERVED_SUFFIX = ""       # e.g., " #CareerForge"
+
+BASE_LIMIT = 280
+URL_RESERVE = 25           # ~23 chars for t.co + margin
+# We ALWAYS reserve URL space because most tools append the link.
+# If you KNOW your tool won't attach it, set URL_RESERVE = 0.
+
+# Robust trailing timestamp remover (after HTML is stripped):
+# accepts separators (—, –, -, |, :), optional ()/[], and date formats.
+STAMP_RE = re.compile(r"""(?isx)
+    \s*
+    (?:—|–|-|\||:)?\s*                 # optional separator
+    (?:\(|\[)?\s*                      # optional open paren/bracket
+    (?:
+       \d{4}[-/]\d{2}[-/]\d{2}         # 2025-10-11 or 2025/10/11
+       (?:[ T]\d{1,2}:\d{2}(?::\d{2})?\s?(?:AM|PM)?)?  # optional time
+       (?:\s?[A-Z]{2,4})?              # optional TZ like UTC/PST/PT
+     |
+       \d{1,2}/\d{1,2}/\d{2,4}         # 10/11/2025
+    )
+    \s*(?:\)|\])?                      # optional close paren/bracket
+    \s*$
+""")
+
+# =========================================
 
 def strip_stamp(s: str) -> str:
-    for pat in STAMP_PATTERNS:
-        s = re.sub(pat, "", s).strip()
-    return s
+    return STAMP_RE.sub("", s or "").strip()
 
-def clean_text(s: str) -> str:
-    # remove HTML tags and unescape entities
+def collapse_ws(s: str) -> str:
+    """Remove HTML tags/entities, collapse whitespace, unescape entities."""
+    # strip HTML tags
     s = re.sub(r"<[^>]+>", "", s or "")
-    return html.unescape(s).strip()
+    # normalize common entities/dashes
+    s = (s.replace("&nbsp;", " ")
+           .replace("&mdash;", "—").replace("&#8212;", "—")
+           .replace("&ndash;", "–").replace("&#8211;", "–"))
+    # unescape and collapse whitespace
+    s = html.unescape(s)
+    s = re.sub(r"\s+", " ", s).strip()
+    return s
 
 def smart_truncate(s: str, limit: int) -> str:
     if len(s) <= limit:
         return s
-    cut = max(0, limit - 1)  # space for ellipsis
+    cut = max(0, limit - 1)
     s = s[:cut]
-    # don't chop mid-word if we can help it
     if " " in s:
         s = s.rsplit(" ", 1)[0]
     return s + "…"
@@ -39,37 +71,47 @@ if not os.path.exists(IN_FEED):
 tree = ET.parse(IN_FEED)
 root = tree.getroot()
 channel = root.find("channel")
+if channel is None:
+    print("No <channel> found in rss.xml", file=sys.stderr)
+    sys.exit(1)
 
-# new RSS root
+# New RSS root
 new_root = ET.Element("rss", attrib={"version": "2.0"})
 new_channel = ET.SubElement(new_root, "channel")
 
-# copy channel metadata (lightly adjusted title)
+# Copy channel metadata (adjust title to indicate X feed)
 for tag in ["title", "link", "description", "language", "lastBuildDate", "pubDate"]:
     src = channel.find(tag)
     if src is not None:
         val = (src.text or "")
         if tag == "title":
-            val = val.replace("RSS", "RSS (X)")
+            val = (val or "RSS") + " (X)"
         ET.SubElement(new_channel, tag).text = val
 
-# transform items
+# Transform items
 for item in channel.findall("item"):
-    title = strip_stamp(clean_text(item.findtext("title") or ""))
-    desc  = strip_stamp(clean_text(item.findtext("description") or ""))
+    title = strip_stamp(collapse_ws(item.findtext("title") or ""))
+    desc  = strip_stamp(collapse_ws(item.findtext("description") or ""))
     link  = (item.findtext("link") or "").strip()
 
-    # choose base body (prefer title)
+    # prefer title text; fall back to description
     body = title if title else desc
 
-    # optionally append the link into the text (if your poster doesn't auto-attach it)
-    reserve = 0
-    if APPEND_LINK_IN_TEXT and link:
-        # t.co wraps to ~23 chars; be conservative and reserve 25
-        reserve = 25
+    # compute reserve (URL + any prefix/suffix you plan to add)
+    reserve = URL_RESERVE + len(RESERVED_PREFIX) + len(RESERVED_SUFFIX)
+    max_body = max(0, BASE_LIMIT - reserve)
 
-    text = smart_truncate(body, MAX_BODY - reserve)
+    text = smart_truncate(body, max_body)
+
+    # put prefix/suffix around truncated text
+    if RESERVED_PREFIX:
+        text = f"{RESERVED_PREFIX}{text}"
+    if RESERVED_SUFFIX:
+        text = f"{text}{RESERVED_SUFFIX}"
+
+    # append link if your tool won't attach it automatically
     if APPEND_LINK_IN_TEXT and link:
+        # if we append here, we already reserved URL_RESERVE above
         text = f"{text} {link}"
 
     nitem = ET.SubElement(new_channel, "item")
@@ -77,7 +119,7 @@ for item in channel.findall("item"):
     ET.SubElement(nitem, "description").text = text
     ET.SubElement(nitem, "link").text = link
 
-    # stable GUID so we don't need timestamps in titles
+    # Stable GUID so timestamps aren't needed anywhere
     orig_guid = item.findtext("guid") or ""
     base = (orig_guid or link or title or desc).encode("utf-8", errors="ignore")
     guid = hashlib.sha1(base).hexdigest()
@@ -87,6 +129,6 @@ for item in channel.findall("item"):
     if pub:
         ET.SubElement(nitem, "pubDate").text = pub
 
-# write out the new feed
+# Write the new feed
 ET.ElementTree(new_root).write(OUT_FEED, encoding="utf-8", xml_declaration=True)
 print(f"Wrote {OUT_FEED}")
