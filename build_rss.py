@@ -336,3 +336,4 @@ with open(FPS_PATH, "w", encoding="utf-8") as f:
     json.dump(fps, f, ensure_ascii=False, indent=2)
 
 print("Generated:", title)
+
