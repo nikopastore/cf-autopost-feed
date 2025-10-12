@@ -7,14 +7,15 @@ Creates/updates rss.xml by generating 1 new <item> per run:
 - description = richer version for LinkedIn/FB (hook + bullets + CTA + tags; emojis allowed)
 - link        = stable GUID URL (optional for non-X platforms)
 
-Env vars: OPENAI_API_KEY, BRAND, SITE_URL
+Env vars (required): OPENAI_API_KEY
+Env vars (optional): BRAND, SITE_URL, MODEL
 """
 
 import os, re, json, hashlib, random
 from datetime import datetime, timezone
 import xml.etree.ElementTree as ET
 
-# ------------- Config -------------
+# ---------------- Config ----------------
 MODEL = os.getenv("MODEL", "gpt-4o-mini")
 BRAND = os.getenv("BRAND", "Career Forge")
 SITE_URL = os.getenv("SITE_URL", "https://example.com/")
@@ -24,7 +25,21 @@ FEED_FILE     = "rss.xml"
 CHANNEL_TITLE = f"{BRAND} — Daily Career Post"
 CHANNEL_DESC  = f"{BRAND} — actionable career tactics, AI shortcuts, and systems."
 CHANNEL_LANG  = "en-us"
-# ----------------------------------
+# ----------------------------------------
+
+EMOJI_PALETTE = [
+    "✅","💬","📌","✍️","🚀","🧠","💼","⏱️","📈","🤝","🔎","📣","🗂️","🧩","🎯","⚡"
+]
+
+EMOJI_KEYWORDS = [
+    (re.compile(r"\b(salary|comp|offer|negotia)", re.I), ["💰","🤝","📈"]),
+    (re.compile(r"\bresume|bullet|ATS", re.I),           ["📄","✍️","✅"]),
+    (re.compile(r"\binterview|behavioral|STAR", re.I),    ["🎤","🧠","✅"]),
+    (re.compile(r"\bmetric|impact|result|number", re.I),  ["📈","✅","🎯"]),
+    (re.compile(r"\btime|weekly|daily|calendar|schedule", re.I), ["⏱️","📆","✅"]),
+    (re.compile(r"\bAI|prompt", re.I),                    ["🤖","⚡","✅"]),
+    (re.compile(r"\bportfolio|project|proof", re.I),      ["🗂️","📌","🚀"]),
+]
 
 def rss_now():
     return datetime.now(timezone.utc).strftime("%a, %d %b %Y %H:%M:%S %z")
@@ -47,8 +62,42 @@ def slugify(text, n=60):
     text = re.sub(r"[\s_-]+", "-", text)
     return text[:n] or "post"
 
+def has_emoji(s: str) -> int:
+    # crude count of emoji-like codepoints
+    return sum(1 for ch in s if ord(ch) >= 0x1F300)
+
+def pick_emojis(topic_or_line: str, need: int) -> list:
+    bag = []
+    for rx, ems in EMOJI_KEYWORDS:
+        if rx.search(topic_or_line):
+            bag.extend(ems)
+    if not bag:
+        bag = EMOJI_PALETTE[:]
+    random.shuffle(bag)
+    return bag[:need]
+
+def enforce_emojis(xline: str, topic: str) -> str:
+    count = has_emoji(xline)
+    if count >= 2:
+        return xline
+    need = max(0, 2 - count)
+    inserts = pick_emojis(f"{topic} {xline}", need)
+    # Put one emoji near start, one near end if needed
+    if not inserts:
+        return xline
+    if need >= 1:
+        xline = f"{inserts[0]} {xline}"
+    if need >= 2:
+        xline = f"{xline} {inserts[1]}"
+    return xline
+
+def scrub_deictic(s: str) -> str:
+    # Remove references like "this/above/below/thread"
+    s = re.sub(r"\b(this|above|below|in\s+this\s+thread)\b", "", s, flags=re.I)
+    return re.sub(r"\s{2,}", " ", s).strip()
+
 def call_openai(topic):
-    """Ask the model for a self-contained X line + richer body WITH tasteful emojis."""
+    """Ask the model for a self-contained X line + richer body WITH emojis; fall back if needed."""
     try:
         from openai import OpenAI
         client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
@@ -64,10 +113,12 @@ def call_openai(topic):
             "content": f"""
 Return STRICT JSON with keys:
 
-- x_line: a SINGLE self-contained line (<= 230 chars) that includes the actual tactic/script inline.
-  * Include 2–4 tasteful emojis woven into the text (examples: ✅💬📌✍️🚀🧠💼🕒📈❌👉).
+- x_line: a SINGLE self-contained line (<= 230 chars) including the actual tactic or mini-script inline.
+  * Include 2–4 tasteful emojis woven into the text (e.g., ✅💬📌✍️🚀🧠💼⏱️📈🤝).
+  * Acceptable format examples:
+      - Script: You: "…" Them: "…" You: "…"
+      - Template: “When X, I do Y so Z.” (fill-in-the-blank)
   * Must NOT say “this/see below/in thread”.
-  * Prefer including the core script/template in quotes, e.g.: You: "…"; Them: "…"; You: "…"
   * No hashtags. No links.
 
 - hook: concise hook (<= 80 chars) for richer networks, with 1–2 emojis.
@@ -92,14 +143,14 @@ Return ONLY JSON.
     except Exception:
         # Fallback with emojis, fully self-contained
         payload = {
-            "x_line": '💬 Salary talk script — You: "Based on scope & market, I’m targeting $X–$Y." Them: "Lower budget." You: "Is there flex on base, sign-on, or equity?" ✅',
-            "hook": "Salary negotiation that feels natural ✍️",
+            "x_line": '💬 Interview script — Q: "Biggest impact?" You: "Cut cycle time 20% with daily stand-ups + WIP limits; shipped weekly." ✅',
+            "hook": "Prove impact in interviews ✍️",
             "bullets": [
-                "Open with scope + market data 📈",
-                "State a range you can defend 💼",
-                "Trade: base vs. sign-on vs. equity 🔁",
+                "Lead with a number 📈",
+                "Name 1–2 levers you used ⚙️",
+                "End with the outcome ✅",
             ],
-            "cta": "Which lever first — base, sign-on, or equity? 👉",
+            "cta": "What metric do you lead with — time, revenue, or quality? 🤔",
             "tags": ["careerforge", "jobsearch"],
         }
     return payload
@@ -139,14 +190,19 @@ def ensure_feed_scaffold():
     tree.write(FEED_FILE, encoding="utf-8", xml_declaration=True)
     return tree
 
-def make_item(payload):
-    x_line  = (payload.get("x_line") or "").strip()
+def make_item(payload, topic):
+    # X line — enforce emojis & self-contained feel
+    x_line  = scrub_deictic((payload.get("x_line") or "").strip())
+    x_line  = enforce_emojis(x_line, topic)
+
     hook    = (payload.get("hook") or "").strip()
     bullets = [b.strip(" •-") for b in (payload.get("bullets") or payload.get("value") or []) if b and b.strip()]
     cta     = (payload.get("cta") or "").strip()
     tags    = [t for t in (payload.get("tags") or []) if t][:2]
 
-    # Title = the self-contained, emoji-friendly X line
+    # Title = self-contained, emoji-friendly X line (≤ 230 here; X feed will still cap to 280)
+    if len(x_line) > 230:
+        x_line = x_line[:229].rsplit(" ", 1)[0] + "…"
     title = x_line
 
     # Description = richer body for LinkedIn/FB (with emojis)
@@ -190,9 +246,9 @@ def main():
     topic   = choose_topic(topics)
     payload = call_openai(topic)
     tree    = ensure_feed_scaffold()
-    item    = make_item(payload)
+    item    = make_item(payload, topic)
     prepend_item(tree, item)
-    print("Generated new RSS item:", payload.get("x_line") or payload.get("hook"))
+    print("Generated new RSS item:", (payload.get("x_line") or payload.get("hook")))
 
 if __name__ == "__main__":
     main()
