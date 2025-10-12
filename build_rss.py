@@ -18,6 +18,7 @@ import os, re, json, hashlib, random
 from datetime import datetime, timezone
 import xml.etree.ElementTree as ET
 
+# ---------- Paths ----------
 CONFIG_PATH = "ops/config.json"
 RULES_PATH  = "ops/rules.json"
 BANDIT_PATH = "ops/bandit.json"
@@ -27,12 +28,14 @@ FPS_PATH    = "analytics/fingerprints.json"
 TOPICS_FILE = "content/seeds_topics.txt"
 FEED_FILE   = "rss.xml"
 
+# ---------- Branding ----------
 BRAND = os.getenv("BRAND", "Career Forge")
 SITE_URL = os.getenv("SITE_URL", "https://example.com/")
 CHANNEL_TITLE = f"{BRAND} — Daily Career Post"
 CHANNEL_DESC  = f"{BRAND} — actionable career tactics, AI shortcuts, and systems."
 CHANNEL_LANG  = "en-us"
 
+# ---------- Style catalog ----------
 STYLE_CATALOG = [
     ("template_drop",    "Share a fill-in-the-blank template + 1 tiny example."),
     ("myth_vs_fact",     "Debunk 1 myth and replace with 1 fact + a quick how-to."),
@@ -48,6 +51,7 @@ STYLE_CATALOG = [
 EMOJI_PALETTE = ["✅","💬","📌","✍️","🚀","🧠","💼","⏱️","📈","🤝","🔎","📣","🗂️","🧩","🎯","⚡","🔥","🌟"]
 FORBIDDEN_MARKERS_RX = re.compile(r"\b(You:|Them:|Q:|A:|in this thread|see below)\b", re.I)
 
+# ---------- Helpers ----------
 def load_json(path, default):
     try:
         with open(path, "r", encoding="utf-8") as f:
@@ -66,7 +70,8 @@ def read_topics(path):
     except FileNotFoundError:
         base = ["Job search systems", "Interview frameworks", "Resume quant tactics"]
     trends = load_json(TRENDS_PATH, {}).get("items", [])
-    t_titles = [t["title"] for t in trends][:10]
+    t_titles = [t.get("title","") for t in trends if t.get("title")] [:10]
+    # preserve order, de-dup
     seen = set(); out=[]
     for t in base + t_titles:
         if t not in seen:
@@ -87,7 +92,6 @@ def choose_style(weights):
     return pool[0][0], pool[0][1]
 
 def slugify(text, n=60):
-    import re
     text = re.sub(r"[^\w\s-]", "", (text or "")).strip().lower()
     text = re.sub(r"[\s_-]+", "-", text)
     return text[:n] or "post"
@@ -123,6 +127,40 @@ def dup_guard_ok(title, fps, n, thr):
         if jaccard(probe, set(fp.get("ngrams", []))) >= thr:
             return False
     return True
+
+# ---- NEW: robust tag coercion ----
+def coerce_tag_list(obj):
+    """
+    Accepts list | dict | string | None and returns a clean list[str] (lowercased, unique, non-empty).
+    - list: keep string items
+    - dict: take string KEYS + any string values; also flatten list values
+    - string: split on commas/whitespace
+    """
+    out = []
+    if isinstance(obj, list):
+        cand = obj
+    elif isinstance(obj, dict):
+        cand = list(obj.keys()) + list(obj.values())
+    elif isinstance(obj, str):
+        import re as _re
+        cand = _re.split(r"[,\s]+", obj)
+    else:
+        cand = []
+    for x in cand:
+        if isinstance(x, str):
+            s = x.strip().lower()
+            if s: out.append(s)
+        elif isinstance(x, list):
+            for y in x:
+                if isinstance(y, str):
+                    s = y.strip().lower()
+                    if s: out.append(s)
+    # de-dup, preserve order
+    seen=set(); clean=[]
+    for s in out:
+        if s not in seen:
+            seen.add(s); clean.append(s)
+    return clean
 
 def call_openai(topic, style_key, style_desc, model, cta_bias=None, min_emojis=2, require_number=False):
     payload = None
@@ -197,34 +235,37 @@ def ensure_feed_scaffold():
     return tree
 
 def make_item(payload):
+    # style / cta
     style_key = (payload.get("style") or "").strip().lower() or "unspecified"
     cta_type  = (payload.get("cta_type") or "").strip().lower() or "question"
+    # title line (X-ready)
     x_line = sanitize_xline((payload.get("x_line") or "").strip())
     x_line = add_minimum_emojis(x_line, need_min=rules.get("min_emojis",2))
     if rules.get("require_number_in_title") and not re.search(r"\d+%|[$]\d+", x_line):
         x_line = x_line + " 📈"
     if len(x_line) > 230:
         x_line = x_line[:229].rsplit(" ", 1)[0] + "…"
-
+    # description (LI/FB)
     hook   = (payload.get("desc_title") or "").strip()
-    points = [p.strip(" •-") for p in (payload.get("desc_points") or []) if p.strip()]
+    points = [p.strip(" •-") for p in (payload.get("desc_points") or []) if str(p).strip()]
     cta    = (payload.get("desc_cta") or "").strip()
-
-    tag_bank = load_json(TAGS_PATH, [])
-    ptags = [t for t in (payload.get("tags") or []) if t][:2]
+    # tags (robust)
+    tag_bank = coerce_tag_list(load_json(TAGS_PATH, []))
+    ptags = coerce_tag_list(payload.get("tags") or [])[:2]
+    # merge ptags into bank (no write-back; just use here)
     for t in ptags:
         if t not in tag_bank: tag_bank.append(t)
     tags_raw = (ptags[:2]) if ptags else (tag_bank[:2])
+    # build description
     bullets_fmt = "\n".join([f"• {b}" for b in points])
     tag_str = " ".join([f"#{t}" for t in tags_raw]) if tags_raw else ""
     description = "\n".join([s for s in [hook, "", bullets_fmt, "", cta, "", tag_str] if s]).strip()
-
+    # guid/link
     now = datetime.now(timezone.utc)
     base = f"{slugify(x_line)}-{now.strftime('%Y%m%d%H%M%S')}"
-    import hashlib as _h
-    guid = _h.sha1(base.encode("utf-8")).hexdigest()
+    guid = hashlib.sha1(base.encode("utf-8")).hexdigest()
     link = f"{SITE_URL}?p={guid}"
-
+    # xml item
     item = ET.Element("item")
     ET.SubElement(item,"title").text = x_line
     ET.SubElement(item,"description").text = description
@@ -245,6 +286,7 @@ def prepend_item(tree, item):
         node.text = rss_now()
     tree.write(FEED_FILE, encoding="utf-8", xml_declaration=True)
 
+# ---------- Main ----------
 cfg   = load_json(CONFIG_PATH, {})
 rules = load_json(RULES_PATH, {})
 band  = load_json(BANDIT_PATH, {})
@@ -268,10 +310,12 @@ payload = call_openai(topic, style_key, style_desc, model,
 tree = ensure_feed_scaffold()
 item, guid, title = make_item(payload)
 
+# duplicate guard
 fps = load_json(FPS_PATH, [])
 dg = cfg.get("dup_guard", {"enabled":True,"ngram":5,"threshold":0.8,"history_size":200})
 if dg.get("enabled", True):
     if not dup_guard_ok(title, fps, dg.get("ngram",5), dg.get("threshold",0.8)):
+        # one reroll with different style weight
         alt_weights = {k:(1.0 if k!=style_key else 0.2) for k in style_weights} or {"checklist":1.0,"template_drop":1.0}
         alt_style, alt_desc = choose_style(alt_weights)
         payload2 = call_openai(topic, alt_style, alt_desc, model,
@@ -284,6 +328,7 @@ if dg.get("enabled", True):
 
 prepend_item(tree, item)
 
+# save fingerprint
 probe = list(ngrams(title, dg.get("ngram",5)))
 fps = (fps + [{"guid":guid, "ngrams":probe}])[-int(dg.get("history_size",200)):]
 os.makedirs("analytics", exist_ok=True)
