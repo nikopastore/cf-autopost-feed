@@ -37,75 +37,45 @@ jobs:
           SITE_URL: "https://nikopastore.github.io/cf-autopost-feed/"
         run: python build_rss.py
 
-      # (Optional) Strip timestamps in the main feed too; safe to keep.
+      # Optional: keep this if you still want to normalize old items
       - name: Strip timestamps from titles/descriptions and ensure GUIDs
         run: |
           python - <<'PY'
           import xml.etree.ElementTree as ET
           import re, hashlib, sys
-
           FEED = "rss.xml"
-
           def norm_entities(s: str) -> str:
               return (s or "") \
                 .replace("&nbsp;", " ") \
                 .replace("&mdash;", "—").replace("&#8212;", "—") \
                 .replace("&ndash;", "–").replace("&#8211;", "–")
-
-          STAMP_RE = re.compile(r"""(?isx)
-              \s*
-              (?:</?(?:em|i|strong|b|span)[^>]*>\s*)*
-              (?:—|–|-|\||:)?\s*
-              (?:\(|\[)?\s*
-              (?:
-                 \d{4}[-/]\d{2}[-/]\d{2}
-                 (?:[ T]\d{1,2}:\d{2}(?::\d{2})?\s?(?:AM|PM)?)?
-                 (?:\s?[A-Z]{2,4})?
-               |
-                 \d{1,2}/\d{1,2}/\d{2,4}
-              )
-              \s*(?:\)|\])?
-              \s*
-              (?:</?(?:em|i|strong|b|span)[^>]*>\s*)*
-              \s*$
-          """)
-
+          STAMP_RE = re.compile(r"""(?isx)\s*(?:—|–|-|\||:)?\s*(?:\(|\[)?\s*(?:\d{4}[-/]\d{2}[-/]\d{2}(?:[ T]\d{1,2}:\d{2}(?::\d{2})?\s?(?:AM|PM)?)?(?:\s?[A-Z]{2,4})?|\d{1,2}/\d{1,2}/\d{2,4})\s*(?:\)|\])?\s*$""")
           def strip_tail(s: str | None) -> str | None:
               if s is None: return None
-              s2 = norm_entities(s)
-              return STAMP_RE.sub("", s2)
-
+              return STAMP_RE.sub("", norm_entities(s))
           try:
               tree = ET.parse(FEED)
           except Exception as e:
               print(f"Failed to parse {FEED}: {e}", file=sys.stderr); sys.exit(1)
-
-          root = tree.getroot()
-          ch = root.find("channel")
-          if ch is None:
-              print("No <channel> found in rss.xml", file=sys.stderr); sys.exit(1)
-
+          root = tree.getroot(); ch = root.find("channel")
+          if ch is None: print("No <channel>", file=sys.stderr); sys.exit(1)
           changed = False
           for item in ch.findall("item"):
-              for tag in ("title", "description"):
+              for tag in ("title","description"):
                   n = item.find(tag)
                   if n is not None and (n.text or "").strip():
                       new_text = strip_tail(n.text)
                       if new_text != n.text:
-                          n.text = new_text
-                          changed = True
-
+                          n.text = new_text; changed = True
               guid = item.find("guid")
               if guid is None or not (guid.text or "").strip():
                   base = (item.findtext("link") or "") + "|" + (item.findtext("title") or "") + "|" + (item.findtext("pubDate") or "")
                   digest = hashlib.sha1(base.encode("utf-8", errors="ignore")).hexdigest()
                   guid = ET.SubElement(item, "guid", attrib={"isPermaLink": "false"})
-                  guid.text = digest
-                  changed = True
+                  guid.text = digest; changed = True
               else:
                   if guid.get("isPermaLink") is None:
-                      guid.set("isPermaLink", "false")
-
+                      guid.set("isPermaLink","false")
           if changed:
               tree.write(FEED, encoding="utf-8", xml_declaration=True)
               print("rss.xml updated")
@@ -118,17 +88,17 @@ jobs:
           git config user.name "cf-bot"
           git config user.email "cf-bot@users.noreply.github.com"
           git add rss.xml
-          git commit -m "Add RSS item (no timestamps) [skip ci]" || echo "No changes"
+          git commit -m "Add RSS item (normalized) [skip ci]" || echo "No changes"
           git push
 
-      # NEW: Build and commit the X-only feed
-      - name: Build X-only RSS (rss_x.xml)
+      # Build BOTH X feeds: full + live (1-item)
+      - name: Build X feeds (rss_x.xml + rss_x_live.xml)
         run: python scripts/make_x_feed.py
 
-      - name: Commit & push X RSS
+      - name: Commit & push X feeds
         run: |
           git config user.name "cf-bot"
           git config user.email "cf-bot@users.noreply.github.com"
-          git add rss_x.xml
-          git commit -m "Build/Update rss_x.xml [skip ci]" || echo "No changes"
+          git add rss_x.xml rss_x_live.xml
+          git commit -m "Build/Update X feeds [skip ci]" || echo "No changes"
           git push
