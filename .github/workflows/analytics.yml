@@ -5,8 +5,8 @@ permissions:
 
 on:
   schedule:
-    - cron: "5 15 * * *"   # 15:05 UTC -> 08:05 America/Phoenix (after your 07:40 post)
-    - cron: "35 21 * * *"  # 21:35 UTC -> 14:35 America/Phoenix (after your 14:10 post)
+    - cron: "5 15 * * *"   # 08:05 Phoenix (after AM post)
+    - cron: "35 21 * * *"  # 14:35 Phoenix (after PM post)
   workflow_dispatch:
 
 jobs:
@@ -27,14 +27,26 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Build analytics
-        run: |
-          python scripts/build_analytics.py
+      - name: Install deps
+        run: pip install -r requirements.txt
 
-      - name: Commit & push analytics
+      - name: Build analytics
+        run: python scripts/build_analytics.py
+
+      - name: Update bandit weights
+        run: python scripts/update_bandit.py
+
+      - name: Suggest best cron times
+        run: python scripts/suggest_cron.py
+
+      - name: Generate simple carousel (latest)
+        run: python scripts/make_carousel.py || true
+
+      - name: Commit & push analytics artifacts
         run: |
           git config user.name "cf-bot"
           git config user.email "cf-bot@users.noreply.github.com"
-          git add analytics/posts_features.csv analytics/feature_summary.csv analytics/latest_report.md analytics/for_chatgpt.md
-          git commit -m "analytics: update daily reports [skip ci]" || echo "No changes"
+          git add analytics/posts_features.csv analytics/feature_summary.csv analytics/latest_report.md analytics/for_chatgpt.md analytics/cron_suggestion.md carousels/latest/*
+          git add ops/bandit.json || true
+          git commit -m "analytics: update reports, bandit, cron suggestion [skip ci]" || echo "No changes"
           git push

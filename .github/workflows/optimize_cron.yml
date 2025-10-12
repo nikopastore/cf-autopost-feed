@@ -1,0 +1,15 @@
+name: Optimize Posting Times
+permissions: { contents: write }
+on:
+  schedule:
+    - cron: "0 16 * * 1"  # Mondays 09:00 Phoenix
+  workflow_dispatch:
+
+jobs:
+  optimize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { persist-credentials: true, fetch-depth: 0 }
+      - name: Optimize from analytics
+        run: python scripts/optimize_times.py

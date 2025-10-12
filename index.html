@@ -23,7 +23,6 @@
     .btnrow{ display:flex; flex-wrap:wrap; gap:10px; margin-top:10px }
     .btn{ display:inline-block; padding:10px 14px; border-radius:10px; border:1px solid var(--border); background:#0f1218; color:#cfe1ff; text-decoration:none; font-weight:600 }
     .btn:hover{ background:#121723 }
-    .btn.disabled{ opacity:.5; pointer-events:none }
     h2.section{ margin:26px 0 10px; font-size:16px }
     ul.links{ list-style:none; padding:0; margin:0 }
     ul.links li{ padding:10px 0; border-bottom:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap }
@@ -47,7 +46,10 @@
         <div id="kpi-updated" class="small muted">Last updated —</div>
         <div class="btnrow">
           <a class="btn" href="analytics/dashboard.html">Open Dashboard</a>
+          <a class="btn" href="analytics/leaderboard.html">Leaderboard</a>
           <a class="btn" href="analytics/latest_report.md">Latest Report (MD)</a>
+          <a class="btn" href="analytics/cron_suggestion.md">Cron Suggestion</a>
+          <a class="btn" href="newsletter.md">Weekly Digest</a>
         </div>
       </div>
 
@@ -56,20 +58,24 @@
         <div class="btnrow">
           <a class="btn" href="build_rss.py">build_rss.py</a>
           <a class="btn" href="scripts/make_x_feed.py">make_x_feed.py</a>
+          <a class="btn" href="scripts/make_li_feed.py">make_li_feed.py</a>
+          <a class="btn" href="scripts/make_fb_feed.py">make_fb_feed.py</a>
         </div>
         <div class="btnrow">
           <a class="btn" href="rss.xml">rss.xml</a>
           <a class="btn" href="rss_x.xml">rss_x.xml</a>
           <a class="btn" href="rss_x_live.xml"><span class="pill">LIVE</span> rss_x_live.xml</a>
+          <a class="btn" href="rss_li_live.xml"><span class="pill">LIVE</span> rss_li_live.xml</a>
+          <a class="btn" href="rss_fb_live.xml"><span class="pill">LIVE</span> rss_fb_live.xml</a>
         </div>
-        <div class="small muted" style="margin-top:8px">Point your X Zap at <strong>rss_x_live.xml</strong> for a 1-item feed.</div>
+        <div class="small muted" style="margin-top:8px">Point Zaps at the <strong>LIVE</strong> feeds for one-item triggers.</div>
       </div>
 
       <div class="card">
         <h3>🔗 Integrations</h3>
         <div class="btnrow">
-          <a id="zapier-dashboard" class="btn disabled" href="#" target="_blank" rel="noopener">Open Zapier Dashboard</a>
-          <a id="buffer-dashboard" class="btn disabled" href="#" target="_blank" rel="noopener">Open Buffer Dashboard</a>
+          <a id="zapier-dashboard" class="btn" href="#" target="_blank" rel="noopener">Open Zapier Dashboard</a>
+          <a id="buffer-dashboard" class="btn" href="#" target="_blank" rel="noopener">Open Buffer Dashboard</a>
         </div>
         <div id="link-warning" class="warn">Set both links in the CONFIG block at the bottom of this page.</div>
       </div>
@@ -98,14 +104,6 @@
         <div>🧠 Seeds <span class="pill">content/seeds_topics.txt</span></div>
         <a href="content/seeds_topics.txt">View</a>
       </li>
-      <li>
-        <div>⚡ Zapier Dashboard</div>
-        <a id="ql-zapier" class="btn disabled" href="#" target="_blank" rel="noopener">Open</a>
-      </li>
-      <li>
-        <div>📦 Buffer Dashboard</div>
-        <a id="ql-buffer" class="btn disabled" href="#" target="_blank" rel="noopener">Open</a>
-      </li>
     </ul>
   </main>
 
@@ -124,40 +122,23 @@
     document.getElementById('kpi-total').textContent = posts.length.toString();
     const dt = posts.map(r=>r.pubDate_local).filter(Boolean).sort().pop();
     document.getElementById('kpi-updated').textContent = dt ? ('Last updated ' + new Date(dt).toLocaleString()) : 'Last updated —';
-  }catch(e){
-    console.warn('Analytics files not ready yet.', e);
-  }
+  }catch(e){ console.warn('Analytics files not ready yet.', e); }
 
-  // ---- CONFIG: paste your real dashboards here (include https://) ----
+  // ---- CONFIG: paste your dashboards here (include https://) ----
   const LINKS = {
-    zapier: "https://zapier.com/app/zaps",            // EXAMPLE
-    buffer: "https://publish.buffer.com/"             // EXAMPLE
+    zapier: "https://zapier.com/app/zaps",         // EXAMPLE
+    buffer: "https://publish.buffer.com/"          // EXAMPLE
   };
-  // --------------------------------------------------------------------
-
-  // Apply links; if missing, keep buttons visible but disabled with a hint
+  // ----------------------------------------------------------------
   function setLink(id, url){
     const el = document.getElementById(id);
     if(!el) return;
-    if(url && /^https?:\/\//.test(url) && !url.includes('<YOUR_')){
-      el.href = url;
-      el.classList.remove('disabled');
-    } else {
-      el.href = '#';
-      el.classList.add('disabled');
-    }
+    if(url && /^https?:\/\//.test(url)){
+      el.href = url; document.getElementById('link-warning').style.display='none';
+    } else { el.href='#'; }
   }
   setLink('zapier-dashboard', LINKS.zapier);
   setLink('buffer-dashboard', LINKS.buffer);
-  setLink('ql-zapier', LINKS.zapier);
-  setLink('ql-buffer', LINKS.buffer);
-
-  // Hide the yellow warning if both links are set
-  const bothSet = ['zapier','buffer'].every(k => /^https?:\/\//.test(LINKS[k]) && !LINKS[k].includes('<YOUR_'));
-  if(bothSet) {
-    const warn = document.getElementById('link-warning');
-    if(warn) warn.style.display = 'none';
-  }
 })();
 </script>
 </body>

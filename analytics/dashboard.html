@@ -116,8 +116,7 @@
 
   function parseCSV(url){
     return new Promise((resolve,reject)=>{
-      Papa.parse(url, {
-        download:true, header:true, skipEmptyLines:true,
+      Papa.parse(url, { download:true, header:true, skipEmptyLines:true,
         complete: res => resolve(res.data), error: err => reject(err)
       });
     });
@@ -127,7 +126,6 @@
     console.error(e); alert('Failed to load analytics CSVs. Make sure analytics/*.csv exist.');
   });
 
-  // KPIs
   const total = posts.length;
   const withMetrics = posts.filter(r => (["likes","replies","reposts","clicks","saves"].some(k => +r[k]>0))).length;
   const avgScore = (posts.reduce((s,r)=>s+ (+r.eng_score||0),0) / Math.max(1,total)).toFixed(2);
@@ -135,11 +133,9 @@
   document.getElementById('kpi-with-metrics').textContent = withMetrics;
   document.getElementById('kpi-avg-score').textContent = avgScore;
 
-  // Last updated ≈ newest pubDate_local
   const dt = posts.map(r => r.pubDate_local).filter(Boolean).sort().pop();
   document.getElementById('last-updated').textContent = dt ? ('Last updated ' + new Date(dt).toLocaleString()) : 'Last updated —';
 
-  // Helpers from summary
   function rowsByFeature(key){
     return summary.filter(r => r.feature === key)
                   .map(r => ({bucket: r.bucket, avg: +r.avg_eng_score, n:+r.n_posts}))
@@ -155,20 +151,12 @@
   document.getElementById('kpi-best-style').textContent = 'Style: ' + bestLabel(styleRows);
   document.getElementById('kpi-best-cta').textContent   = 'CTA: '   + bestLabel(ctaRows);
 
-  // Build charts
   function barChart(ctxId, rows, label){
     const ctx = document.getElementById(ctxId);
     const labels = rows.map(r=>`${r.bucket} (n=${r.n})`);
     const data = rows.map(r=>r.avg);
-    new Chart(ctx, {
-      type:'bar',
-      data:{ labels, datasets:[{ label, data }] },
-      options:{
-        responsive:true,
-        scales:{ y:{ beginAtZero:true } },
-        plugins:{ legend:{ display:false } }
-      }
-    });
+    new Chart(ctx, { type:'bar', data:{ labels, datasets:[{ label, data }] },
+      options:{ responsive:true, scales:{ y:{ beginAtZero:true } }, plugins:{ legend:{ display:false } } } });
   }
 
   barChart('chart-style', styleRows, 'Avg engagement by style');
@@ -176,32 +164,20 @@
   barChart('chart-emoji', rowsByFeature('emoji'), 'Avg engagement by emoji count');
   barChart('chart-length',rowsByFeature('len'),   'Avg engagement by title length');
 
-  // Top posts table (top 10 by eng_score)
   const top = posts.slice().sort((a,b)=> (+b.eng_score||0) - (+a.eng_score||0)).slice(0,10);
   const tbody = document.querySelector('#top-table tbody');
   top.forEach(r=>{
     const tr = document.createElement('tr');
     const cells = [
-      r.title_sample,
-      (+r.eng_score||0).toFixed(2),
-      r.style || '—',
-      r.cta || '—',
-      r.title_emoji_ct || 0,
-      r.title_len || 0,
+      r.title_sample,(+r.eng_score||0).toFixed(2),r.style || '—',r.cta || '—',r.title_emoji_ct || 0,r.title_len || 0,
       r.likes||0, r.replies||0, r.reposts||0, r.clicks||0, r.saves||0,
       r.pubDate_local ? new Date(r.pubDate_local).toLocaleString() : '—',
       r.link ? `<a href="${r.link}" target="_blank" rel="noopener">open</a>` : ''
     ];
-    cells.forEach((val,i)=>{
-      const td = document.createElement('td');
-      td.innerHTML = val;
-      if([1,4,5,6,7,8,9,10,11].includes(i)) td.className='nowrap';
-      tr.appendChild(td);
-    });
+    cells.forEach((val,i)=>{ const td=document.createElement('td'); td.innerHTML=val; if([1,4,5,6,7,8,9,10,11].includes(i)) td.className='nowrap'; tr.appendChild(td); });
     tbody.appendChild(tr);
   });
 
-  // Render latest_report.md
   try{
     const md = await (await fetch(mdReportUrl)).text();
     document.getElementById('md-report').innerHTML = marked.parse(md);

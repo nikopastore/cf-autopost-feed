@@ -1,0 +1,5 @@
+{
+  "paused": false,
+  "dup_guard": { "enabled": true, "ngram": 5, "threshold": 0.80, "history_size": 200 },
+  "model": "gpt-5"
+}

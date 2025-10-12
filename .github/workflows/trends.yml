@@ -1,0 +1,25 @@
+name: Harvest Trends
+permissions: { contents: write }
+on:
+  schedule:
+    - cron: "0 13 * * *"   # 06:00 Phoenix
+  workflow_dispatch:
+
+jobs:
+  trends:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { persist-credentials: true, fetch-depth: 0 }
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+      - name: Harvest Google News
+        run: python scripts/trend_harvest.py
+      - name: Commit trends
+        run: |
+          git config user.name "cf-bot"
+          git config user.email "cf-bot@users.noreply.github.com"
+          git add content/trends.json
+          git commit -m "chore(trends): refresh trends [skip ci]" || echo "No changes"
+          git push

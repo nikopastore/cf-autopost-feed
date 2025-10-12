@@ -5,8 +5,8 @@ permissions:
 
 on:
   schedule:
-    - cron: "40 14 * * *"   # 14:40 UTC -> 07:40 America/Phoenix
-    - cron: "10 21 * * *"   # 21:10 UTC -> 14:10 America/Phoenix
+    - cron: "40 14 * * *"   # 07:40 America/Phoenix
+    - cron: "10 21 * * *"   # 14:10 America/Phoenix
   workflow_dispatch:
 
 jobs:
@@ -30,75 +30,38 @@ jobs:
       - name: Install deps
         run: pip install -r requirements.txt
 
+      - name: Harvest trends (best-effort)
+        run: python scripts/trend_harvest.py || true
+
       - name: Generate RSS item
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           BRAND: "Career Forge"
           SITE_URL: "https://nikopastore.github.io/cf-autopost-feed/"
+          MODEL: "gpt-5"
         run: python build_rss.py
 
-      # Optional: keep this if you still want to normalize old items
-      - name: Strip timestamps from titles/descriptions and ensure GUIDs
-        run: |
-          python - <<'PY'
-          import xml.etree.ElementTree as ET
-          import re, hashlib, sys
-          FEED = "rss.xml"
-          def norm_entities(s: str) -> str:
-              return (s or "") \
-                .replace("&nbsp;", " ") \
-                .replace("&mdash;", "—").replace("&#8212;", "—") \
-                .replace("&ndash;", "–").replace("&#8211;", "–")
-          STAMP_RE = re.compile(r"""(?isx)\s*(?:—|–|-|\||:)?\s*(?:\(|\[)?\s*(?:\d{4}[-/]\d{2}[-/]\d{2}(?:[ T]\d{1,2}:\d{2}(?::\d{2})?\s?(?:AM|PM)?)?(?:\s?[A-Z]{2,4})?|\d{1,2}/\d{1,2}/\d{2,4})\s*(?:\)|\])?\s*$""")
-          def strip_tail(s: str | None) -> str | None:
-              if s is None: return None
-              return STAMP_RE.sub("", norm_entities(s))
-          try:
-              tree = ET.parse(FEED)
-          except Exception as e:
-              print(f"Failed to parse {FEED}: {e}", file=sys.stderr); sys.exit(1)
-          root = tree.getroot(); ch = root.find("channel")
-          if ch is None: print("No <channel>", file=sys.stderr); sys.exit(1)
-          changed = False
-          for item in ch.findall("item"):
-              for tag in ("title","description"):
-                  n = item.find(tag)
-                  if n is not None and (n.text or "").strip():
-                      new_text = strip_tail(n.text)
-                      if new_text != n.text:
-                          n.text = new_text; changed = True
-              guid = item.find("guid")
-              if guid is None or not (guid.text or "").strip():
-                  base = (item.findtext("link") or "") + "|" + (item.findtext("title") or "") + "|" + (item.findtext("pubDate") or "")
-                  digest = hashlib.sha1(base.encode("utf-8", errors="ignore")).hexdigest()
-                  guid = ET.SubElement(item, "guid", attrib={"isPermaLink": "false"})
-                  guid.text = digest; changed = True
-              else:
-                  if guid.get("isPermaLink") is None:
-                      guid.set("isPermaLink","false")
-          if changed:
-              tree.write(FEED, encoding="utf-8", xml_declaration=True)
-              print("rss.xml updated")
-          else:
-              print("No changes detected by stripper")
-          PY
-
-      - name: Commit & push main RSS
+      - name: Commit & push main RSS + fingerprints
         run: |
           git config user.name "cf-bot"
           git config user.email "cf-bot@users.noreply.github.com"
-          git add rss.xml
-          git commit -m "Add RSS item (normalized) [skip ci]" || echo "No changes"
+          git add rss.xml analytics/fingerprints.json
+          git commit -m "Add RSS item [skip ci]" || echo "No changes"
           git push
 
-      # Build BOTH X feeds: full + live (1-item)
-      - name: Build X feeds (rss_x.xml + rss_x_live.xml)
+      - name: Build X feeds
         run: python scripts/make_x_feed.py
 
-      - name: Commit & push X feeds
+      - name: Build LinkedIn feeds
+        run: python scripts/make_li_feed.py
+
+      - name: Build Facebook feeds
+        run: python scripts/make_fb_feed.py
+
+      - name: Commit & push platform feeds
         run: |
           git config user.name "cf-bot"
           git config user.email "cf-bot@users.noreply.github.com"
-          git add rss_x.xml rss_x_live.xml
-          git commit -m "Build/Update X feeds [skip ci]" || echo "No changes"
+          git add rss_x.xml rss_x_live.xml rss_li.xml rss_li_live.xml rss_fb.xml rss_fb_live.xml
+          git commit -m "Update platform feeds [skip ci]" || echo "No changes"
           git push

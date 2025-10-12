@@ -1,0 +1,6 @@
+{
+  "resume": ["resume", "ats", "bullets", "portfolio"],
+  "interview": ["interview", "behavioral", "star", "stories"],
+  "strategy": ["jobsearch", "networking", "systems", "outreach"],
+  "offer": ["salary", "negotiation", "comp", "offer"]
+}

@@ -1,0 +1,6 @@
+{
+  "min_emojis": 2,
+  "require_number_in_title": false,
+  "prefer_styles": [],
+  "forbid_dialogue": true
+}

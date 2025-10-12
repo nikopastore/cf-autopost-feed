@@ -1,0 +1,43 @@
+<!doctype html><html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Career Forge — Leaderboard</title>
+<script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+<style>
+body{font:14px system-ui,Segoe UI,Roboto; margin:0; background:#0b0c10; color:#e5e7eb}
+main{max-width:1000px;margin:20px auto;padding:0 16px}
+h1{font-size:20px} table{width:100%;border-collapse:collapse}
+th,td{padding:10px;border-bottom:1px solid #1c1f26} th{position:sticky;top:0;background:#101216}
+.pill{padding:2px 8px;border-radius:999px;background:#1c2430;color:#cfe1ff;font-size:11px}
+</style></head><body><main>
+<h1>Career Forge — Leaderboard</h1>
+<p class="pill">Top posts by Style, CTA, and Time</p>
+<h3>Overall Top 20</h3>
+<table id="t1"><thead><tr><th>Title</th><th>Score</th><th>Style</th><th>CTA</th><th>Time</th><th>Emojis</th><th>Len</th></tr></thead><tbody></tbody></table>
+<h3>Best by Style</h3>
+<div id="styles"></div>
+<script>
+(async function(){
+  const bust='?t='+Date.now();
+  function parseCSV(u){return new Promise((res,rej)=>Papa.parse(u,{download:true,header:true,complete:r=>res(r.data),error:rej}))}
+  const rows = await parseCSV('../analytics/posts_features.csv'+bust);
+  const top = rows.slice().sort((a,b)=> (+b.eng_score||0)-(+a.eng_score||0)).slice(0,20);
+  const tb = document.querySelector('#t1 tbody');
+  top.forEach(r=>{
+    const tr=document.createElement('tr');
+    [r.title_sample,(+r.eng_score||0).toFixed(2),r.style,r.cta,r.pubDate_local, r.title_emoji_ct, r.title_len]
+    .forEach(v=>{const td=document.createElement('td'); td.textContent=v||'—'; tr.appendChild(td);});
+    tb.appendChild(tr);
+  });
+  const byStyle={};
+  rows.forEach(r=>{(byStyle[r.style] ||= []).push(r);});
+  const box=document.getElementById('styles');
+  Object.keys(byStyle).forEach(s=>{
+    const arr=byStyle[s].slice().sort((a,b)=> (+b.eng_score||0)-(+a.eng_score||0)).slice(0,5);
+    const h=document.createElement('h4'); h.textContent=s; box.appendChild(h);
+    const tbl=document.createElement('table'); tbl.innerHTML='<thead><tr><th>Title</th><th>Score</th></tr></thead>';
+    const tb2=document.createElement('tbody');
+    arr.forEach(r=>{const tr=document.createElement('tr'); const td1=document.createElement('td'); td1.textContent=r.title_sample; const td2=document.createElement('td'); td2.textContent=(+r.eng_score||0).toFixed(2); tr.append(td1,td2); tb2.appendChild(tr);});
+    tbl.appendChild(tb2); box.appendChild(tbl);
+  });
+})();
+</script>
+</main></body></html>

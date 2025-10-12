@@ -1,0 +1,2 @@
+https://news.google.com/rss/search?q=interview+tips+OR+resume+tips+OR+salary+negotiation&hl=en-US&gl=US&ceid=US:en
+https://news.google.com/rss/search?q=job+market+trends+OR+hiring+freeze+OR+tech+layoffs&hl=en-US&gl=US&ceid=US:en

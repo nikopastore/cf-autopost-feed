@@ -1,0 +1,20 @@
+{
+  "style_weights": {
+    "template_drop": 1.0,
+    "myth_vs_fact": 1.0,
+    "mistake_fix": 1.0,
+    "checklist": 1.0,
+    "data_bite": 1.0,
+    "challenge": 1.0,
+    "hot_take": 1.0,
+    "caselet": 1.0,
+    "hook_lab": 1.0,
+    "swipe_headlines": 1.0
+  },
+  "cta_weights": {
+    "question": 1.0,
+    "pollish": 1.0,
+    "challenge": 1.0,
+    "tip": 1.0
+  }
+}
