@@ -9,18 +9,19 @@ We generate self-contained, emoji-forward posts twice daily. Below are features 
 ## Feature Summary (averages)
 
 - bullets :: 0 => avg_score=0.0 (n=6)
-- bullets :: 1+ => avg_score=0.0 (n=9)
-- dialogue :: no => avg_score=0.0 (n=15)
+- bullets :: 1+ => avg_score=0.0 (n=13)
+- dialogue :: no => avg_score=0.0 (n=19)
 - emoji :: 0 => avg_score=0.0 (n=9)
-- emoji :: 2 => avg_score=0.0 (n=5)
+- emoji :: 2 => avg_score=0.0 (n=9)
 - emoji :: 3+ => avg_score=0.0 (n=1)
-- len :: <= 120 => avg_score=0.0 (n=10)
+- len :: <= 120 => avg_score=0.0 (n=14)
 - len :: <= 160 => avg_score=0.0 (n=3)
 - len :: <= 200 => avg_score=0.0 (n=1)
 - len :: <= 240 => avg_score=0.0 (n=1)
-- number :: no => avg_score=0.0 (n=1)
-- number :: yes => avg_score=0.0 (n=14)
-- question :: yes => avg_score=0.0 (n=15)
+- number :: no => avg_score=0.0 (n=2)
+- number :: yes => avg_score=0.0 (n=17)
+- question :: yes => avg_score=0.0 (n=19)
+- time :: early-morning => avg_score=0.0 (n=4)
 - time :: evening => avg_score=0.0 (n=12)
 - time :: late-afternoon => avg_score=0.0 (n=3)
 
@@ -33,8 +34,8 @@ Return a checklist with examples.
 
 ## Top Posts (samples)
 
+- You: "What’s the salary range?" Them: "$50k-$60k." You: "Is that negotiable?" 💼🤝  | score=0.0 | emojis=2 | len=80
+- You: "What are the growth opportunities here?" Them: "Not much." You: "Thanks for clarifying!" 🚀💼  | score=0.0 | emojis=2 | len=97
+- You: "I led a team of 5 to boost sales by 30% in Q2. Here's how..." 📈🤝  | score=0.0 | emojis=2 | len=70
+- You: "Can you describe a challenge you overcame?" Them: "Sure! I tackled X by doing Y, resulting in Z." 🚀💼  | score=0.0 | emojis=2 | len=106
 - When pitching a project, I say, "Here’s the impact: X% increase in Y!" 📈💼  | score=0.0 | emojis=2 | len=73
-- You: "I led a project that improved efficiency by 25% in Q3." 📈 Them: "How did you achieve that?" You: "By implementing a new workflow system!" 🚀  | score=0.0 | emojis=2 | len=145
-- When pitching a project, I say, "I achieved X by doing Y, which led to Z." 📈🤝  | score=0.0 | emojis=2 | len=77
-- When applying for roles, I showcase 3 key projects: 1. Metrics improvement 📈, 2. Process optimization 🛠️, 3. Cross-team collaboration 🤝.  | score=0.0 | emojis=4 | len=136
-- You: "I analyzed project outcomes and improved efficiency by 20%.", Them: "How did you do that?", You: "I implemented a new tracking system!" 📈💼  | score=0.0 | emojis=2 | len=144
