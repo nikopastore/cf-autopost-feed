@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """
-build_rss.py — Career Forge: self-contained posts
+build_rss.py — Career Forge: emoji-forward, self-contained posts
 
 Creates/updates rss.xml by generating 1 new <item> per run:
-- title  = X-ready, self-contained micro-post (contains the actual tactic/script; no "this/see below")
-- description = richer version for LinkedIn/FB (bullets + CTA + tags)
-- link   = stable GUID URL (optional to use in non-X platforms)
+- title       = X-ready, self-contained micro-post (includes the actual tactic/script; emojis allowed)
+- description = richer version for LinkedIn/FB (hook + bullets + CTA + tags; emojis allowed)
+- link        = stable GUID URL (optional for non-X platforms)
 
-Env: OPENAI_API_KEY, BRAND, SITE_URL
+Env vars: OPENAI_API_KEY, BRAND, SITE_URL
 """
 
 import os, re, json, hashlib, random
@@ -18,6 +18,7 @@ import xml.etree.ElementTree as ET
 MODEL = os.getenv("MODEL", "gpt-4o-mini")
 BRAND = os.getenv("BRAND", "Career Forge")
 SITE_URL = os.getenv("SITE_URL", "https://example.com/")
+
 TOPICS_FILE   = "content/seeds_topics.txt"
 FEED_FILE     = "rss.xml"
 CHANNEL_TITLE = f"{BRAND} — Daily Career Post"
@@ -32,9 +33,9 @@ def read_topics(path):
     try:
         with open(path, "r", encoding="utf-8") as f:
             topics = [ln.strip() for ln in f if ln.strip()]
-        return topics or ["AI resume rewrite tactics", "Interview frameworks that land offers"]
+        return topics or ["Emoji-powered resume tips", "Interview frameworks that land offers"]
     except FileNotFoundError:
-        return ["AI resume rewrite tactics", "Interview frameworks that land offers"]
+        return ["Emoji-powered resume tips", "Interview frameworks that land offers"]
 
 def choose_topic(topics):
     seed = int(datetime.now(timezone.utc).strftime("%Y%m%d%H"))
@@ -47,7 +48,7 @@ def slugify(text, n=60):
     return text[:n] or "post"
 
 def call_openai(topic):
-    # Robust call with fallback
+    """Ask the model for a self-contained X line + richer body WITH tasteful emojis."""
     try:
         from openai import OpenAI
         client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
@@ -63,21 +64,22 @@ def call_openai(topic):
             "content": f"""
 Return STRICT JSON with keys:
 
-- x_line: a SINGLE self-contained line (<= 220 chars) that includes the actual tactic/script inline.
-  * Must NOT say "this/see below/in thread".
-  * Include the core script/template in quotes if useful, e.g.: You: "…"; Them: "…"; You: "…"
-  * No hashtags. No links. No emojis.
+- x_line: a SINGLE self-contained line (<= 230 chars) that includes the actual tactic/script inline.
+  * Include 2–4 tasteful emojis woven into the text (examples: ✅💬📌✍️🚀🧠💼🕒📈❌👉).
+  * Must NOT say “this/see below/in thread”.
+  * Prefer including the core script/template in quotes, e.g.: You: "…"; Them: "…"; You: "…"
+  * No hashtags. No links.
 
-- hook: concise hook (<= 80 chars) for richer networks (no emojis).
-- bullets: 2–4 short lines (<= 65 chars each) with concrete steps/templates.
-- cta: 1 question inviting replies with options (<= 110 chars). No emojis.
-- tags: 2 short tags (<= 16 chars each, lowercase), without '#' (we'll add).
+- hook: concise hook (<= 80 chars) for richer networks, with 1–2 emojis.
+- bullets: 2–4 short lines (<= 65 chars each) with concrete steps/templates; allow 1 emoji per line.
+- cta: 1 question inviting replies with options (<= 110 chars), may include 1 emoji.
+- tags: 2 short tags (<= 16 chars each, lowercase), without '#' (we will add them).
 
 Topic: "{topic}"
 
 Constraints:
 - Be specific. Prefer numbers, scripts, mini-templates.
-- Avoid generic advice. Avoid deictic language ("this/above/below").
+- Avoid generic advice and deictic language (“this/above/below”).
 Return ONLY JSON.
 """,
         }
@@ -88,15 +90,16 @@ Return ONLY JSON.
         start, end = txt.find("{"), txt.rfind("}")
         payload = json.loads(txt[start:end+1])
     except Exception:
+        # Fallback with emojis, fully self-contained
         payload = {
-            "x_line": 'Salary talk? Try: You: "Based on scope & market, I’m targeting $X–$Y." Them: "Lower budget." You: "Is there flex on base, sign-on, or equity?"',
-            "hook": "Salary negotiation that feels natural",
+            "x_line": '💬 Salary talk script — You: "Based on scope & market, I’m targeting $X–$Y." Them: "Lower budget." You: "Is there flex on base, sign-on, or equity?" ✅',
+            "hook": "Salary negotiation that feels natural ✍️",
             "bullets": [
-                "Open with scope + market data",
-                "State a range you can defend",
-                "Trade: base vs. sign-on vs. equity",
+                "Open with scope + market data 📈",
+                "State a range you can defend 💼",
+                "Trade: base vs. sign-on vs. equity 🔁",
             ],
-            "cta": "Which lever would you use first — base, sign-on, or equity?",
+            "cta": "Which lever first — base, sign-on, or equity? 👉",
             "tags": ["careerforge", "jobsearch"],
         }
     return payload
@@ -143,10 +146,10 @@ def make_item(payload):
     cta     = (payload.get("cta") or "").strip()
     tags    = [t for t in (payload.get("tags") or []) if t][:2]
 
-    # Title = the self-contained X line
+    # Title = the self-contained, emoji-friendly X line
     title = x_line
 
-    # Description = richer body for LinkedIn/FB
+    # Description = richer body for LinkedIn/FB (with emojis)
     bullets_fmt = "\n".join([f"• {b}" for b in bullets])
     tag_str = " ".join([f"#{t}" for t in tags]) if tags else ""
     desc_parts = [hook] if hook else []
@@ -193,6 +196,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 if __name__ == "__main__":
     main()
