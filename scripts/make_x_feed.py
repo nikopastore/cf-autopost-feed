@@ -15,7 +15,7 @@ RESERVED_PREFIX = ""       # e.g., "CF: "
 RESERVED_SUFFIX = " #careerforge"       # e.g., " #CareerForge"
 
 BASE_LIMIT   = 280
-URL_RESERVE  = 28  # ultra-safe t.co reserve (approx 23), covers any tool extras
+URL_RESERVE  = 0  # ultra-safe t.co reserve (approx 23), covers any tool extras
 # =================================================
 
 STAMP_RE = re.compile(r"""(?isx)
