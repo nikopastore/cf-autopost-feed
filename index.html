@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
   <style>
-    :root { --bg:#0b0c10; --card:#111318; --muted:#9aa4af; --fg:#e5e7eb; --accent:#60a5fa; --border:#1c1f26; }
+    :root { --bg:#0b0c10; --card:#111318; --muted:#9aa4af; --fg:#e5e7eb; --border:#1c1f26; }
     *{ box-sizing:border-box }
     body{ margin:0; font:14px/1.45 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial; background:var(--bg); color:var(--fg); }
     header{ padding:28px 18px; border-bottom:1px solid #222; position:sticky; top:0; background:linear-gradient(180deg,rgba(11,12,16,.96),rgba(11,12,16,.78)); backdrop-filter: blur(4px); z-index:9;}
@@ -30,14 +30,12 @@
     ul.links a:hover{ text-decoration:underline }
     .pill{ display:inline-block; padding:2px 8px; border-radius:999px; font-size:11px; background:#1c2430; color:#cfe1ff; }
     .small{ font-size:12px }
-    .label{ color:#cbd5e1; font-size:12px; margin-top:6px }
-    .stack { display:grid; gap:6px }
   </style>
 </head>
 <body>
   <header>
     <h1>Career Forge — Ops & Analytics Hub</h1>
-    <div class="sub">Automated posts + live analytics (powered by GitHub Actions & static files)</div>
+    <div class="sub">Automated posts + live analytics (GitHub Actions & static files)</div>
   </header>
   <main>
     <div class="grid cards">
@@ -49,13 +47,6 @@
           <a class="btn" href="analytics/dashboard.html">Open Dashboard</a>
           <a class="btn" href="analytics/latest_report.md">Latest Report (MD)</a>
         </div>
-      </div>
-
-      <div class="card">
-        <h3>🏆 Top Style / CTA</h3>
-        <div class="kpi" id="kpi-style">—</div>
-        <div class="kpi" id="kpi-cta">—</div>
-        <div class="small muted">Averages from feature_summary.csv</div>
       </div>
 
       <div class="card">
@@ -72,25 +63,14 @@
         <div class="small muted" style="margin-top:8px">Point your X Zap at <strong>rss_x_live.xml</strong> for a 1-item feed.</div>
       </div>
 
-      <!-- NEW: Integrations card -->
+      <!-- Simplified Integrations -->
       <div class="card">
-        <h3>🔗 Posting Integrations</h3>
-        <div class="label">Zapier Zaps</div>
-        <div class="btnrow stack">
-          <a id="zap-x" class="btn" href="#" target="_blank" rel="noopener">Zapier — X Zap</a>
-          <a id="zap-li" class="btn" href="#" target="_blank" rel="noopener">Zapier — LinkedIn Zap</a>
-          <a id="zap-other" class="btn" href="#" target="_blank" rel="noopener">Zapier — Other Zap</a>
+        <h3>🔗 Integrations</h3>
+        <div class="btnrow">
+          <a id="zapier-dashboard" class="btn" href="#" target="_blank" rel="noopener">Open Zapier Dashboard</a>
+          <a id="buffer-dashboard" class="btn" href="#" target="_blank" rel="noopener">Open Buffer Dashboard</a>
         </div>
-        <div class="label" style="margin-top:12px">Buffer Profiles</div>
-        <div class="btnrow stack">
-          <a id="buf-x-queue" class="btn" href="#" target="_blank" rel="noopener">Buffer — X Queue</a>
-          <a id="buf-x-sched" class="btn" href="#" target="_blank" rel="noopener">Buffer — X Schedule</a>
-          <a id="buf-li-queue" class="btn" href="#" target="_blank" rel="noopener">Buffer — LinkedIn Queue</a>
-          <a id="buf-li-sched" class="btn" href="#" target="_blank" rel="noopener">Buffer — LinkedIn Schedule</a>
-        </div>
-        <div class="small muted" style="margin-top:10px">
-          Edit the <strong>CONFIG</strong> block at the bottom of this page to insert your exact Zapier/Buffer links.
-        </div>
+        <div class="small muted" style="margin-top:8px">Set both links in the CONFIG block at the bottom of this page.</div>
       </div>
 
       <div class="card">
@@ -100,7 +80,6 @@
           <a class="btn" href="analytics/feature_summary.csv">feature_summary.csv</a>
           <a class="btn" href="analytics/for_chatgpt.md">brief for ChatGPT</a>
         </div>
-        <div class="small muted" style="margin-top:8px">Paste “brief for ChatGPT” into your AI to get style/CTA recommendations.</div>
       </div>
     </div>
 
@@ -119,32 +98,12 @@
         <a href="content/seeds_topics.txt">View</a>
       </li>
       <li>
-        <div>⚡ Zapier — X Zap</div>
-        <a id="ql-zap-x" href="#" target="_blank" rel="noopener">Open</a>
+        <div>⚡ Zapier Dashboard</div>
+        <a id="ql-zapier" href="#" target="_blank" rel="noopener">Open</a>
       </li>
       <li>
-        <div>⚡ Zapier — LinkedIn Zap</div>
-        <a id="ql-zap-li" href="#" target="_blank" rel="noopener">Open</a>
-      </li>
-      <li>
-        <div>⚡ Zapier — Other Zap</div>
-        <a id="ql-zap-other" href="#" target="_blank" rel="noopener">Open</a>
-      </li>
-      <li>
-        <div>📦 Buffer — X Queue</div>
-        <a id="ql-buf-xq" href="#" target="_blank" rel="noopener">Open</a>
-      </li>
-      <li>
-        <div>📦 Buffer — X Schedule</div>
-        <a id="ql-buf-xs" href="#" target="_blank" rel="noopener">Open</a>
-      </li>
-      <li>
-        <div>📦 Buffer — LinkedIn Queue</div>
-        <a id="ql-buf-liq" href="#" target="_blank" rel="noopener">Open</a>
-      </li>
-      <li>
-        <div>📦 Buffer — LinkedIn Schedule</div>
-        <a id="ql-buf-lis" href="#" target="_blank" rel="noopener">Open</a>
+        <div>📦 Buffer Dashboard</div>
+        <a id="ql-buffer" href="#" target="_blank" rel="noopener">Open</a>
       </li>
     </ul>
   </main>
@@ -163,39 +122,20 @@
     const posts = await parseCSV('analytics/posts_features.csv'+bust);
     const summary = await parseCSV('analytics/feature_summary.csv'+bust);
 
-    // KPIs
     document.getElementById('kpi-total').textContent = posts.length.toString();
     const dt = posts.map(r=>r.pubDate_local).filter(Boolean).sort().pop();
     document.getElementById('kpi-updated').textContent = dt ? ('Last updated ' + new Date(dt).toLocaleString()) : 'Last updated —';
-
-    function rowsByFeature(f){ return summary.filter(r=>r.feature===f).sort((a,b)=> (+b.avg_eng_score||0) - (+a.avg_eng_score||0)); }
-    const bestStyle = rowsByFeature('style')[0];
-    const bestCTA   = rowsByFeature('cta')[0];
-    document.getElementById('kpi-style').textContent = 'Style: ' + (bestStyle ? `${bestStyle.bucket} (${(+bestStyle.avg_eng_score).toFixed(2)})` : '—');
-    document.getElementById('kpi-cta').textContent   = 'CTA: '   + (bestCTA   ? `${bestCTA.bucket} (${(+bestCTA.avg_eng_score).toFixed(2)})`   : '—');
   }catch(e){
     console.warn('Analytics files not ready yet.', e);
   }
 
-  // ---------- CONFIG: paste your real links here ----------
+  // ---- CONFIG: paste your real dashboards here ----
   const LINKS = {
-    zapier: {
-      // Get these from Zapier: open your Zap → copy URL
-      x:        "https://zapier.com/app/zaps/<YOUR_X_ZAP_ID>/overview",
-      linkedin: "https://zapier.com/app/zaps/<YOUR_LINKEDIN_ZAP_ID>/overview",
-      other:    "https://zapier.com/app/zaps/<YOUR_OTHER_ZAP_ID>/overview"
-    },
-    buffer: {
-      // Get these from Buffer: open profile → copy Queue URL; Schedule tab URL for schedule
-      xQueue:   "https://publish.buffer.com/profile/<YOUR_X_PROFILE_ID>/queue",
-      xSched:   "https://publish.buffer.com/profile/<YOUR_X_PROFILE_ID>/settings/schedule",
-      liQueue:  "https://publish.buffer.com/profile/<YOUR_LINKEDIN_PROFILE_ID>/queue",
-      liSched:  "https://publish.buffer.com/profile/<YOUR_LINKEDIN_PROFILE_ID>/settings/schedule"
-    }
+    zapier: "https://zapier.com/app/zaps/<YOUR_WORKSPACE_OR_ZAPS>",   // e.g., https://zapier.com/app/zaps
+    buffer: "https://publish.buffer.com/<YOUR_WORKSPACE_OR_OVERVIEW>"  // e.g., https://publish.buffer.com/
   };
-  // --------------------------------------------------------
+  // -------------------------------------------------
 
-  // Apply links to buttons + quick links (hide if not filled)
   function setHref(id, url){
     const el = document.getElementById(id);
     if(!el) return;
@@ -203,22 +143,10 @@
     else { el.style.display = 'none'; }
   }
 
-  setHref('zap-x', LINKS.zapier.x);
-  setHref('zap-li', LINKS.zapier.linkedin);
-  setHref('zap-other', LINKS.zapier.other);
-
-  setHref('buf-x-queue', LINKS.buffer.xQueue);
-  setHref('buf-x-sched', LINKS.buffer.xSched);
-  setHref('buf-li-queue', LINKS.buffer.liQueue);
-  setHref('buf-li-sched', LINKS.buffer.liSched);
-
-  setHref('ql-zap-x', LINKS.zapier.x);
-  setHref('ql-zap-li', LINKS.zapier.linkedin);
-  setHref('ql-zap-other', LINKS.zapier.other);
-  setHref('ql-buf-xq', LINKS.buffer.xQueue);
-  setHref('ql-buf-xs', LINKS.buffer.xSched);
-  setHref('ql-buf-liq', LINKS.buffer.liQueue);
-  setHref('ql-buf-lis', LINKS.buffer.liSched);
+  setHref('zapier-dashboard', LINKS.zapier);
+  setHref('buffer-dashboard', LINKS.buffer);
+  setHref('ql-zapier', LINKS.zapier);
+  setHref('ql-buffer', LINKS.buffer);
 })();
 </script>
 </body>
