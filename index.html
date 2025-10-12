@@ -23,6 +23,7 @@
     .btnrow{ display:flex; flex-wrap:wrap; gap:10px; margin-top:10px }
     .btn{ display:inline-block; padding:10px 14px; border-radius:10px; border:1px solid var(--border); background:#0f1218; color:#cfe1ff; text-decoration:none; font-weight:600 }
     .btn:hover{ background:#121723 }
+    .btn.disabled{ opacity:.5; pointer-events:none }
     h2.section{ margin:26px 0 10px; font-size:16px }
     ul.links{ list-style:none; padding:0; margin:0 }
     ul.links li{ padding:10px 0; border-bottom:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap }
@@ -30,6 +31,7 @@
     ul.links a:hover{ text-decoration:underline }
     .pill{ display:inline-block; padding:2px 8px; border-radius:999px; font-size:11px; background:#1c2430; color:#cfe1ff; }
     .small{ font-size:12px }
+    .warn{ color:#fbbf24; font-size:12px; margin-top:6px }
   </style>
 </head>
 <body>
@@ -63,14 +65,13 @@
         <div class="small muted" style="margin-top:8px">Point your X Zap at <strong>rss_x_live.xml</strong> for a 1-item feed.</div>
       </div>
 
-      <!-- Simplified Integrations -->
       <div class="card">
         <h3>🔗 Integrations</h3>
         <div class="btnrow">
-          <a id="zapier-dashboard" class="btn" href="#" target="_blank" rel="noopener">Open Zapier Dashboard</a>
-          <a id="buffer-dashboard" class="btn" href="#" target="_blank" rel="noopener">Open Buffer Dashboard</a>
+          <a id="zapier-dashboard" class="btn disabled" href="#" target="_blank" rel="noopener">Open Zapier Dashboard</a>
+          <a id="buffer-dashboard" class="btn disabled" href="#" target="_blank" rel="noopener">Open Buffer Dashboard</a>
         </div>
-        <div class="small muted" style="margin-top:8px">Set both links in the CONFIG block at the bottom of this page.</div>
+        <div id="link-warning" class="warn">Set both links in the CONFIG block at the bottom of this page.</div>
       </div>
 
       <div class="card">
@@ -99,11 +100,11 @@
       </li>
       <li>
         <div>⚡ Zapier Dashboard</div>
-        <a id="ql-zapier" href="#" target="_blank" rel="noopener">Open</a>
+        <a id="ql-zapier" class="btn disabled" href="#" target="_blank" rel="noopener">Open</a>
       </li>
       <li>
         <div>📦 Buffer Dashboard</div>
-        <a id="ql-buffer" href="#" target="_blank" rel="noopener">Open</a>
+        <a id="ql-buffer" class="btn disabled" href="#" target="_blank" rel="noopener">Open</a>
       </li>
     </ul>
   </main>
@@ -120,8 +121,6 @@
   }
   try{
     const posts = await parseCSV('analytics/posts_features.csv'+bust);
-    const summary = await parseCSV('analytics/feature_summary.csv'+bust);
-
     document.getElementById('kpi-total').textContent = posts.length.toString();
     const dt = posts.map(r=>r.pubDate_local).filter(Boolean).sort().pop();
     document.getElementById('kpi-updated').textContent = dt ? ('Last updated ' + new Date(dt).toLocaleString()) : 'Last updated —';
@@ -129,24 +128,36 @@
     console.warn('Analytics files not ready yet.', e);
   }
 
-  // ---- CONFIG: paste your real dashboards here ----
+  // ---- CONFIG: paste your real dashboards here (include https://) ----
   const LINKS = {
-    zapier: "https://zapier.com/app/assets/zaps",   // e.g., https://zapier.com/app/zaps
-    buffer: "https://publish.buffer.com/all-channels"  // e.g., https://publish.buffer.com/
+    zapier: "https://zapier.com/app/zaps",            // EXAMPLE
+    buffer: "https://publish.buffer.com/"             // EXAMPLE
   };
-  // -------------------------------------------------
+  // --------------------------------------------------------------------
 
-  function setHref(id, url){
+  // Apply links; if missing, keep buttons visible but disabled with a hint
+  function setLink(id, url){
     const el = document.getElementById(id);
     if(!el) return;
-    if(url && !url.includes('<YOUR_')) { el.href = url; }
-    else { el.style.display = 'none'; }
+    if(url && /^https?:\/\//.test(url) && !url.includes('<YOUR_')){
+      el.href = url;
+      el.classList.remove('disabled');
+    } else {
+      el.href = '#';
+      el.classList.add('disabled');
+    }
   }
+  setLink('zapier-dashboard', LINKS.zapier);
+  setLink('buffer-dashboard', LINKS.buffer);
+  setLink('ql-zapier', LINKS.zapier);
+  setLink('ql-buffer', LINKS.buffer);
 
-  setHref('zapier-dashboard', LINKS.zapier);
-  setHref('buffer-dashboard', LINKS.buffer);
-  setHref('ql-zapier', LINKS.zapier);
-  setHref('ql-buffer', LINKS.buffer);
+  // Hide the yellow warning if both links are set
+  const bothSet = ['zapier','buffer'].every(k => /^https?:\/\//.test(LINKS[k]) && !LINKS[k].includes('<YOUR_'));
+  if(bothSet) {
+    const warn = document.getElementById('link-warning');
+    if(warn) warn.style.display = 'none';
+  }
 })();
 </script>
 </body>
