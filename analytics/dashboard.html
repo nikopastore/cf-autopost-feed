@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Career Forge — Analytics Dashboard</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    :root { --bg:#0b0c10; --card:#111318; --muted:#9aa4af; --fg:#e5e7eb; --accent:#60a5fa; }
+    *{ box-sizing:border-box }
+    body{ margin:0; font:14px/1.45 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial; background:var(--bg); color:var(--fg); }
+    header{ padding:24px 20px; border-bottom:1px solid #222; position:sticky; top:0; background:linear-gradient(180deg,rgba(11,12,16,.95),rgba(11,12,16,.75)); backdrop-filter: blur(4px); z-index:9;}
+    h1{ margin:0 0 4px; font-size:20px }
+    .sub{ color:var(--muted); font-size:12px }
+    main{ max-width:1100px; margin:20px auto; padding:0 16px 48px }
+    .grid{ display:grid; gap:16px }
+    .cards{ grid-template-columns:repeat(auto-fit,minmax(220px,1fr)) }
+    .card{ background:var(--card); border:1px solid #1c1f26; border-radius:14px; padding:16px }
+    .card h3{ margin:0 0 8px; font-size:14px; color:#cbd5e1 }
+    .kpi{ font-size:22px; font-weight:700 }
+    .muted{ color:var(--muted) }
+    canvas{ width:100% !important; height:360px !important; }
+    table{ width:100%; border-collapse:collapse; font-size:13px }
+    th,td{ padding:10px; border-bottom:1px solid #222 }
+    th{ text-align:left; color:#cbd5e1; position:sticky; top:0; background:var(--card) }
+    .nowrap{ white-space:nowrap }
+    a{ color:#93c5fd; text-decoration: none }
+    a:hover{ text-decoration: underline }
+    .section-title{ margin:28px 0 10px; font-size:16px }
+    .pill{ display:inline-block; padding:2px 8px; border-radius:999px; font-size:12px; background:#1c2430; color:#cfe1ff; margin-right:6px }
+    .report{ padding:16px; border-radius:14px; border:1px solid #1c1f26; background:var(--card) }
+    .small{ font-size:12px }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Career Forge — Analytics Dashboard</h1>
+    <div class="sub">Live from repository CSVs (no servers). Updated by GitHub Actions.</div>
+  </header>
+  <main>
+    <div class="grid cards">
+      <div class="card">
+        <h3>Total Posts</h3>
+        <div id="kpi-total" class="kpi">—</div>
+        <div class="small muted" id="last-updated">Last updated —</div>
+      </div>
+      <div class="card">
+        <h3>Posts with Metrics</h3>
+        <div id="kpi-with-metrics" class="kpi">—</div>
+        <div class="small muted">Rows where any engagement > 0</div>
+      </div>
+      <div class="card">
+        <h3>Avg Engagement Score</h3>
+        <div id="kpi-avg-score" class="kpi">—</div>
+        <div class="small muted">likes×1 + replies×2 + reposts×3 + clicks×0.5 + saves×1.5</div>
+      </div>
+      <div class="card">
+        <h3>Best Style / CTA (avg score)</h3>
+        <div id="kpi-best-style" class="kpi">—</div>
+        <div id="kpi-best-cta" class="kpi">—</div>
+      </div>
+    </div>
+
+    <h2 class="section-title">Performance by Style</h2>
+    <div class="card"><canvas id="chart-style"></canvas></div>
+
+    <h2 class="section-title">Performance by CTA Type</h2>
+    <div class="card"><canvas id="chart-cta"></canvas></div>
+
+    <h2 class="section-title">Emoji Count vs. Avg Score</h2>
+    <div class="card"><canvas id="chart-emoji"></canvas></div>
+
+    <h2 class="section-title">Title Length vs. Avg Score</h2>
+    <div class="card"><canvas id="chart-length"></canvas></div>
+
+    <h2 class="section-title">Top Posts (by engagement score)</h2>
+    <div class="card">
+      <div class="small muted" style="margin-bottom:8px">Click link to open the original target link (if any)</div>
+      <div style="overflow:auto">
+        <table id="top-table">
+          <thead>
+            <tr>
+              <th>Title (sample)</th>
+              <th class="nowrap">Score</th>
+              <th class="nowrap">Style</th>
+              <th class="nowrap">CTA</th>
+              <th class="nowrap">Emojis</th>
+              <th class="nowrap">Len</th>
+              <th class="nowrap">Likes</th>
+              <th class="nowrap">Replies</th>
+              <th class="nowrap">Reposts</th>
+              <th class="nowrap">Clicks</th>
+              <th class="nowrap">Saves</th>
+              <th class="nowrap">Time</th>
+              <th>Link</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <h2 class="section-title">Latest Narrative Report</h2>
+    <div id="md-report" class="report small">Loading report…</div>
+  </main>
+
+<script>
+(async function(){
+  const cacheBust = '?t=' + Date.now();
+  const csvFeaturesUrl = 'posts_features.csv' + cacheBust;
+  const csvSummaryUrl  = 'feature_summary.csv' + cacheBust;
+  const mdReportUrl    = 'latest_report.md' + cacheBust;
+
+  function parseCSV(url){
+    return new Promise((resolve,reject)=>{
+      Papa.parse(url, {
+        download:true, header:true, skipEmptyLines:true,
+        complete: res => resolve(res.data), error: err => reject(err)
+      });
+    });
+  }
+
+  const [posts, summary] = await Promise.all([parseCSV(csvFeaturesUrl), parseCSV(csvSummaryUrl)]).catch(e=>{
+    console.error(e); alert('Failed to load analytics CSVs. Make sure analytics/*.csv exist.');
+  });
+
+  // KPIs
+  const total = posts.length;
+  const withMetrics = posts.filter(r => (["likes","replies","reposts","clicks","saves"].some(k => +r[k]>0))).length;
+  const avgScore = (posts.reduce((s,r)=>s+ (+r.eng_score||0),0) / Math.max(1,total)).toFixed(2);
+  document.getElementById('kpi-total').textContent = total;
+  document.getElementById('kpi-with-metrics').textContent = withMetrics;
+  document.getElementById('kpi-avg-score').textContent = avgScore;
+
+  // Last updated ≈ newest pubDate_local
+  const dt = posts.map(r => r.pubDate_local).filter(Boolean).sort().pop();
+  document.getElementById('last-updated').textContent = dt ? ('Last updated ' + new Date(dt).toLocaleString()) : 'Last updated —';
+
+  // Helpers from summary
+  function rowsByFeature(key){
+    return summary.filter(r => r.feature === key)
+                  .map(r => ({bucket: r.bucket, avg: +r.avg_eng_score, n:+r.n_posts}))
+                  .sort((a,b)=>b.avg - a.avg);
+  }
+  function bestLabel(rows){
+    if(!rows.length) return '—';
+    const r = rows[0]; return `${r.bucket} (${r.avg.toFixed(2)})`;
+  }
+
+  const styleRows = rowsByFeature('style');
+  const ctaRows   = rowsByFeature('cta');
+  document.getElementById('kpi-best-style').textContent = 'Style: ' + bestLabel(styleRows);
+  document.getElementById('kpi-best-cta').textContent   = 'CTA: '   + bestLabel(ctaRows);
+
+  // Build charts
+  function barChart(ctxId, rows, label){
+    const ctx = document.getElementById(ctxId);
+    const labels = rows.map(r=>`${r.bucket} (n=${r.n})`);
+    const data = rows.map(r=>r.avg);
+    new Chart(ctx, {
+      type:'bar',
+      data:{ labels, datasets:[{ label, data }] },
+      options:{
+        responsive:true,
+        scales:{ y:{ beginAtZero:true } },
+        plugins:{ legend:{ display:false } }
+      }
+    });
+  }
+
+  barChart('chart-style', styleRows, 'Avg engagement by style');
+  barChart('chart-cta',   ctaRows,   'Avg engagement by CTA');
+  barChart('chart-emoji', rowsByFeature('emoji'), 'Avg engagement by emoji count');
+  barChart('chart-length',rowsByFeature('len'),   'Avg engagement by title length');
+
+  // Top posts table (top 10 by eng_score)
+  const top = posts.slice().sort((a,b)=> (+b.eng_score||0) - (+a.eng_score||0)).slice(0,10);
+  const tbody = document.querySelector('#top-table tbody');
+  top.forEach(r=>{
+    const tr = document.createElement('tr');
+    const cells = [
+      r.title_sample,
+      (+r.eng_score||0).toFixed(2),
+      r.style || '—',
+      r.cta || '—',
+      r.title_emoji_ct || 0,
+      r.title_len || 0,
+      r.likes||0, r.replies||0, r.reposts||0, r.clicks||0, r.saves||0,
+      r.pubDate_local ? new Date(r.pubDate_local).toLocaleString() : '—',
+      r.link ? `<a href="${r.link}" target="_blank" rel="noopener">open</a>` : ''
+    ];
+    cells.forEach((val,i)=>{
+      const td = document.createElement('td');
+      td.innerHTML = val;
+      if([1,4,5,6,7,8,9,10,11].includes(i)) td.className='nowrap';
+      tr.appendChild(td);
+    });
+    tbody.appendChild(tr);
+  });
+
+  // Render latest_report.md
+  try{
+    const md = await (await fetch(mdReportUrl)).text();
+    document.getElementById('md-report').innerHTML = marked.parse(md);
+  }catch(e){
+    document.getElementById('md-report').textContent = 'latest_report.md not found yet — run the Analytics workflow once.';
+  }
+})();
+</script>
+</body>
+</html>
