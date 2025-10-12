@@ -25,11 +25,13 @@
     .btn:hover{ background:#121723 }
     h2.section{ margin:26px 0 10px; font-size:16px }
     ul.links{ list-style:none; padding:0; margin:0 }
-    ul.links li{ padding:10px 0; border-bottom:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; gap:10px }
+    ul.links li{ padding:10px 0; border-bottom:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap }
     ul.links a{ color:#93c5fd; text-decoration:none; font-weight:600 }
     ul.links a:hover{ text-decoration:underline }
     .pill{ display:inline-block; padding:2px 8px; border-radius:999px; font-size:11px; background:#1c2430; color:#cfe1ff; }
     .small{ font-size:12px }
+    .label{ color:#cbd5e1; font-size:12px; margin-top:6px }
+    .stack { display:grid; gap:6px }
   </style>
 </head>
 <body>
@@ -48,21 +50,49 @@
           <a class="btn" href="analytics/latest_report.md">Latest Report (MD)</a>
         </div>
       </div>
+
       <div class="card">
         <h3>🏆 Top Style / CTA</h3>
         <div class="kpi" id="kpi-style">—</div>
         <div class="kpi" id="kpi-cta">—</div>
         <div class="small muted">Averages from feature_summary.csv</div>
       </div>
+
       <div class="card">
         <h3>⚙️ Generators & Feeds</h3>
+        <div class="btnrow">
+          <a class="btn" href="build_rss.py">build_rss.py</a>
+          <a class="btn" href="scripts/make_x_feed.py">make_x_feed.py</a>
+        </div>
         <div class="btnrow">
           <a class="btn" href="rss.xml">rss.xml</a>
           <a class="btn" href="rss_x.xml">rss_x.xml</a>
           <a class="btn" href="rss_x_live.xml"><span class="pill">LIVE</span> rss_x_live.xml</a>
         </div>
-        <div class="small muted" style="margin-top:8px">Point your X Zap at <strong>rss_x_live.xml</strong> for 1-item feed.</div>
+        <div class="small muted" style="margin-top:8px">Point your X Zap at <strong>rss_x_live.xml</strong> for a 1-item feed.</div>
       </div>
+
+      <!-- NEW: Integrations card -->
+      <div class="card">
+        <h3>🔗 Posting Integrations</h3>
+        <div class="label">Zapier Zaps</div>
+        <div class="btnrow stack">
+          <a id="zap-x" class="btn" href="#" target="_blank" rel="noopener">Zapier — X Zap</a>
+          <a id="zap-li" class="btn" href="#" target="_blank" rel="noopener">Zapier — LinkedIn Zap</a>
+          <a id="zap-other" class="btn" href="#" target="_blank" rel="noopener">Zapier — Other Zap</a>
+        </div>
+        <div class="label" style="margin-top:12px">Buffer Profiles</div>
+        <div class="btnrow stack">
+          <a id="buf-x-queue" class="btn" href="#" target="_blank" rel="noopener">Buffer — X Queue</a>
+          <a id="buf-x-sched" class="btn" href="#" target="_blank" rel="noopener">Buffer — X Schedule</a>
+          <a id="buf-li-queue" class="btn" href="#" target="_blank" rel="noopener">Buffer — LinkedIn Queue</a>
+          <a id="buf-li-sched" class="btn" href="#" target="_blank" rel="noopener">Buffer — LinkedIn Schedule</a>
+        </div>
+        <div class="small muted" style="margin-top:10px">
+          Edit the <strong>CONFIG</strong> block at the bottom of this page to insert your exact Zapier/Buffer links.
+        </div>
+      </div>
+
       <div class="card">
         <h3>🗂️ Raw Data</h3>
         <div class="btnrow">
@@ -89,16 +119,32 @@
         <a href="content/seeds_topics.txt">View</a>
       </li>
       <li>
-        <div>🛠️ Generator <span class="pill">build_rss.py</span></div>
-        <a href="build_rss.py">View</a>
+        <div>⚡ Zapier — X Zap</div>
+        <a id="ql-zap-x" href="#" target="_blank" rel="noopener">Open</a>
       </li>
       <li>
-        <div>🛠️ X feed builder <span class="pill">scripts/make_x_feed.py</span></div>
-        <a href="scripts/make_x_feed.py">View</a>
+        <div>⚡ Zapier — LinkedIn Zap</div>
+        <a id="ql-zap-li" href="#" target="_blank" rel="noopener">Open</a>
       </li>
       <li>
-        <div>📓 Engagement input <span class="pill">analytics/engagement.csv</span></div>
-        <a href="analytics/engagement.csv">Edit</a>
+        <div>⚡ Zapier — Other Zap</div>
+        <a id="ql-zap-other" href="#" target="_blank" rel="noopener">Open</a>
+      </li>
+      <li>
+        <div>📦 Buffer — X Queue</div>
+        <a id="ql-buf-xq" href="#" target="_blank" rel="noopener">Open</a>
+      </li>
+      <li>
+        <div>📦 Buffer — X Schedule</div>
+        <a id="ql-buf-xs" href="#" target="_blank" rel="noopener">Open</a>
+      </li>
+      <li>
+        <div>📦 Buffer — LinkedIn Queue</div>
+        <a id="ql-buf-liq" href="#" target="_blank" rel="noopener">Open</a>
+      </li>
+      <li>
+        <div>📦 Buffer — LinkedIn Schedule</div>
+        <a id="ql-buf-lis" href="#" target="_blank" rel="noopener">Open</a>
       </li>
     </ul>
   </main>
@@ -130,6 +176,49 @@
   }catch(e){
     console.warn('Analytics files not ready yet.', e);
   }
+
+  // ---------- CONFIG: paste your real links here ----------
+  const LINKS = {
+    zapier: {
+      // Get these from Zapier: open your Zap → copy URL
+      x:        "https://zapier.com/app/zaps/<YOUR_X_ZAP_ID>/overview",
+      linkedin: "https://zapier.com/app/zaps/<YOUR_LINKEDIN_ZAP_ID>/overview",
+      other:    "https://zapier.com/app/zaps/<YOUR_OTHER_ZAP_ID>/overview"
+    },
+    buffer: {
+      // Get these from Buffer: open profile → copy Queue URL; Schedule tab URL for schedule
+      xQueue:   "https://publish.buffer.com/profile/<YOUR_X_PROFILE_ID>/queue",
+      xSched:   "https://publish.buffer.com/profile/<YOUR_X_PROFILE_ID>/settings/schedule",
+      liQueue:  "https://publish.buffer.com/profile/<YOUR_LINKEDIN_PROFILE_ID>/queue",
+      liSched:  "https://publish.buffer.com/profile/<YOUR_LINKEDIN_PROFILE_ID>/settings/schedule"
+    }
+  };
+  // --------------------------------------------------------
+
+  // Apply links to buttons + quick links (hide if not filled)
+  function setHref(id, url){
+    const el = document.getElementById(id);
+    if(!el) return;
+    if(url && !url.includes('<YOUR_')) { el.href = url; }
+    else { el.style.display = 'none'; }
+  }
+
+  setHref('zap-x', LINKS.zapier.x);
+  setHref('zap-li', LINKS.zapier.linkedin);
+  setHref('zap-other', LINKS.zapier.other);
+
+  setHref('buf-x-queue', LINKS.buffer.xQueue);
+  setHref('buf-x-sched', LINKS.buffer.xSched);
+  setHref('buf-li-queue', LINKS.buffer.liQueue);
+  setHref('buf-li-sched', LINKS.buffer.liSched);
+
+  setHref('ql-zap-x', LINKS.zapier.x);
+  setHref('ql-zap-li', LINKS.zapier.linkedin);
+  setHref('ql-zap-other', LINKS.zapier.other);
+  setHref('ql-buf-xq', LINKS.buffer.xQueue);
+  setHref('ql-buf-xs', LINKS.buffer.xSched);
+  setHref('ql-buf-liq', LINKS.buffer.liQueue);
+  setHref('ql-buf-lis', LINKS.buffer.liSched);
 })();
 </script>
 </body>
