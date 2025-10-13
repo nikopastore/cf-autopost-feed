@@ -2,17 +2,19 @@
   "min_emojis": 2,
   "forbid_dialogue": true,
   "require_number_in_title": false,
-
-  "voice": "coach",                       // drive expert career-coach / recruiter tone
-  "enforce_second_person": true,          // prefer “you / your”
-  "allow_first_person_in_quotes_only": true, // “I …” only inside a reusable template quote
-
+  "voice": "coach",
+  "enforce_second_person": true,
+  "allow_first_person_in_quotes_only": true,
   "banned_phrases": [
     "I say,",
     "I'd say",
     "I would say",
     "When pitching a project",
+    "When presenting your work",
+    "When selling your work",
     "Say this:",
-    "Tell them:"
+    "Tell them:",
+    "Transform weak resume bullets",
+    "powerful achievements"
   ]
 }
