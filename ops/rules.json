@@ -1,6 +1,18 @@
 {
   "min_emojis": 2,
+  "forbid_dialogue": true,
   "require_number_in_title": false,
-  "prefer_styles": [],
-  "forbid_dialogue": true
+
+  "voice": "coach",                       // drive expert career-coach / recruiter tone
+  "enforce_second_person": true,          // prefer “you / your”
+  "allow_first_person_in_quotes_only": true, // “I …” only inside a reusable template quote
+
+  "banned_phrases": [
+    "I say,",
+    "I'd say",
+    "I would say",
+    "When pitching a project",
+    "Say this:",
+    "Tell them:"
+  ]
 }
