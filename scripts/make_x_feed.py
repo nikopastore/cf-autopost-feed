@@ -106,5 +106,3 @@ all_src, ch = load_items()
 all_x = transform(all_src)
 write_feed(OUT_ALL, ch, all_x)
 write_feed(OUT_LIVE, ch, all_x[:1])
-
-write_feed(OUT_LIVE, ch, all_x[:1])
