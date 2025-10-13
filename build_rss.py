@@ -1,16 +1,15 @@
 #!/usr/bin/env python3
 """
-Career Forge — build_rss.py (Pro SMM + Pause + DupGuard + Bandit + Tags + Trends)
+Career Forge — build_rss.py (Coach Voice + Quality Gate)
 
-- Respects ops/config.json ("paused", dup_guard, model)
-- Loads ops/rules.json to bias output (min emojis, forbid dialogue, %/$ requirement)
-- Loads ops/bandit.json to weight style/cta choices (updated by analytics workflow)
-- Enriches topics using content/seeds_topics.txt + content/trends.json
-- Emits <category domain="style"> and <category domain="cta">
-- Title = self-contained X line (no links/hashtags/dialogue labels, emoji-forward)
-- Description = LI/FB richer copy (hook + bullets + CTA + 2 tags)
+Key upgrades:
+- Persona: expert career coach / recruiter (second-person guidance).
+- Guardrails: no dialogue labels; avoid tense conflicts like “When … I … achieved …”.
+- First-person allowed only inside quotes (templates), never as narration.
+- Quality Gate: detects bad patterns; auto-regenerates with stricter constraints.
+- Tags loader now accepts list/dict/string safely (coerces to list).
 
-Env (required): OPENAI_API_KEY
+Requires env: OPENAI_API_KEY
 Optional: BRAND, SITE_URL, MODEL
 """
 
@@ -37,19 +36,18 @@ CHANNEL_LANG  = "en-us"
 
 # ---------- Style catalog ----------
 STYLE_CATALOG = [
+    ("coach_tip",        "Direct, second-person advice that a top career coach would give."),
+    ("recruiter_inside", "Inside-view tip from a recruiter: what they look for & how to show it."),
     ("template_drop",    "Share a fill-in-the-blank template + 1 tiny example."),
-    ("myth_vs_fact",     "Debunk 1 myth and replace with 1 fact + a quick how-to."),
     ("mistake_fix",      "Name 1 common mistake and show the concise fix."),
     ("checklist",        "Give a tight 4-item checklist for a narrow task."),
     ("data_bite",        "One stat/number, why it matters, and what to do."),
-    ("challenge",        "Issue a 24–48h micro-challenge with clear steps."),
-    ("hot_take",         "A contrarian but respectful take with 1 actionable tip."),
-    ("caselet",          "A 1-sentence mini-case: role → action → result."),
-    ("hook_lab",         "Provide 3 alternative hooks for the same idea."),
-    ("swipe_headlines",  "Provide 3 headline angles anyone can reuse."),
+    ("challenge",        "Issue a 24–48h micro-challenge with clear steps.")
 ]
 EMOJI_PALETTE = ["✅","💬","📌","✍️","🚀","🧠","💼","⏱️","📈","🤝","🔎","📣","🗂️","🧩","🎯","⚡","🔥","🌟"]
-FORBIDDEN_MARKERS_RX = re.compile(r"\b(You:|Them:|Q:|A:|in this thread|see below)\b", re.I)
+
+FORBIDDEN_DIALOGUE_RX = re.compile(r"\b(You:|Them:|Q:|A:)\b", re.I)
+FORBIDDEN_META_RX = re.compile(r"\b(in this thread|see below)\b", re.I)
 
 # ---------- Helpers ----------
 def load_json(path, default):
@@ -71,7 +69,6 @@ def read_topics(path):
         base = ["Job search systems", "Interview frameworks", "Resume quant tactics"]
     trends = load_json(TRENDS_PATH, {}).get("items", [])
     t_titles = [t.get("title","") for t in trends if t.get("title")] [:10]
-    # preserve order, de-dup
     seen = set(); out=[]
     for t in base + t_titles:
         if t not in seen:
@@ -84,8 +81,7 @@ def choose_style(weights):
         w = max(0.01, float(weights.get(key, 1.0)))
         pool.append((key, desc, w))
     total = sum(w for _,_,w in pool)
-    import random as _r
-    r = _r.random() * total; c = 0.0
+    r = random.random() * total; c = 0.0
     for key, desc, w in pool:
         c += w
         if r <= c: return key, desc
@@ -102,11 +98,13 @@ def has_emoji(s: str) -> int:
 def add_minimum_emojis(line: str, need_min=2) -> str:
     count = has_emoji(line)
     if count >= need_min: return line
-    import random as _r; _r.shuffle(EMOJI_PALETTE)
-    return f"{EMOJI_PALETTE[0]} {line}" if (need_min - count) == 1 else f"{EMOJI_PALETTE[0]} {line} {EMOJI_PALETTE[1]}"
+    palette = EMOJI_PALETTE[:]
+    random.shuffle(palette)
+    return f"{palette[0]} {line}" if (need_min - count) == 1 else f"{palette[0]} {line} {palette[1]}"
 
 def sanitize_xline(s: str) -> str:
-    s = FORBIDDEN_MARKERS_RX.sub("", s)
+    s = FORBIDDEN_DIALOGUE_RX.sub("", s)
+    s = FORBIDDEN_META_RX.sub("", s)
     s = re.sub(r"\s{2,}", " ", s).strip()
     s = re.sub(r"https?://\S+", "", s).strip()
     s = re.sub(r"#[A-Za-z0-9_]+", "", s).strip()
@@ -128,22 +126,15 @@ def dup_guard_ok(title, fps, n, thr):
             return False
     return True
 
-# ---- NEW: robust tag coercion ----
+# ---- Tags coercion ----
 def coerce_tag_list(obj):
-    """
-    Accepts list | dict | string | None and returns a clean list[str] (lowercased, unique, non-empty).
-    - list: keep string items
-    - dict: take string KEYS + any string values; also flatten list values
-    - string: split on commas/whitespace
-    """
     out = []
     if isinstance(obj, list):
         cand = obj
     elif isinstance(obj, dict):
         cand = list(obj.keys()) + list(obj.values())
     elif isinstance(obj, str):
-        import re as _re
-        cand = _re.split(r"[,\s]+", obj)
+        cand = re.split(r"[,\s]+", obj)
     else:
         cand = []
     for x in cand:
@@ -155,60 +146,140 @@ def coerce_tag_list(obj):
                 if isinstance(y, str):
                     s = y.strip().lower()
                     if s: out.append(s)
-    # de-dup, preserve order
     seen=set(); clean=[]
     for s in out:
         if s not in seen:
             seen.add(s); clean.append(s)
     return clean
 
-def call_openai(topic, style_key, style_desc, model, cta_bias=None, min_emojis=2, require_number=False):
+# ---- Persona & quality gate utilities ----
+QUOTE_CHARS = "\"'“”‘’"
+def contains_unquoted_I(text: str) -> bool:
+    """Return True if ' I ' appears outside of quotes."""
+    inside = False
+    prev = ""
+    for ch in text:
+        if ch in QUOTE_CHARS:
+            # toggle on any quote; simple heuristic robust enough for short lines
+            inside = not inside
+        if ch == "I" and not inside:
+            # check word boundary " I " (start or space before; space or punctuation after)
+            prev_c = prev
+            next_c = " "
+        prev = ch
+    # Simpler, robust regex approach:
+    # 'I' outside quotes → strip quoted segments then search
+    tmp = re.sub(r"[\"“”‘’][^\"“”‘’]+[\"“”‘’]", " ", text)
+    return bool(re.search(r"\bI\b", tmp))
+
+def has_banned_phrases(text: str, banned: list[str]) -> bool:
+    low = text.lower()
+    for p in banned:
+        if p.strip() and p.lower() in low:
+            return True
+    return False
+
+WHEN_I_PAST_RX = re.compile(r"\bwhen\s+\w+ing\b.*\bI\b.*\b(achieved|led to|delivered|shipped)\b", re.I)
+
+def quality_gate(x_line: str, rules: dict) -> tuple[bool, str]:
+    """
+    Returns (ok, reason_if_bad)
+    """
+    # No dialogue markers or meta
+    if FORBIDDEN_DIALOGUE_RX.search(x_line) or FORBIDDEN_META_RX.search(x_line):
+        return False, "dialogue/meta markers"
+    # Banned phrases
+    if has_banned_phrases(x_line, rules.get("banned_phrases", [])):
+        return False, "banned phrase"
+    # Tense conflict like 'When ... I achieved ...'
+    if WHEN_I_PAST_RX.search(x_line):
+        return False, "tense conflict (when...I...achieved)"
+    # Enforce second-person voice (soft): prefer 'you/your' somewhere
+    if rules.get("enforce_second_person", False):
+        if not re.search(r"\b(you|your)\b", x_line, re.I):
+            # allow templates starting with 'Use:' that quote 1st person
+            if not re.search(r"Use:\s*[\"“]", x_line):
+                return False, "missing second-person signal"
+    # First-person outside quotes not allowed
+    if rules.get("allow_first_person_in_quotes_only", False):
+        if contains_unquoted_I(x_line):
+            return False, "first-person outside quotes"
+    return True, ""
+
+# ---- OpenAI call ----
+def call_openai(topic, style_key, style_desc, model, rules, pass_hint=""):
+    """
+    pass_hint: extra constraints for retries (plain text bullets).
+    """
     payload = None
-    try:
-        from openai import OpenAI
-        client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-        sys_msg = {"role":"system","content":
-            "You are a professional social media manager for a career brand. Optimize for growth via useful, engaging, on-brand posts. Avoid dialogue markers like 'You:' or 'Them:'."}
-        user_msg = {"role":"user","content":f"""
+    sys = (
+        "You are a top-tier career coach and ex-recruiter. "
+        "You write concise, concrete, **second-person** advice. "
+        "No dialogue labels (‘You:’, ‘Them:’). "
+        "Avoid tense conflicts like “When pitching…, I achieved…”. "
+        "Use first-person *only* inside quotes when providing a reusable template. "
+        "Every post must be self-contained (no 'in this thread', no links)."
+    )
+    # map rules to prompt toggles
+    min_emojis = int(rules.get("min_emojis", 2))
+    require_number = bool(rules.get("require_number_in_title", False))
+    banned_join = "; ".join(rules.get("banned_phrases", []))
+
+    user = f"""
 STYLE: {style_key}
 STYLE_DESC: {style_desc}
 TOPIC_SEED: "{topic}"
-CTA_BIAS: {cta_bias or {}}
-MIN_EMOJIS: {min_emojis}
-REQUIRE_NUMBER_IN_TITLE: {require_number}
 
-Return STRICT JSON with keys:
-- style: string (echo style id)
-- cta_type: one of ["question","pollish","challenge","tip"]
-- x_line: SINGLE, self-contained line (<= 230 chars), no links/hashtags/dialogue labels; include {min_emojis}–4 tasteful emojis; be specific; if REQUIRE_NUMBER_IN_TITLE=true, include a % or $.
-- desc_title: concise hook (<= 80 chars) with 1–2 emojis.
-- desc_points: 3–5 bullets, each <= 80 chars, concrete steps/templates (1 emoji max each).
-- desc_cta: 1 question inviting replies (<= 110 chars), may include 1 emoji.
-- tags: 2 short tags (<= 16 chars each, lowercase, no '#').
-Return ONLY JSON.
-"""}
+VOICE: expert career coach / recruiter (second-person).
+BAN: dialogue labels; meta like "in this thread"; phrases → {banned_join or "—"}.
+TENSE: do not mix future/present setup with past-tense boasts like "I achieved".
+FIRST PERSON: allowed only inside quotes as a template (e.g., Use: “I achieved X% by Y.”).
+
+OUTPUT RULES
+- Return STRICT JSON only.
+- x_line: SINGLE line for X (<= 230 chars), second-person, {min_emojis}–4 tasteful emojis, no hashtags/links/dialogue/meta.
+- If a template is useful, prefix with 'Use:' then a quoted first-person line (that a candidate could say).
+- Ensure no tense conflict; no "When … I … achieved …" constructions.
+- desc_title: concise hook (<= 80 chars) + 1–2 emojis.
+- desc_points: 3–5 bullets; concrete steps/templates; <= 80 chars; max 1 emoji each.
+- desc_cta: 1 thoughtful question (<= 110 chars).
+- tags: 2 short lowercase tags (no '#').
+- require_number_in_title={str(require_number).lower()}
+
+{pass_hint}
+"""
+    try:
+        from openai import OpenAI
+        client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
         attempts = [model or "gpt-5", "gpt-4o", "gpt-4o-mini"]
         for mdl in attempts:
             try:
-                resp = client.chat.completions.create(model=mdl, temperature=0.6, messages=[sys_msg,user_msg])
+                resp = client.chat.completions.create(
+                    model=mdl, temperature=0.6,
+                    messages=[{"role":"system","content":sys},{"role":"user","content":user}]
+                )
                 txt = (resp.choices[0].message.content or "").strip()
                 start, end = txt.find("{"), txt.rfind("}")
-                import json as _json
-                payload = _json.loads(txt[start:end+1]); break
-            except Exception: pass
-    except Exception: pass
+                payload = json.loads(txt[start:end+1])
+                if payload: break
+            except Exception:
+                pass
+    except Exception:
+        pass
 
+    # Fallback payload (rare)
     if not payload:
         payload = {
             "style": style_key, "cta_type": "question",
-            "x_line": "Template: “Action → measurable outcome (%/time/$) in one line.” Keep it punchy. ✅📌",
-            "desc_title": "Steal this bullet format ✍️",
-            "desc_points": ["Lead with a number 📈","Name the lever ⚙️","Add brief scope 🧠","End with outcome ✅"],
-            "desc_cta": "Where do you struggle—numbers, scope, or lever? 🤔",
+            "x_line": "Your update pitch, coach-style: Use: “I improved X% by doing Y — so Z happened.” Keep it tight. ✅📌",
+            "desc_title": "Refresh your pitch ✍️",
+            "desc_points": ["Lead with outcome 📈","Name the lever ⚙️","Give brief scope 🧠","Close with value ✅"],
+            "desc_cta": "What part of your pitch feels weakest now?",
             "tags": ["resume","jobsearch"]
         }
     return payload
 
+# ---- Feed scaffold ----
 def ensure_feed_scaffold():
     if not os.path.exists(FEED_FILE):
         rss = ET.Element("rss", attrib={"version":"2.0"})
@@ -234,38 +305,39 @@ def ensure_feed_scaffold():
     tree.write(FEED_FILE, encoding="utf-8", xml_declaration=True)
     return tree
 
-def make_item(payload):
-    # style / cta
+# ---- Build item ----
+def make_item(payload, rules):
     style_key = (payload.get("style") or "").strip().lower() or "unspecified"
     cta_type  = (payload.get("cta_type") or "").strip().lower() or "question"
-    # title line (X-ready)
+
     x_line = sanitize_xline((payload.get("x_line") or "").strip())
+    # emojis
     x_line = add_minimum_emojis(x_line, need_min=rules.get("min_emojis",2))
+    # require %/$ optional
     if rules.get("require_number_in_title") and not re.search(r"\d+%|[$]\d+", x_line):
         x_line = x_line + " 📈"
     if len(x_line) > 230:
         x_line = x_line[:229].rsplit(" ", 1)[0] + "…"
-    # description (LI/FB)
+
     hook   = (payload.get("desc_title") or "").strip()
     points = [p.strip(" •-") for p in (payload.get("desc_points") or []) if str(p).strip()]
     cta    = (payload.get("desc_cta") or "").strip()
-    # tags (robust)
+
     tag_bank = coerce_tag_list(load_json(TAGS_PATH, []))
     ptags = coerce_tag_list(payload.get("tags") or [])[:2]
-    # merge ptags into bank (no write-back; just use here)
     for t in ptags:
         if t not in tag_bank: tag_bank.append(t)
     tags_raw = (ptags[:2]) if ptags else (tag_bank[:2])
-    # build description
+
     bullets_fmt = "\n".join([f"• {b}" for b in points])
     tag_str = " ".join([f"#{t}" for t in tags_raw]) if tags_raw else ""
     description = "\n".join([s for s in [hook, "", bullets_fmt, "", cta, "", tag_str] if s]).strip()
-    # guid/link
+
     now = datetime.now(timezone.utc)
     base = f"{slugify(x_line)}-{now.strftime('%Y%m%d%H%M%S')}"
     guid = hashlib.sha1(base.encode("utf-8")).hexdigest()
     link = f"{SITE_URL}?p={guid}"
-    # xml item
+
     item = ET.Element("item")
     ET.SubElement(item,"title").text = x_line
     ET.SubElement(item,"description").text = description
@@ -297,32 +369,57 @@ topics = read_topics(TOPICS_FILE)
 random.seed(int(datetime.now(timezone.utc).strftime("%Y%m%d%H")))
 model  = os.getenv("MODEL") or cfg.get("model") or "gpt-5"
 
-style_weights = band.get("style_weights", {})
+style_weights = band.get("style_weights", {
+    "coach_tip":1.4, "recruiter_inside":1.3, "checklist":1.1, "mistake_fix":1.1,
+    "template_drop":1.0, "data_bite":0.9, "challenge":0.8
+})
 style_key, style_desc = choose_style(style_weights)
 cta_bias = band.get("cta_weights", {})
 
 topic = random.choice(topics)
-payload = call_openai(topic, style_key, style_desc, model,
-                      cta_bias=cta_bias,
-                      min_emojis=rules.get("min_emojis",2),
-                      require_number=rules.get("require_number_in_title", False))
+
+# Generate with up to 3 attempts, tightening constraints if the quality gate fails
+attempt_notes = [
+    "",
+    "REVISION: Fix any tense conflict; keep second-person; if using a template, prefix 'Use:' then quote the line.",
+    "REVISION: Remove any first-person narration; only quote first-person inside 'Use: “...”'; add a concrete number or example if helpful."
+]
+payload = None
+xline = ""; ok=False; reason=""
+
+for note in attempt_notes:
+    p = call_openai(topic, style_key, style_desc, model, rules, pass_hint=note)
+    # assemble to see x_line and test
+    try:
+        # dry-run x_line only for validation
+        candidate = sanitize_xline((p.get("x_line") or "").strip())
+        candidate = add_minimum_emojis(candidate, need_min=rules.get("min_emojis",2))
+        if len(candidate) > 230:
+            candidate = candidate[:229].rsplit(" ", 1)[0] + "…"
+        ok, reason = quality_gate(candidate, rules)
+        if ok:
+            payload = p; xline = candidate; break
+    except Exception:
+        pass
+
+if not payload:
+    # last resort: keep the final attempt but continue
+    payload = p
+    xline = sanitize_xline((payload.get("x_line") or "").strip())
 
 tree = ensure_feed_scaffold()
-item, guid, title = make_item(payload)
+item, guid, title = make_item(payload, rules)
 
 # duplicate guard
 fps = load_json(FPS_PATH, [])
 dg = cfg.get("dup_guard", {"enabled":True,"ngram":5,"threshold":0.8,"history_size":200})
 if dg.get("enabled", True):
     if not dup_guard_ok(title, fps, dg.get("ngram",5), dg.get("threshold",0.8)):
-        # one reroll with different style weight
-        alt_weights = {k:(1.0 if k!=style_key else 0.2) for k in style_weights} or {"checklist":1.0,"template_drop":1.0}
+        # reroll style weights a bit
+        alt_weights = {k:(1.0 if k!=style_key else 0.35) for k in style_weights} or {"checklist":1.0,"coach_tip":1.2}
         alt_style, alt_desc = choose_style(alt_weights)
-        payload2 = call_openai(topic, alt_style, alt_desc, model,
-                               cta_bias=cta_bias,
-                               min_emojis=rules.get("min_emojis",2),
-                               require_number=rules.get("require_number_in_title", False))
-        item2, guid2, title2 = make_item(payload2)
+        p2 = call_openai(topic, alt_style, alt_desc, model, rules, pass_hint="REVISION: ensure second-person; avoid first-person narration; no tense conflicts.")
+        item2, guid2, title2 = make_item(p2, rules)
         if dup_guard_ok(title2, fps, dg.get("ngram",5), dg.get("threshold",0.8)):
             item, guid, title = item2, guid2, title2
 
@@ -334,6 +431,8 @@ fps = (fps + [{"guid":guid, "ngrams":probe}])[-int(dg.get("history_size",200)):]
 os.makedirs("analytics", exist_ok=True)
 with open(FPS_PATH, "w", encoding="utf-8") as f:
     json.dump(fps, f, ensure_ascii=False, indent=2)
+
+print("Generated:", title)
 
 print("Generated:", title)
 
