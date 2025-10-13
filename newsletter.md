@@ -1,4 +1,4 @@
-# Career Forge — Weekly Digest (2025-10-12)
+# Career Forge — Weekly Digest (2025-10-13)
 
 ## Top Posts
 - **Master interviews with the STAR method 🌟: Situation, Task, Action, Result. No more rambling, just results. 💼**  
