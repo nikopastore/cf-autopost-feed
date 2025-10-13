@@ -16,5 +16,9 @@
     "Tell them:",
     "Transform weak resume bullets",
     "powerful achievements"
-  ]
+  ],
+  "style_weights": {
+    "hook_lab": 0.7,
+    "unknown": 0.7
+  }
 }
