@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(find:*)",
-      "Bash(python -c \"import sys; print(f''Python: {sys.version}'')\")"
+      "Bash(python -c \"import sys; print(f''Python: {sys.version}'')\")",
+      "Bash(cat:*)"
     ],
     "deny": [],
     "ask": []
