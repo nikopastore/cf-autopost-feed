@@ -260,13 +260,13 @@ FIRST PERSON: allowed only inside quotes as a template (e.g., Use: “I achieved
 
 OUTPUT RULES
 - Return STRICT JSON only.
-- x_line: SINGLE line for X (<= 230 chars), second-person, {min_emojis}–4 tasteful emojis, no hashtags/links/dialogue/meta.
+- x_line: SINGLE line for X (<= 230 chars), second-person, {min_emojis}–4 tasteful emojis, no hashtags/links/dialogue/meta. Dashes are OK in content.
 - If a template is useful, prefix with 'Use:' then a quoted first-person line (that a candidate could say).
 - Ensure no tense conflict; no "When … I … achieved …" constructions.
 - desc_title: concise hook (<= 80 chars) + 1–2 emojis.
 - desc_points: 3–5 bullets; concrete steps/templates; <= 80 chars; max 1 emoji each.
 - desc_cta: 1 thoughtful question (<= 110 chars).
-- tags: 2 short lowercase tags (no '#').
+- tags: 2 short lowercase tags WITHOUT dashes or hyphens (use single words like 'resume' or 'jobsearch', NOT 'job-search'). No '#' symbol.
 - require_number_in_title={str(require_number).lower()}
 
 {pass_hint}
