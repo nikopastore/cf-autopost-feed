@@ -475,8 +475,8 @@ for attempt_num, note in enumerate(attempt_notes, 1):
         p = call_openai(topic, style_key, style_desc, model, rules, pass_hint=note)
         # assemble to see x_line and test
         candidate = sanitize_xline((p.get("x_line") or "").strip())
-        candidate = sanitize_xline((p.get("x_line") or "").strip())
         candidate = add_minimum_emojis(candidate, need_min=rules.get("min_emojis",2))
+        if len(candidate) > 230:
             candidate = candidate[:229].rsplit(" ", 1)[0] + "..."
         original_candidate = candidate
         candidate = enforce_second_person_line(candidate)
@@ -488,6 +488,9 @@ for attempt_num, note in enumerate(attempt_notes, 1):
             payload = p; xline = candidate; break
         else:
             logger.warning(f"Quality gate failed on attempt {attempt_num}: {reason}")
+    except Exception as e:
+        logger.error(f"Attempt {attempt_num} raised exception: {e}")
+
 if not payload:
     # CRITICAL: Do not publish content that failed all quality gates
     # Instead, skip this run and let the next scheduled run try again
