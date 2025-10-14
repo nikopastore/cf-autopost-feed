@@ -1,9 +1,14 @@
 name: Optimize Posting Times
 permissions: { contents: write }
+
 on:
   schedule:
     - cron: "0 16 * * 1"  # Mondays 09:00 Phoenix
   workflow_dispatch:
+
+concurrency:
+  group: optimize-cron
+  cancel-in-progress: false
 
 jobs:
   optimize:
@@ -11,5 +16,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with: { persist-credentials: true, fetch-depth: 0 }
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: 'pip'
+      - name: Install deps
+        run: pip install -r requirements.txt
       - name: Optimize from analytics
         run: python scripts/optimize_times.py

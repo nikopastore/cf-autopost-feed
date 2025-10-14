@@ -1,9 +1,14 @@
 name: Update Style Bandit
 permissions: { contents: write }
+
 on:
   schedule:
     - cron: "20 15 * * 1"  # Mondays 08:20 Phoenix
   workflow_dispatch:
+
+concurrency:
+  group: bandit-update
+  cancel-in-progress: false
 
 jobs:
   bandit:
@@ -11,6 +16,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with: { persist-credentials: true, fetch-depth: 0 }
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: 'pip'
+      - name: Install deps
+        run: pip install -r requirements.txt
       - name: Update weights from analytics
         run: python scripts/update_style_bandit.py
       - name: Commit rules

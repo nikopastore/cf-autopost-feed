@@ -4,7 +4,7 @@ Career Forge — build_rss.py (Coach Voice + Quality Gate)
 
 Key upgrades:
 - Persona: expert career coach / recruiter (second-person guidance).
-- Guardrails: no dialogue labels; avoid tense conflicts like “When … I … achieved …”.
+- Guardrails: no dialogue labels; avoid tense conflicts like "When … I … achieved …".
 - First-person allowed only inside quotes (templates), never as narration.
 - Quality Gate: detects bad patterns; auto-regenerates with stricter constraints.
 - Tags loader now accepts list/dict/string safely (coerces to list).
@@ -16,6 +16,11 @@ Optional: BRAND, SITE_URL, MODEL
 import os, re, json, hashlib, random
 from datetime import datetime, timezone
 import xml.etree.ElementTree as ET
+from tenacity import retry, wait_exponential, stop_after_attempt, retry_if_exception_type
+from logger_config import get_logger
+from backup_manager import backup_file
+
+logger = get_logger(__name__)
 
 # ---------- Paths ----------
 CONFIG_PATH = "ops/config.json"
@@ -48,13 +53,25 @@ EMOJI_PALETTE = ["✅","💬","📌","✍️","🚀","🧠","💼","⏱️","�
 
 FORBIDDEN_DIALOGUE_RX = re.compile(r"\b(You:|Them:|Q:|A:)\b", re.I)
 FORBIDDEN_META_RX = re.compile(r"\b(in this thread|see below)\b", re.I)
+WHITESPACE_RX = re.compile(r"\s{2,}")
+URL_RX = re.compile(r"https?://\S+")
+HASHTAG_RX = re.compile(r"#[A-Za-z0-9_]+")
 
 # ---------- Helpers ----------
 def load_json(path, default):
     try:
         with open(path, "r", encoding="utf-8") as f:
-            return json.load(f)
-    except Exception:
+            data = json.load(f)
+            logger.info(f"Loaded JSON from {path}")
+            return data
+    except FileNotFoundError:
+        logger.warning(f"File not found: {path}, using default")
+        return default
+    except json.JSONDecodeError as e:
+        logger.error(f"JSON decode error in {path}: {e}")
+        return default
+    except Exception as e:
+        logger.error(f"Unexpected error loading {path}: {e}")
         return default
 
 def rss_now():
@@ -105,10 +122,10 @@ def add_minimum_emojis(line: str, need_min=2) -> str:
 def sanitize_xline(s: str) -> str:
     s = FORBIDDEN_DIALOGUE_RX.sub("", s)
     s = FORBIDDEN_META_RX.sub("", s)
-    s = re.sub(r"\s{2,}", " ", s).strip()
-    s = re.sub(r"https?://\S+", "", s).strip()
-    s = re.sub(r"#[A-Za-z0-9_]+", "", s).strip()
-    return s
+    s = WHITESPACE_RX.sub(" ", s)
+    s = URL_RX.sub("", s)
+    s = HASHTAG_RX.sub("", s)
+    return s.strip()
 
 def ngrams(text, n=5):
     toks = re.findall(r"[a-z0-9]+", (text or "").lower())
@@ -207,6 +224,12 @@ def quality_gate(x_line: str, rules: dict) -> tuple[bool, str]:
     return True, ""
 
 # ---- OpenAI call ----
+@retry(
+    wait=wait_exponential(multiplier=1, min=4, max=60),
+    stop=stop_after_attempt(3),
+    retry=retry_if_exception_type((ConnectionError, TimeoutError)),
+    reraise=True
+)
 def call_openai(topic, style_key, style_desc, model, rules, pass_hint=""):
     """
     pass_hint: extra constraints for retries (plain text bullets).
@@ -248,30 +271,50 @@ OUTPUT RULES
 
 {pass_hint}
 """
+    # Validate API key
+    api_key = os.getenv("OPENAI_API_KEY")
+    if not api_key:
+        logger.error("OPENAI_API_KEY environment variable is not set")
+        raise ValueError("OPENAI_API_KEY environment variable is required")
+
     try:
         from openai import OpenAI
-        client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-        attempts = [model or "gpt-5", "gpt-4o", "gpt-4o-mini"]
+        client = OpenAI(api_key=api_key)
+        attempts = [model or "gpt-4o", "gpt-4o", "gpt-4o-mini"]
+
         for mdl in attempts:
             try:
+                logger.info(f"Attempting content generation with model: {mdl}")
                 resp = client.chat.completions.create(
                     model=mdl, temperature=0.6,
                     messages=[{"role":"system","content":sys},{"role":"user","content":user}]
                 )
                 txt = (resp.choices[0].message.content or "").strip()
                 start, end = txt.find("{"), txt.rfind("}")
+                if start == -1 or end == -1:
+                    logger.warning(f"Model {mdl} returned non-JSON response")
+                    continue
                 payload = json.loads(txt[start:end+1])
-                if payload: break
-            except Exception:
-                pass
-    except Exception:
-        pass
+                if payload:
+                    logger.info(f"Successfully generated content with model: {mdl}")
+                    break
+            except json.JSONDecodeError as e:
+                logger.warning(f"Model {mdl} returned invalid JSON: {e}")
+            except Exception as e:
+                logger.warning(f"Model {mdl} failed: {e}")
+    except ImportError as e:
+        logger.error(f"Failed to import OpenAI library: {e}")
+        raise
+    except Exception as e:
+        logger.error(f"Unexpected error in OpenAI call: {e}")
+        raise
 
-    # Fallback payload (rare)
+    # Fallback payload - safe default content that passes quality gates
     if not payload:
+        logger.warning("All OpenAI attempts failed, using safe fallback content")
         payload = {
             "style": style_key, "cta_type": "question",
-            "x_line": "Your update pitch, coach-style: Use: “I improved X% by doing Y — so Z happened.” Keep it tight. ✅📌",
+            "x_line": "Your update pitch, coach-style: Use: "I improved X% by doing Y — so Z happened." Keep it tight. ✅📌",
             "desc_title": "Refresh your pitch ✍️",
             "desc_points": ["Lead with outcome 📈","Name the lever ⚙️","Give brief scope 🧠","Close with value ✅"],
             "desc_cta": "What part of your pitch feels weakest now?",
@@ -330,7 +373,8 @@ def make_item(payload, rules):
     tags_raw = (ptags[:2]) if ptags else (tag_bank[:2])
 
     bullets_fmt = "\n".join([f"• {b}" for b in points])
-    tag_str = " ".join([f"#{t}" for t in tags_raw]) if tags_raw else ""
+    # Remove dashes from tags when formatting as hashtags (dashes break hashtag linking)
+    tag_str = " ".join([f"#{t.replace('-', '')}" for t in tags_raw]) if tags_raw else ""
     description = "\n".join([s for s in [hook, "", bullets_fmt, "", cta, "", tag_str] if s]).strip()
 
     now = datetime.now(timezone.utc)
@@ -367,7 +411,7 @@ if cfg.get("paused"):
 
 topics = read_topics(TOPICS_FILE)
 random.seed(int(datetime.now(timezone.utc).strftime("%Y%m%d%H")))
-model  = os.getenv("MODEL") or cfg.get("model") or "gpt-5"
+model  = os.getenv("MODEL") or cfg.get("model") or "gpt-4o"
 
 style_weights = band.get("style_weights", {
     "coach_tip":1.4, "recruiter_inside":1.3, "checklist":1.1, "mistake_fix":1.1,
@@ -387,25 +431,35 @@ attempt_notes = [
 payload = None
 xline = ""; ok=False; reason=""
 
-for note in attempt_notes:
-    p = call_openai(topic, style_key, style_desc, model, rules, pass_hint=note)
-    # assemble to see x_line and test
+for attempt_num, note in enumerate(attempt_notes, 1):
+    logger.info(f"Quality gate attempt {attempt_num}/{len(attempt_notes)}")
     try:
-        # dry-run x_line only for validation
+        p = call_openai(topic, style_key, style_desc, model, rules, pass_hint=note)
+        # assemble to see x_line and test
         candidate = sanitize_xline((p.get("x_line") or "").strip())
         candidate = add_minimum_emojis(candidate, need_min=rules.get("min_emojis",2))
         if len(candidate) > 230:
             candidate = candidate[:229].rsplit(" ", 1)[0] + "…"
         ok, reason = quality_gate(candidate, rules)
         if ok:
+            logger.info(f"Quality gate passed on attempt {attempt_num}")
             payload = p; xline = candidate; break
-    except Exception:
-        pass
+        else:
+            logger.warning(f"Quality gate failed on attempt {attempt_num}: {reason}")
+    except Exception as e:
+        logger.error(f"Attempt {attempt_num} raised exception: {e}")
 
 if not payload:
-    # last resort: keep the final attempt but continue
-    payload = p
-    xline = sanitize_xline((payload.get("x_line") or "").strip())
+    # CRITICAL: Do not publish content that failed all quality gates
+    # Instead, skip this run and let the next scheduled run try again
+    logger.error("All quality gate attempts failed. Skipping content generation for this run.")
+    logger.info("The next scheduled run will attempt content generation again.")
+    raise SystemExit(1)
+
+logger.info(f"Selected topic: {topic}, style: {style_key}")
+
+# Backup existing feed before modification
+backup_file(FEED_FILE, keep_count=30)
 
 tree = ensure_feed_scaffold()
 item, guid, title = make_item(payload, rules)

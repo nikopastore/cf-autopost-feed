@@ -1,1 +1,15 @@
-openai>=1.40.0
+# Core dependencies
+openai==1.40.0
+feedparser==6.0.11
+Pillow==10.4.0
+
+# Retry logic and resilience
+tenacity==8.5.0
+
+# Data validation
+pydantic==2.8.2
+
+# Testing (optional, but recommended)
+pytest==8.3.2
+pytest-cov==5.0.0
+pytest-mock==3.14.0

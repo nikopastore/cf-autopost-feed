@@ -1,9 +1,14 @@
 name: Harvest Trends
 permissions: { contents: write }
+
 on:
   schedule:
     - cron: "0 13 * * *"   # 06:00 Phoenix
   workflow_dispatch:
+
+concurrency:
+  group: trends
+  cancel-in-progress: false
 
 jobs:
   trends:
@@ -13,7 +18,11 @@ jobs:
         with: { persist-credentials: true, fetch-depth: 0 }
       - name: Set up Python
         uses: actions/setup-python@v5
-        with: { python-version: "3.11" }
+        with:
+          python-version: "3.11"
+          cache: 'pip'
+      - name: Install deps
+        run: pip install -r requirements.txt
       - name: Harvest Google News
         run: python scripts/trend_harvest.py
       - name: Commit trends

@@ -8,6 +8,10 @@ on:
     - cron: "0 16 * * MON"   # Mondays 09:00 Phoenix
   workflow_dispatch:
 
+concurrency:
+  group: newsletter
+  cancel-in-progress: false
+
 jobs:
   newsletter:
     runs-on: ubuntu-latest
@@ -21,6 +25,9 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+          cache: 'pip'
+      - name: Install deps
+        run: pip install -r requirements.txt
       - name: Make newsletter
         run: python scripts/make_newsletter.py
       - name: Commit & push
