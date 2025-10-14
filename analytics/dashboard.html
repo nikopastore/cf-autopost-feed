@@ -64,6 +64,17 @@
       </div>
     </div>
 
+    <h2 class="section-title" id="eng-section-title" style="display:none">Engagement (last 30 days)</h2>
+    <div id="eng-section" class="grid cards" style="display:none">
+      <div class="card">
+        <h3>Totals (30 days)</h3>
+        <div id="eng-totals" class="kpi">&mdash;</div>
+        <div class="small muted">Clicks &middot; Likes &middot; Comments &middot; Shares</div>
+      </div>
+      <div class="card"><canvas id="eng-line-chart"></canvas></div>
+      <div class="card"><canvas id="eng-service-chart"></canvas></div>
+    </div>
+
     <h2 class="section-title">Performance by Style</h2>
     <div class="card"><canvas id="chart-style"></canvas></div>
 
@@ -163,6 +174,110 @@
   barChart('chart-cta',   ctaRows,   'Avg engagement by CTA');
   barChart('chart-emoji', rowsByFeature('emoji'), 'Avg engagement by emoji count');
   barChart('chart-length',rowsByFeature('len'),   'Avg engagement by title length');
+
+
+  async function loadMetrics(){
+    const titleEl = document.getElementById('eng-section-title');
+    const sectionEl = document.getElementById('eng-section');
+    if(!titleEl || !sectionEl) return;
+    try{
+      const res = await fetch('../analytics/metrics.json' + cacheBust, { cache: 'no-store' });
+      if(!res.ok) return;
+      const metrics = await res.json();
+      if(!Array.isArray(metrics) || !metrics.length) return;
+      const cutoff = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000);
+      const totals = { clicks:0, likes:0, comments:0, shares:0 };
+      const dayMap = new Map();
+      const serviceMap = new Map();
+      for (const rec of metrics){
+        const day = typeof rec.day === 'string' ? rec.day : '';
+        const dayDate = day ? new Date(day + 'T00:00:00Z') : null;
+        if(!dayDate || Number.isNaN(dayDate.getTime()) || dayDate < cutoff) continue;
+        const clicks = Number(rec.clicks) || 0;
+        const likes = Number(rec.likes) || 0;
+        const comments = Number(rec.comments) || 0;
+        const shares = Number(rec.shares) || 0;
+        totals.clicks += clicks;
+        totals.likes += likes;
+        totals.comments += comments;
+        totals.shares += shares;
+        const dayEntry = dayMap.get(day) || { clicks:0, likes:0 };
+        dayEntry.clicks += clicks;
+        dayEntry.likes += likes;
+        dayMap.set(day, dayEntry);
+        const service = (rec.service || 'unknown').toLowerCase();
+        const serviceEntry = serviceMap.get(service) || { clicks:0, likes:0 };
+        serviceEntry.clicks += clicks;
+        serviceEntry.likes += likes;
+        serviceMap.set(service, serviceEntry);
+      }
+      if(!dayMap.size) return;
+      titleEl.style.display = '';
+      sectionEl.style.display = 'grid';
+      document.getElementById('eng-totals').textContent =
+        `Clicks: ${totals.clicks} | Likes: ${totals.likes} | Comments: ${totals.comments} | Shares: ${totals.shares}`;
+      const dayLabels = Array.from(dayMap.keys()).sort();
+      const lineCtx = document.getElementById('eng-line-chart');
+      new Chart(lineCtx, {
+        type: 'line',
+        data: {
+          labels: dayLabels,
+          datasets: [
+            {
+              label: 'Clicks',
+              data: dayLabels.map(d => dayMap.get(d).clicks),
+              borderColor: '#60a5fa',
+              backgroundColor: 'rgba(96,165,250,0.25)',
+              fill: false,
+              tension: 0.25
+            },
+            {
+              label: 'Likes',
+              data: dayLabels.map(d => dayMap.get(d).likes),
+              borderColor: '#f97316',
+              backgroundColor: 'rgba(249,115,22,0.25)',
+              fill: false,
+              tension: 0.25
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: { y: { beginAtZero: true } }
+        }
+      });
+      const serviceLabels = Array.from(serviceMap.keys()).sort();
+      const serviceCtx = document.getElementById('eng-service-chart');
+      const serviceColors = ['#60a5fa','#34d399','#f97316','#f472b6','#a855f7','#2dd4bf','#c084fc'];
+      new Chart(serviceCtx, {
+        type: 'bar',
+        data: {
+          labels: serviceLabels,
+          datasets: [
+            {
+              label: 'Clicks + Likes',
+              data: serviceLabels.map(s => {
+                const entry = serviceMap.get(s);
+                return (entry.clicks || 0) + (entry.likes || 0);
+              }),
+              backgroundColor: serviceLabels.map((_, idx) => serviceColors[idx % serviceColors.length])
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { display: false } },
+          scales: { y: { beginAtZero: true } }
+        }
+      });
+    }catch(err){
+      console.warn('Engagement metrics unavailable', err);
+    }
+  }
+
+  await loadMetrics();
 
   const top = posts.slice().sort((a,b)=> (+b.eng_score||0) - (+a.eng_score||0)).slice(0,10);
   const tbody = document.querySelector('#top-table tbody');

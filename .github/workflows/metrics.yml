@@ -1,0 +1,50 @@
+name: Engagement Metrics
+
+on:
+  schedule:
+    - cron: "15 8 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Configure git
+        run: |
+          git config --global user.name "cf-metrics-bot"
+          git config --global user.email "cf-metrics-bot@users.noreply.github.com"
+          git config --global --add safe.directory "${GITHUB_WORKSPACE}"
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install requests
+
+      - name: Fetch Buffer metrics
+        env:
+          BUFFER_TOKEN: ${{ secrets.BUFFER_TOKEN }}
+          PROFILE_IDS: CHANGE_ME_1,CHANGE_ME_2,CHANGE_ME_3
+        run: python analytics/fetch_metrics.py
+
+      - name: Commit metrics
+        run: |
+          if git status --porcelain analytics/metrics.json | grep -q .; then
+            git add analytics/metrics.json
+            git commit -m "chore: update metrics [skip ci]"
+            git push
+          else
+            echo "No analytics updates to commit."
+          fi
