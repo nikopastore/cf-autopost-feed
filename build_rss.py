@@ -279,7 +279,20 @@ OUTPUT RULES
 
     try:
         from openai import OpenAI
-        client = OpenAI(api_key=api_key)
+
+        # Initialize client with explicit parameters to avoid environment variable conflicts
+        # GitHub Actions may set proxy vars that the old client doesn't support
+        try:
+            client = OpenAI(
+                api_key=api_key,
+                timeout=30.0,
+                max_retries=0
+            )
+        except TypeError as e:
+            # Fallback for older OpenAI library versions or environment conflicts
+            logger.warning(f"Standard client init failed ({e}), trying minimal init")
+            client = OpenAI(api_key=api_key)
+
         attempts = [model or "gpt-4o", "gpt-4o", "gpt-4o-mini"]
 
         for mdl in attempts:

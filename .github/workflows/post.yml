@@ -44,7 +44,12 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           BRAND: "Career Forge"
           SITE_URL: "https://nikopastore.github.io/cf-autopost-feed/"
-          MODEL: "gpt-5"
+          MODEL: "gpt-4o"
+          # Clear proxy settings that may interfere with OpenAI client
+          HTTP_PROXY: ""
+          HTTPS_PROXY: ""
+          http_proxy: ""
+          https_proxy: ""
         run: python build_rss.py
 
       - name: Commit & push main RSS + fingerprints
