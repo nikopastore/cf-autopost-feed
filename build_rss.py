@@ -314,7 +314,7 @@ OUTPUT RULES
         logger.warning("All OpenAI attempts failed, using safe fallback content")
         payload = {
             "style": style_key, "cta_type": "question",
-            "x_line": "Your update pitch, coach-style: Use: "I improved X% by doing Y — so Z happened." Keep it tight. ✅📌",
+            "x_line": 'Your update pitch, coach-style: Use: "I improved X% by doing Y so Z happened." Keep it tight. ✅📌',
             "desc_title": "Refresh your pitch ✍️",
             "desc_points": ["Lead with outcome 📈","Name the lever ⚙️","Give brief scope 🧠","Close with value ✅"],
             "desc_cta": "What part of your pitch feels weakest now?",
