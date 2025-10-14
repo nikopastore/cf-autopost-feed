@@ -5,33 +5,37 @@ We generate self-contained, emoji-forward posts twice daily. Below are feature a
 ## Feature Summary (averages)
 
 - bullets :: 0 => avg_score=0.0 (n=6)
-- bullets :: 1+ => avg_score=0.0 (n=14)
-- cta :: tip => avg_score=0.0 (n=1)
+- bullets :: 1+ => avg_score=0.0 (n=20)
+- cta :: question => avg_score=0.0 (n=5)
+- cta :: tip => avg_score=0.0 (n=2)
 - cta :: unknown => avg_score=0.0 (n=19)
 - emoji :: 0 => avg_score=0.0 (n=9)
-- emoji :: 2 => avg_score=0.0 (n=10)
-- emoji :: 3+ => avg_score=0.0 (n=1)
-- len :: <= 120 => avg_score=0.0 (n=15)
+- emoji :: 2 => avg_score=0.0 (n=12)
+- emoji :: 3+ => avg_score=0.0 (n=5)
+- len :: <= 120 => avg_score=0.0 (n=21)
 - len :: <= 160 => avg_score=0.0 (n=3)
 - len :: <= 200 => avg_score=0.0 (n=1)
 - len :: <= 240 => avg_score=0.0 (n=1)
-- number :: no => avg_score=0.0 (n=2)
-- number :: yes => avg_score=0.0 (n=18)
-- question :: yes => avg_score=0.0 (n=20)
+- number :: no => avg_score=0.0 (n=5)
+- number :: yes => avg_score=0.0 (n=21)
+- question :: yes => avg_score=0.0 (n=26)
 - style :: hook_lab => avg_score=0.0 (n=1)
+- style :: swipe_headlines => avg_score=0.0 (n=1)
 - style :: unknown => avg_score=0.0 (n=19)
-- time :: early-morning => avg_score=0.0 (n=5)
-- time :: evening => avg_score=0.0 (n=12)
-- time :: late-afternoon => avg_score=0.0 (n=3)
+- style :: unspecified => avg_score=0.0 (n=5)
+- time :: early-afternoon => avg_score=0.0 (n=1)
+- time :: early-morning => avg_score=0.0 (n=6)
+- time :: evening => avg_score=0.0 (n=15)
+- time :: late-afternoon => avg_score=0.0 (n=4)
 
 ## Ask ChatGPT
 
-Using the feature summary and the top posts below, propose 5 concrete editing rules (max 1 line each) I should apply to future posts to maximize engagement. Include 1 recommendation for **style mix** and 1 for **CTA type**.
+Using the summary and top posts, propose 5 editing rules to maximize engagement, incl. 1 rec for **style mix** and 1 for **CTA**.
 
 ## Top Posts (samples)
 
-- Master interviews with the STAR method 🌟: Situation, Task, Action, Result. No more rambling, just results. 💼  | score=0.0 | emojis=2 | len=108 | style=hook_lab | cta=tip
-- You: "What’s the salary range?" Them: "$50k-$60k." You: "Is that negotiable?" 💼🤝  | score=0.0 | emojis=2 | len=80 | style=unknown | cta=unknown
-- You: "What are the growth opportunities here?" Them: "Not much." You: "Thanks for clarifying!" 🚀💼  | score=0.0 | emojis=2 | len=97 | style=unknown | cta=unknown
-- You: "I led a team of 5 to boost sales by 30% in Q2. Here's how..." 📈🤝  | score=0.0 | emojis=2 | len=70 | style=unknown | cta=unknown
-- You: "Can you describe a challenge you overcame?" Them: "Sure! I tackled X by doing Y, resulting in Z." 🚀💼  | score=0.0 | emojis=2 | len=106 | style=unknown | cta=unknown
+- ✍️ Avoid vague explanations for career gaps; be specific and positive. 🌟  | score=0.0 | emojis=3 | len=72 | style=unspecified | cta=question
+- Negotiate confidently with scripts that highlight your value. 💼💪  | score=0.0 | emojis=2 | len=64 | style=unspecified | cta=question
+- 🔥 Turn rejection into an opportunity to shine and refine your career path. 🌟  | score=0.0 | emojis=2 | len=76 | style=unspecified | cta=question
+- 📈 Transform weak resume bullets into powerful achievements 💪✨.  | score=0.0 | emojis=3 | len=62 | style=unspecified | cta=question
+- 📈 Transform your resume bullets for impact 🎯✨ and clarity.  | score=0.0 | emojis=3 | len=58 | style=unspecified | cta=question

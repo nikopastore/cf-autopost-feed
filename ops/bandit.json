@@ -6,12 +6,17 @@
     "mistake_fix": 1.1,
     "template_drop": 1.0,
     "data_bite": 0.9,
-    "challenge": 0.8
+    "challenge": 0.8,
+    "hook_lab": 0.25,
+    "swipe_headlines": 0.25,
+    "unknown": 0.25,
+    "unspecified": 0.25
   },
   "cta_weights": {
-    "question": 1.2,
-    "tip": 1.0,
+    "question": 0.333,
+    "tip": 0.333,
     "challenge": 0.9,
-    "pollish": 0.8
+    "pollish": 0.8,
+    "unknown": 0.333
   }
 }
