@@ -87,15 +87,15 @@ jobs:
         run: |
           git config user.name "cf-bot"
           git config user.email "cf-bot@users.noreply.github.com"
+          branch=$(git rev-parse --abbrev-ref HEAD)
+          git pull --rebase --autostash origin "$branch"
           git add rss.xml
           if ! git diff --cached --quiet; then
             git commit -m "Add RSS item (normalized) [skip ci]"
           else
             echo "No changes to commit for rss.xml"
           fi
-          branch=$(git rev-parse --abbrev-ref HEAD)
-          git pull --rebase origin "$branch"
-          git push
+          git push origin "$branch"
 
       # Build BOTH X feeds: full + live (1-item)
       - name: Build X feeds (rss_x.xml + rss_x_live.xml)
@@ -105,12 +105,12 @@ jobs:
         run: |
           git config user.name "cf-bot"
           git config user.email "cf-bot@users.noreply.github.com"
+          branch=$(git rev-parse --abbrev-ref HEAD)
+          git pull --rebase --autostash origin "$branch"
           git add rss_x.xml rss_x_live.xml
           if ! git diff --cached --quiet; then
             git commit -m "Build/Update X feeds [skip ci]"
           else
             echo "No changes to commit for X feeds"
           fi
-          branch=$(git rev-parse --abbrev-ref HEAD)
-          git pull --rebase origin "$branch"
-          git push
+          git push origin "$branch"
