@@ -2,8 +2,14 @@
 # rss_fb.xml (all) + rss_fb_live.xml (1): longer description ok for FB
 import xml.etree.ElementTree as ET, re, hashlib, html, os, sys
 IN_FEED="rss.xml"; OUT_ALL="rss_fb.xml"; OUT_LIVE="rss_fb_live.xml"
+FB_SUFFIX = "#CareerForward #CareerFocused #CareerForge"
 def clean(s): s=re.sub(r"<[^>]+>","",s or ""); s=html.unescape(s); return re.sub(r"\s+"," ",s).strip()
-def fb_text(title, desc): return desc if desc else title
+def fb_text(title, desc):
+    base = desc if desc else title
+    base = base.strip()
+    if base.lower().endswith(FB_SUFFIX.lower()):
+        return base
+    return (base + " " + FB_SUFFIX).strip() if base else FB_SUFFIX
 def build(items, ch_src, out_path):
     root=ET.Element("rss",attrib={"version":"2.0"}); ch=ET.SubElement(root,"channel")
     for t in ["title","link","description","language","lastBuildDate","pubDate"]:

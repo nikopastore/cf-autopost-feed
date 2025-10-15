@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# rss_x.xml (all) + rss_x_live.xml (latest 1), X-safe truncation (no hashtags)
+# rss_x.xml (all) + rss_x_live.xml (latest 1), X-safe truncation with standard hashtag suffix
 
 import xml.etree.ElementTree as ET, re, hashlib, html, sys, os
 from email.utils import parsedate_to_datetime
@@ -10,7 +10,7 @@ OUT_ALL="rss_x.xml"
 OUT_LIVE="rss_x_live.xml"
 
 RESERVED_PREFIX=""          # nothing before
-RESERVED_SUFFIX=""          # removed hashtag suffix for X
+RESERVED_SUFFIX=" #CareerForge"
 BASE_LIMIT=280
 
 STAMP_RE=re.compile(r"""(?isx)\s*(?:—|–|-|\||:)?\s*(?:\(|\[)?\s*(?:\d{4}[-/]\d{2}[-/]\d{2}(?:[ T]\d{1,2}:\d{2}(?::\d{2})?\s?(?:AM|PM)?)?(?:\s?[A-Z]{2,4})?|\d{1,2}/\d{1,2}/\d{2,4})\s*(?:\)|\])?\s*$""")

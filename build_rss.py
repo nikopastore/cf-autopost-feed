@@ -407,12 +407,18 @@ def make_item(payload, rules):
     tag_bank = coerce_tag_list(load_json(TAGS_PATH, []))
     ptags = coerce_tag_list(payload.get("tags") or [])[:2]
     for t in ptags:
-        if t not in tag_bank: tag_bank.append(t)
+        if t not in tag_bank:
+            tag_bank.append(t)
     tags_raw = (ptags[:2]) if ptags else (tag_bank[:2])
 
     bullets_fmt = "\n".join([f"• {b}" for b in points])
-    # Remove dashes from tags when formatting as hashtags (dashes break hashtag linking)
-    tag_str = " ".join([f"#{t.replace('-', '')}" for t in tags_raw]) if tags_raw else ""
+
+    def clean_hashtag(token: str) -> str:
+        return re.sub(r"[^A-Za-z0-9]", "", token or "")
+
+    tag_tokens = [clean_hashtag(t) for t in tags_raw]
+    tag_tokens = [tok for tok in tag_tokens if tok]
+    tag_str = " ".join([f"#{tok}" for tok in tag_tokens]) if tag_tokens else ""
     description = "\n".join([s for s in [hook, "", bullets_fmt, "", cta, "", tag_str] if s]).strip()
 
     now = datetime.now(timezone.utc)

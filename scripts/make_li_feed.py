@@ -2,8 +2,14 @@
 # rss_li.xml (all) + rss_li_live.xml (1): description-focused copy for LinkedIn
 import xml.etree.ElementTree as ET, re, hashlib, html, os, sys
 IN_FEED="rss.xml"; OUT_ALL="rss_li.xml"; OUT_LIVE="rss_li_live.xml"
+LI_SUFFIX = "#CareerForward #CareerFocused #CareerForge"
 def clean(s): s=re.sub(r"<[^>]+>","",s or ""); s=html.unescape(s); return re.sub(r"\s+"," ",s).strip()
-def li_text(title, desc): return desc if desc else title
+def li_text(title, desc):
+    base = desc if desc else title
+    base = base.strip()
+    if base.lower().endswith(LI_SUFFIX.lower()):
+        return base
+    return (base + " " + LI_SUFFIX).strip() if base else LI_SUFFIX
 def build(items, ch_src, out_path):
     root=ET.Element("rss",attrib={"version":"2.0"}); ch=ET.SubElement(root,"channel")
     for t in ["title","link","description","language","lastBuildDate","pubDate"]:
