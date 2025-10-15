@@ -97,20 +97,23 @@ jobs:
           fi
           git push origin "$branch"
 
-      # Build BOTH X feeds: full + live (1-item)
-      - name: Build X feeds (rss_x.xml + rss_x_live.xml)
-        run: python scripts/make_x_feed.py
+      # Build social feeds for FB, LinkedIn, and X
+      - name: Build social feeds
+        run: |
+          python scripts/make_fb_feed.py
+          python scripts/make_li_feed.py
+          python scripts/make_x_feed.py
 
-      - name: Commit & push X feeds
+      - name: Commit & push social feeds
         run: |
           git config user.name "cf-bot"
           git config user.email "cf-bot@users.noreply.github.com"
           branch=$(git rev-parse --abbrev-ref HEAD)
           git pull --rebase --autostash origin "$branch"
-          git add rss_x.xml rss_x_live.xml
+          git add rss_fb.xml rss_fb_live.xml rss_li.xml rss_li_live.xml rss_x.xml rss_x_live.xml
           if ! git diff --cached --quiet; then
-            git commit -m "Build/Update X feeds [skip ci]"
+            git commit -m "Build/Update social feeds [skip ci]"
           else
-            echo "No changes to commit for X feeds"
+            echo "No changes to commit for social feeds"
           fi
           git push origin "$branch"
