@@ -88,7 +88,13 @@ jobs:
           git config user.name "cf-bot"
           git config user.email "cf-bot@users.noreply.github.com"
           git add rss.xml
-          git commit -m "Add RSS item (normalized) [skip ci]" || echo "No changes"
+          if ! git diff --cached --quiet; then
+            git commit -m "Add RSS item (normalized) [skip ci]"
+          else
+            echo "No changes to commit for rss.xml"
+          fi
+          branch=$(git rev-parse --abbrev-ref HEAD)
+          git pull --rebase origin "$branch"
           git push
 
       # Build BOTH X feeds: full + live (1-item)
@@ -100,5 +106,11 @@ jobs:
           git config user.name "cf-bot"
           git config user.email "cf-bot@users.noreply.github.com"
           git add rss_x.xml rss_x_live.xml
-          git commit -m "Build/Update X feeds [skip ci]" || echo "No changes"
+          if ! git diff --cached --quiet; then
+            git commit -m "Build/Update X feeds [skip ci]"
+          else
+            echo "No changes to commit for X feeds"
+          fi
+          branch=$(git rev-parse --abbrev-ref HEAD)
+          git pull --rebase origin "$branch"
           git push
