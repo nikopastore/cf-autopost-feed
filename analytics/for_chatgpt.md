@@ -5,26 +5,26 @@ We generate self-contained, emoji-forward posts twice daily. Below are feature a
 ## Feature Summary (averages)
 
 - bullets :: 0 => avg_score=0.0 (n=6)
-- bullets :: 1+ => avg_score=0.0 (n=27)
-- cta :: question => avg_score=0.0 (n=12)
+- bullets :: 1+ => avg_score=0.0 (n=28)
+- cta :: question => avg_score=0.0 (n=13)
 - cta :: tip => avg_score=0.0 (n=2)
 - cta :: unknown => avg_score=0.0 (n=19)
 - emoji :: 0 => avg_score=0.0 (n=9)
-- emoji :: 2 => avg_score=0.0 (n=17)
+- emoji :: 2 => avg_score=0.0 (n=18)
 - emoji :: 3+ => avg_score=0.0 (n=7)
-- len :: <= 120 => avg_score=0.0 (n=28)
+- len :: <= 120 => avg_score=0.0 (n=29)
 - len :: <= 160 => avg_score=0.0 (n=3)
 - len :: <= 200 => avg_score=0.0 (n=1)
 - len :: <= 240 => avg_score=0.0 (n=1)
-- number :: no => avg_score=0.0 (n=7)
+- number :: no => avg_score=0.0 (n=8)
 - number :: yes => avg_score=0.0 (n=26)
-- question :: yes => avg_score=0.0 (n=33)
+- question :: yes => avg_score=0.0 (n=34)
 - style :: hook_lab => avg_score=0.0 (n=1)
 - style :: swipe_headlines => avg_score=0.0 (n=1)
 - style :: unknown => avg_score=0.0 (n=19)
-- style :: unspecified => avg_score=0.0 (n=12)
+- style :: unspecified => avg_score=0.0 (n=13)
 - time :: early-afternoon => avg_score=0.0 (n=3)
-- time :: early-morning => avg_score=0.0 (n=8)
+- time :: early-morning => avg_score=0.0 (n=9)
 - time :: evening => avg_score=0.0 (n=18)
 - time :: late-afternoon => avg_score=0.0 (n=4)
 
@@ -34,8 +34,8 @@ Using the summary and top posts, propose 5 editing rules to maximize engagement,
 
 ## Top Posts (samples)
 
+- Show ownership in interviews with confidence and examples. 🚀💼  | score=0.0 | emojis=2 | len=61 | style=unspecified | cta=question
 - Negotiate with confidence—research, prepare, and articulate your value! 💼💪  | score=0.0 | emojis=2 | len=74 | style=unspecified | cta=question
 - 🚀 Showcase your strategic impact with a non-design portfolio! 📊✨  | score=0.0 | emojis=3 | len=64 | style=unspecified | cta=question
 - 📊 Only 37% of people negotiate salary—stand out by preparing well! 💪  | score=0.0 | emojis=2 | len=68 | style=unspecified | cta=question
 - Craft a 5-slide 'About Me' to ace screening calls in 48h! 🎯📈  | score=0.0 | emojis=2 | len=60 | style=unspecified | cta=question
-- 📈 Navigate around experience barriers by showcasing skills and achievements! 🚀  | score=0.0 | emojis=2 | len=78 | style=unspecified | cta=question
