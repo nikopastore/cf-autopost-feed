@@ -19,6 +19,8 @@
   ],
   "style_weights": {
     "hook_lab": 0.7,
-    "unknown": 0.7
+    "unknown": 0.7,
+    "swipe_headlines": 0.7,
+    "unspecified": 0.7
   }
 }
