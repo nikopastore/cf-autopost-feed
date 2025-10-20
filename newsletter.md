@@ -1,26 +1,29 @@
-# Career Forge — Weekly Digest (2025-10-13)
+# Career Forge — Weekly Digest (2025-10-20)
 
 ## Top Posts
-- **Master interviews with the STAR method 🌟: Situation, Task, Action, Result. No more rambling, just results. 💼**  
-  score=0.0 | style=hook_lab | cta=tip
-- **You: "What’s the salary range?" Them: "$50k-$60k." You: "Is that negotiable?" 💼🤝**  
-  score=0.0 | style=unknown | cta=unknown
-- **You: "What are the growth opportunities here?" Them: "Not much." You: "Thanks for clarifying!" 🚀💼**  
-  score=0.0 | style=unknown | cta=unknown
-- **You: "I led a team of 5 to boost sales by 30% in Q2. Here's how..." 📈🤝**  
-  score=0.0 | style=unknown | cta=unknown
-- **You: "Can you describe a challenge you overcame?" Them: "Sure! I tackled X by doing Y, resulting in Z." 🚀💼**  
-  score=0.0 | style=unknown | cta=unknown
-- **When pitching a project, I say, "Here’s the impact: X% increase in Y!" 📈💼**  
-  score=0.0 | style=unknown | cta=unknown
-- **You: "I led a project that improved efficiency by 25% in Q3." 📈 Them: "How did you achieve that?" You: "By implementing a new workflow system!" 🚀**  
-  score=0.0 | style=unknown | cta=unknown
+- **Optimize your resume for ATS with AI tactics for better results! 📈🤖**  
+  score=0.0 | style=unspecified | cta=question
+- **Maximize your growth with a focused one-hour weekly career review. 🕒💼**  
+  score=0.0 | style=unspecified | cta=question
+- **Showcase skills with impact-focused stories—experience isn't just years. 🚀💼**  
+  score=0.0 | style=unspecified | cta=question
+- **Research a company in 10 minutes: know their values, products, and culture! 🔍📈**  
+  score=0.0 | style=unspecified | cta=question
+- **💼 Avoid over-focusing on one company. Diversify your pipeline for better results! 📈✨**  
+  score=0.0 | style=unspecified | cta=question
+- **Craft a 30/60/90 plan to impress employers—show initiative! 🚀📈**  
+  score=0.0 | style=unspecified | cta=question
+- **Researching a company in 10 minutes boosts your interview game! 🚀🕒**  
+  score=0.0 | style=unspecified | cta=question
 
 ## What worked (averages)
 ### Styles
 - hook_lab: 0.0
+- swipe_headlines: 0.0
 - unknown: 0.0
+- unspecified: 0.0
 ### CTAs
+- question: 0.0
 - tip: 0.0
 - unknown: 0.0
 ### Emojis in title
