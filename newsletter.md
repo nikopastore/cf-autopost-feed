@@ -1,19 +1,19 @@
-# Career Forge — Weekly Digest (2025-10-20)
+# Career Forge — Weekly Digest (2025-10-27)
 
 ## Top Posts
-- **Optimize your resume for ATS with AI tactics for better results! 📈🤖**  
+- **Avoid vague goals—define clear targets for your job hunt 🎯📈.**  
   score=0.0 | style=unspecified | cta=question
-- **Maximize your growth with a focused one-hour weekly career review. 🕒💼**  
+- **🧠 Boost your AI resume for ATS success 🚀 with clear, quantifiable achievements.**  
   score=0.0 | style=unspecified | cta=question
-- **Showcase skills with impact-focused stories—experience isn't just years. 🚀💼**  
+- **Quantify your impact with numbers – they speak louder than words! 📊🔍**  
   score=0.0 | style=unspecified | cta=question
-- **Research a company in 10 minutes: know their values, products, and culture! 🔍📈**  
+- **Negotiate assertively—your value shines through confidence and clarity. 💪🏾💼**  
   score=0.0 | style=unspecified | cta=question
-- **💼 Avoid over-focusing on one company. Diversify your pipeline for better results! 📈✨**  
+- **Timebox your job search by blocking 2-hour slots daily—boost focus 🎯 and efficiency 🚀.**  
   score=0.0 | style=unspecified | cta=question
-- **Craft a 30/60/90 plan to impress employers—show initiative! 🚀📈**  
+- **🧠 Transform overwhelm into action: ship a project in 48h! ⏳🚀**  
   score=0.0 | style=unspecified | cta=question
-- **Researching a company in 10 minutes boosts your interview game! 🚀🕒**  
+- **Mistake: Focusing on quantity over quality. Aim for a tailored approach! 🎯📈**  
   score=0.0 | style=unspecified | cta=question
 
 ## What worked (averages)
