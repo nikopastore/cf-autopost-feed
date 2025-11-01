@@ -1,24 +1,24 @@
 feature,bucket,avg_eng_score,n_posts
 bullets,0,0.0,6
-bullets,1+,0.0,59
-cta,question,0.0,44
+bullets,1+,0.0,60
+cta,question,0.0,45
 cta,tip,0.0,2
 cta,unknown,0.0,19
 emoji,0,0.0,9
 emoji,2,0.0,40
-emoji,3+,0.0,16
-len,<= 120,0.0,60
+emoji,3+,0.0,17
+len,<= 120,0.0,61
 len,<= 160,0.0,3
 len,<= 200,0.0,1
 len,<= 240,0.0,1
-number,no,0.0,17
+number,no,0.0,18
 number,yes,0.0,48
-question,yes,0.0,65
+question,yes,0.0,66
 style,hook_lab,0.0,1
 style,swipe_headlines,0.0,1
 style,unknown,0.0,19
-style,unspecified,0.0,44
+style,unspecified,0.0,45
 time,early-afternoon,0.0,19
-time,early-morning,0.0,24
+time,early-morning,0.0,25
 time,evening,0.0,18
 time,late-afternoon,0.0,4
