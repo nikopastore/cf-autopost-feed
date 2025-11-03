@@ -1,19 +1,19 @@
-# Career Forge — Weekly Digest (2025-10-27)
+# Career Forge — Weekly Digest (2025-11-03)
 
 ## Top Posts
-- **Avoid vague goals—define clear targets for your job hunt 🎯📈.**  
+- **Negotiate like a pro by leveraging family wisdom—ask for more, always! 💪🎙️**  
   score=0.0 | style=unspecified | cta=question
-- **🧠 Boost your AI resume for ATS success 🚀 with clear, quantifiable achievements.**  
+- **🚀 80% of interviewers use job posts for questions—turn them into your advantage! 🚀**  
   score=0.0 | style=unspecified | cta=question
-- **Quantify your impact with numbers – they speak louder than words! 📊🔍**  
+- **Evaluate culture fit with strategic questions—uncover values and work style. 🌟🤝**  
   score=0.0 | style=unspecified | cta=question
-- **Negotiate assertively—your value shines through confidence and clarity. 💪🏾💼**  
+- **Boost your LinkedIn visibility with a standout headline! 🌟🔍**  
   score=0.0 | style=unspecified | cta=question
-- **Timebox your job search by blocking 2-hour slots daily—boost focus 🎯 and efficiency 🚀.**  
+- **Optimize your career trajectory with a one-hour weekly review. 🚀🗓️**  
   score=0.0 | style=unspecified | cta=question
-- **🧠 Transform overwhelm into action: ship a project in 48h! ⏳🚀**  
+- **✍️ A solid 30/60/90 plan boosts your hiring chance by 30% 🚀. Use: “I plan to achieve X in 90 days by doing Y.”**  
   score=0.0 | style=unspecified | cta=question
-- **Mistake: Focusing on quantity over quality. Aim for a tailored approach! 🎯📈**  
+- **Negotiate confidently: know your worth, use data-backed leverage, and articulate value clearly. 💪💼**  
   score=0.0 | style=unspecified | cta=question
 
 ## What worked (averages)
