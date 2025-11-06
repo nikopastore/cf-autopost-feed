@@ -1,16 +1,16 @@
 {
   "style_weights": {
     "coach_tip": 1.4,
-    "recruiter_inside": 0.2,
+    "recruiter_inside": 0.167,
     "checklist": 1.1,
-    "mistake_fix": 1.1,
+    "mistake_fix": 0.167,
     "template_drop": 1.0,
     "data_bite": 0.9,
     "challenge": 0.8,
-    "hook_lab": 0.2,
-    "swipe_headlines": 0.2,
-    "unknown": 0.2,
-    "unspecified": 0.2
+    "hook_lab": 0.167,
+    "swipe_headlines": 0.167,
+    "unknown": 0.167,
+    "unspecified": 0.167
   },
   "cta_weights": {
     "question": 0.333,
