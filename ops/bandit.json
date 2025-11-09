@@ -1,16 +1,16 @@
 {
   "style_weights": {
-    "coach_tip": 0.1,
-    "recruiter_inside": 0.1,
-    "checklist": 1.1,
-    "mistake_fix": 0.1,
-    "template_drop": 0.1,
-    "data_bite": 0.1,
-    "challenge": 0.1,
-    "hook_lab": 0.1,
-    "swipe_headlines": 0.1,
-    "unknown": 0.1,
-    "unspecified": 0.1
+    "coach_tip": 0.091,
+    "recruiter_inside": 0.091,
+    "checklist": 0.091,
+    "mistake_fix": 0.091,
+    "template_drop": 0.091,
+    "data_bite": 0.091,
+    "challenge": 0.091,
+    "hook_lab": 0.091,
+    "swipe_headlines": 0.091,
+    "unknown": 0.091,
+    "unspecified": 0.091
   },
   "cta_weights": {
     "question": 0.333,
