@@ -2,7 +2,7 @@
 Based on average engagement by **local time bucket** (America/Phoenix).
 
 ## Top buckets
-- early-afternoon: avg_score=0.00 (n=27)
+- early-afternoon: avg_score=0.00 (n=28)
 - early-morning: avg_score=0.00 (n=33)
 - evening: avg_score=0.00 (n=18)
 - late-afternoon: avg_score=0.00 (n=4)
