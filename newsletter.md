@@ -1,27 +1,29 @@
-# Career Forge — Weekly Digest (2025-11-03)
+# Career Forge — Weekly Digest (2025-11-10)
 
 ## Top Posts
-- **Negotiate like a pro by leveraging family wisdom—ask for more, always! 💪🎙️**  
-  score=0.0 | style=unspecified | cta=question
-- **🚀 80% of interviewers use job posts for questions—turn them into your advantage! 🚀**  
-  score=0.0 | style=unspecified | cta=question
-- **Evaluate culture fit with strategic questions—uncover values and work style. 🌟🤝**  
-  score=0.0 | style=unspecified | cta=question
-- **Boost your LinkedIn visibility with a standout headline! 🌟🔍**  
-  score=0.0 | style=unspecified | cta=question
-- **Optimize your career trajectory with a one-hour weekly review. 🚀🗓️**  
-  score=0.0 | style=unspecified | cta=question
-- **✍️ A solid 30/60/90 plan boosts your hiring chance by 30% 🚀. Use: “I plan to achieve X in 90 days by doing Y.”**  
-  score=0.0 | style=unspecified | cta=question
-- **Negotiate confidently: know your worth, use data-backed leverage, and articulate value clearly. 💪💼**  
-  score=0.0 | style=unspecified | cta=question
+- **Your update pitch, coach-style: Use: "I improved X% by doing Y so Z happened." Keep it tight. ✅📌**  
+  score=0.0 | style=coach_tip | cta=question
+- **Your update pitch, coach-style: Use: "I improved X% by doing Y so Z happened." Keep it tight. ✅📌**  
+  score=0.0 | style=mistake_fix | cta=question
+- **Your update pitch, coach-style: Use: "I improved X% by doing Y so Z happened." Keep it tight. ✅📌**  
+  score=0.0 | style=checklist | cta=question
+- **Your update pitch, coach-style: Use: "I improved X% by doing Y so Z happened." Keep it tight. ✅📌**  
+  score=0.0 | style=challenge | cta=question
+- **Your update pitch, coach-style: Use: "I improved X% by doing Y so Z happened." Keep it tight. ✅📌**  
+  score=0.0 | style=template_drop | cta=question
+- **Your update pitch, coach-style: Use: "I improved X% by doing Y so Z happened." Keep it tight. ✅📌**  
+  score=0.0 | style=data_bite | cta=question
+- **Your update pitch, coach-style: Use: "I improved X% by doing Y so Z happened." Keep it tight. ✅📌**  
+  score=0.0 | style=coach_tip | cta=question
 
 ## What worked (averages)
 ### Styles
+- challenge: 0.0
+- checklist: 0.0
+- coach_tip: 0.0
+- data_bite: 0.0
 - hook_lab: 0.0
-- swipe_headlines: 0.0
-- unknown: 0.0
-- unspecified: 0.0
+- mistake_fix: 0.0
 ### CTAs
 - question: 0.0
 - tip: 0.0
