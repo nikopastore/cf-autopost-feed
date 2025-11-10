@@ -21,6 +21,13 @@
     "hook_lab": 0.7,
     "unknown": 0.7,
     "swipe_headlines": 0.7,
-    "unspecified": 0.7
+    "unspecified": 0.7,
+    "challenge": 0.7,
+    "checklist": 0.7,
+    "coach_tip": 0.7,
+    "data_bite": 0.7,
+    "mistake_fix": 0.7,
+    "recruiter_inside": 0.7,
+    "template_drop": 0.7
   }
 }
