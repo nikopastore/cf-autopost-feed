@@ -5,7 +5,7 @@ permissions:
 
 on:
   schedule:
-    - cron: "40 14 * * *"   # 14:40 UTC -> 07:40 America/Phoenix (Daily AM post only)
+    - cron: "0 13 * * *"   # 13:00 UTC -> 06:00 America/Phoenix (Daily 6 AM post)
   workflow_dispatch:
 
 jobs:
