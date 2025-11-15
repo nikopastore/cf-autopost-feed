@@ -2,14 +2,28 @@
 # rss_fb.xml (all) + rss_fb_live.xml (1): longer description ok for FB
 import xml.etree.ElementTree as ET, re, hashlib, html, os, sys
 IN_FEED="rss.xml"; OUT_ALL="rss_fb.xml"; OUT_LIVE="rss_fb_live.xml"
-FB_SUFFIX = "#CareerForward #CareerFocused #CareerForge"
+
+# Rotating hashtags - picks one based on index
+ROTATING_HASHTAGS = [
+    "#AIAutomations",
+    "#AICopilot",
+    "#OperateSmarterGrowFaster",
+    "#AIForBusiness",
+    "#NoMoreBusywork",
+    "#AIWorkflows"
+]
+
+# Base suffix with ScalePilot hashtags (rotating tag added dynamically)
+FB_BASE_SUFFIX = "#ScalePilot #SocialPilot"
 def clean(s): s=re.sub(r"<[^>]+>","",s or ""); s=html.unescape(s); return re.sub(r"\s+"," ",s).strip()
-def fb_text(title, desc):
+def fb_text(title, desc, rotating_tag):
     base = desc if desc else title
     base = base.strip()
-    if base.lower().endswith(FB_SUFFIX.lower()):
+    full_suffix = f"{FB_BASE_SUFFIX} {rotating_tag}"
+    # Check if hashtags already present
+    if any(tag in base.lower() for tag in [t.lower() for t in ROTATING_HASHTAGS + ["#scalepilot", "#socialpilot"]]):
         return base
-    return (base + " " + FB_SUFFIX).strip() if base else FB_SUFFIX
+    return (base + " " + full_suffix).strip() if base else full_suffix
 def build(items, ch_src, out_path):
     root=ET.Element("rss",attrib={"version":"2.0"}); ch=ET.SubElement(root,"channel")
     for t in ["title","link","description","language","lastBuildDate","pubDate"]:
@@ -20,14 +34,16 @@ def build(items, ch_src, out_path):
 if not os.path.exists(IN_FEED): print("rss.xml not found"); sys.exit(1)
 t=ET.parse(IN_FEED); ch=t.getroot().find("channel")
 items=[]
-for it in ch.findall("item"):
+for idx, it in enumerate(ch.findall("item")):
     title=clean(it.findtext("title")); desc=clean(it.findtext("description")); link=(it.findtext("link") or "").strip()
-    text=fb_text(title, desc)
+    # Use index-based selection for consistent hashtag per item
+    rotating_tag = ROTATING_HASHTAGS[idx % len(ROTATING_HASHTAGS)]
+    text=fb_text(title, desc, rotating_tag)
     n=ET.Element("item"); ET.SubElement(n,"title").text=text; ET.SubElement(n,"description").text=text
     ET.SubElement(n,"link").text=link
     base=(it.findtext("guid") or link or title or desc).encode("utf-8","ignore")
     import hashlib as H; ET.SubElement(n,"guid",attrib={"isPermaLink":"false"}).text=H.sha1(base).hexdigest()
-    pub=it.findtext("pubDate"); 
+    pub=it.findtext("pubDate");
     if pub: ET.SubElement(n,"pubDate").text=pub
     items.append(n)
 build(items, ch, OUT_ALL)

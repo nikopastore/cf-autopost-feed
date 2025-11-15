@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # rss_x.xml (all) + rss_x_live.xml (latest 1), X-safe truncation with standard hashtag suffix
 
-import xml.etree.ElementTree as ET, re, hashlib, html, sys, os
+import xml.etree.ElementTree as ET, re, hashlib, html, sys, os, random
 from email.utils import parsedate_to_datetime
 from datetime import datetime, timezone
 
@@ -9,8 +9,19 @@ IN_FEED="rss.xml"
 OUT_ALL="rss_x.xml"
 OUT_LIVE="rss_x_live.xml"
 
+# Rotating hashtags - picks one randomly
+ROTATING_HASHTAGS = [
+    "#AIAutomations",
+    "#AICopilot",
+    "#OperateSmarterGrowFaster",
+    "#AIForBusiness",
+    "#NoMoreBusywork",
+    "#AIWorkflows"
+]
+
 RESERVED_PREFIX=""          # nothing before
-RESERVED_SUFFIX=" #CareerForge"
+# Updated suffix with ScalePilot hashtags + rotating hashtag
+RESERVED_SUFFIX=" #ScalePilot #SocialPilot"  # Will add rotating hashtag in transform()
 BASE_LIMIT=280
 
 STAMP_RE=re.compile(r"""(?isx)\s*(?:—|–|-|\||:)?\s*(?:\(|\[)?\s*(?:\d{4}[-/]\d{2}[-/]\d{2}(?:[ T]\d{1,2}:\d{2}(?::\d{2})?\s?(?:AM|PM)?)?(?:\s?[A-Z]{2,4})?|\d{1,2}/\d{1,2}/\d{2,4})\s*(?:\)|\])?\s*$""")
@@ -45,13 +56,15 @@ def emoji_safe_truncate(text, limit):
     if " " in s: s=s.rsplit(" ",1)[0]
     return s+"…"
 
-def smart_text(body):
+def smart_text(body, rotating_tag):
     # remove any hashtags from body, then truncate with reserved space
     body = strip_hashtags(body)
-    reserve=len(RESERVED_PREFIX)+len(RESERVED_SUFFIX)
+    # Combine the suffix with the rotating hashtag
+    full_suffix = f"{RESERVED_SUFFIX} {rotating_tag}"
+    reserve=len(RESERVED_PREFIX)+len(full_suffix)
     txt=emoji_safe_truncate(body, max(0,BASE_LIMIT-reserve))
     if RESERVED_PREFIX: txt=f"{RESERVED_PREFIX}{txt}"
-    if RESERVED_SUFFIX: txt=f"{txt}{RESERVED_SUFFIX}"
+    txt=f"{txt}{full_suffix}"
     if len(txt)>BASE_LIMIT: txt=emoji_safe_truncate(txt, BASE_LIMIT)
     return txt
 
@@ -72,12 +85,14 @@ def load_items():
 
 def transform(src_items):
     out=[]
-    for it in src_items:
+    for idx, it in enumerate(src_items):
         title=strip_stamp(collapse_ws(it.findtext("title") or ""))
         desc =strip_stamp(collapse_ws(it.findtext("description") or ""))
         link=(it.findtext("link") or "").strip()
         body=title or desc
-        text=smart_text(body)
+        # Use index-based selection for consistent hashtag per item
+        rotating_tag = ROTATING_HASHTAGS[idx % len(ROTATING_HASHTAGS)]
+        text=smart_text(body, rotating_tag)
         n=ET.Element("item")
         ET.SubElement(n,"title").text=text
         ET.SubElement(n,"description").text=text
