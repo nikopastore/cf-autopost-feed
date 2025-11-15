@@ -1,12 +1,11 @@
-name: Generate and publish RSS item (AM/PM)
+name: Generate and publish RSS item (Daily AM)
 
 permissions:
   contents: write
 
 on:
   schedule:
-    - cron: "40 14 * * *"   # 14:40 UTC -> 07:40 America/Phoenix
-    - cron: "10 21 * * *"   # 21:10 UTC -> 14:10 America/Phoenix
+    - cron: "40 14 * * *"   # 14:40 UTC -> 07:40 America/Phoenix (Daily AM post only)
   workflow_dispatch:
 
 jobs:
