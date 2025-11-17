@@ -1,16 +1,16 @@
-# Career Forge — Weekly Digest (2025-11-10)
+# Career Forge — Weekly Digest (2025-11-17)
 
 ## Top Posts
 - **Your update pitch, coach-style: Use: "I improved X% by doing Y so Z happened." Keep it tight. ✅📌**  
-  score=0.0 | style=coach_tip | cta=question
+  score=0.0 | style=checklist | cta=question
 - **Your update pitch, coach-style: Use: "I improved X% by doing Y so Z happened." Keep it tight. ✅📌**  
   score=0.0 | style=mistake_fix | cta=question
 - **Your update pitch, coach-style: Use: "I improved X% by doing Y so Z happened." Keep it tight. ✅📌**  
-  score=0.0 | style=checklist | cta=question
+  score=0.0 | style=data_bite | cta=question
 - **Your update pitch, coach-style: Use: "I improved X% by doing Y so Z happened." Keep it tight. ✅📌**  
-  score=0.0 | style=challenge | cta=question
+  score=0.0 | style=data_bite | cta=question
 - **Your update pitch, coach-style: Use: "I improved X% by doing Y so Z happened." Keep it tight. ✅📌**  
-  score=0.0 | style=template_drop | cta=question
+  score=0.0 | style=mistake_fix | cta=question
 - **Your update pitch, coach-style: Use: "I improved X% by doing Y so Z happened." Keep it tight. ✅📌**  
   score=0.0 | style=data_bite | cta=question
 - **Your update pitch, coach-style: Use: "I improved X% by doing Y so Z happened." Keep it tight. ✅📌**  
