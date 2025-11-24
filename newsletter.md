@@ -1,18 +1,18 @@
-# Career Forge — Weekly Digest (2025-11-17)
+# Career Forge — Weekly Digest (2025-11-24)
 
 ## Top Posts
-- **Your update pitch, coach-style: Use: "I improved X% by doing Y so Z happened." Keep it tight. ✅📌**  
-  score=0.0 | style=checklist | cta=question
-- **Your update pitch, coach-style: Use: "I improved X% by doing Y so Z happened." Keep it tight. ✅📌**  
-  score=0.0 | style=mistake_fix | cta=question
-- **Your update pitch, coach-style: Use: "I improved X% by doing Y so Z happened." Keep it tight. ✅📌**  
-  score=0.0 | style=data_bite | cta=question
-- **Your update pitch, coach-style: Use: "I improved X% by doing Y so Z happened." Keep it tight. ✅📌**  
-  score=0.0 | style=data_bite | cta=question
-- **Your update pitch, coach-style: Use: "I improved X% by doing Y so Z happened." Keep it tight. ✅📌**  
-  score=0.0 | style=mistake_fix | cta=question
-- **Your update pitch, coach-style: Use: "I improved X% by doing Y so Z happened." Keep it tight. ✅📌**  
-  score=0.0 | style=data_bite | cta=question
+- **Build a behavioral interview question bank in 48 hours! 🔍📚**  
+  score=0.0 | style=unspecified | cta=question
+- **🎯 Boost profile views by 13x with a compelling LinkedIn headline! 🚀**  
+  score=0.0 | style=unspecified | cta=question
+- **Master your job search by timeboxing with calendar blocks 🗓️🎯.**  
+  score=0.0 | style=unspecified | cta=question
+- **Show coachability with examples of feedback-driven growth 🌱💼.**  
+  score=0.0 | style=unspecified | cta=question
+- **📊 60% of employers value portfolios for non-design roles. Showcase your impact and skills effectively! 📈**  
+  score=0.0 | style=unspecified | cta=question
+- **Turn rejection into opportunity—build stronger relationships and insights. 🔄💼**  
+  score=0.0 | style=unspecified | cta=question
 - **Your update pitch, coach-style: Use: "I improved X% by doing Y so Z happened." Keep it tight. ✅📌**  
   score=0.0 | style=coach_tip | cta=question
 
