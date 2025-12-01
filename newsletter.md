@@ -1,20 +1,20 @@
-# Career Forge — Weekly Digest (2025-11-24)
+# Career Forge — Weekly Digest (2025-12-01)
 
 ## Top Posts
-- **Build a behavioral interview question bank in 48 hours! 🔍📚**  
+- **Show you're coachable & proactive with concrete examples 🏆🚀.**  
   score=0.0 | style=unspecified | cta=question
-- **🎯 Boost profile views by 13x with a compelling LinkedIn headline! 🚀**  
+- **Secure valuable referrals for career growth! 🌟🤝**  
   score=0.0 | style=unspecified | cta=question
-- **Master your job search by timeboxing with calendar blocks 🗓️🎯.**  
+- **🤝 Elevate your LinkedIn headline for better discovery in 48 hours! 🚀✨**  
   score=0.0 | style=unspecified | cta=question
-- **Show coachability with examples of feedback-driven growth 🌱💼.**  
+- **🧩 Boost your cold outreach success with a strategic 24-hour plan! 🚀**  
   score=0.0 | style=unspecified | cta=question
-- **📊 60% of employers value portfolios for non-design roles. Showcase your impact and skills effectively! 📈**  
+- **Stop tracking only applications—measure interviews and offers too! 📊🚀**  
   score=0.0 | style=unspecified | cta=question
-- **Turn rejection into opportunity—build stronger relationships and insights. 🔄💼**  
+- **Master networking as an introvert—strategic scripts and timing can be your secret weapons. 🌟🤝**  
   score=0.0 | style=unspecified | cta=question
-- **Your update pitch, coach-style: Use: "I improved X% by doing Y so Z happened." Keep it tight. ✅📌**  
-  score=0.0 | style=coach_tip | cta=question
+- **Showcase ownership in interviews by highlighting initiatives you led. 🚀💼**  
+  score=0.0 | style=unspecified | cta=question
 
 ## What worked (averages)
 ### Styles
