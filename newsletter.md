@@ -1,19 +1,19 @@
-# Career Forge — Weekly Digest (2025-12-08)
+# Career Forge — Weekly Digest (2025-12-15)
 
 ## Top Posts
-- **Negotiate confidently with clarity—know your worth and articulate it! 💪💼**  
+- **Identify skill gaps quickly—boost your career growth! 📈🔍**  
   score=0.0 | style=unspecified | cta=question
-- **Spot deal breakers in job offers—quickly identify red flags! 🚩💡**  
+- **Negotiate confidently—your skills deserve recognition and fair pay. 💪🏽💼**  
   score=0.0 | style=unspecified | cta=question
-- **Use: “I am excited about this opportunity and would like to discuss a compensation package that reflects my skills and experience.” 🎯💼**  
+- **Negotiate like a pro and maximize your salary package! 💼💰**  
   score=0.0 | style=unspecified | cta=question
-- **Boost resume impact in 24h by refining key sections! 🚀📄**  
+- **Boost your negotiation skills in 24–48h with this challenge! 🚀💼**  
   score=0.0 | style=unspecified | cta=question
-- **Negotiate for a higher salary with confidence and strategy 💼💪.**  
+- **🧩 Master company research in 10 minutes—uncover key insights fast! 🕵️‍♀️✨**  
   score=0.0 | style=unspecified | cta=question
-- **⚡ Build a 10-company pipeline in a week with focus and strategy! 🚀**  
+- **Overlooked skills gaps? Audit now to boost your career 📈🔍**  
   score=0.0 | style=unspecified | cta=question
-- **🌟 Revamp your resume for ATS success in 48 hours! 🚀✨**  
+- **Invite parents to salary talks—show confidence in support systems. 👨‍👩‍👧‍👦**  
   score=0.0 | style=unspecified | cta=question
 
 ## What worked (averages)
