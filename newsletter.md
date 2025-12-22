@@ -1,19 +1,19 @@
-# Career Forge — Weekly Digest (2025-12-15)
+# Career Forge — Weekly Digest (2025-12-22)
 
 ## Top Posts
-- **Identify skill gaps quickly—boost your career growth! 📈🔍**  
+- **Negotiate confidently—highlight your unique value and market research. 💼💡**  
   score=0.0 | style=unspecified | cta=question
-- **Negotiate confidently—your skills deserve recognition and fair pay. 💪🏽💼**  
+- **Introverts often overthink networking. Keep it simple—use scripts! 🤝💡**  
   score=0.0 | style=unspecified | cta=question
-- **Negotiate like a pro and maximize your salary package! 💼💰**  
+- **🔥 Craft interview questions from job posts to showcase your fit! 🎯**  
   score=0.0 | style=unspecified | cta=question
-- **Boost your negotiation skills in 24–48h with this challenge! 🚀💼**  
+- **🔥 Transform job posts into interview questions in 24–48h! 🚀**  
   score=0.0 | style=unspecified | cta=question
-- **🧩 Master company research in 10 minutes—uncover key insights fast! 🕵️‍♀️✨**  
+- **🔍 70% of hiring managers value 'ownership'—showcase it with examples of initiative! 💪**  
   score=0.0 | style=unspecified | cta=question
-- **Overlooked skills gaps? Audit now to boost your career 📈🔍**  
+- **👩‍💻 Spend 30 minutes daily on job search systems to streamline and boost your success. ⏰**  
   score=0.0 | style=unspecified | cta=question
-- **Invite parents to salary talks—show confidence in support systems. 👨‍👩‍👧‍👦**  
+- **Overcome 'years of experience' bias by showcasing relevant skills and results. 🚀📈**  
   score=0.0 | style=unspecified | cta=question
 
 ## What worked (averages)
