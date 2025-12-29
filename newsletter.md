@@ -1,19 +1,19 @@
-# Career Forge — Weekly Digest (2025-12-22)
+# Career Forge — Weekly Digest (2025-12-29)
 
 ## Top Posts
+- **📌 Master behavioral interviews by showcasing your skills with confidence. 🚀**  
+  score=0.0 | style=unspecified | cta=question
+- **Nail your appraisal with confidence and clarity. 🎯💡**  
+  score=0.0 | style=unspecified | cta=question
+- **🔍 70% of jobs are filled through referrals—networking can boost your chances! 🤝**  
+  score=0.0 | style=unspecified | cta=question
+- **✍️ Boost your cold outreach success with this 4-step checklist! 📧✨**  
+  score=0.0 | style=unspecified | cta=question
+- **💬 42% of hiring managers prefer STAR+L stories—boost your leadership narrative! 🚀**  
+  score=0.0 | style=unspecified | cta=question
+- **📈 Allocate 15 minutes weekly for a career review to boost clarity and focus. 🔍**  
+  score=0.0 | style=unspecified | cta=question
 - **Negotiate confidently—highlight your unique value and market research. 💼💡**  
-  score=0.0 | style=unspecified | cta=question
-- **Introverts often overthink networking. Keep it simple—use scripts! 🤝💡**  
-  score=0.0 | style=unspecified | cta=question
-- **🔥 Craft interview questions from job posts to showcase your fit! 🎯**  
-  score=0.0 | style=unspecified | cta=question
-- **🔥 Transform job posts into interview questions in 24–48h! 🚀**  
-  score=0.0 | style=unspecified | cta=question
-- **🔍 70% of hiring managers value 'ownership'—showcase it with examples of initiative! 💪**  
-  score=0.0 | style=unspecified | cta=question
-- **👩‍💻 Spend 30 minutes daily on job search systems to streamline and boost your success. ⏰**  
-  score=0.0 | style=unspecified | cta=question
-- **Overcome 'years of experience' bias by showcasing relevant skills and results. 🚀📈**  
   score=0.0 | style=unspecified | cta=question
 
 ## What worked (averages)
