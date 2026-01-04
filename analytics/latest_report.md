@@ -1,9 +1,11 @@
 # Career Forge — Analytics Report
 
-_Generated: 2026-01-03T14:41:08.616433-07:00_
+_Generated: 2026-01-04T08:29:04.706182-07:00_
 
 ## Top 5 Posts (by engagement score)
 
+- **85% of black women are dissatisfied with their salary negotiations. 🎯💼**  
+  score=0.0 | likes=0 | replies=0 | reposts=0 | clicks=0 | saves=0 | time=2026-01-04T06:32:56-07:00 | style=unspecified | cta=question
 - **📈 Don't rely solely on self-assessment for skills—seek external feedback! 🔍**  
   score=0.0 | likes=0 | replies=0 | reposts=0 | clicks=0 | saves=0 | time=2026-01-03T06:32:14-07:00 | style=unspecified | cta=question
 - **🎯 Break big goals into micro-tasks for progress and clarity! 🚀**  
@@ -12,8 +14,6 @@ _Generated: 2026-01-03T14:41:08.616433-07:00_
   score=0.0 | likes=0 | replies=0 | reposts=0 | clicks=0 | saves=0 | time=2026-01-01T06:37:06-07:00 | style=unspecified | cta=question
 - **🧩 Show you're coachable by sharing past growth moments—demonstrates high agency! 🚀**  
   score=0.0 | likes=0 | replies=0 | reposts=0 | clicks=0 | saves=0 | time=2025-12-31T06:35:41-07:00 | style=unspecified | cta=question
-- **Avoid costly errors in salary talks with this checklist. 💰🛠️**  
-  score=0.0 | likes=0 | replies=0 | reposts=0 | clicks=0 | saves=0 | time=2025-12-30T06:39:43-07:00 | style=unspecified | cta=question
 
 ## Performance by Style
 
@@ -27,23 +27,23 @@ _Generated: 2026-01-03T14:41:08.616433-07:00_
 - swipe_headlines: avg_score=0.0 (n=1)
 - template_drop: avg_score=0.0 (n=1)
 - unknown: avg_score=0.0 (n=19)
-- unspecified: avg_score=0.0 (n=99)
+- unspecified: avg_score=0.0 (n=100)
 
 ## Performance by CTA Type
 
-- question: avg_score=0.0 (n=123)
+- question: avg_score=0.0 (n=124)
 - tip: avg_score=0.0 (n=2)
 - unknown: avg_score=0.0 (n=19)
 
 ## Emoji Count in Title
 
 - 0: avg_score=0.0 (n=9)
-- 2: avg_score=0.0 (n=107)
+- 2: avg_score=0.0 (n=108)
 - 3+: avg_score=0.0 (n=28)
 
 ## Title Length
 
-- <= 120: avg_score=0.0 (n=138)
+- <= 120: avg_score=0.0 (n=139)
 - <= 160: avg_score=0.0 (n=4)
 - <= 200: avg_score=0.0 (n=1)
 - <= 240: avg_score=0.0 (n=1)
@@ -51,21 +51,21 @@ _Generated: 2026-01-03T14:41:08.616433-07:00_
 ## Numbers / % / $ Present
 
 - no: avg_score=0.0 (n=64)
-- yes: avg_score=0.0 (n=80)
+- yes: avg_score=0.0 (n=81)
 
 ## Question Mark Present
 
-- yes: avg_score=0.0 (n=144)
+- yes: avg_score=0.0 (n=145)
 
 ## Bullets Present in Description
 
 - 0: avg_score=0.0 (n=6)
-- 1+: avg_score=0.0 (n=138)
+- 1+: avg_score=0.0 (n=139)
 
 ## Local Post Time Bucket
 
 - early-afternoon: avg_score=0.0 (n=33)
-- early-morning: avg_score=0.0 (n=87)
+- early-morning: avg_score=0.0 (n=88)
 - evening: avg_score=0.0 (n=18)
 - late-afternoon: avg_score=0.0 (n=4)
 - morning: avg_score=0.0 (n=2)
