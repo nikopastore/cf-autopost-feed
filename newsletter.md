@@ -1,19 +1,19 @@
-# Career Forge — Weekly Digest (2025-12-29)
+# Career Forge — Weekly Digest (2026-01-05)
 
 ## Top Posts
-- **📌 Master behavioral interviews by showcasing your skills with confidence. 🚀**  
+- **Spot offer red flags early to avoid career pitfalls! 🚩🤔**  
   score=0.0 | style=unspecified | cta=question
-- **Nail your appraisal with confidence and clarity. 🎯💡**  
+- **85% of black women are dissatisfied with their salary negotiations. 🎯💼**  
   score=0.0 | style=unspecified | cta=question
-- **🔍 70% of jobs are filled through referrals—networking can boost your chances! 🤝**  
+- **📈 Don't rely solely on self-assessment for skills—seek external feedback! 🔍**  
   score=0.0 | style=unspecified | cta=question
-- **✍️ Boost your cold outreach success with this 4-step checklist! 📧✨**  
+- **🎯 Break big goals into micro-tasks for progress and clarity! 🚀**  
   score=0.0 | style=unspecified | cta=question
-- **💬 42% of hiring managers prefer STAR+L stories—boost your leadership narrative! 🚀**  
+- **🔥 Referrals boost your hire chances by 85%—ask confidently! 💼✨**  
   score=0.0 | style=unspecified | cta=question
-- **📈 Allocate 15 minutes weekly for a career review to boost clarity and focus. 🔍**  
+- **🧩 Show you're coachable by sharing past growth moments—demonstrates high agency! 🚀**  
   score=0.0 | style=unspecified | cta=question
-- **Negotiate confidently—highlight your unique value and market research. 💼💡**  
+- **Avoid costly errors in salary talks with this checklist. 💰🛠️**  
   score=0.0 | style=unspecified | cta=question
 
 ## What worked (averages)
