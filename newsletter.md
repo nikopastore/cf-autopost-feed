@@ -1,19 +1,19 @@
-# Career Forge — Weekly Digest (2026-01-05)
+# Career Forge — Weekly Digest (2026-01-12)
 
 ## Top Posts
-- **Spot offer red flags early to avoid career pitfalls! 🚩🤔**  
+- **⚡ Master quick company research in 10 minutes with these steps! ⏰🔍**  
   score=0.0 | style=unspecified | cta=question
-- **85% of black women are dissatisfied with their salary negotiations. 🎯💼**  
+- **📈 Showcase projects that solve real problems—stand out to hiring managers! 🚀**  
   score=0.0 | style=unspecified | cta=question
-- **📈 Don't rely solely on self-assessment for skills—seek external feedback! 🔍**  
+- **Boost productivity with a daily 3-task system for consistent wins. 💪🗓️**  
   score=0.0 | style=unspecified | cta=question
-- **🎯 Break big goals into micro-tasks for progress and clarity! 🚀**  
+- **Show leadership by linking achievements to team success! 🌟💪**  
   score=0.0 | style=unspecified | cta=question
-- **🔥 Referrals boost your hire chances by 85%—ask confidently! 💼✨**  
+- **Craft a tight career narrative by linking roles with a clear theme. 🎯🚀**  
   score=0.0 | style=unspecified | cta=question
-- **🧩 Show you're coachable by sharing past growth moments—demonstrates high agency! 🚀**  
+- **Craft a compelling cover letter in 5 lines: hook, value, skills, culture fit, and action! 📝💼**  
   score=0.0 | style=unspecified | cta=question
-- **Avoid costly errors in salary talks with this checklist. 💰🛠️**  
+- **Mastering salary negotiations is crucial—show your worth and secure the pay you deserve. 💼💸**  
   score=0.0 | style=unspecified | cta=question
 
 ## What worked (averages)
