@@ -1,9 +1,11 @@
 # Career Forge — Analytics Report
 
-_Generated: 2026-01-14T14:45:29.446202-07:00_
+_Generated: 2026-01-15T08:37:09.172785-07:00_
 
 ## Top 5 Posts (by engagement score)
 
+- **🔎 Over 60% of Gen Z consult family in job talks. 🤝 Involve them wisely—set clear goals.**  
+  score=0.0 | likes=0 | replies=0 | reposts=0 | clicks=0 | saves=0 | time=2026-01-15T06:44:03-07:00 | style=unspecified | cta=question
 - **Discussing salary with parents? Create your own pitch first! 👨‍👩‍👦💡**  
   score=0.0 | likes=0 | replies=0 | reposts=0 | clicks=0 | saves=0 | time=2026-01-14T06:43:38-07:00 | style=unspecified | cta=question
 - **✍️ Capture attention: 83% of hiring managers value tailored cover letters. 🎯**  
@@ -12,8 +14,6 @@ _Generated: 2026-01-14T14:45:29.446202-07:00_
   score=0.0 | likes=0 | replies=0 | reposts=0 | clicks=0 | saves=0 | time=2026-01-12T06:46:18-07:00 | style=unspecified | cta=question
 - **📈 Showcase projects that solve real problems—stand out to hiring managers! 🚀**  
   score=0.0 | likes=0 | replies=0 | reposts=0 | clicks=0 | saves=0 | time=2026-01-11T06:33:06-07:00 | style=unspecified | cta=question
-- **Boost productivity with a daily 3-task system for consistent wins. 💪🗓️**  
-  score=0.0 | likes=0 | replies=0 | reposts=0 | clicks=0 | saves=0 | time=2026-01-10T06:32:29-07:00 | style=unspecified | cta=question
 
 ## Performance by Style
 
@@ -27,23 +27,23 @@ _Generated: 2026-01-14T14:45:29.446202-07:00_
 - swipe_headlines: avg_score=0.0 (n=1)
 - template_drop: avg_score=0.0 (n=1)
 - unknown: avg_score=0.0 (n=19)
-- unspecified: avg_score=0.0 (n=110)
+- unspecified: avg_score=0.0 (n=111)
 
 ## Performance by CTA Type
 
-- question: avg_score=0.0 (n=134)
+- question: avg_score=0.0 (n=135)
 - tip: avg_score=0.0 (n=2)
 - unknown: avg_score=0.0 (n=19)
 
 ## Emoji Count in Title
 
 - 0: avg_score=0.0 (n=9)
-- 2: avg_score=0.0 (n=115)
+- 2: avg_score=0.0 (n=116)
 - 3+: avg_score=0.0 (n=31)
 
 ## Title Length
 
-- <= 120: avg_score=0.0 (n=149)
+- <= 120: avg_score=0.0 (n=150)
 - <= 160: avg_score=0.0 (n=4)
 - <= 200: avg_score=0.0 (n=1)
 - <= 240: avg_score=0.0 (n=1)
@@ -51,21 +51,21 @@ _Generated: 2026-01-14T14:45:29.446202-07:00_
 ## Numbers / % / $ Present
 
 - no: avg_score=0.0 (n=67)
-- yes: avg_score=0.0 (n=88)
+- yes: avg_score=0.0 (n=89)
 
 ## Question Mark Present
 
-- yes: avg_score=0.0 (n=155)
+- yes: avg_score=0.0 (n=156)
 
 ## Bullets Present in Description
 
 - 0: avg_score=0.0 (n=6)
-- 1+: avg_score=0.0 (n=149)
+- 1+: avg_score=0.0 (n=150)
 
 ## Local Post Time Bucket
 
 - early-afternoon: avg_score=0.0 (n=33)
-- early-morning: avg_score=0.0 (n=98)
+- early-morning: avg_score=0.0 (n=99)
 - evening: avg_score=0.0 (n=18)
 - late-afternoon: avg_score=0.0 (n=4)
 - morning: avg_score=0.0 (n=2)
