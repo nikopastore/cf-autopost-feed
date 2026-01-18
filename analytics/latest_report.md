@@ -1,9 +1,11 @@
 # Career Forge — Analytics Report
 
-_Generated: 2026-01-17T14:41:12.051158-07:00_
+_Generated: 2026-01-18T08:29:38.114530-07:00_
 
 ## Top 5 Posts (by engagement score)
 
+- **✍️ 🔑 79% of interviewers say concise answers show confidence. Keep answers tight and focused to impress and land offers.**  
+  score=0.0 | likes=0 | replies=0 | reposts=0 | clicks=0 | saves=0 | time=2026-01-18T06:32:15-07:00 | style=unspecified | cta=question
 - **💬 Boost your LinkedIn visibility with a catchy headline 🎯.**  
   score=0.0 | likes=0 | replies=0 | reposts=0 | clicks=0 | saves=0 | time=2026-01-17T06:32:11-07:00 | style=unspecified | cta=question
 - **Show off projects with tangible outcomes—numbers speak louder than words! 📊💡**  
@@ -12,8 +14,6 @@ _Generated: 2026-01-17T14:41:12.051158-07:00_
   score=0.0 | likes=0 | replies=0 | reposts=0 | clicks=0 | saves=0 | time=2026-01-15T06:44:03-07:00 | style=unspecified | cta=question
 - **Discussing salary with parents? Create your own pitch first! 👨‍👩‍👦💡**  
   score=0.0 | likes=0 | replies=0 | reposts=0 | clicks=0 | saves=0 | time=2026-01-14T06:43:38-07:00 | style=unspecified | cta=question
-- **✍️ Capture attention: 83% of hiring managers value tailored cover letters. 🎯**  
-  score=0.0 | likes=0 | replies=0 | reposts=0 | clicks=0 | saves=0 | time=2026-01-13T06:45:17-07:00 | style=unspecified | cta=question
 
 ## Performance by Style
 
@@ -27,11 +27,11 @@ _Generated: 2026-01-17T14:41:12.051158-07:00_
 - swipe_headlines: avg_score=0.0 (n=1)
 - template_drop: avg_score=0.0 (n=1)
 - unknown: avg_score=0.0 (n=19)
-- unspecified: avg_score=0.0 (n=113)
+- unspecified: avg_score=0.0 (n=114)
 
 ## Performance by CTA Type
 
-- question: avg_score=0.0 (n=137)
+- question: avg_score=0.0 (n=138)
 - tip: avg_score=0.0 (n=2)
 - unknown: avg_score=0.0 (n=19)
 
@@ -39,11 +39,11 @@ _Generated: 2026-01-17T14:41:12.051158-07:00_
 
 - 0: avg_score=0.0 (n=9)
 - 2: avg_score=0.0 (n=118)
-- 3+: avg_score=0.0 (n=31)
+- 3+: avg_score=0.0 (n=32)
 
 ## Title Length
 
-- <= 120: avg_score=0.0 (n=152)
+- <= 120: avg_score=0.0 (n=153)
 - <= 160: avg_score=0.0 (n=4)
 - <= 200: avg_score=0.0 (n=1)
 - <= 240: avg_score=0.0 (n=1)
@@ -51,21 +51,21 @@ _Generated: 2026-01-17T14:41:12.051158-07:00_
 ## Numbers / % / $ Present
 
 - no: avg_score=0.0 (n=68)
-- yes: avg_score=0.0 (n=90)
+- yes: avg_score=0.0 (n=91)
 
 ## Question Mark Present
 
-- yes: avg_score=0.0 (n=158)
+- yes: avg_score=0.0 (n=159)
 
 ## Bullets Present in Description
 
 - 0: avg_score=0.0 (n=6)
-- 1+: avg_score=0.0 (n=152)
+- 1+: avg_score=0.0 (n=153)
 
 ## Local Post Time Bucket
 
 - early-afternoon: avg_score=0.0 (n=33)
-- early-morning: avg_score=0.0 (n=101)
+- early-morning: avg_score=0.0 (n=102)
 - evening: avg_score=0.0 (n=18)
 - late-afternoon: avg_score=0.0 (n=4)
 - morning: avg_score=0.0 (n=2)
