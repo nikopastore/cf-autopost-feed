@@ -1,6 +1,6 @@
 # Career Forge — Analytics Report
 
-_Generated: 2026-01-21T08:45:32.560533-07:00_
+_Generated: 2026-01-21T14:52:13.457776-07:00_
 
 ## Top 5 Posts (by engagement score)
 
