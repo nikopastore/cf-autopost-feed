@@ -5,20 +5,20 @@ We generate self-contained, emoji-forward posts twice daily. Below are feature a
 ## Feature Summary (averages)
 
 - bullets :: 0 => avg_score=0.0 (n=6)
-- bullets :: 1+ => avg_score=0.0 (n=157)
-- cta :: question => avg_score=0.0 (n=142)
+- bullets :: 1+ => avg_score=0.0 (n=158)
+- cta :: question => avg_score=0.0 (n=143)
 - cta :: tip => avg_score=0.0 (n=2)
 - cta :: unknown => avg_score=0.0 (n=19)
 - emoji :: 0 => avg_score=0.0 (n=9)
-- emoji :: 2 => avg_score=0.0 (n=122)
+- emoji :: 2 => avg_score=0.0 (n=123)
 - emoji :: 3+ => avg_score=0.0 (n=32)
-- len :: <= 120 => avg_score=0.0 (n=157)
+- len :: <= 120 => avg_score=0.0 (n=158)
 - len :: <= 160 => avg_score=0.0 (n=4)
 - len :: <= 200 => avg_score=0.0 (n=1)
 - len :: <= 240 => avg_score=0.0 (n=1)
-- number :: no => avg_score=0.0 (n=70)
+- number :: no => avg_score=0.0 (n=71)
 - number :: yes => avg_score=0.0 (n=93)
-- question :: yes => avg_score=0.0 (n=163)
+- question :: yes => avg_score=0.0 (n=164)
 - style :: challenge => avg_score=0.0 (n=4)
 - style :: checklist => avg_score=0.0 (n=4)
 - style :: coach_tip => avg_score=0.0 (n=4)
@@ -29,9 +29,9 @@ We generate self-contained, emoji-forward posts twice daily. Below are feature a
 - style :: swipe_headlines => avg_score=0.0 (n=1)
 - style :: template_drop => avg_score=0.0 (n=1)
 - style :: unknown => avg_score=0.0 (n=19)
-- style :: unspecified => avg_score=0.0 (n=118)
+- style :: unspecified => avg_score=0.0 (n=119)
 - time :: early-afternoon => avg_score=0.0 (n=33)
-- time :: early-morning => avg_score=0.0 (n=106)
+- time :: early-morning => avg_score=0.0 (n=107)
 - time :: evening => avg_score=0.0 (n=18)
 - time :: late-afternoon => avg_score=0.0 (n=4)
 - time :: morning => avg_score=0.0 (n=2)
@@ -42,8 +42,8 @@ Using the summary and top posts, propose 5 editing rules to maximize engagement,
 
 ## Top Posts (samples)
 
+- Timebox your job search with calendar blocks for focus and efficiency. 📆🔍  | score=0.0 | emojis=2 | len=73 | style=unspecified | cta=question
 - 🔥 Master company research in 10 mins with these 4 quick steps! ⏰ 🌟  | score=0.0 | emojis=2 | len=66 | style=unspecified | cta=question
 - Turn rejection into fuel for growth and leverage your next move. 🚀💪  | score=0.0 | emojis=2 | len=67 | style=unspecified | cta=question
 - Avoid generic phrases—tailor your resume to beat the ATS and stand out! 🚀📄  | score=0.0 | emojis=2 | len=74 | style=unspecified | cta=question
 - Maximize your salary offer with strategic negotiation! 💼💰  | score=0.0 | emojis=2 | len=57 | style=unspecified | cta=question
-- ✍️ 🔑 79% of interviewers say concise answers show confidence. Keep answers tight and focused to impress and land offers.  | score=0.0 | emojis=3 | len=120 | style=unspecified | cta=question
