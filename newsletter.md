@@ -1,19 +1,19 @@
-# Career Forge — Weekly Digest (2026-01-19)
+# Career Forge — Weekly Digest (2026-01-26)
 
 ## Top Posts
-- **Maximize your salary offer with strategic negotiation! 💼💰**  
+- **Craft a killer 30/60/90 plan to showcase your strategic foresight and adaptability! 🚀📈**  
   score=0.0 | style=unspecified | cta=question
-- **✍️ 🔑 79% of interviewers say concise answers show confidence. Keep answers tight and focused to impress and land offers.**  
+- **✍️ Avoid generic AI prompts—be specific about your industry and role. 🎯**  
   score=0.0 | style=unspecified | cta=question
-- **💬 Boost your LinkedIn visibility with a catchy headline 🎯.**  
+- **💼 Avoid overwhelming yourself—schedule job search tasks in calendar blocks ⏰📅.**  
   score=0.0 | style=unspecified | cta=question
-- **Show off projects with tangible outcomes—numbers speak louder than words! 📊💡**  
+- **Timebox your job search with calendar blocks for focus and efficiency. 📆🔍**  
   score=0.0 | style=unspecified | cta=question
-- **🔎 Over 60% of Gen Z consult family in job talks. 🤝 Involve them wisely—set clear goals.**  
+- **🔥 Master company research in 10 mins with these 4 quick steps! ⏰ 🌟**  
   score=0.0 | style=unspecified | cta=question
-- **Discussing salary with parents? Create your own pitch first! 👨‍👩‍👦💡**  
+- **Turn rejection into fuel for growth and leverage your next move. 🚀💪**  
   score=0.0 | style=unspecified | cta=question
-- **✍️ Capture attention: 83% of hiring managers value tailored cover letters. 🎯**  
+- **Avoid generic phrases—tailor your resume to beat the ATS and stand out! 🚀📄**  
   score=0.0 | style=unspecified | cta=question
 
 ## What worked (averages)
