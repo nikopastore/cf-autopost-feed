@@ -1,9 +1,11 @@
 # Career Forge — Analytics Report
 
-_Generated: 2026-01-29T14:52:18.196656-07:00_
+_Generated: 2026-01-30T08:48:24.047459-07:00_
 
 ## Top 5 Posts (by engagement score)
 
+- **Your update pitch, coach-style: Use: "I improved X% by doing Y so Z happened." Keep it tight. ✅📌**  
+  score=0.0 | likes=0 | replies=0 | reposts=0 | clicks=0 | saves=0 | time=2026-01-30T06:58:21-07:00 | style=template_drop | cta=question
 - **Women earn 82 cents for every dollar men make. 📉 Demand your worth—negotiate effectively! 💪**  
   score=0.0 | likes=0 | replies=0 | reposts=0 | clicks=0 | saves=0 | time=2026-01-29T07:01:50-07:00 | style=unspecified | cta=question
 - **Master your career narrative—turn gaps into strengths! 📊🚀**  
@@ -12,8 +14,6 @@ _Generated: 2026-01-29T14:52:18.196656-07:00_
   score=0.0 | likes=0 | replies=0 | reposts=0 | clicks=0 | saves=0 | time=2026-01-27T06:51:41-07:00 | style=unspecified | cta=question
 - **Craft a killer 30/60/90 plan to showcase your strategic foresight and adaptability! 🚀📈**  
   score=0.0 | likes=0 | replies=0 | reposts=0 | clicks=0 | saves=0 | time=2026-01-26T06:49:14-07:00 | style=unspecified | cta=question
-- **✍️ Avoid generic AI prompts—be specific about your industry and role. 🎯**  
-  score=0.0 | likes=0 | replies=0 | reposts=0 | clicks=0 | saves=0 | time=2026-01-25T06:35:34-07:00 | style=unspecified | cta=question
 
 ## Performance by Style
 
@@ -25,47 +25,47 @@ _Generated: 2026-01-29T14:52:18.196656-07:00_
 - mistake_fix: avg_score=0.0 (n=4)
 - recruiter_inside: avg_score=0.0 (n=2)
 - swipe_headlines: avg_score=0.0 (n=1)
-- template_drop: avg_score=0.0 (n=1)
+- template_drop: avg_score=0.0 (n=2)
 - unknown: avg_score=0.0 (n=19)
 - unspecified: avg_score=0.0 (n=125)
 
 ## Performance by CTA Type
 
-- question: avg_score=0.0 (n=149)
+- question: avg_score=0.0 (n=150)
 - tip: avg_score=0.0 (n=2)
 - unknown: avg_score=0.0 (n=19)
 
 ## Emoji Count in Title
 
 - 0: avg_score=0.0 (n=9)
-- 2: avg_score=0.0 (n=128)
+- 2: avg_score=0.0 (n=129)
 - 3+: avg_score=0.0 (n=33)
 
 ## Title Length
 
-- <= 120: avg_score=0.0 (n=164)
+- <= 120: avg_score=0.0 (n=165)
 - <= 160: avg_score=0.0 (n=4)
 - <= 200: avg_score=0.0 (n=1)
 - <= 240: avg_score=0.0 (n=1)
 
 ## Numbers / % / $ Present
 
-- no: avg_score=0.0 (n=75)
+- no: avg_score=0.0 (n=76)
 - yes: avg_score=0.0 (n=95)
 
 ## Question Mark Present
 
-- yes: avg_score=0.0 (n=170)
+- yes: avg_score=0.0 (n=171)
 
 ## Bullets Present in Description
 
 - 0: avg_score=0.0 (n=6)
-- 1+: avg_score=0.0 (n=164)
+- 1+: avg_score=0.0 (n=165)
 
 ## Local Post Time Bucket
 
 - early-afternoon: avg_score=0.0 (n=33)
-- early-morning: avg_score=0.0 (n=113)
+- early-morning: avg_score=0.0 (n=114)
 - evening: avg_score=0.0 (n=18)
 - late-afternoon: avg_score=0.0 (n=4)
 - morning: avg_score=0.0 (n=2)
