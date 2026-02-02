@@ -1,19 +1,19 @@
-# Career Forge — Weekly Digest (2026-01-26)
+# Career Forge — Weekly Digest (2026-02-02)
 
 ## Top Posts
-- **Craft a killer 30/60/90 plan to showcase your strategic foresight and adaptability! 🚀📈**  
+- **Boost your resume by quantifying achievements! 🚀📊**  
   score=0.0 | style=unspecified | cta=question
-- **✍️ Avoid generic AI prompts—be specific about your industry and role. 🎯**  
+- **⚡ Boost your networking skills in just 48 hours 🚀 with introvert-friendly scripts and cadence tips!**  
   score=0.0 | style=unspecified | cta=question
-- **💼 Avoid overwhelming yourself—schedule job search tasks in calendar blocks ⏰📅.**  
+- **💼 70% of employers expect a counteroffer. Use this to negotiate better pay! 💪**  
   score=0.0 | style=unspecified | cta=question
-- **Timebox your job search with calendar blocks for focus and efficiency. 📆🔍**  
+- **Your update pitch, coach-style: Use: "I improved X% by doing Y so Z happened." Keep it tight. ✅📌**  
+  score=0.0 | style=template_drop | cta=question
+- **Women earn 82 cents for every dollar men make. 📉 Demand your worth—negotiate effectively! 💪**  
   score=0.0 | style=unspecified | cta=question
-- **🔥 Master company research in 10 mins with these 4 quick steps! ⏰ 🌟**  
+- **Master your career narrative—turn gaps into strengths! 📊🚀**  
   score=0.0 | style=unspecified | cta=question
-- **Turn rejection into fuel for growth and leverage your next move. 🚀💪**  
-  score=0.0 | style=unspecified | cta=question
-- **Avoid generic phrases—tailor your resume to beat the ATS and stand out! 🚀📄**  
+- **✅ Leverage your current skills to pivot careers—no need to start from zero! 🚀**  
   score=0.0 | style=unspecified | cta=question
 
 ## What worked (averages)
