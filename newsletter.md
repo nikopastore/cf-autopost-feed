@@ -1,19 +1,19 @@
-# Career Forge — Weekly Digest (2026-02-02)
+# Career Forge — Weekly Digest (2026-02-16)
 
 ## Top Posts
-- **Boost your resume by quantifying achievements! 🚀📊**  
-  score=0.0 | style=unspecified | cta=question
-- **⚡ Boost your networking skills in just 48 hours 🚀 with introvert-friendly scripts and cadence tips!**  
-  score=0.0 | style=unspecified | cta=question
-- **💼 70% of employers expect a counteroffer. Use this to negotiate better pay! 💪**  
-  score=0.0 | style=unspecified | cta=question
 - **Your update pitch, coach-style: Use: "I improved X% by doing Y so Z happened." Keep it tight. ✅📌**  
-  score=0.0 | style=template_drop | cta=question
-- **Women earn 82 cents for every dollar men make. 📉 Demand your worth—negotiate effectively! 💪**  
+  score=0.0 | style=data_bite | cta=question
+- **Your update pitch, coach-style: Use: "I improved X% by doing Y so Z happened." Keep it tight. ✅📌**  
+  score=0.0 | style=data_bite | cta=question
+- **Your update pitch, coach-style: Use: "I improved X% by doing Y so Z happened." Keep it tight. ✅📌**  
+  score=0.0 | style=mistake_fix | cta=question
+- **Your update pitch, coach-style: Use: "I improved X% by doing Y so Z happened." Keep it tight. ✅📌**  
+  score=0.0 | style=challenge | cta=question
+- **Negotiate your worth confidently—know your value and stand firm. 💪🏾💼**  
   score=0.0 | style=unspecified | cta=question
-- **Master your career narrative—turn gaps into strengths! 📊🚀**  
+- **Identify your skill gaps swiftly and plan to bridge them! 🚀📈**  
   score=0.0 | style=unspecified | cta=question
-- **✅ Leverage your current skills to pivot careers—no need to start from zero! 🚀**  
+- **Use: "I would like to discuss a salary adjustment based on my market research and achievements." 💼📈**  
   score=0.0 | style=unspecified | cta=question
 
 ## What worked (averages)
