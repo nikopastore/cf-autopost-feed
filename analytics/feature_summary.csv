@@ -1,19 +1,19 @@
 feature,bucket,avg_eng_score,n_posts
 bullets,0,0.0,6
-bullets,1+,0.0,183
-cta,question,0.0,168
+bullets,1+,0.0,184
+cta,question,0.0,169
 cta,tip,0.0,2
 cta,unknown,0.0,19
 emoji,0,0.0,9
-emoji,2,0.0,145
+emoji,2,0.0,146
 emoji,3+,0.0,35
-len,<= 120,0.0,183
+len,<= 120,0.0,184
 len,<= 160,0.0,4
 len,<= 200,0.0,1
 len,<= 240,0.0,1
-number,no,0.0,86
+number,no,0.0,87
 number,yes,0.0,103
-question,yes,0.0,189
+question,yes,0.0,190
 style,challenge,0.0,5
 style,checklist,0.0,4
 style,coach_tip,0.0,4
@@ -22,11 +22,11 @@ style,hook_lab,0.0,1
 style,mistake_fix,0.0,5
 style,recruiter_inside,0.0,2
 style,swipe_headlines,0.0,1
-style,template_drop,0.0,3
+style,template_drop,0.0,4
 style,unknown,0.0,19
 style,unspecified,0.0,138
 time,early-afternoon,0.0,33
-time,early-morning,0.0,132
+time,early-morning,0.0,133
 time,evening,0.0,18
 time,late-afternoon,0.0,4
 time,morning,0.0,2
