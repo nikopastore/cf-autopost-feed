@@ -1,9 +1,11 @@
 # Career Forge — Analytics Report
 
-_Generated: 2026-02-18T14:57:49.191822-07:00_
+_Generated: 2026-02-19T08:59:44.100625-07:00_
 
 ## Top 5 Posts (by engagement score)
 
+- **⏱️ Leverage past skills for a career pivot—show transferable strengths! 🚀**  
+  score=0.0 | likes=0 | replies=0 | reposts=0 | clicks=0 | saves=0 | time=2026-02-19T07:10:49-07:00 | style=unspecified | cta=question
 - **Your update pitch, coach-style: Use: "I improved X% by doing Y so Z happened." Keep it tight. ✅📌**  
   score=0.0 | likes=0 | replies=0 | reposts=0 | clicks=0 | saves=0 | time=2026-02-18T07:08:38-07:00 | style=template_drop | cta=question
 - **Your update pitch, coach-style: Use: "I improved X% by doing Y so Z happened." Keep it tight. ✅📌**  
@@ -12,8 +14,6 @@ _Generated: 2026-02-18T14:57:49.191822-07:00_
   score=0.0 | likes=0 | replies=0 | reposts=0 | clicks=0 | saves=0 | time=2026-02-16T07:06:45-07:00 | style=data_bite | cta=question
 - **Your update pitch, coach-style: Use: "I improved X% by doing Y so Z happened." Keep it tight. ✅📌**  
   score=0.0 | likes=0 | replies=0 | reposts=0 | clicks=0 | saves=0 | time=2026-02-15T06:49:39-07:00 | style=data_bite | cta=question
-- **Your update pitch, coach-style: Use: "I improved X% by doing Y so Z happened." Keep it tight. ✅📌**  
-  score=0.0 | likes=0 | replies=0 | reposts=0 | clicks=0 | saves=0 | time=2026-02-14T06:48:37-07:00 | style=mistake_fix | cta=question
 
 ## Performance by Style
 
@@ -27,45 +27,45 @@ _Generated: 2026-02-18T14:57:49.191822-07:00_
 - swipe_headlines: avg_score=0.0 (n=1)
 - template_drop: avg_score=0.0 (n=4)
 - unknown: avg_score=0.0 (n=19)
-- unspecified: avg_score=0.0 (n=138)
+- unspecified: avg_score=0.0 (n=139)
 
 ## Performance by CTA Type
 
-- question: avg_score=0.0 (n=169)
+- question: avg_score=0.0 (n=170)
 - tip: avg_score=0.0 (n=2)
 - unknown: avg_score=0.0 (n=19)
 
 ## Emoji Count in Title
 
 - 0: avg_score=0.0 (n=9)
-- 2: avg_score=0.0 (n=146)
+- 2: avg_score=0.0 (n=147)
 - 3+: avg_score=0.0 (n=35)
 
 ## Title Length
 
-- <= 120: avg_score=0.0 (n=184)
+- <= 120: avg_score=0.0 (n=185)
 - <= 160: avg_score=0.0 (n=4)
 - <= 200: avg_score=0.0 (n=1)
 - <= 240: avg_score=0.0 (n=1)
 
 ## Numbers / % / $ Present
 
-- no: avg_score=0.0 (n=87)
+- no: avg_score=0.0 (n=88)
 - yes: avg_score=0.0 (n=103)
 
 ## Question Mark Present
 
-- yes: avg_score=0.0 (n=190)
+- yes: avg_score=0.0 (n=191)
 
 ## Bullets Present in Description
 
 - 0: avg_score=0.0 (n=6)
-- 1+: avg_score=0.0 (n=184)
+- 1+: avg_score=0.0 (n=185)
 
 ## Local Post Time Bucket
 
 - early-afternoon: avg_score=0.0 (n=33)
-- early-morning: avg_score=0.0 (n=133)
+- early-morning: avg_score=0.0 (n=134)
 - evening: avg_score=0.0 (n=18)
 - late-afternoon: avg_score=0.0 (n=4)
 - morning: avg_score=0.0 (n=2)
