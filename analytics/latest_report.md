@@ -1,9 +1,11 @@
 # Career Forge — Analytics Report
 
-_Generated: 2026-02-27T14:52:31.464834-07:00_
+_Generated: 2026-02-28T08:33:00.988296-07:00_
 
 ## Top 5 Posts (by engagement score)
 
+- **Your update pitch, coach-style: Use: "I improved X% by doing Y so Z happened." Keep it tight. ✅📌**  
+  score=0.0 | likes=0 | replies=0 | reposts=0 | clicks=0 | saves=0 | time=2026-02-28T06:39:41-07:00 | style=recruiter_inside | cta=question
 - **Your update pitch, coach-style: Use: "I improved X% by doing Y so Z happened." Keep it tight. ✅📌**  
   score=0.0 | likes=0 | replies=0 | reposts=0 | clicks=0 | saves=0 | time=2026-02-27T07:01:30-07:00 | style=coach_tip | cta=question
 - **Your update pitch, coach-style: Use: "I improved X% by doing Y so Z happened." Keep it tight. ✅📌**  
@@ -12,8 +14,6 @@ _Generated: 2026-02-27T14:52:31.464834-07:00_
   score=0.0 | likes=0 | replies=0 | reposts=0 | clicks=0 | saves=0 | time=2026-02-25T07:11:31-07:00 | style=checklist | cta=question
 - **Turn rejection into a springboard for success! 💪🔄 Use feedback to refine your approach and boost your career momentum.**  
   score=0.0 | likes=0 | replies=0 | reposts=0 | clicks=0 | saves=0 | time=2026-02-24T07:12:59-07:00 | style=unspecified | cta=question
-- **Master salary talks by showcasing value, not just numbers 💼💰.**  
-  score=0.0 | likes=0 | replies=0 | reposts=0 | clicks=0 | saves=0 | time=2026-02-23T07:09:08-07:00 | style=unspecified | cta=question
 
 ## Performance by Style
 
@@ -23,7 +23,7 @@ _Generated: 2026-02-27T14:52:31.464834-07:00_
 - data_bite: avg_score=0.0 (n=7)
 - hook_lab: avg_score=0.0 (n=1)
 - mistake_fix: avg_score=0.0 (n=5)
-- recruiter_inside: avg_score=0.0 (n=3)
+- recruiter_inside: avg_score=0.0 (n=4)
 - swipe_headlines: avg_score=0.0 (n=1)
 - template_drop: avg_score=0.0 (n=4)
 - unknown: avg_score=0.0 (n=19)
@@ -31,41 +31,41 @@ _Generated: 2026-02-27T14:52:31.464834-07:00_
 
 ## Performance by CTA Type
 
-- question: avg_score=0.0 (n=178)
+- question: avg_score=0.0 (n=179)
 - tip: avg_score=0.0 (n=2)
 - unknown: avg_score=0.0 (n=19)
 
 ## Emoji Count in Title
 
 - 0: avg_score=0.0 (n=9)
-- 2: avg_score=0.0 (n=155)
+- 2: avg_score=0.0 (n=156)
 - 3+: avg_score=0.0 (n=35)
 
 ## Title Length
 
-- <= 120: avg_score=0.0 (n=193)
+- <= 120: avg_score=0.0 (n=194)
 - <= 160: avg_score=0.0 (n=4)
 - <= 200: avg_score=0.0 (n=1)
 - <= 240: avg_score=0.0 (n=1)
 
 ## Numbers / % / $ Present
 
-- no: avg_score=0.0 (n=93)
+- no: avg_score=0.0 (n=94)
 - yes: avg_score=0.0 (n=106)
 
 ## Question Mark Present
 
-- yes: avg_score=0.0 (n=199)
+- yes: avg_score=0.0 (n=200)
 
 ## Bullets Present in Description
 
 - 0: avg_score=0.0 (n=6)
-- 1+: avg_score=0.0 (n=193)
+- 1+: avg_score=0.0 (n=194)
 
 ## Local Post Time Bucket
 
 - early-afternoon: avg_score=0.0 (n=33)
-- early-morning: avg_score=0.0 (n=142)
+- early-morning: avg_score=0.0 (n=143)
 - evening: avg_score=0.0 (n=18)
 - late-afternoon: avg_score=0.0 (n=4)
 - morning: avg_score=0.0 (n=2)
