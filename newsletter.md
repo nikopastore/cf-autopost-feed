@@ -1,20 +1,20 @@
-# Career Forge — Weekly Digest (2026-02-23)
+# Career Forge — Weekly Digest (2026-03-02)
 
 ## Top Posts
-- **Master salary talks by showcasing value, not just numbers 💼💰.**  
-  score=0.0 | style=unspecified | cta=question
-- **🔥 Ace your interview with these expert tips! 🚀**  
-  score=0.0 | style=unspecified | cta=question
-- **📣 Elevate your resume for ATS: focus on keywords, results, and clarity! 🚀**  
-  score=0.0 | style=unspecified | cta=question
-- **Master networking as an introvert—build genuine connections effortlessly 🌟🤝.**  
-  score=0.0 | style=unspecified | cta=question
-- **⏱️ Leverage past skills for a career pivot—show transferable strengths! 🚀**  
-  score=0.0 | style=unspecified | cta=question
 - **Your update pitch, coach-style: Use: "I improved X% by doing Y so Z happened." Keep it tight. ✅📌**  
-  score=0.0 | style=template_drop | cta=question
+  score=0.0 | style=checklist | cta=question
 - **Your update pitch, coach-style: Use: "I improved X% by doing Y so Z happened." Keep it tight. ✅📌**  
-  score=0.0 | style=template_drop | cta=question
+  score=0.0 | style=data_bite | cta=question
+- **Your update pitch, coach-style: Use: "I improved X% by doing Y so Z happened." Keep it tight. ✅📌**  
+  score=0.0 | style=recruiter_inside | cta=question
+- **Your update pitch, coach-style: Use: "I improved X% by doing Y so Z happened." Keep it tight. ✅📌**  
+  score=0.0 | style=coach_tip | cta=question
+- **Your update pitch, coach-style: Use: "I improved X% by doing Y so Z happened." Keep it tight. ✅📌**  
+  score=0.0 | style=recruiter_inside | cta=question
+- **Your update pitch, coach-style: Use: "I improved X% by doing Y so Z happened." Keep it tight. ✅📌**  
+  score=0.0 | style=checklist | cta=question
+- **Turn rejection into a springboard for success! 💪🔄 Use feedback to refine your approach and boost your career momentum.**  
+  score=0.0 | style=unspecified | cta=question
 
 ## What worked (averages)
 ### Styles
