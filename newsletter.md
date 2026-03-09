@@ -1,20 +1,20 @@
-# Career Forge — Weekly Digest (2026-03-02)
+# Career Forge — Weekly Digest (2026-03-09)
 
 ## Top Posts
+- **🔎 Timebox your job search with calendar blocks for focus and efficiency! ⏰📅**  
+  score=0.0 | style=unspecified | cta=question
+- **🗂️ Craft a compelling cover letter in just 5 lines! ✨📄**  
+  score=0.0 | style=unspecified | cta=question
+- **Nail your interview answers with clarity and impact! 🚀🎯**  
+  score=0.0 | style=unspecified | cta=question
+- **Master concise interview answers in 48h — stop rambling, land offers! 🎯💼**  
+  score=0.0 | style=unspecified | cta=question
+- **⏱️ Strategically embellish to fit the role—truthful flair can win jobs! 🎯**  
+  score=0.0 | style=unspecified | cta=question
 - **Your update pitch, coach-style: Use: "I improved X% by doing Y so Z happened." Keep it tight. ✅📌**  
-  score=0.0 | style=checklist | cta=question
+  score=0.0 | style=template_drop | cta=question
 - **Your update pitch, coach-style: Use: "I improved X% by doing Y so Z happened." Keep it tight. ✅📌**  
   score=0.0 | style=data_bite | cta=question
-- **Your update pitch, coach-style: Use: "I improved X% by doing Y so Z happened." Keep it tight. ✅📌**  
-  score=0.0 | style=recruiter_inside | cta=question
-- **Your update pitch, coach-style: Use: "I improved X% by doing Y so Z happened." Keep it tight. ✅📌**  
-  score=0.0 | style=coach_tip | cta=question
-- **Your update pitch, coach-style: Use: "I improved X% by doing Y so Z happened." Keep it tight. ✅📌**  
-  score=0.0 | style=recruiter_inside | cta=question
-- **Your update pitch, coach-style: Use: "I improved X% by doing Y so Z happened." Keep it tight. ✅📌**  
-  score=0.0 | style=checklist | cta=question
-- **Turn rejection into a springboard for success! 💪🔄 Use feedback to refine your approach and boost your career momentum.**  
-  score=0.0 | style=unspecified | cta=question
 
 ## What worked (averages)
 ### Styles
