@@ -1,20 +1,20 @@
-# Career Forge — Weekly Digest (2026-03-09)
+# Career Forge — Weekly Digest (2026-03-16)
 
 ## Top Posts
-- **🔎 Timebox your job search with calendar blocks for focus and efficiency! ⏰📅**  
+- **🧠 Show ownership in interviews: 54% of hiring managers value initiative. 🚀**  
   score=0.0 | style=unspecified | cta=question
-- **🗂️ Craft a compelling cover letter in just 5 lines! ✨📄**  
+- **Optimize your resume's top section for hiring managers' first glance. 📄👀**  
   score=0.0 | style=unspecified | cta=question
-- **Nail your interview answers with clarity and impact! 🚀🎯**  
+- **🎯 Master networking as an introvert with thoughtful scripts and steady cadence. 🤝✨**  
   score=0.0 | style=unspecified | cta=question
-- **Master concise interview answers in 48h — stop rambling, land offers! 🎯💼**  
+- **🧩 Boost LinkedIn discovery with a compelling headline! 🚀✨**  
   score=0.0 | style=unspecified | cta=question
-- **⏱️ Strategically embellish to fit the role—truthful flair can win jobs! 🎯**  
+- **Spot deal breakers early in job offers to protect your career path! 🚩🔍**  
   score=0.0 | style=unspecified | cta=question
-- **Your update pitch, coach-style: Use: "I improved X% by doing Y so Z happened." Keep it tight. ✅📌**  
-  score=0.0 | style=template_drop | cta=question
-- **Your update pitch, coach-style: Use: "I improved X% by doing Y so Z happened." Keep it tight. ✅📌**  
-  score=0.0 | style=data_bite | cta=question
+- **🎯 Transform vague duties into quantifiable achievements for impact! 📈✨**  
+  score=0.0 | style=unspecified | cta=question
+- **🚀 Your 5-slide 'About Me' deck should be concise and impactful. 🎯**  
+  score=0.0 | style=unspecified | cta=question
 
 ## What worked (averages)
 ### Styles
