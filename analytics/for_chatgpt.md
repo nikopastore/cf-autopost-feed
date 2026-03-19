@@ -5,20 +5,20 @@ We generate self-contained, emoji-forward posts twice daily. Below are feature a
 ## Feature Summary (averages)
 
 - bullets :: 0 => avg_score=0.0 (n=6)
-- bullets :: 1+ => avg_score=0.0 (n=212)
-- cta :: question => avg_score=0.0 (n=197)
+- bullets :: 1+ => avg_score=0.0 (n=213)
+- cta :: question => avg_score=0.0 (n=198)
 - cta :: tip => avg_score=0.0 (n=2)
 - cta :: unknown => avg_score=0.0 (n=19)
 - emoji :: 0 => avg_score=0.0 (n=9)
-- emoji :: 2 => avg_score=0.0 (n=169)
+- emoji :: 2 => avg_score=0.0 (n=170)
 - emoji :: 3+ => avg_score=0.0 (n=40)
-- len :: <= 120 => avg_score=0.0 (n=212)
+- len :: <= 120 => avg_score=0.0 (n=213)
 - len :: <= 160 => avg_score=0.0 (n=4)
 - len :: <= 200 => avg_score=0.0 (n=1)
 - len :: <= 240 => avg_score=0.0 (n=1)
-- number :: no => avg_score=0.0 (n=99)
+- number :: no => avg_score=0.0 (n=100)
 - number :: yes => avg_score=0.0 (n=119)
-- question :: yes => avg_score=0.0 (n=218)
+- question :: yes => avg_score=0.0 (n=219)
 - style :: challenge => avg_score=0.0 (n=5)
 - style :: checklist => avg_score=0.0 (n=6)
 - style :: coach_tip => avg_score=0.0 (n=5)
@@ -29,9 +29,9 @@ We generate self-contained, emoji-forward posts twice daily. Below are feature a
 - style :: swipe_headlines => avg_score=0.0 (n=1)
 - style :: template_drop => avg_score=0.0 (n=5)
 - style :: unknown => avg_score=0.0 (n=19)
-- style :: unspecified => avg_score=0.0 (n=158)
+- style :: unspecified => avg_score=0.0 (n=159)
 - time :: early-afternoon => avg_score=0.0 (n=33)
-- time :: early-morning => avg_score=0.0 (n=161)
+- time :: early-morning => avg_score=0.0 (n=162)
 - time :: evening => avg_score=0.0 (n=18)
 - time :: late-afternoon => avg_score=0.0 (n=4)
 - time :: morning => avg_score=0.0 (n=2)
@@ -42,8 +42,8 @@ Using the summary and top posts, propose 5 editing rules to maximize engagement,
 
 ## Top Posts (samples)
 
+- Negotiate salary confidently—show your value & research market rates. 💼🤑  | score=0.0 | emojis=2 | len=72 | style=unspecified | cta=question
 - ⏱️ Your LinkedIn headline is too vague—clarify your role and impact! 💼✨  | score=0.0 | emojis=3 | len=71 | style=unspecified | cta=question
 - Find 25 target companies in 48 hours using AI prompts! 🚀💼  | score=0.0 | emojis=2 | len=57 | style=unspecified | cta=question
 - 🧠 Show ownership in interviews: 54% of hiring managers value initiative. 🚀  | score=0.0 | emojis=2 | len=74 | style=unspecified | cta=question
 - Optimize your resume's top section for hiring managers' first glance. 📄👀  | score=0.0 | emojis=2 | len=72 | style=unspecified | cta=question
-- 🎯 Master networking as an introvert with thoughtful scripts and steady cadence. 🤝✨  | score=0.0 | emojis=3 | len=82 | style=unspecified | cta=question
