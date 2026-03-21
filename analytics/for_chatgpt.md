@@ -5,20 +5,20 @@ We generate self-contained, emoji-forward posts twice daily. Below are feature a
 ## Feature Summary (averages)
 
 - bullets :: 0 => avg_score=0.0 (n=6)
-- bullets :: 1+ => avg_score=0.0 (n=214)
-- cta :: question => avg_score=0.0 (n=199)
+- bullets :: 1+ => avg_score=0.0 (n=215)
+- cta :: question => avg_score=0.0 (n=200)
 - cta :: tip => avg_score=0.0 (n=2)
 - cta :: unknown => avg_score=0.0 (n=19)
 - emoji :: 0 => avg_score=0.0 (n=9)
-- emoji :: 2 => avg_score=0.0 (n=171)
+- emoji :: 2 => avg_score=0.0 (n=172)
 - emoji :: 3+ => avg_score=0.0 (n=40)
-- len :: <= 120 => avg_score=0.0 (n=214)
+- len :: <= 120 => avg_score=0.0 (n=215)
 - len :: <= 160 => avg_score=0.0 (n=4)
 - len :: <= 200 => avg_score=0.0 (n=1)
 - len :: <= 240 => avg_score=0.0 (n=1)
-- number :: no => avg_score=0.0 (n=101)
+- number :: no => avg_score=0.0 (n=102)
 - number :: yes => avg_score=0.0 (n=119)
-- question :: yes => avg_score=0.0 (n=220)
+- question :: yes => avg_score=0.0 (n=221)
 - style :: challenge => avg_score=0.0 (n=5)
 - style :: checklist => avg_score=0.0 (n=6)
 - style :: coach_tip => avg_score=0.0 (n=5)
@@ -29,9 +29,9 @@ We generate self-contained, emoji-forward posts twice daily. Below are feature a
 - style :: swipe_headlines => avg_score=0.0 (n=1)
 - style :: template_drop => avg_score=0.0 (n=5)
 - style :: unknown => avg_score=0.0 (n=19)
-- style :: unspecified => avg_score=0.0 (n=160)
+- style :: unspecified => avg_score=0.0 (n=161)
 - time :: early-afternoon => avg_score=0.0 (n=33)
-- time :: early-morning => avg_score=0.0 (n=163)
+- time :: early-morning => avg_score=0.0 (n=164)
 - time :: evening => avg_score=0.0 (n=18)
 - time :: late-afternoon => avg_score=0.0 (n=4)
 - time :: morning => avg_score=0.0 (n=2)
@@ -42,8 +42,8 @@ Using the summary and top posts, propose 5 editing rules to maximize engagement,
 
 ## Top Posts (samples)
 
+- Avoid these callback-killers to boost your interview chances! 🚀🔍  | score=0.0 | emojis=2 | len=64 | style=unspecified | cta=question
 - Craft a cohesive career story by connecting roles—highlight growth and skills. 📈🔗  | score=0.0 | emojis=2 | len=81 | style=unspecified | cta=question
 - Negotiate salary confidently—show your value & research market rates. 💼🤑  | score=0.0 | emojis=2 | len=72 | style=unspecified | cta=question
 - ⏱️ Your LinkedIn headline is too vague—clarify your role and impact! 💼✨  | score=0.0 | emojis=3 | len=71 | style=unspecified | cta=question
 - Find 25 target companies in 48 hours using AI prompts! 🚀💼  | score=0.0 | emojis=2 | len=57 | style=unspecified | cta=question
-- 🧠 Show ownership in interviews: 54% of hiring managers value initiative. 🚀  | score=0.0 | emojis=2 | len=74 | style=unspecified | cta=question
