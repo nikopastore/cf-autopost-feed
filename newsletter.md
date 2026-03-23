@@ -1,19 +1,19 @@
-# Career Forge — Weekly Digest (2026-03-16)
+# Career Forge — Weekly Digest (2026-03-23)
 
 ## Top Posts
-- **🧠 Show ownership in interviews: 54% of hiring managers value initiative. 🚀**  
+- **Boost your job search with a data-driven scoreboard! 📊🚀**  
   score=0.0 | style=unspecified | cta=question
-- **Optimize your resume's top section for hiring managers' first glance. 📄👀**  
+- **Turn job posts into interview prep—spot trends and ask smart questions. 🔍💼**  
   score=0.0 | style=unspecified | cta=question
-- **🎯 Master networking as an introvert with thoughtful scripts and steady cadence. 🤝✨**  
+- **Avoid these callback-killers to boost your interview chances! 🚀🔍**  
   score=0.0 | style=unspecified | cta=question
-- **🧩 Boost LinkedIn discovery with a compelling headline! 🚀✨**  
+- **Craft a cohesive career story by connecting roles—highlight growth and skills. 📈🔗**  
   score=0.0 | style=unspecified | cta=question
-- **Spot deal breakers early in job offers to protect your career path! 🚩🔍**  
+- **Negotiate salary confidently—show your value & research market rates. 💼🤑**  
   score=0.0 | style=unspecified | cta=question
-- **🎯 Transform vague duties into quantifiable achievements for impact! 📈✨**  
+- **⏱️ Your LinkedIn headline is too vague—clarify your role and impact! 💼✨**  
   score=0.0 | style=unspecified | cta=question
-- **🚀 Your 5-slide 'About Me' deck should be concise and impactful. 🎯**  
+- **Find 25 target companies in 48 hours using AI prompts! 🚀💼**  
   score=0.0 | style=unspecified | cta=question
 
 ## What worked (averages)
