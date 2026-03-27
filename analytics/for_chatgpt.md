@@ -5,20 +5,20 @@ We generate self-contained, emoji-forward posts twice daily. Below are feature a
 ## Feature Summary (averages)
 
 - bullets :: 0 => avg_score=0.0 (n=6)
-- bullets :: 1+ => avg_score=0.0 (n=220)
-- cta :: question => avg_score=0.0 (n=205)
+- bullets :: 1+ => avg_score=0.0 (n=221)
+- cta :: question => avg_score=0.0 (n=206)
 - cta :: tip => avg_score=0.0 (n=2)
 - cta :: unknown => avg_score=0.0 (n=19)
 - emoji :: 0 => avg_score=0.0 (n=9)
-- emoji :: 2 => avg_score=0.0 (n=177)
+- emoji :: 2 => avg_score=0.0 (n=178)
 - emoji :: 3+ => avg_score=0.0 (n=40)
-- len :: <= 120 => avg_score=0.0 (n=220)
+- len :: <= 120 => avg_score=0.0 (n=221)
 - len :: <= 160 => avg_score=0.0 (n=4)
 - len :: <= 200 => avg_score=0.0 (n=1)
 - len :: <= 240 => avg_score=0.0 (n=1)
 - number :: no => avg_score=0.0 (n=105)
-- number :: yes => avg_score=0.0 (n=121)
-- question :: yes => avg_score=0.0 (n=226)
+- number :: yes => avg_score=0.0 (n=122)
+- question :: yes => avg_score=0.0 (n=227)
 - style :: challenge => avg_score=0.0 (n=5)
 - style :: checklist => avg_score=0.0 (n=6)
 - style :: coach_tip => avg_score=0.0 (n=5)
@@ -29,9 +29,9 @@ We generate self-contained, emoji-forward posts twice daily. Below are feature a
 - style :: swipe_headlines => avg_score=0.0 (n=1)
 - style :: template_drop => avg_score=0.0 (n=5)
 - style :: unknown => avg_score=0.0 (n=19)
-- style :: unspecified => avg_score=0.0 (n=166)
+- style :: unspecified => avg_score=0.0 (n=167)
 - time :: early-afternoon => avg_score=0.0 (n=33)
-- time :: early-morning => avg_score=0.0 (n=169)
+- time :: early-morning => avg_score=0.0 (n=170)
 - time :: evening => avg_score=0.0 (n=18)
 - time :: late-afternoon => avg_score=0.0 (n=4)
 - time :: morning => avg_score=0.0 (n=2)
@@ -42,8 +42,8 @@ Using the summary and top posts, propose 5 editing rules to maximize engagement,
 
 ## Top Posts (samples)
 
+- 🤝 Craft a winning 30/60/90 plan to showcase your strategic vision. 🚀  | score=0.0 | emojis=2 | len=68 | style=unspecified | cta=question
 - Navigate necessary interview embellishments with integrity and strategy. 🎯🤝  | score=0.0 | emojis=2 | len=75 | style=unspecified | cta=question
 - Missing one salary negotiation can cost you ₹3 lakh—master this skill! 💰🤝  | score=0.0 | emojis=2 | len=73 | style=unspecified | cta=question
 - Master salary talk—ditch 'negotiable' for a confident number! 💪💼  | score=0.0 | emojis=2 | len=64 | style=unspecified | cta=question
 - Boost your job search with a data-driven scoreboard! 📊🚀  | score=0.0 | emojis=2 | len=55 | style=unspecified | cta=question
-- Turn job posts into interview prep—spot trends and ask smart questions. 🔍💼  | score=0.0 | emojis=2 | len=74 | style=unspecified | cta=question
