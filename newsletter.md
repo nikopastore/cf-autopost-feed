@@ -1,19 +1,19 @@
-# Career Forge — Weekly Digest (2026-03-23)
+# Career Forge — Weekly Digest (2026-03-30)
 
 ## Top Posts
-- **Boost your job search with a data-driven scoreboard! 📊🚀**  
+- **📣 Break free from the 'years of experience' barrier with focused action! 🚀**  
   score=0.0 | style=unspecified | cta=question
-- **Turn job posts into interview prep—spot trends and ask smart questions. 🔍💼**  
+- **Avoid underselling yourself—articulate your value clearly and confidently. 💪💼**  
   score=0.0 | style=unspecified | cta=question
-- **Avoid these callback-killers to boost your interview chances! 🚀🔍**  
+- **Boost your non-design role portfolio with strategic projects! 📊🚀**  
   score=0.0 | style=unspecified | cta=question
-- **Craft a cohesive career story by connecting roles—highlight growth and skills. 📈🔗**  
+- **🤝 Craft a winning 30/60/90 plan to showcase your strategic vision. 🚀**  
   score=0.0 | style=unspecified | cta=question
-- **Negotiate salary confidently—show your value & research market rates. 💼🤑**  
+- **Navigate necessary interview embellishments with integrity and strategy. 🎯🤝**  
   score=0.0 | style=unspecified | cta=question
-- **⏱️ Your LinkedIn headline is too vague—clarify your role and impact! 💼✨**  
+- **Missing one salary negotiation can cost you ₹3 lakh—master this skill! 💰🤝**  
   score=0.0 | style=unspecified | cta=question
-- **Find 25 target companies in 48 hours using AI prompts! 🚀💼**  
+- **Master salary talk—ditch 'negotiable' for a confident number! 💪💼**  
   score=0.0 | style=unspecified | cta=question
 
 ## What worked (averages)
