@@ -5,20 +5,20 @@ We generate self-contained, emoji-forward posts twice daily. Below are feature a
 ## Feature Summary (averages)
 
 - bullets :: 0 => avg_score=0.0 (n=6)
-- bullets :: 1+ => avg_score=0.0 (n=226)
-- cta :: question => avg_score=0.0 (n=211)
+- bullets :: 1+ => avg_score=0.0 (n=227)
+- cta :: question => avg_score=0.0 (n=212)
 - cta :: tip => avg_score=0.0 (n=2)
 - cta :: unknown => avg_score=0.0 (n=19)
 - emoji :: 0 => avg_score=0.0 (n=9)
-- emoji :: 2 => avg_score=0.0 (n=183)
+- emoji :: 2 => avg_score=0.0 (n=184)
 - emoji :: 3+ => avg_score=0.0 (n=40)
-- len :: <= 120 => avg_score=0.0 (n=226)
+- len :: <= 120 => avg_score=0.0 (n=227)
 - len :: <= 160 => avg_score=0.0 (n=4)
 - len :: <= 200 => avg_score=0.0 (n=1)
 - len :: <= 240 => avg_score=0.0 (n=1)
 - number :: no => avg_score=0.0 (n=108)
-- number :: yes => avg_score=0.0 (n=124)
-- question :: yes => avg_score=0.0 (n=232)
+- number :: yes => avg_score=0.0 (n=125)
+- question :: yes => avg_score=0.0 (n=233)
 - style :: challenge => avg_score=0.0 (n=5)
 - style :: checklist => avg_score=0.0 (n=6)
 - style :: coach_tip => avg_score=0.0 (n=5)
@@ -29,9 +29,9 @@ We generate self-contained, emoji-forward posts twice daily. Below are feature a
 - style :: swipe_headlines => avg_score=0.0 (n=1)
 - style :: template_drop => avg_score=0.0 (n=5)
 - style :: unknown => avg_score=0.0 (n=19)
-- style :: unspecified => avg_score=0.0 (n=172)
+- style :: unspecified => avg_score=0.0 (n=173)
 - time :: early-afternoon => avg_score=0.0 (n=33)
-- time :: early-morning => avg_score=0.0 (n=175)
+- time :: early-morning => avg_score=0.0 (n=176)
 - time :: evening => avg_score=0.0 (n=18)
 - time :: late-afternoon => avg_score=0.0 (n=4)
 - time :: morning => avg_score=0.0 (n=2)
@@ -42,8 +42,8 @@ Using the summary and top posts, propose 5 editing rules to maximize engagement,
 
 ## Top Posts (samples)
 
+- Show ownership in interviews by detailing your role in projects. 🎯🚀  | score=0.0 | emojis=2 | len=67 | style=unspecified | cta=question
 - Avoid jargon overload—focus on clarity and results! 🎯🚫  | score=0.0 | emojis=2 | len=54 | style=unspecified | cta=question
 - Negotiate confidently; your value is clear. 💪💼 Use: “I was hoping for X based on my skills and market data.”  | score=0.0 | emojis=2 | len=108 | style=unspecified | cta=question
 - 📣 Break free from the 'years of experience' barrier with focused action! 🚀  | score=0.0 | emojis=2 | len=74 | style=unspecified | cta=question
 - Avoid underselling yourself—articulate your value clearly and confidently. 💪💼  | score=0.0 | emojis=2 | len=77 | style=unspecified | cta=question
-- Boost your non-design role portfolio with strategic projects! 📊🚀  | score=0.0 | emojis=2 | len=64 | style=unspecified | cta=question
