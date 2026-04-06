@@ -1,19 +1,19 @@
-# Career Forge — Weekly Digest (2026-03-30)
+# Career Forge — Weekly Digest (2026-04-06)
 
 ## Top Posts
-- **📣 Break free from the 'years of experience' barrier with focused action! 🚀**  
+- **Master salary talks: show value, research well, and practice negotiation. 💼💰**  
   score=0.0 | style=unspecified | cta=question
-- **Avoid underselling yourself—articulate your value clearly and confidently. 💪💼**  
+- **⚡ Assess culture fit by exploring shared values and work style—ask the right questions! 🌟**  
   score=0.0 | style=unspecified | cta=question
-- **Boost your non-design role portfolio with strategic projects! 📊🚀**  
+- **Overcome experience gatekeeping with a 48-hour impact demonstration! 🚀💼**  
   score=0.0 | style=unspecified | cta=question
-- **🤝 Craft a winning 30/60/90 plan to showcase your strategic vision. 🚀**  
+- **💼 Audit your skills to bridge gaps fast—unlock your career potential! 🔍✨**  
   score=0.0 | style=unspecified | cta=question
-- **Navigate necessary interview embellishments with integrity and strategy. 🎯🤝**  
+- **Show ownership in interviews by detailing your role in projects. 🎯🚀**  
   score=0.0 | style=unspecified | cta=question
-- **Missing one salary negotiation can cost you ₹3 lakh—master this skill! 💰🤝**  
+- **Avoid jargon overload—focus on clarity and results! 🎯🚫**  
   score=0.0 | style=unspecified | cta=question
-- **Master salary talk—ditch 'negotiable' for a confident number! 💪💼**  
+- **Negotiate confidently; your value is clear. 💪💼 Use: “I was hoping for X based on my skills and market data.”**  
   score=0.0 | style=unspecified | cta=question
 
 ## What worked (averages)
