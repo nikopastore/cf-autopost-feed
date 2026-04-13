@@ -1,19 +1,19 @@
-# Career Forge — Weekly Digest (2026-04-06)
+# Career Forge — Weekly Digest (2026-04-13)
 
 ## Top Posts
-- **Master salary talks: show value, research well, and practice negotiation. 💼💰**  
+- **Avoid generic phrases—tailor your resume with specific achievements to pass ATS filters! 🎯📈**  
   score=0.0 | style=unspecified | cta=question
-- **⚡ Assess culture fit by exploring shared values and work style—ask the right questions! 🌟**  
+- **🌟 Avoid vague claims—show real examples of being coachable & proactive! 🌟**  
   score=0.0 | style=unspecified | cta=question
-- **Overcome experience gatekeeping with a 48-hour impact demonstration! 🚀💼**  
+- **Turn job posts into interview prep: decode skills & craft tailored responses! 🔍💼**  
   score=0.0 | style=unspecified | cta=question
-- **💼 Audit your skills to bridge gaps fast—unlock your career potential! 🔍✨**  
+- **Boost your career in 24 hours: Revamp your résumé & ace interviews! 🚀📈**  
   score=0.0 | style=unspecified | cta=question
-- **Show ownership in interviews by detailing your role in projects. 🎯🚀**  
+- **Unlock your resume's power by quantifying achievements! 🚀📈**  
   score=0.0 | style=unspecified | cta=question
-- **Avoid jargon overload—focus on clarity and results! 🎯🚫**  
+- **📣 Avoid vague claims in interviews—be specific! 🎯**  
   score=0.0 | style=unspecified | cta=question
-- **Negotiate confidently; your value is clear. 💪💼 Use: “I was hoping for X based on my skills and market data.”**  
+- **🗂️ Transform career gaps into strengths in 48 hours! 🚀**  
   score=0.0 | style=unspecified | cta=question
 
 ## What worked (averages)
