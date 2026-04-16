@@ -1,9 +1,11 @@
 # Career Forge — Analytics Report
 
-_Generated: 2026-04-15T15:10:01.390674-07:00_
+_Generated: 2026-04-16T09:46:38.697683-07:00_
 
 ## Top 5 Posts (by engagement score)
 
+- **Revamp your LinkedIn headline for visibility! 🚀🔍**  
+  score=0.0 | likes=0 | replies=0 | reposts=0 | clicks=0 | saves=0 | time=2026-04-16T07:59:08-07:00 | style=unspecified | cta=question
 - **📣 Leverage your skills to carve out a profitable niche! 🎯**  
   score=0.0 | likes=0 | replies=0 | reposts=0 | clicks=0 | saves=0 | time=2026-04-15T07:47:53-07:00 | style=unspecified | cta=question
 - **🌟 Showcase leadership by narrating impactful stories using STAR+L! 🚀✨**  
@@ -12,8 +14,6 @@ _Generated: 2026-04-15T15:10:01.390674-07:00_
   score=0.0 | likes=0 | replies=0 | reposts=0 | clicks=0 | saves=0 | time=2026-04-13T07:52:32-07:00 | style=unspecified | cta=question
 - **🌟 Avoid vague claims—show real examples of being coachable & proactive! 🌟**  
   score=0.0 | likes=0 | replies=0 | reposts=0 | clicks=0 | saves=0 | time=2026-04-12T07:00:54-07:00 | style=unspecified | cta=question
-- **Turn job posts into interview prep: decode skills & craft tailored responses! 🔍💼**  
-  score=0.0 | likes=0 | replies=0 | reposts=0 | clicks=0 | saves=0 | time=2026-04-11T06:57:36-07:00 | style=unspecified | cta=question
 
 ## Performance by Style
 
@@ -27,23 +27,23 @@ _Generated: 2026-04-15T15:10:01.390674-07:00_
 - swipe_headlines: avg_score=0.0 (n=1)
 - template_drop: avg_score=0.0 (n=5)
 - unknown: avg_score=0.0 (n=19)
-- unspecified: avg_score=0.0 (n=186)
+- unspecified: avg_score=0.0 (n=187)
 
 ## Performance by CTA Type
 
-- question: avg_score=0.0 (n=225)
+- question: avg_score=0.0 (n=226)
 - tip: avg_score=0.0 (n=2)
 - unknown: avg_score=0.0 (n=19)
 
 ## Emoji Count in Title
 
 - 0: avg_score=0.0 (n=9)
-- 2: avg_score=0.0 (n=194)
+- 2: avg_score=0.0 (n=195)
 - 3+: avg_score=0.0 (n=43)
 
 ## Title Length
 
-- <= 120: avg_score=0.0 (n=240)
+- <= 120: avg_score=0.0 (n=241)
 - <= 160: avg_score=0.0 (n=4)
 - <= 200: avg_score=0.0 (n=1)
 - <= 240: avg_score=0.0 (n=1)
@@ -51,21 +51,21 @@ _Generated: 2026-04-15T15:10:01.390674-07:00_
 ## Numbers / % / $ Present
 
 - no: avg_score=0.0 (n=113)
-- yes: avg_score=0.0 (n=133)
+- yes: avg_score=0.0 (n=134)
 
 ## Question Mark Present
 
-- yes: avg_score=0.0 (n=246)
+- yes: avg_score=0.0 (n=247)
 
 ## Bullets Present in Description
 
 - 0: avg_score=0.0 (n=6)
-- 1+: avg_score=0.0 (n=240)
+- 1+: avg_score=0.0 (n=241)
 
 ## Local Post Time Bucket
 
 - early-afternoon: avg_score=0.0 (n=33)
-- early-morning: avg_score=0.0 (n=189)
+- early-morning: avg_score=0.0 (n=190)
 - evening: avg_score=0.0 (n=18)
 - late-afternoon: avg_score=0.0 (n=4)
 - morning: avg_score=0.0 (n=2)
