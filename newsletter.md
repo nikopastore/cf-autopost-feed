@@ -1,19 +1,19 @@
-# Career Forge — Weekly Digest (2026-04-13)
+# Career Forge — Weekly Digest (2026-04-20)
 
 ## Top Posts
-- **Avoid generic phrases—tailor your resume with specific achievements to pass ATS filters! 🎯📈**  
+- **Stop using vague language in resumes—be specific and quantify! 📈📄**  
   score=0.0 | style=unspecified | cta=question
-- **🌟 Avoid vague claims—show real examples of being coachable & proactive! 🌟**  
+- **📊 Keep answers concise—60 seconds max. Over 60% of hiring managers favor brevity. 🕒**  
   score=0.0 | style=unspecified | cta=question
-- **Turn job posts into interview prep: decode skills & craft tailored responses! 🔍💼**  
+- **🌟 Hiring managers spend 7 seconds on a resume's top section—make it count! ⏱️📄**  
   score=0.0 | style=unspecified | cta=question
-- **Boost your career in 24 hours: Revamp your résumé & ace interviews! 🚀📈**  
+- **Showcase skills over years—emphasize achievements and impact! 🚀📈**  
   score=0.0 | style=unspecified | cta=question
-- **Unlock your resume's power by quantifying achievements! 🚀📈**  
+- **Revamp your LinkedIn headline for visibility! 🚀🔍**  
   score=0.0 | style=unspecified | cta=question
-- **📣 Avoid vague claims in interviews—be specific! 🎯**  
+- **📣 Leverage your skills to carve out a profitable niche! 🎯**  
   score=0.0 | style=unspecified | cta=question
-- **🗂️ Transform career gaps into strengths in 48 hours! 🚀**  
+- **🌟 Showcase leadership by narrating impactful stories using STAR+L! 🚀✨**  
   score=0.0 | style=unspecified | cta=question
 
 ## What worked (averages)
