@@ -1,19 +1,19 @@
-# Career Forge — Weekly Digest (2026-04-20)
+# Career Forge — Weekly Digest (2026-04-27)
 
 ## Top Posts
-- **Stop using vague language in resumes—be specific and quantify! 📈📄**  
+- **Don't limit yourself to your current industry—broaden your scope! 🌍💼**  
   score=0.0 | style=unspecified | cta=question
-- **📊 Keep answers concise—60 seconds max. Over 60% of hiring managers favor brevity. 🕒**  
+- **🧩 Craft a LinkedIn headline that stands out—showcase your unique value! 🚀**  
   score=0.0 | style=unspecified | cta=question
-- **🌟 Hiring managers spend 7 seconds on a resume's top section—make it count! ⏱️📄**  
+- **Avoid these mistakes to boost your callback rate! 🔍📞**  
   score=0.0 | style=unspecified | cta=question
-- **Showcase skills over years—emphasize achievements and impact! 🚀📈**  
+- **50% of professionals don't negotiate salary—boost your earnings by asking! 💪💰**  
   score=0.0 | style=unspecified | cta=question
-- **Revamp your LinkedIn headline for visibility! 🚀🔍**  
+- **Master salary negotiation as a black woman with confidence and strategy 💪🏾💼.**  
   score=0.0 | style=unspecified | cta=question
-- **📣 Leverage your skills to carve out a profitable niche! 🎯**  
+- **🛑 Avoid ignoring transferable skills—highlight them to pivot careers smoothly. 🔄**  
   score=0.0 | style=unspecified | cta=question
-- **🌟 Showcase leadership by narrating impactful stories using STAR+L! 🚀✨**  
+- **Negotiate with confidence—know your worth and communicate it clearly. 💪💼**  
   score=0.0 | style=unspecified | cta=question
 
 ## What worked (averages)
