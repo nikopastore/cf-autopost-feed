@@ -1,19 +1,19 @@
-# Career Forge — Weekly Digest (2026-04-27)
+# Career Forge — Weekly Digest (2026-05-04)
 
 ## Top Posts
+- **Craft a seamless career narrative to highlight growth 🌟 and adaptability 🚀.**  
+  score=0.0 | style=unspecified | cta=question
+- **Transform vague resume bullets into impact-driven statements 🚀📈.**  
+  score=0.0 | style=unspecified | cta=question
+- **Negotiate your salary confidently as a black woman. 🌟💼**  
+  score=0.0 | style=unspecified | cta=question
+- **Turn job posts into your interview advantage! 🚀💼**  
+  score=0.0 | style=unspecified | cta=question
+- **Craft a compelling 5-slide “About Me” deck for screening calls 🎯💼**  
+  score=0.0 | style=unspecified | cta=question
+- **💰 Negotiating a 10% raise now can boost your lifetime earnings by over $500K. Aim high, but stay realistic to maximize your potential. 🎯**  
+  score=0.0 | style=unspecified | cta=question
 - **Don't limit yourself to your current industry—broaden your scope! 🌍💼**  
-  score=0.0 | style=unspecified | cta=question
-- **🧩 Craft a LinkedIn headline that stands out—showcase your unique value! 🚀**  
-  score=0.0 | style=unspecified | cta=question
-- **Avoid these mistakes to boost your callback rate! 🔍📞**  
-  score=0.0 | style=unspecified | cta=question
-- **50% of professionals don't negotiate salary—boost your earnings by asking! 💪💰**  
-  score=0.0 | style=unspecified | cta=question
-- **Master salary negotiation as a black woman with confidence and strategy 💪🏾💼.**  
-  score=0.0 | style=unspecified | cta=question
-- **🛑 Avoid ignoring transferable skills—highlight them to pivot careers smoothly. 🔄**  
-  score=0.0 | style=unspecified | cta=question
-- **Negotiate with confidence—know your worth and communicate it clearly. 💪💼**  
   score=0.0 | style=unspecified | cta=question
 
 ## What worked (averages)
