@@ -5,20 +5,20 @@ We generate self-contained, emoji-forward posts twice daily. Below are feature a
 ## Feature Summary (averages)
 
 - bullets :: 0 => avg_score=0.0 (n=6)
-- bullets :: 1+ => avg_score=0.0 (n=260)
-- cta :: question => avg_score=0.0 (n=245)
+- bullets :: 1+ => avg_score=0.0 (n=261)
+- cta :: question => avg_score=0.0 (n=246)
 - cta :: tip => avg_score=0.0 (n=2)
 - cta :: unknown => avg_score=0.0 (n=19)
 - emoji :: 0 => avg_score=0.0 (n=9)
-- emoji :: 2 => avg_score=0.0 (n=211)
+- emoji :: 2 => avg_score=0.0 (n=212)
 - emoji :: 3+ => avg_score=0.0 (n=46)
-- len :: <= 120 => avg_score=0.0 (n=259)
+- len :: <= 120 => avg_score=0.0 (n=260)
 - len :: <= 160 => avg_score=0.0 (n=5)
 - len :: <= 200 => avg_score=0.0 (n=1)
 - len :: <= 240 => avg_score=0.0 (n=1)
-- number :: no => avg_score=0.0 (n=122)
+- number :: no => avg_score=0.0 (n=123)
 - number :: yes => avg_score=0.0 (n=144)
-- question :: yes => avg_score=0.0 (n=266)
+- question :: yes => avg_score=0.0 (n=267)
 - style :: challenge => avg_score=0.0 (n=5)
 - style :: checklist => avg_score=0.0 (n=6)
 - style :: coach_tip => avg_score=0.0 (n=5)
@@ -29,9 +29,9 @@ We generate self-contained, emoji-forward posts twice daily. Below are feature a
 - style :: swipe_headlines => avg_score=0.0 (n=1)
 - style :: template_drop => avg_score=0.0 (n=5)
 - style :: unknown => avg_score=0.0 (n=19)
-- style :: unspecified => avg_score=0.0 (n=206)
+- style :: unspecified => avg_score=0.0 (n=207)
 - time :: early-afternoon => avg_score=0.0 (n=33)
-- time :: early-morning => avg_score=0.0 (n=209)
+- time :: early-morning => avg_score=0.0 (n=210)
 - time :: evening => avg_score=0.0 (n=18)
 - time :: late-afternoon => avg_score=0.0 (n=4)
 - time :: morning => avg_score=0.0 (n=2)
@@ -42,8 +42,8 @@ Using the summary and top posts, propose 5 editing rules to maximize engagement,
 
 ## Top Posts (samples)
 
+- 🚀 Boost your cold outreach game with these proven strategies! 🚀  | score=0.0 | emojis=2 | len=63 | style=unspecified | cta=question
 - Avoid vague leadership stories—use STAR+L for clarity and impact. 🎯🌟  | score=0.0 | emojis=2 | len=68 | style=unspecified | cta=question
 - ✅ Quickly identify 25 target companies by leveraging AI tools and strategic research. 🔍✨  | score=0.0 | emojis=3 | len=88 | style=unspecified | cta=question
 - Craft a seamless career narrative to highlight growth 🌟 and adaptability 🚀.  | score=0.0 | emojis=2 | len=75 | style=unspecified | cta=question
 - Transform vague resume bullets into impact-driven statements 🚀📈.  | score=0.0 | emojis=2 | len=64 | style=unspecified | cta=question
-- Negotiate your salary confidently as a black woman. 🌟💼  | score=0.0 | emojis=2 | len=54 | style=unspecified | cta=question
