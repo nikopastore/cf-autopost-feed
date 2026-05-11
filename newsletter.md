@@ -1,19 +1,19 @@
-# Career Forge — Weekly Digest (2026-05-04)
+# Career Forge — Weekly Digest (2026-05-11)
 
 ## Top Posts
+- **Spot red flags in job descriptions to avoid pitfalls 🚩. Protect your career path by reading carefully and asking questions 🔍.**  
+  score=0.0 | style=unspecified | cta=question
+- **🧠 Find your top 25 companies fast by using AI-driven search prompts. 🚀**  
+  score=0.0 | style=unspecified | cta=question
+- **Elevate your screening calls with a 5-slide 'About Me'! 🚀💼**  
+  score=0.0 | style=unspecified | cta=question
+- **🚀 Boost your cold outreach game with these proven strategies! 🚀**  
+  score=0.0 | style=unspecified | cta=question
+- **Avoid vague leadership stories—use STAR+L for clarity and impact. 🎯🌟**  
+  score=0.0 | style=unspecified | cta=question
+- **✅ Quickly identify 25 target companies by leveraging AI tools and strategic research. 🔍✨**  
+  score=0.0 | style=unspecified | cta=question
 - **Craft a seamless career narrative to highlight growth 🌟 and adaptability 🚀.**  
-  score=0.0 | style=unspecified | cta=question
-- **Transform vague resume bullets into impact-driven statements 🚀📈.**  
-  score=0.0 | style=unspecified | cta=question
-- **Negotiate your salary confidently as a black woman. 🌟💼**  
-  score=0.0 | style=unspecified | cta=question
-- **Turn job posts into your interview advantage! 🚀💼**  
-  score=0.0 | style=unspecified | cta=question
-- **Craft a compelling 5-slide “About Me” deck for screening calls 🎯💼**  
-  score=0.0 | style=unspecified | cta=question
-- **💰 Negotiating a 10% raise now can boost your lifetime earnings by over $500K. Aim high, but stay realistic to maximize your potential. 🎯**  
-  score=0.0 | style=unspecified | cta=question
-- **Don't limit yourself to your current industry—broaden your scope! 🌍💼**  
   score=0.0 | style=unspecified | cta=question
 
 ## What worked (averages)
