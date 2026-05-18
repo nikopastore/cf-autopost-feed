@@ -1,19 +1,19 @@
-# Career Forge — Weekly Digest (2026-05-11)
+# Career Forge — Weekly Digest (2026-05-18)
 
 ## Top Posts
-- **Spot red flags in job descriptions to avoid pitfalls 🚩. Protect your career path by reading carefully and asking questions 🔍.**  
+- **Build a solid behavioral interview question bank to shine in interviews! 🔍💼**  
   score=0.0 | style=unspecified | cta=question
-- **🧠 Find your top 25 companies fast by using AI-driven search prompts. 🚀**  
+- **✅ Craft a seamless career narrative by connecting your roles 📈✨.**  
   score=0.0 | style=unspecified | cta=question
-- **Elevate your screening calls with a 5-slide 'About Me'! 🚀💼**  
+- **Highlight your impact—grab attention with numbers and results! 📈🔥**  
   score=0.0 | style=unspecified | cta=question
-- **🚀 Boost your cold outreach game with these proven strategies! 🚀**  
+- **📌 Negotiate confidently—prepare to discuss your value and market standards. 💼✨**  
   score=0.0 | style=unspecified | cta=question
-- **Avoid vague leadership stories—use STAR+L for clarity and impact. 🎯🌟**  
+- **Audit your skills, close gaps in just 48h! 🚀📈**  
   score=0.0 | style=unspecified | cta=question
-- **✅ Quickly identify 25 target companies by leveraging AI tools and strategic research. 🔍✨**  
+- **💬 Maximize productivity with a daily 3-task system! 🚀 Stay focused and build momentum every day.**  
   score=0.0 | style=unspecified | cta=question
-- **Craft a seamless career narrative to highlight growth 🌟 and adaptability 🚀.**  
+- **Master negotiation with clear goals and confidence. 💼🚀**  
   score=0.0 | style=unspecified | cta=question
 
 ## What worked (averages)
