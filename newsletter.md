@@ -1,19 +1,19 @@
-# Career Forge — Weekly Digest (2026-05-18)
+# Career Forge — Weekly Digest (2026-05-25)
 
 ## Top Posts
+- **📊 76% of hiring managers reject based on experience. Focus on skills! 🔍**  
+  score=0.0 | style=unspecified | cta=question
+- **📈 80% of recruiters use LinkedIn daily. Optimize your headline for discovery! 🚀**  
+  score=0.0 | style=unspecified | cta=question
+- **🔎 Boost your LinkedIn discovery with a clear, concise headline! 🚀**  
+  score=0.0 | style=unspecified | cta=question
+- **Avoid accepting the first offer immediately—take time to evaluate and negotiate. 💼💪**  
+  score=0.0 | style=unspecified | cta=question
+- **Address career gaps confidently—explain growth and learning. 🌱📈**  
+  score=0.0 | style=unspecified | cta=question
+- **Avoid saying you're negotiable on salary—be confident and strategic about your worth. 💼💰**  
+  score=0.0 | style=unspecified | cta=question
 - **Build a solid behavioral interview question bank to shine in interviews! 🔍💼**  
-  score=0.0 | style=unspecified | cta=question
-- **✅ Craft a seamless career narrative by connecting your roles 📈✨.**  
-  score=0.0 | style=unspecified | cta=question
-- **Highlight your impact—grab attention with numbers and results! 📈🔥**  
-  score=0.0 | style=unspecified | cta=question
-- **📌 Negotiate confidently—prepare to discuss your value and market standards. 💼✨**  
-  score=0.0 | style=unspecified | cta=question
-- **Audit your skills, close gaps in just 48h! 🚀📈**  
-  score=0.0 | style=unspecified | cta=question
-- **💬 Maximize productivity with a daily 3-task system! 🚀 Stay focused and build momentum every day.**  
-  score=0.0 | style=unspecified | cta=question
-- **Master negotiation with clear goals and confidence. 💼🚀**  
   score=0.0 | style=unspecified | cta=question
 
 ## What worked (averages)
