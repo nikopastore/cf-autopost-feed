@@ -1,9 +1,11 @@
 # Career Forge — Analytics Report
 
-_Generated: 2026-05-26T15:49:32.517636-07:00_
+_Generated: 2026-05-27T11:05:55.264956-07:00_
 
 ## Top 5 Posts (by engagement score)
 
+- **Don't overload slides with text—use visuals and concise points. 🎯📊**  
+  score=0.0 | likes=0 | replies=0 | reposts=0 | clicks=0 | saves=0 | time=2026-05-27T09:39:38-07:00 | style=unspecified | cta=question
 - **Don't just list tasks—quantify your impact with numbers 📊💼.**  
   score=0.0 | likes=0 | replies=0 | reposts=0 | clicks=0 | saves=0 | time=2026-05-26T09:44:18-07:00 | style=unspecified | cta=question
 - **📊 76% of hiring managers reject based on experience. Focus on skills! 🔍**  
@@ -12,8 +14,6 @@ _Generated: 2026-05-26T15:49:32.517636-07:00_
   score=0.0 | likes=0 | replies=0 | reposts=0 | clicks=0 | saves=0 | time=2026-05-24T07:26:00-07:00 | style=unspecified | cta=question
 - **🔎 Boost your LinkedIn discovery with a clear, concise headline! 🚀**  
   score=0.0 | likes=0 | replies=0 | reposts=0 | clicks=0 | saves=0 | time=2026-05-22T08:51:03-07:00 | style=unspecified | cta=question
-- **Avoid accepting the first offer immediately—take time to evaluate and negotiate. 💼💪**  
-  score=0.0 | likes=0 | replies=0 | reposts=0 | clicks=0 | saves=0 | time=2026-05-21T09:17:39-07:00 | style=unspecified | cta=question
 
 ## Performance by Style
 
@@ -27,23 +27,23 @@ _Generated: 2026-05-26T15:49:32.517636-07:00_
 - swipe_headlines: avg_score=0.0 (n=1)
 - template_drop: avg_score=0.0 (n=5)
 - unknown: avg_score=0.0 (n=19)
-- unspecified: avg_score=0.0 (n=224)
+- unspecified: avg_score=0.0 (n=225)
 
 ## Performance by CTA Type
 
-- question: avg_score=0.0 (n=263)
+- question: avg_score=0.0 (n=264)
 - tip: avg_score=0.0 (n=2)
 - unknown: avg_score=0.0 (n=19)
 
 ## Emoji Count in Title
 
 - 0: avg_score=0.0 (n=9)
-- 2: avg_score=0.0 (n=227)
+- 2: avg_score=0.0 (n=228)
 - 3+: avg_score=0.0 (n=48)
 
 ## Title Length
 
-- <= 120: avg_score=0.0 (n=276)
+- <= 120: avg_score=0.0 (n=277)
 - <= 160: avg_score=0.0 (n=6)
 - <= 200: avg_score=0.0 (n=1)
 - <= 240: avg_score=0.0 (n=1)
@@ -51,16 +51,16 @@ _Generated: 2026-05-26T15:49:32.517636-07:00_
 ## Numbers / % / $ Present
 
 - no: avg_score=0.0 (n=129)
-- yes: avg_score=0.0 (n=155)
+- yes: avg_score=0.0 (n=156)
 
 ## Question Mark Present
 
-- yes: avg_score=0.0 (n=284)
+- yes: avg_score=0.0 (n=285)
 
 ## Bullets Present in Description
 
 - 0: avg_score=0.0 (n=6)
-- 1+: avg_score=0.0 (n=278)
+- 1+: avg_score=0.0 (n=279)
 
 ## Local Post Time Bucket
 
@@ -68,7 +68,7 @@ _Generated: 2026-05-26T15:49:32.517636-07:00_
 - early-morning: avg_score=0.0 (n=222)
 - evening: avg_score=0.0 (n=18)
 - late-afternoon: avg_score=0.0 (n=4)
-- morning: avg_score=0.0 (n=7)
+- morning: avg_score=0.0 (n=8)
 
 ## Next experiments
 
