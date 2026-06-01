@@ -1,19 +1,19 @@
-# Career Forge — Weekly Digest (2026-05-25)
+# Career Forge — Weekly Digest (2026-06-01)
 
 ## Top Posts
-- **📊 76% of hiring managers reject based on experience. Focus on skills! 🔍**  
+- **Show you're coachable and proactive by seeking feedback and acting on it. 🌟🚀**  
   score=0.0 | style=unspecified | cta=question
-- **📈 80% of recruiters use LinkedIn daily. Optimize your headline for discovery! 🚀**  
+- **Boost your coachability & high agency in 24 hours! 🚀🌟**  
   score=0.0 | style=unspecified | cta=question
-- **🔎 Boost your LinkedIn discovery with a clear, concise headline! 🚀**  
+- **Build a 10-company pipeline this week with targeted actions 🎯📈.**  
   score=0.0 | style=unspecified | cta=question
-- **Avoid accepting the first offer immediately—take time to evaluate and negotiate. 💼💪**  
+- **Craft a 5-line cover letter that grabs attention and showcases your fit. 🎯📄**  
   score=0.0 | style=unspecified | cta=question
-- **Address career gaps confidently—explain growth and learning. 🌱📈**  
+- **Master behavioral interviews by crafting impactful stories! 🎯📚**  
   score=0.0 | style=unspecified | cta=question
-- **Avoid saying you're negotiable on salary—be confident and strategic about your worth. 💼💰**  
+- **Don't overload slides with text—use visuals and concise points. 🎯📊**  
   score=0.0 | style=unspecified | cta=question
-- **Build a solid behavioral interview question bank to shine in interviews! 🔍💼**  
+- **Don't just list tasks—quantify your impact with numbers 📊💼.**  
   score=0.0 | style=unspecified | cta=question
 
 ## What worked (averages)
