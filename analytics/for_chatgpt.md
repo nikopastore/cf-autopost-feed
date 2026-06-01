@@ -5,20 +5,20 @@ We generate self-contained, emoji-forward posts twice daily. Below are feature a
 ## Feature Summary (averages)
 
 - bullets :: 0 => avg_score=0.0 (n=6)
-- bullets :: 1+ => avg_score=0.0 (n=283)
-- cta :: question => avg_score=0.0 (n=268)
+- bullets :: 1+ => avg_score=0.0 (n=284)
+- cta :: question => avg_score=0.0 (n=269)
 - cta :: tip => avg_score=0.0 (n=2)
 - cta :: unknown => avg_score=0.0 (n=19)
 - emoji :: 0 => avg_score=0.0 (n=9)
-- emoji :: 2 => avg_score=0.0 (n=232)
+- emoji :: 2 => avg_score=0.0 (n=233)
 - emoji :: 3+ => avg_score=0.0 (n=48)
-- len :: <= 120 => avg_score=0.0 (n=281)
+- len :: <= 120 => avg_score=0.0 (n=282)
 - len :: <= 160 => avg_score=0.0 (n=6)
 - len :: <= 200 => avg_score=0.0 (n=1)
 - len :: <= 240 => avg_score=0.0 (n=1)
-- number :: no => avg_score=0.0 (n=130)
+- number :: no => avg_score=0.0 (n=131)
 - number :: yes => avg_score=0.0 (n=159)
-- question :: yes => avg_score=0.0 (n=289)
+- question :: yes => avg_score=0.0 (n=290)
 - style :: challenge => avg_score=0.0 (n=5)
 - style :: checklist => avg_score=0.0 (n=6)
 - style :: coach_tip => avg_score=0.0 (n=5)
@@ -29,12 +29,12 @@ We generate self-contained, emoji-forward posts twice daily. Below are feature a
 - style :: swipe_headlines => avg_score=0.0 (n=1)
 - style :: template_drop => avg_score=0.0 (n=5)
 - style :: unknown => avg_score=0.0 (n=19)
-- style :: unspecified => avg_score=0.0 (n=229)
+- style :: unspecified => avg_score=0.0 (n=230)
 - time :: early-afternoon => avg_score=0.0 (n=33)
 - time :: early-morning => avg_score=0.0 (n=224)
 - time :: evening => avg_score=0.0 (n=18)
 - time :: late-afternoon => avg_score=0.0 (n=4)
-- time :: morning => avg_score=0.0 (n=10)
+- time :: morning => avg_score=0.0 (n=11)
 
 ## Ask ChatGPT
 
@@ -42,8 +42,8 @@ Using the summary and top posts, propose 5 editing rules to maximize engagement,
 
 ## Top Posts (samples)
 
+- Show you're coachable and proactive by seeking feedback and acting on it. 🌟🚀  | score=0.0 | emojis=2 | len=76 | style=unspecified | cta=question
 - Boost your coachability & high agency in 24 hours! 🚀🌟  | score=0.0 | emojis=2 | len=53 | style=unspecified | cta=question
 - Build a 10-company pipeline this week with targeted actions 🎯📈.  | score=0.0 | emojis=2 | len=63 | style=unspecified | cta=question
 - Craft a 5-line cover letter that grabs attention and showcases your fit. 🎯📄  | score=0.0 | emojis=2 | len=75 | style=unspecified | cta=question
 - Master behavioral interviews by crafting impactful stories! 🎯📚  | score=0.0 | emojis=2 | len=62 | style=unspecified | cta=question
-- Don't overload slides with text—use visuals and concise points. 🎯📊  | score=0.0 | emojis=2 | len=66 | style=unspecified | cta=question
