@@ -6,7 +6,7 @@ Based on average engagement by **local time bucket** (America/Phoenix).
 - early-morning: avg_score=0.00 (n=224)
 - evening: avg_score=0.00 (n=18)
 - late-afternoon: avg_score=0.00 (n=4)
-- morning: avg_score=0.00 (n=13)
+- morning: avg_score=0.00 (n=14)
 
 ## Proposed crons (UTC)
 - `10 21 * * *`  ← early-afternoon
