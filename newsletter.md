@@ -1,19 +1,19 @@
-# Career Forge — Weekly Digest (2026-06-01)
+# Career Forge — Weekly Digest (2026-06-08)
 
 ## Top Posts
-- **Show you're coachable and proactive by seeking feedback and acting on it. 🌟🚀**  
+- **Boost cold outreach success by personalizing your message. 🔍📧**  
   score=0.0 | style=unspecified | cta=question
-- **Boost your coachability & high agency in 24 hours! 🚀🌟**  
+- **Transform your resume with impact! 🚀 Highlight results, not tasks. 📈**  
   score=0.0 | style=unspecified | cta=question
-- **Build a 10-company pipeline this week with targeted actions 🎯📈.**  
+- **⚡ Use: "I prioritize tasks by daily importance, momentum, and impact." 🚀 Start each day with 3 key tasks to drive momentum and focus.**  
   score=0.0 | style=unspecified | cta=question
-- **Craft a 5-line cover letter that grabs attention and showcases your fit. 🎯📄**  
+- **72% of recruiters value portfolios for non-design roles—showcase your skills! 📊💼**  
   score=0.0 | style=unspecified | cta=question
-- **Master behavioral interviews by crafting impactful stories! 🎯📚**  
+- **Avoid downplaying your worth—own your achievements confidently! 💪💼**  
   score=0.0 | style=unspecified | cta=question
-- **Don't overload slides with text—use visuals and concise points. 🎯📊**  
+- **Boost your career prospects by attending university job search events! 🎓🌟**  
   score=0.0 | style=unspecified | cta=question
-- **Don't just list tasks—quantify your impact with numbers 📊💼.**  
+- **💬 Avoid excessive detail in cover letters—focus on impact! 🎯✉️**  
   score=0.0 | style=unspecified | cta=question
 
 ## What worked (averages)
