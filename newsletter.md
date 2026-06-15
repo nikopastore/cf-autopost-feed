@@ -1,19 +1,19 @@
-# Career Forge — Weekly Digest (2026-06-08)
+# Career Forge — Weekly Digest (2026-06-15)
 
 ## Top Posts
-- **Boost cold outreach success by personalizing your message. 🔍📧**  
+- **🤝 Turn rejection into a stepping stone—leverage feedback to shine brighter next time! 🚀**  
   score=0.0 | style=unspecified | cta=question
-- **Transform your resume with impact! 🚀 Highlight results, not tasks. 📈**  
+- **📈 Show ownership by discussing how you led initiatives and solved problems. 🚀**  
   score=0.0 | style=unspecified | cta=question
-- **⚡ Use: "I prioritize tasks by daily importance, momentum, and impact." 🚀 Start each day with 3 key tasks to drive momentum and focus.**  
+- **Tell a cohesive career story by linking roles with a common theme. 🎯📈**  
   score=0.0 | style=unspecified | cta=question
-- **72% of recruiters value portfolios for non-design roles—showcase your skills! 📊💼**  
+- **Master networking as an introvert with strategic scripts and cadence! 🌟🤝**  
   score=0.0 | style=unspecified | cta=question
-- **Avoid downplaying your worth—own your achievements confidently! 💪💼**  
+- **Negotiate your worth with confidence—you're worth every dollar! 💼💰**  
   score=0.0 | style=unspecified | cta=question
-- **Boost your career prospects by attending university job search events! 🎓🌟**  
+- **🧠 Audit your skills fast & fill gaps in 48h! 🚀**  
   score=0.0 | style=unspecified | cta=question
-- **💬 Avoid excessive detail in cover letters—focus on impact! 🎯✉️**  
+- **Transform vague resume bullets into impactful achievements! 🚀📄**  
   score=0.0 | style=unspecified | cta=question
 
 ## What worked (averages)
