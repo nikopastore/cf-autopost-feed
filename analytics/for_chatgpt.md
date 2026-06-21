@@ -5,20 +5,20 @@ We generate self-contained, emoji-forward posts twice daily. Below are feature a
 ## Feature Summary (averages)
 
 - bullets :: 0 => avg_score=0.0 (n=6)
-- bullets :: 1+ => avg_score=0.0 (n=303)
-- cta :: question => avg_score=0.0 (n=288)
+- bullets :: 1+ => avg_score=0.0 (n=304)
+- cta :: question => avg_score=0.0 (n=289)
 - cta :: tip => avg_score=0.0 (n=2)
 - cta :: unknown => avg_score=0.0 (n=19)
 - emoji :: 0 => avg_score=0.0 (n=9)
-- emoji :: 2 => avg_score=0.0 (n=251)
+- emoji :: 2 => avg_score=0.0 (n=252)
 - emoji :: 3+ => avg_score=0.0 (n=49)
-- len :: <= 120 => avg_score=0.0 (n=300)
+- len :: <= 120 => avg_score=0.0 (n=301)
 - len :: <= 160 => avg_score=0.0 (n=7)
 - len :: <= 200 => avg_score=0.0 (n=1)
 - len :: <= 240 => avg_score=0.0 (n=1)
 - number :: no => avg_score=0.0 (n=138)
-- number :: yes => avg_score=0.0 (n=171)
-- question :: yes => avg_score=0.0 (n=309)
+- number :: yes => avg_score=0.0 (n=172)
+- question :: yes => avg_score=0.0 (n=310)
 - style :: challenge => avg_score=0.0 (n=5)
 - style :: checklist => avg_score=0.0 (n=6)
 - style :: coach_tip => avg_score=0.0 (n=5)
@@ -29,9 +29,9 @@ We generate self-contained, emoji-forward posts twice daily. Below are feature a
 - style :: swipe_headlines => avg_score=0.0 (n=1)
 - style :: template_drop => avg_score=0.0 (n=5)
 - style :: unknown => avg_score=0.0 (n=19)
-- style :: unspecified => avg_score=0.0 (n=249)
+- style :: unspecified => avg_score=0.0 (n=250)
 - time :: early-afternoon => avg_score=0.0 (n=33)
-- time :: early-morning => avg_score=0.0 (n=230)
+- time :: early-morning => avg_score=0.0 (n=231)
 - time :: evening => avg_score=0.0 (n=18)
 - time :: late-afternoon => avg_score=0.0 (n=4)
 - time :: morning => avg_score=0.0 (n=24)
@@ -42,8 +42,8 @@ Using the summary and top posts, propose 5 editing rules to maximize engagement,
 
 ## Top Posts (samples)
 
+- 📌 Build a robust 10-company pipeline in one week—maximize your job search momentum! 🚀  | score=0.0 | emojis=2 | len=85 | style=unspecified | cta=question
 - 🧠 Craft a cohesive career story by linking roles with a common theme. 🎯  | score=0.0 | emojis=2 | len=71 | style=unspecified | cta=question
 - 🚀 Timebox your job search with calendar blocks to boost productivity! ⏰📅  | score=0.0 | emojis=2 | len=72 | style=unspecified | cta=question
 - Quantify your impact: Use metrics to showcase achievements 🎯📈.  | score=0.0 | emojis=2 | len=62 | style=unspecified | cta=question
 - Humanly raises $25M to improve job search with AI 🤖 - leverage it for personalized job matches! 💼  | score=0.0 | emojis=2 | len=97 | style=unspecified | cta=question
-- 🎯 Craft a winning 30/60/90 plan to impress in interviews! 🚀  | score=0.0 | emojis=2 | len=59 | style=unspecified | cta=question
