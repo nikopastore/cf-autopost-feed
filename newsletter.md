@@ -1,19 +1,19 @@
-# Career Forge — Weekly Digest (2026-06-15)
+# Career Forge — Weekly Digest (2026-06-22)
 
 ## Top Posts
-- **🤝 Turn rejection into a stepping stone—leverage feedback to shine brighter next time! 🚀**  
+- **Run a swift weekly career review to stay aligned with goals and excel 🎯📈.**  
   score=0.0 | style=unspecified | cta=question
-- **📈 Show ownership by discussing how you led initiatives and solved problems. 🚀**  
+- **📌 Build a robust 10-company pipeline in one week—maximize your job search momentum! 🚀**  
   score=0.0 | style=unspecified | cta=question
-- **Tell a cohesive career story by linking roles with a common theme. 🎯📈**  
+- **🧠 Craft a cohesive career story by linking roles with a common theme. 🎯**  
   score=0.0 | style=unspecified | cta=question
-- **Master networking as an introvert with strategic scripts and cadence! 🌟🤝**  
+- **🚀 Timebox your job search with calendar blocks to boost productivity! ⏰📅**  
   score=0.0 | style=unspecified | cta=question
-- **Negotiate your worth with confidence—you're worth every dollar! 💼💰**  
+- **Quantify your impact: Use metrics to showcase achievements 🎯📈.**  
   score=0.0 | style=unspecified | cta=question
-- **🧠 Audit your skills fast & fill gaps in 48h! 🚀**  
+- **Humanly raises $25M to improve job search with AI 🤖 - leverage it for personalized job matches! 💼**  
   score=0.0 | style=unspecified | cta=question
-- **Transform vague resume bullets into impactful achievements! 🚀📄**  
+- **🎯 Craft a winning 30/60/90 plan to impress in interviews! 🚀**  
   score=0.0 | style=unspecified | cta=question
 
 ## What worked (averages)
