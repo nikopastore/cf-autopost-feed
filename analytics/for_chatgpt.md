@@ -5,20 +5,20 @@ We generate self-contained, emoji-forward posts twice daily. Below are feature a
 ## Feature Summary (averages)
 
 - bullets :: 0 => avg_score=0.0 (n=6)
-- bullets :: 1+ => avg_score=0.0 (n=306)
-- cta :: question => avg_score=0.0 (n=291)
+- bullets :: 1+ => avg_score=0.0 (n=307)
+- cta :: question => avg_score=0.0 (n=292)
 - cta :: tip => avg_score=0.0 (n=2)
 - cta :: unknown => avg_score=0.0 (n=19)
 - emoji :: 0 => avg_score=0.0 (n=9)
-- emoji :: 2 => avg_score=0.0 (n=254)
+- emoji :: 2 => avg_score=0.0 (n=255)
 - emoji :: 3+ => avg_score=0.0 (n=49)
-- len :: <= 120 => avg_score=0.0 (n=303)
+- len :: <= 120 => avg_score=0.0 (n=304)
 - len :: <= 160 => avg_score=0.0 (n=7)
 - len :: <= 200 => avg_score=0.0 (n=1)
 - len :: <= 240 => avg_score=0.0 (n=1)
 - number :: no => avg_score=0.0 (n=139)
-- number :: yes => avg_score=0.0 (n=173)
-- question :: yes => avg_score=0.0 (n=312)
+- number :: yes => avg_score=0.0 (n=174)
+- question :: yes => avg_score=0.0 (n=313)
 - style :: challenge => avg_score=0.0 (n=5)
 - style :: checklist => avg_score=0.0 (n=6)
 - style :: coach_tip => avg_score=0.0 (n=5)
@@ -29,9 +29,9 @@ We generate self-contained, emoji-forward posts twice daily. Below are feature a
 - style :: swipe_headlines => avg_score=0.0 (n=1)
 - style :: template_drop => avg_score=0.0 (n=5)
 - style :: unknown => avg_score=0.0 (n=19)
-- style :: unspecified => avg_score=0.0 (n=252)
+- style :: unspecified => avg_score=0.0 (n=253)
 - time :: early-afternoon => avg_score=0.0 (n=33)
-- time :: early-morning => avg_score=0.0 (n=232)
+- time :: early-morning => avg_score=0.0 (n=233)
 - time :: evening => avg_score=0.0 (n=18)
 - time :: late-afternoon => avg_score=0.0 (n=4)
 - time :: morning => avg_score=0.0 (n=25)
@@ -42,8 +42,8 @@ Using the summary and top posts, propose 5 editing rules to maximize engagement,
 
 ## Top Posts (samples)
 
+- 📈 Craft your interview truths carefully—honesty with tact wins. 🎯  | score=0.0 | emojis=2 | len=65 | style=unspecified | cta=question
 - Boost your job search by building a 10-company pipeline this week! 🚀📈  | score=0.0 | emojis=2 | len=69 | style=unspecified | cta=question
 - Run a swift weekly career review to stay aligned with goals and excel 🎯📈.  | score=0.0 | emojis=2 | len=73 | style=unspecified | cta=question
 - 📌 Build a robust 10-company pipeline in one week—maximize your job search momentum! 🚀  | score=0.0 | emojis=2 | len=85 | style=unspecified | cta=question
 - 🧠 Craft a cohesive career story by linking roles with a common theme. 🎯  | score=0.0 | emojis=2 | len=71 | style=unspecified | cta=question
-- 🚀 Timebox your job search with calendar blocks to boost productivity! ⏰📅  | score=0.0 | emojis=2 | len=72 | style=unspecified | cta=question
