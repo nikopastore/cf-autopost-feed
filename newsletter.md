@@ -1,19 +1,19 @@
-# Career Forge — Weekly Digest (2026-06-22)
+# Career Forge — Weekly Digest (2026-06-29)
 
 ## Top Posts
-- **Run a swift weekly career review to stay aligned with goals and excel 🎯📈.**  
+- **Over 75% of resumes are rejected by ATS—optimize yours with keywords! 🔍📄**  
   score=0.0 | style=unspecified | cta=question
-- **📌 Build a robust 10-company pipeline in one week—maximize your job search momentum! 🚀**  
+- **📣 Boost productivity by focusing on just 3 tasks daily—avoid overwhelm! 🚀**  
   score=0.0 | style=unspecified | cta=question
-- **🧠 Craft a cohesive career story by linking roles with a common theme. 🎯**  
+- **Craft a seamless career narrative that connects your diverse roles. 🎯📈**  
   score=0.0 | style=unspecified | cta=question
-- **🚀 Timebox your job search with calendar blocks to boost productivity! ⏰📅**  
+- **🚀 Showcase leadership by narrating impactful stories—use STAR+L to shine! 🌟**  
   score=0.0 | style=unspecified | cta=question
-- **Quantify your impact: Use metrics to showcase achievements 🎯📈.**  
+- **💼 Avoid vague accomplishments—quantify your impact for clarity. 📊**  
   score=0.0 | style=unspecified | cta=question
-- **Humanly raises $25M to improve job search with AI 🤖 - leverage it for personalized job matches! 💼**  
+- **📈 Craft your interview truths carefully—honesty with tact wins. 🎯**  
   score=0.0 | style=unspecified | cta=question
-- **🎯 Craft a winning 30/60/90 plan to impress in interviews! 🚀**  
+- **Boost your job search by building a 10-company pipeline this week! 🚀📈**  
   score=0.0 | style=unspecified | cta=question
 
 ## What worked (averages)
