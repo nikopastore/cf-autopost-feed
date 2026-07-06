@@ -1,19 +1,19 @@
-# Career Forge — Weekly Digest (2026-06-29)
+# Career Forge — Weekly Digest (2026-07-06)
 
 ## Top Posts
-- **Over 75% of resumes are rejected by ATS—optimize yours with keywords! 🔍📄**  
+- **💬 Craft crisp interview answers: focus, structure, impact. 🎯✨**  
   score=0.0 | style=unspecified | cta=question
-- **📣 Boost productivity by focusing on just 3 tasks daily—avoid overwhelm! 🚀**  
+- **✅ Use: “I improved team efficiency by 30% by implementing new software.” 🎯**  
   score=0.0 | style=unspecified | cta=question
-- **Craft a seamless career narrative that connects your diverse roles. 🎯📈**  
+- **Boost your career with a 48-hour résumé and interview makeover! 🚀💼**  
   score=0.0 | style=unspecified | cta=question
-- **🚀 Showcase leadership by narrating impactful stories—use STAR+L to shine! 🌟**  
+- **✅ Craft a LinkedIn headline that boosts your discoverability 🚀.**  
   score=0.0 | style=unspecified | cta=question
-- **💼 Avoid vague accomplishments—quantify your impact for clarity. 📊**  
+- **🚀 Overcome callback killers by refining your pitch—stand out and get noticed! 🚀**  
   score=0.0 | style=unspecified | cta=question
-- **📈 Craft your interview truths carefully—honesty with tact wins. 🎯**  
+- **Perform a fast skills audit and gap plan in 48 hours! 🚀📊**  
   score=0.0 | style=unspecified | cta=question
-- **Boost your job search by building a 10-company pipeline this week! 🚀📈**  
+- **🧩 60% of employers value skills over experience. 🎯 Highlight your capabilities to stand out!**  
   score=0.0 | style=unspecified | cta=question
 
 ## What worked (averages)
