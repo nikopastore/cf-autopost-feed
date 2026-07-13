@@ -1,19 +1,19 @@
-# Career Forge — Weekly Digest (2026-07-06)
+# Career Forge — Weekly Digest (2026-07-13)
 
 ## Top Posts
-- **💬 Craft crisp interview answers: focus, structure, impact. 🎯✨**  
+- **🎯 Master your job search in just 30 minutes a day! ⏰🚀**  
   score=0.0 | style=unspecified | cta=question
-- **✅ Use: “I improved team efficiency by 30% by implementing new software.” 🎯**  
+- **📣 Transition smoothly from public to private sector 🌐✨—showcase versatility and adaptability.**  
   score=0.0 | style=unspecified | cta=question
-- **Boost your career with a 48-hour résumé and interview makeover! 🚀💼**  
+- **📣 Spotting red flags in job descriptions helps you avoid pitfalls. 🚩**  
   score=0.0 | style=unspecified | cta=question
-- **✅ Craft a LinkedIn headline that boosts your discoverability 🚀.**  
+- **Women earn 82 cents for every dollar men earn. Close the gap by negotiating assertively. 💼💪**  
   score=0.0 | style=unspecified | cta=question
-- **🚀 Overcome callback killers by refining your pitch—stand out and get noticed! 🚀**  
+- **Conduct a fast skills audit to identify gaps and build your plan! 🔍📈**  
   score=0.0 | style=unspecified | cta=question
-- **Perform a fast skills audit and gap plan in 48 hours! 🚀📊**  
+- **Master behavioral interview questions in 48h! 💪🚀**  
   score=0.0 | style=unspecified | cta=question
-- **🧩 60% of employers value skills over experience. 🎯 Highlight your capabilities to stand out!**  
+- **Avoid sounding robotic when negotiating salary. 🤖💼 Use: "I reviewed industry standards and believe X is fair."**  
   score=0.0 | style=unspecified | cta=question
 
 ## What worked (averages)
