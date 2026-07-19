@@ -5,20 +5,20 @@ We generate self-contained, emoji-forward posts twice daily. Below are feature a
 ## Feature Summary (averages)
 
 - bullets :: 0 => avg_score=0.0 (n=6)
-- bullets :: 1+ => avg_score=0.0 (n=331)
-- cta :: question => avg_score=0.0 (n=316)
+- bullets :: 1+ => avg_score=0.0 (n=332)
+- cta :: question => avg_score=0.0 (n=317)
 - cta :: tip => avg_score=0.0 (n=2)
 - cta :: unknown => avg_score=0.0 (n=19)
 - emoji :: 0 => avg_score=0.0 (n=9)
 - emoji :: 2 => avg_score=0.0 (n=277)
-- emoji :: 3+ => avg_score=0.0 (n=51)
-- len :: <= 120 => avg_score=0.0 (n=328)
+- emoji :: 3+ => avg_score=0.0 (n=52)
+- len :: <= 120 => avg_score=0.0 (n=329)
 - len :: <= 160 => avg_score=0.0 (n=7)
 - len :: <= 200 => avg_score=0.0 (n=1)
 - len :: <= 240 => avg_score=0.0 (n=1)
 - number :: no => avg_score=0.0 (n=150)
-- number :: yes => avg_score=0.0 (n=187)
-- question :: yes => avg_score=0.0 (n=337)
+- number :: yes => avg_score=0.0 (n=188)
+- question :: yes => avg_score=0.0 (n=338)
 - style :: challenge => avg_score=0.0 (n=5)
 - style :: checklist => avg_score=0.0 (n=6)
 - style :: coach_tip => avg_score=0.0 (n=5)
@@ -29,9 +29,9 @@ We generate self-contained, emoji-forward posts twice daily. Below are feature a
 - style :: swipe_headlines => avg_score=0.0 (n=1)
 - style :: template_drop => avg_score=0.0 (n=5)
 - style :: unknown => avg_score=0.0 (n=19)
-- style :: unspecified => avg_score=0.0 (n=277)
+- style :: unspecified => avg_score=0.0 (n=278)
 - time :: early-afternoon => avg_score=0.0 (n=33)
-- time :: early-morning => avg_score=0.0 (n=254)
+- time :: early-morning => avg_score=0.0 (n=255)
 - time :: evening => avg_score=0.0 (n=18)
 - time :: late-afternoon => avg_score=0.0 (n=4)
 - time :: morning => avg_score=0.0 (n=28)
@@ -42,8 +42,8 @@ Using the summary and top posts, propose 5 editing rules to maximize engagement,
 
 ## Top Posts (samples)
 
+- 📈 Craft a cover letter in 5 lines—stand out in the pile! 📝✨  | score=0.0 | emojis=3 | len=59 | style=unspecified | cta=question
 - 🔎 Avoid vague requests for referrals—be specific and direct! 🎯  | score=0.0 | emojis=2 | len=62 | style=unspecified | cta=question
 - Overcome experience barriers by highlighting your skills and accomplishments 🎯💼.  | score=0.0 | emojis=2 | len=80 | style=unspecified | cta=question
 - Skip generic questions—ask about real scenarios to gauge culture fit 🎯🤝.  | score=0.0 | emojis=2 | len=72 | style=unspecified | cta=question
 - Negotiate your worth confidently—stop leaving money on the table! 💼💰  | score=0.0 | emojis=2 | len=68 | style=unspecified | cta=question
-- Culture fit is key! 🎯 Ask questions to ensure alignment with values and work style. 🤝  | score=0.0 | emojis=2 | len=85 | style=unspecified | cta=question
