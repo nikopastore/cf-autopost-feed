@@ -1,19 +1,19 @@
-# Career Forge — Weekly Digest (2026-07-13)
+# Career Forge — Weekly Digest (2026-07-20)
 
 ## Top Posts
-- **🎯 Master your job search in just 30 minutes a day! ⏰🚀**  
+- **Boost your earnings by mastering negotiation skills 💼💪.**  
   score=0.0 | style=unspecified | cta=question
-- **📣 Transition smoothly from public to private sector 🌐✨—showcase versatility and adaptability.**  
+- **📈 Craft a cover letter in 5 lines—stand out in the pile! 📝✨**  
   score=0.0 | style=unspecified | cta=question
-- **📣 Spotting red flags in job descriptions helps you avoid pitfalls. 🚩**  
+- **🔎 Avoid vague requests for referrals—be specific and direct! 🎯**  
   score=0.0 | style=unspecified | cta=question
-- **Women earn 82 cents for every dollar men earn. Close the gap by negotiating assertively. 💼💪**  
+- **Overcome experience barriers by highlighting your skills and accomplishments 🎯💼.**  
   score=0.0 | style=unspecified | cta=question
-- **Conduct a fast skills audit to identify gaps and build your plan! 🔍📈**  
+- **Skip generic questions—ask about real scenarios to gauge culture fit 🎯🤝.**  
   score=0.0 | style=unspecified | cta=question
-- **Master behavioral interview questions in 48h! 💪🚀**  
+- **Negotiate your worth confidently—stop leaving money on the table! 💼💰**  
   score=0.0 | style=unspecified | cta=question
-- **Avoid sounding robotic when negotiating salary. 🤖💼 Use: "I reviewed industry standards and believe X is fair."**  
+- **Culture fit is key! 🎯 Ask questions to ensure alignment with values and work style. 🤝**  
   score=0.0 | style=unspecified | cta=question
 
 ## What worked (averages)
