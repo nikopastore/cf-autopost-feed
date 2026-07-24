@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-23T15:00:10.401513+00:00",
+  "updated": "2026-07-24T14:42:52.536258+00:00",
   "count": 20,
   "items": [
     {
@@ -53,6 +53,16 @@
       "published": "Mon, 20 Apr 2020 07:00:00 GMT"
     },
     {
+      "title": "Seattle area job market, once dominated by tech, sees ‘drastic shift’ toward other industries - KUOW",
+      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQNHpYY2xsZDM4VnBmc3M3UFkzWmEwUFNoS3paUGNRSmthYTB4RTdlQWR3Ymg4SmxteU16WklzTHNmR0wwNW5IM0FsZ0l1RllkUjJFaC1pbnZuMnV1emZQX2V6cFNYanloeXVTOC0xbzhzaTgwR3NqWXBsZUJoZFdyLW5BZU4xam1VMGZFem1NNW9ibmNq?oc=5",
+      "published": "Wed, 22 Jul 2026 19:04:00 GMT"
+    },
+    {
+      "title": "Layoffs just hit a 57-year low. So why does the job market feel so tough? - Fast Company",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPQVl5d25FejEzSDdVOU9vcXlBbnFIWEpRYWY1eW5xX0Y0OVVCRmlMaUYtWmdDSnV6T3J0NlRxSDdueThBVFNRNE1SOVlPWXBUMEpFd3ludzFSY1BTdGppS3hUYnhOcXF0Nm55N3ZKN1R1Vkl3bEgySTVicmJvSk82bk9OX2ZkQ2JIVFJlUnhsaEh0QkFlZzJEeFJ0d0hxWmlyUEJVYzFEVHM2UEZ0?oc=5",
+      "published": "Thu, 23 Jul 2026 19:57:26 GMT"
+    },
+    {
       "title": "Tennessee enters 'low hire, low fire' job market with 5,000 layoffs - The Tennessean",
       "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPQjJab2dCR0FPUk1UTzAyclBKaVQzRHdyTjhkYXgxTHZ3Q1NHTWhoajdXUVhnc3g2MWlkTjVRYWJwdG1XcXlTNnRCLUNxQjZYMEVoS3JMeGdzMGNoVEQyTEp6RXl2ZDJzX1Z5UDBlQTVUM2hLMzJzeTF0czhsLXJlVTdLeEVMN1dteGFmSDR6eWtXQ1JmbDdMblJwZ1RadVhZVGFvSERDVVg?oc=5",
       "published": "Mon, 20 Jul 2026 10:02:00 GMT"
@@ -63,19 +73,9 @@
       "published": "Sat, 11 Jul 2026 07:00:00 GMT"
     },
     {
-      "title": "Companies laying off staff this year include Meta, Amazon, and Verizon — see the list - Business Insider",
-      "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNQUtSVkJCN0tBeHVpR3owbi1YTzFyVHNOZlBWOWt4empJQ29tTnpBQ1ZjbEIySlZ3YnhWN3pLRTRocTdLTURIaXo3RmJqY3RKeHlOc1kxbHBSQ0NSM0NHamVZWjNPOWpKRlpkVEprdW1EQ0RVSW52TEtGem95bDlHVVcyUHg?oc=5",
-      "published": "Fri, 17 Jul 2026 14:32:00 GMT"
-    },
-    {
       "title": "Tech jobs grew in May despite AI layoffs - CIO Dive",
       "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1FM0JBamZuekVwa0tnNXRMZ0tZcEZxM0JZMHI4U0xJYWNWQjF2ZHdjZW1SLXRmX0ZsVmhJZEhIeFZxSDJUdVZSNjNZS3oxczU2d29oTzYxbzlkMXk0a1FBMTRiZVZ2ODRCMURoSE1yQklKRDNBRTQ4WA?oc=5",
       "published": "Fri, 05 Jun 2026 07:00:00 GMT"
-    },
-    {
-      "title": "2026 tech layoffs: US leads in head count reduction - HR Dive",
-      "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1od1hpSnc5cTdidVRXUVNzRHRyUlVzU2R1b1BicE1WaktoanYyMmZ5ZW1yQzZXT0FHcXBoMTktUXRmTDJqRU5CbG1NdG9VZV9fZG1tZHBzVlVlSXc3Yk5sSWE0UGZ4bmpJcjRBWnNZQ2pPbHhUSV85VDVOVG8?oc=5",
-      "published": "Tue, 07 Jul 2026 07:00:00 GMT"
     },
     {
       "title": "They Were the Most Sought-After Workers in America. Now They’re Unemployable. What Happened? - Slate Magazine",
@@ -93,9 +93,9 @@
       "published": "Thu, 21 May 2026 07:00:00 GMT"
     },
     {
-      "title": "Washington state tech layoffs are second highest in the country - KUOW",
-      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOMzFsQkE3ZkVfa1p1azRCX0drakkxUjFnUWFWNlVzYkxPYklZZ1ZYdFlEbEdEbUlabkVJUGw0YlJUUV9QVEdyS2llNzBTandOcXFpQnU2amRyU0JZZklabGJEZ0xiQ0M0bFBPWGFKZ3dTRlEtUWpoaE5RT2NlejY1bmQwaWQ5NWgzQUcwdlRkQmhjUFVHMGZz?oc=5",
-      "published": "Wed, 13 May 2026 07:00:00 GMT"
+      "title": "Companies laying off staff this year include Meta, Amazon, and Verizon — see the list - Business Insider",
+      "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNQUtSVkJCN0tBeHVpR3owbi1YTzFyVHNOZlBWOWt4empJQ29tTnpBQ1ZjbEIySlZ3YnhWN3pLRTRocTdLTURIaXo3RmJqY3RKeHlOc1kxbHBSQ0NSM0NHamVZWjNPOWpKRlpkVEprdW1EQ0RVSW52TEtGem95bDlHVVcyUHg?oc=5",
+      "published": "Fri, 17 Jul 2026 14:32:00 GMT"
     },
     {
       "title": "Tech Unemployment Ticks Up to 3.8% in April Amid AI-Driven Layoffs - WSJ",
