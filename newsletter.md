@@ -1,19 +1,19 @@
-# Career Forge — Weekly Digest (2026-07-20)
+# Career Forge — Weekly Digest (2026-07-27)
 
 ## Top Posts
-- **Boost your earnings by mastering negotiation skills 💼💪.**  
+- **✍️ Avoid generic resume phrases—make your achievements stand out! 📄✨**  
   score=0.0 | style=unspecified | cta=question
-- **📈 Craft a cover letter in 5 lines—stand out in the pile! 📝✨**  
+- **⏱️ Create compelling portfolios for non-design roles—showcase impact! 📊✨**  
   score=0.0 | style=unspecified | cta=question
-- **🔎 Avoid vague requests for referrals—be specific and direct! 🎯**  
+- **75% of job seekers face rejection—use it to refine your strategy. 🔄💡**  
   score=0.0 | style=unspecified | cta=question
-- **Overcome experience barriers by highlighting your skills and accomplishments 🎯💼.**  
+- **🧠 Craft a seamless career story by highlighting your growth and impact! 🚀**  
   score=0.0 | style=unspecified | cta=question
-- **Skip generic questions—ask about real scenarios to gauge culture fit 🎯🤝.**  
+- **Leverage AI tools to enhance your job search—stand out with tailored applications 📈🤖.**  
   score=0.0 | style=unspecified | cta=question
-- **Negotiate your worth confidently—stop leaving money on the table! 💼💰**  
+- **Embrace AI in your job search to stand out and land your dream role! 🚀🤖**  
   score=0.0 | style=unspecified | cta=question
-- **Culture fit is key! 🎯 Ask questions to ensure alignment with values and work style. 🤝**  
+- **Boost your job search with AI tools—you're the future of work! 🤖🚀**  
   score=0.0 | style=unspecified | cta=question
 
 ## What worked (averages)
