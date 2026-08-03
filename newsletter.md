@@ -1,19 +1,19 @@
-# Career Forge — Weekly Digest (2026-07-27)
+# Career Forge — Weekly Digest (2026-08-03)
 
 ## Top Posts
-- **✍️ Avoid generic resume phrases—make your achievements stand out! 📄✨**  
+- **Craft leadership stories with STAR+L for interviews and resumes 🌟📝.**  
   score=0.0 | style=unspecified | cta=question
-- **⏱️ Create compelling portfolios for non-design roles—showcase impact! 📊✨**  
+- **Identify 25 target companies in 48 hours using AI prompts! 🚀💼**  
   score=0.0 | style=unspecified | cta=question
-- **75% of job seekers face rejection—use it to refine your strategy. 🔄💡**  
+- **Avoid these mistakes to boost callback chances! 🎯📞**  
   score=0.0 | style=unspecified | cta=question
-- **🧠 Craft a seamless career story by highlighting your growth and impact! 🚀**  
+- **🎯 Use: “I’m exploring opportunities at your company and would appreciate a referral.” 🚀**  
   score=0.0 | style=unspecified | cta=question
-- **Leverage AI tools to enhance your job search—stand out with tailored applications 📈🤖.**  
+- **Boost your job search with strategic referrals—ask confidently! 🚀🤝**  
   score=0.0 | style=unspecified | cta=question
-- **Embrace AI in your job search to stand out and land your dream role! 🚀🤖**  
+- **Build a 10-company pipeline this week—target, research, and engage! 🚀📈**  
   score=0.0 | style=unspecified | cta=question
-- **Boost your job search with AI tools—you're the future of work! 🤖🚀**  
+- **Practice your salary pitch—79% of employers expect negotiation. 💼🗣️**  
   score=0.0 | style=unspecified | cta=question
 
 ## What worked (averages)
