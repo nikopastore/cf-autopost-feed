@@ -5,20 +5,20 @@ We generate self-contained, emoji-forward posts twice daily. Below are feature a
 ## Feature Summary (averages)
 
 - bullets :: 0 => avg_score=0.0 (n=6)
-- bullets :: 1+ => avg_score=0.0 (n=352)
-- cta :: question => avg_score=0.0 (n=337)
+- bullets :: 1+ => avg_score=0.0 (n=353)
+- cta :: question => avg_score=0.0 (n=338)
 - cta :: tip => avg_score=0.0 (n=2)
 - cta :: unknown => avg_score=0.0 (n=19)
 - emoji :: 0 => avg_score=0.0 (n=9)
-- emoji :: 2 => avg_score=0.0 (n=293)
+- emoji :: 2 => avg_score=0.0 (n=294)
 - emoji :: 3+ => avg_score=0.0 (n=56)
-- len :: <= 120 => avg_score=0.0 (n=349)
+- len :: <= 120 => avg_score=0.0 (n=350)
 - len :: <= 160 => avg_score=0.0 (n=7)
 - len :: <= 200 => avg_score=0.0 (n=1)
 - len :: <= 240 => avg_score=0.0 (n=1)
 - number :: no => avg_score=0.0 (n=157)
-- number :: yes => avg_score=0.0 (n=201)
-- question :: yes => avg_score=0.0 (n=358)
+- number :: yes => avg_score=0.0 (n=202)
+- question :: yes => avg_score=0.0 (n=359)
 - style :: challenge => avg_score=0.0 (n=5)
 - style :: checklist => avg_score=0.0 (n=6)
 - style :: coach_tip => avg_score=0.0 (n=5)
@@ -29,9 +29,9 @@ We generate self-contained, emoji-forward posts twice daily. Below are feature a
 - style :: swipe_headlines => avg_score=0.0 (n=1)
 - style :: template_drop => avg_score=0.0 (n=5)
 - style :: unknown => avg_score=0.0 (n=19)
-- style :: unspecified => avg_score=0.0 (n=298)
+- style :: unspecified => avg_score=0.0 (n=299)
 - time :: early-afternoon => avg_score=0.0 (n=33)
-- time :: early-morning => avg_score=0.0 (n=275)
+- time :: early-morning => avg_score=0.0 (n=276)
 - time :: evening => avg_score=0.0 (n=18)
 - time :: late-afternoon => avg_score=0.0 (n=4)
 - time :: morning => avg_score=0.0 (n=28)
@@ -42,8 +42,8 @@ Using the summary and top posts, propose 5 editing rules to maximize engagement,
 
 ## Top Posts (samples)
 
+- Craft a successful 30/60/90 plan to impress in your new role! 📈📝  | score=0.0 | emojis=2 | len=64 | style=unspecified | cta=question
 - 🌟 Quickly find your top 25 companies using AI prompts 🏢✨.  | score=0.0 | emojis=3 | len=57 | style=unspecified | cta=question
 - Craft a career story that connects your roles for a cohesive narrative. 🎯📈  | score=0.0 | emojis=2 | len=74 | style=unspecified | cta=question
 - Transform job posts into interview prep: analyze, question, conquer! 🔍💼  | score=0.0 | emojis=2 | len=71 | style=unspecified | cta=question
 - Break the class ceiling by mastering salary negotiation skills 💼💡  | score=0.0 | emojis=2 | len=65 | style=unspecified | cta=question
-- Only 38% of women negotiate salaries—improve your odds by preparing well. 💼📈  | score=0.0 | emojis=2 | len=76 | style=unspecified | cta=question
