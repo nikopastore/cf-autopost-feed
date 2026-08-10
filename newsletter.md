@@ -1,19 +1,19 @@
-# Career Forge — Weekly Digest (2026-08-03)
+# Career Forge — Weekly Digest (2026-08-10)
 
 ## Top Posts
+- **Craft a successful 30/60/90 plan to impress in your new role! 📈📝**  
+  score=0.0 | style=unspecified | cta=question
+- **🌟 Quickly find your top 25 companies using AI prompts 🏢✨.**  
+  score=0.0 | style=unspecified | cta=question
+- **Craft a career story that connects your roles for a cohesive narrative. 🎯📈**  
+  score=0.0 | style=unspecified | cta=question
+- **Transform job posts into interview prep: analyze, question, conquer! 🔍💼**  
+  score=0.0 | style=unspecified | cta=question
+- **Break the class ceiling by mastering salary negotiation skills 💼💡**  
+  score=0.0 | style=unspecified | cta=question
+- **Only 38% of women negotiate salaries—improve your odds by preparing well. 💼📈**  
+  score=0.0 | style=unspecified | cta=question
 - **Craft leadership stories with STAR+L for interviews and resumes 🌟📝.**  
-  score=0.0 | style=unspecified | cta=question
-- **Identify 25 target companies in 48 hours using AI prompts! 🚀💼**  
-  score=0.0 | style=unspecified | cta=question
-- **Avoid these mistakes to boost callback chances! 🎯📞**  
-  score=0.0 | style=unspecified | cta=question
-- **🎯 Use: “I’m exploring opportunities at your company and would appreciate a referral.” 🚀**  
-  score=0.0 | style=unspecified | cta=question
-- **Boost your job search with strategic referrals—ask confidently! 🚀🤝**  
-  score=0.0 | style=unspecified | cta=question
-- **Build a 10-company pipeline this week—target, research, and engage! 🚀📈**  
-  score=0.0 | style=unspecified | cta=question
-- **Practice your salary pitch—79% of employers expect negotiation. 💼🗣️**  
   score=0.0 | style=unspecified | cta=question
 
 ## What worked (averages)
