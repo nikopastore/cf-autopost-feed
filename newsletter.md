@@ -1,19 +1,19 @@
-# Career Forge — Weekly Digest (2026-08-10)
+# Career Forge — Weekly Digest (2026-08-17)
 
 ## Top Posts
-- **Craft a successful 30/60/90 plan to impress in your new role! 📈📝**  
+- **⏱️ Turn job descriptions into questions to ace your interview! 🎯**  
   score=0.0 | style=unspecified | cta=question
-- **🌟 Quickly find your top 25 companies using AI prompts 🏢✨.**  
+- **✍️ Transform job posts into interview questions for laser-focused prep! 🎯**  
   score=0.0 | style=unspecified | cta=question
-- **Craft a career story that connects your roles for a cohesive narrative. 🎯📈**  
+- **🔎 Unlock opportunities by asking for referrals—boost your job search today! 🚀**  
   score=0.0 | style=unspecified | cta=question
-- **Transform job posts into interview prep: analyze, question, conquer! 🔍💼**  
+- **Boost cold outreach success with personalization and clear value. 📧🌟**  
   score=0.0 | style=unspecified | cta=question
-- **Break the class ceiling by mastering salary negotiation skills 💼💡**  
+- **🤝 Show ownership by detailing your initiative and results. 💪**  
   score=0.0 | style=unspecified | cta=question
-- **Only 38% of women negotiate salaries—improve your odds by preparing well. 💼📈**  
+- **Craft a compelling career narrative by linking roles through skills, achievements, and growth. 🌟📈**  
   score=0.0 | style=unspecified | cta=question
-- **Craft leadership stories with STAR+L for interviews and resumes 🌟📝.**  
+- **Negotiate your salary confidently—you're worth more than you think! 💪💰**  
   score=0.0 | style=unspecified | cta=question
 
 ## What worked (averages)
