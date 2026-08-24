@@ -1,19 +1,19 @@
-# Career Forge — Weekly Digest (2026-08-17)
+# Career Forge — Weekly Digest (2026-08-24)
 
 ## Top Posts
-- **⏱️ Turn job descriptions into questions to ace your interview! 🎯**  
+- **Craft personalized outreach emails with a clear value proposition 🎯📧.**  
   score=0.0 | style=unspecified | cta=question
-- **✍️ Transform job posts into interview questions for laser-focused prep! 🎯**  
+- **🤝 Cut your cover letter to 5 lines—make every word count! 📝✨**  
   score=0.0 | style=unspecified | cta=question
-- **🔎 Unlock opportunities by asking for referrals—boost your job search today! 🚀**  
+- **💬 💡 Elevate your leadership stories with STAR+L: impress with impact and results.**  
   score=0.0 | style=unspecified | cta=question
-- **Boost cold outreach success with personalization and clear value. 📧🌟**  
+- **Negotiate your salary with ease—use empathy, data, and confidence. 💼💪**  
   score=0.0 | style=unspecified | cta=question
-- **🤝 Show ownership by detailing your initiative and results. 💪**  
+- **🎯 Use: “I improved team efficiency by 30% through strategic planning.” 🎯 Highlight achievements with metrics and methods.**  
   score=0.0 | style=unspecified | cta=question
-- **Craft a compelling career narrative by linking roles through skills, achievements, and growth. 🌟📈**  
+- **Avoid vague goals in your 30/60/90 plan—be specific and measurable! 📈🗓️**  
   score=0.0 | style=unspecified | cta=question
-- **Negotiate your salary confidently—you're worth more than you think! 💪💰**  
+- **✅ Overcome 'years of experience' bias by showcasing relevant skills and achievements. 🚀**  
   score=0.0 | style=unspecified | cta=question
 
 ## What worked (averages)
