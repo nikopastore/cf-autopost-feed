@@ -1,19 +1,19 @@
-# Career Forge — Weekly Digest (2026-08-24)
+# Career Forge — Weekly Digest (2026-08-31)
 
 ## Top Posts
-- **Craft personalized outreach emails with a clear value proposition 🎯📧.**  
+- **Show you're coachable by sharing how you embraced feedback and improved. 🌟💪**  
   score=0.0 | style=unspecified | cta=question
-- **🤝 Cut your cover letter to 5 lines—make every word count! 📝✨**  
+- **🔥 Pivot careers without starting from zero—leverage your skills! 🚀**  
   score=0.0 | style=unspecified | cta=question
-- **💬 💡 Elevate your leadership stories with STAR+L: impress with impact and results.**  
+- **75% of resumes never reach a human—optimize for ATS and humans 🤖👥.**  
   score=0.0 | style=unspecified | cta=question
-- **Negotiate your salary with ease—use empathy, data, and confidence. 💼💪**  
+- **Craft a cover letter in 5 lines—showcase your skills fast! 🚀📄**  
   score=0.0 | style=unspecified | cta=question
-- **🎯 Use: “I improved team efficiency by 30% through strategic planning.” 🎯 Highlight achievements with metrics and methods.**  
+- **Humanly raised $25M to enhance AI for job seekers 🤖—leverage this tech for your career boost! 🚀**  
   score=0.0 | style=unspecified | cta=question
-- **Avoid vague goals in your 30/60/90 plan—be specific and measurable! 📈🗓️**  
+- **Negotiate beyond cultural barriers for a fair salary! 💪🏽💰**  
   score=0.0 | style=unspecified | cta=question
-- **✅ Overcome 'years of experience' bias by showcasing relevant skills and achievements. 🚀**  
+- **Build a strong 10-company pipeline this week for job success! 🚀💼**  
   score=0.0 | style=unspecified | cta=question
 
 ## What worked (averages)
