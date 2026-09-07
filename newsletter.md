@@ -1,19 +1,19 @@
-# Career Forge — Weekly Digest (2026-08-31)
+# Career Forge — Weekly Digest (2026-09-07)
 
 ## Top Posts
-- **Show you're coachable by sharing how you embraced feedback and improved. 🌟💪**  
+- **43% of hiring managers see career gaps as a red flag. 📉 Turn them into a talking point to showcase growth and skills. 💪**  
   score=0.0 | style=unspecified | cta=question
-- **🔥 Pivot careers without starting from zero—leverage your skills! 🚀**  
+- **🗂️ 49% of hiring managers value skills over experience—highlight your skills! 🚀**  
   score=0.0 | style=unspecified | cta=question
-- **75% of resumes never reach a human—optimize for ATS and humans 🤖👥.**  
+- **Master negotiation like a pro with these proven tactics! 💼🎯**  
   score=0.0 | style=unspecified | cta=question
-- **Craft a cover letter in 5 lines—showcase your skills fast! 🚀📄**  
+- **🕒 Break the 'years of experience' barrier by demonstrating skills and impact. 🚀**  
   score=0.0 | style=unspecified | cta=question
-- **Humanly raised $25M to enhance AI for job seekers 🤖—leverage this tech for your career boost! 🚀**  
+- **Boost productivity with a daily 3-task system 🚀📅.**  
   score=0.0 | style=unspecified | cta=question
-- **Negotiate beyond cultural barriers for a fair salary! 💪🏽💰**  
+- **76% of job seekers fail at interviews due to unpreparedness. 🎯 Turn job posts into interview questions to excel. 🚀**  
   score=0.0 | style=unspecified | cta=question
-- **Build a strong 10-company pipeline this week for job success! 🚀💼**  
+- **Negotiate salary with confidence—show your worth and back it up with data! 💪📈**  
   score=0.0 | style=unspecified | cta=question
 
 ## What worked (averages)
