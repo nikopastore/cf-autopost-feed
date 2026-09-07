@@ -1,9 +1,11 @@
 # Career Forge — Analytics Report
 
-_Generated: 2026-09-06T16:00:46.728305-07:00_
+_Generated: 2026-09-07T12:06:36.372231-07:00_
 
 ## Top 5 Posts (by engagement score)
 
+- **43% of hiring managers see career gaps as a red flag. 📉 Turn them into a talking point to showcase growth and skills. 💪**  
+  score=0.0 | likes=0 | replies=0 | reposts=0 | clicks=0 | saves=0 | time=2026-09-07T11:10:12-07:00 | style=unspecified | cta=question
 - **🗂️ 49% of hiring managers value skills over experience—highlight your skills! 🚀**  
   score=0.0 | likes=0 | replies=0 | reposts=0 | clicks=0 | saves=0 | time=2026-09-06T09:04:05-07:00 | style=unspecified | cta=question
 - **Master negotiation like a pro with these proven tactics! 💼🎯**  
@@ -12,8 +14,6 @@ _Generated: 2026-09-06T16:00:46.728305-07:00_
   score=0.0 | likes=0 | replies=0 | reposts=0 | clicks=0 | saves=0 | time=2026-09-04T09:47:22-07:00 | style=unspecified | cta=question
 - **Boost productivity with a daily 3-task system 🚀📅.**  
   score=0.0 | likes=0 | replies=0 | reposts=0 | clicks=0 | saves=0 | time=2026-09-03T09:58:36-07:00 | style=unspecified | cta=question
-- **76% of job seekers fail at interviews due to unpreparedness. 🎯 Turn job posts into interview questions to excel. 🚀**  
-  score=0.0 | likes=0 | replies=0 | reposts=0 | clicks=0 | saves=0 | time=2026-09-02T10:04:01-07:00 | style=unspecified | cta=question
 
 ## Performance by Style
 
@@ -27,23 +27,23 @@ _Generated: 2026-09-06T16:00:46.728305-07:00_
 - swipe_headlines: avg_score=0.0 (n=1)
 - template_drop: avg_score=0.0 (n=5)
 - unknown: avg_score=0.0 (n=19)
-- unspecified: avg_score=0.0 (n=326)
+- unspecified: avg_score=0.0 (n=327)
 
 ## Performance by CTA Type
 
-- question: avg_score=0.0 (n=365)
+- question: avg_score=0.0 (n=366)
 - tip: avg_score=0.0 (n=2)
 - unknown: avg_score=0.0 (n=19)
 
 ## Emoji Count in Title
 
 - 0: avg_score=0.0 (n=9)
-- 2: avg_score=0.0 (n=316)
+- 2: avg_score=0.0 (n=317)
 - 3+: avg_score=0.0 (n=61)
 
 ## Title Length
 
-- <= 120: avg_score=0.0 (n=376)
+- <= 120: avg_score=0.0 (n=377)
 - <= 160: avg_score=0.0 (n=8)
 - <= 200: avg_score=0.0 (n=1)
 - <= 240: avg_score=0.0 (n=1)
@@ -51,16 +51,16 @@ _Generated: 2026-09-06T16:00:46.728305-07:00_
 ## Numbers / % / $ Present
 
 - no: avg_score=0.0 (n=167)
-- yes: avg_score=0.0 (n=219)
+- yes: avg_score=0.0 (n=220)
 
 ## Question Mark Present
 
-- yes: avg_score=0.0 (n=386)
+- yes: avg_score=0.0 (n=387)
 
 ## Bullets Present in Description
 
 - 0: avg_score=0.0 (n=6)
-- 1+: avg_score=0.0 (n=380)
+- 1+: avg_score=0.0 (n=381)
 
 ## Local Post Time Bucket
 
@@ -68,7 +68,7 @@ _Generated: 2026-09-06T16:00:46.728305-07:00_
 - early-morning: avg_score=0.0 (n=293)
 - evening: avg_score=0.0 (n=18)
 - late-afternoon: avg_score=0.0 (n=6)
-- morning: avg_score=0.0 (n=35)
+- morning: avg_score=0.0 (n=36)
 
 ## Next experiments
 
