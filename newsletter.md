@@ -1,19 +1,19 @@
-# Career Forge — Weekly Digest (2026-09-07)
+# Career Forge — Weekly Digest (2026-09-14)
 
 ## Top Posts
-- **43% of hiring managers see career gaps as a red flag. 📉 Turn them into a talking point to showcase growth and skills. 💪**  
+- **⚡ Confident negotiators know their worth 💪 and articulate value clearly. Use: “I increased team efficiency by 30% through process improvements.”**  
   score=0.0 | style=unspecified | cta=question
-- **🗂️ 49% of hiring managers value skills over experience—highlight your skills! 🚀**  
+- **📌 Streamline your job search with a focused 30-minute daily routine. ⏰🔍**  
   score=0.0 | style=unspecified | cta=question
-- **Master negotiation like a pro with these proven tactics! 💼🎯**  
+- **Spot deal breakers early in job offers—protect your career! 🚀🔍**  
   score=0.0 | style=unspecified | cta=question
-- **🕒 Break the 'years of experience' barrier by demonstrating skills and impact. 🚀**  
+- **💬 Master job searching in 30 minutes daily with a focused system! ⏰✨ 📌**  
   score=0.0 | style=unspecified | cta=question
-- **Boost productivity with a daily 3-task system 🚀📅.**  
+- **🧠 75% of workers have regrets about new jobs. Spot red flags early! 🚩**  
   score=0.0 | style=unspecified | cta=question
-- **76% of job seekers fail at interviews due to unpreparedness. 🎯 Turn job posts into interview questions to excel. 🚀**  
+- **Avoid these mistakes to boost your callback rate! 🚀📞**  
   score=0.0 | style=unspecified | cta=question
-- **Negotiate salary with confidence—show your worth and back it up with data! 💪📈**  
+- **🗂️ Highlight your unique value with a dynamic LinkedIn headline. 🚀**  
   score=0.0 | style=unspecified | cta=question
 
 ## What worked (averages)
