@@ -5,20 +5,20 @@ We generate self-contained, emoji-forward posts twice daily. Below are feature a
 ## Feature Summary (averages)
 
 - bullets :: 0 => avg_score=0.0 (n=6)
-- bullets :: 1+ => avg_score=0.0 (n=387)
-- cta :: question => avg_score=0.0 (n=372)
+- bullets :: 1+ => avg_score=0.0 (n=388)
+- cta :: question => avg_score=0.0 (n=373)
 - cta :: tip => avg_score=0.0 (n=2)
 - cta :: unknown => avg_score=0.0 (n=19)
 - emoji :: 0 => avg_score=0.0 (n=9)
-- emoji :: 2 => avg_score=0.0 (n=321)
+- emoji :: 2 => avg_score=0.0 (n=322)
 - emoji :: 3+ => avg_score=0.0 (n=63)
 - len :: <= 120 => avg_score=0.0 (n=383)
-- len :: <= 160 => avg_score=0.0 (n=8)
+- len :: <= 160 => avg_score=0.0 (n=9)
 - len :: <= 200 => avg_score=0.0 (n=1)
 - len :: <= 240 => avg_score=0.0 (n=1)
 - number :: no => avg_score=0.0 (n=170)
-- number :: yes => avg_score=0.0 (n=223)
-- question :: yes => avg_score=0.0 (n=393)
+- number :: yes => avg_score=0.0 (n=224)
+- question :: yes => avg_score=0.0 (n=394)
 - style :: challenge => avg_score=0.0 (n=5)
 - style :: checklist => avg_score=0.0 (n=6)
 - style :: coach_tip => avg_score=0.0 (n=5)
@@ -29,12 +29,12 @@ We generate self-contained, emoji-forward posts twice daily. Below are feature a
 - style :: swipe_headlines => avg_score=0.0 (n=1)
 - style :: template_drop => avg_score=0.0 (n=5)
 - style :: unknown => avg_score=0.0 (n=19)
-- style :: unspecified => avg_score=0.0 (n=333)
+- style :: unspecified => avg_score=0.0 (n=334)
 - time :: early-afternoon => avg_score=0.0 (n=34)
 - time :: early-morning => avg_score=0.0 (n=293)
 - time :: evening => avg_score=0.0 (n=18)
 - time :: late-afternoon => avg_score=0.0 (n=6)
-- time :: morning => avg_score=0.0 (n=42)
+- time :: morning => avg_score=0.0 (n=43)
 
 ## Ask ChatGPT
 
@@ -42,8 +42,8 @@ Using the summary and top posts, propose 5 editing rules to maximize engagement,
 
 ## Top Posts (samples)
 
+- ⚡ Confident negotiators know their worth 💪 and articulate value clearly. Use: “I increased team efficiency by 30% through process improvements.”  | score=0.0 | emojis=2 | len=144 | style=unspecified | cta=question
 - 📌 Streamline your job search with a focused 30-minute daily routine. ⏰🔍  | score=0.0 | emojis=2 | len=71 | style=unspecified | cta=question
 - Spot deal breakers early in job offers—protect your career! 🚀🔍  | score=0.0 | emojis=2 | len=62 | style=unspecified | cta=question
 - 💬 Master job searching in 30 minutes daily with a focused system! ⏰✨ 📌  | score=0.0 | emojis=3 | len=70 | style=unspecified | cta=question
 - 🧠 75% of workers have regrets about new jobs. Spot red flags early! 🚩  | score=0.0 | emojis=2 | len=69 | style=unspecified | cta=question
-- Avoid these mistakes to boost your callback rate! 🚀📞  | score=0.0 | emojis=2 | len=52 | style=unspecified | cta=question
