@@ -5,20 +5,20 @@ We generate self-contained, emoji-forward posts twice daily. Below are feature a
 ## Feature Summary (averages)
 
 - bullets :: 0 => avg_score=0.0 (n=6)
-- bullets :: 1+ => avg_score=0.0 (n=392)
-- cta :: question => avg_score=0.0 (n=377)
+- bullets :: 1+ => avg_score=0.0 (n=393)
+- cta :: question => avg_score=0.0 (n=378)
 - cta :: tip => avg_score=0.0 (n=2)
 - cta :: unknown => avg_score=0.0 (n=19)
 - emoji :: 0 => avg_score=0.0 (n=9)
-- emoji :: 2 => avg_score=0.0 (n=325)
+- emoji :: 2 => avg_score=0.0 (n=326)
 - emoji :: 3+ => avg_score=0.0 (n=64)
-- len :: <= 120 => avg_score=0.0 (n=387)
+- len :: <= 120 => avg_score=0.0 (n=388)
 - len :: <= 160 => avg_score=0.0 (n=9)
 - len :: <= 200 => avg_score=0.0 (n=1)
 - len :: <= 240 => avg_score=0.0 (n=1)
-- number :: no => avg_score=0.0 (n=170)
+- number :: no => avg_score=0.0 (n=171)
 - number :: yes => avg_score=0.0 (n=228)
-- question :: yes => avg_score=0.0 (n=398)
+- question :: yes => avg_score=0.0 (n=399)
 - style :: challenge => avg_score=0.0 (n=5)
 - style :: checklist => avg_score=0.0 (n=6)
 - style :: coach_tip => avg_score=0.0 (n=5)
@@ -29,12 +29,12 @@ We generate self-contained, emoji-forward posts twice daily. Below are feature a
 - style :: swipe_headlines => avg_score=0.0 (n=1)
 - style :: template_drop => avg_score=0.0 (n=5)
 - style :: unknown => avg_score=0.0 (n=19)
-- style :: unspecified => avg_score=0.0 (n=338)
+- style :: unspecified => avg_score=0.0 (n=339)
 - time :: early-afternoon => avg_score=0.0 (n=34)
 - time :: early-morning => avg_score=0.0 (n=293)
 - time :: evening => avg_score=0.0 (n=18)
 - time :: late-afternoon => avg_score=0.0 (n=6)
-- time :: morning => avg_score=0.0 (n=47)
+- time :: morning => avg_score=0.0 (n=48)
 
 ## Ask ChatGPT
 
@@ -42,8 +42,8 @@ Using the summary and top posts, propose 5 editing rules to maximize engagement,
 
 ## Top Posts (samples)
 
+- ✅ Turn rejection into opportunity with a strategic follow-up! 🚀  | score=0.0 | emojis=2 | len=63 | style=unspecified | cta=question
 - 📣 Quantify your impact with clear metrics to stand out! 📊✨  | score=0.0 | emojis=3 | len=58 | style=unspecified | cta=question
 - 💼 Turn job rejection into leverage by learning from feedback and showcasing growth. 🚀  | score=0.0 | emojis=2 | len=85 | style=unspecified | cta=question
 - Master company research in 10 minutes with these quick steps! 🕒🔍  | score=0.0 | emojis=2 | len=64 | style=unspecified | cta=question
 - Don't overemphasize flexibility in remote roles—focus on delivering results instead. 🎯💻  | score=0.0 | emojis=2 | len=87 | style=unspecified | cta=question
-- ⚡ Confident negotiators know their worth 💪 and articulate value clearly. Use: “I increased team efficiency by 30% through process improvements.”  | score=0.0 | emojis=2 | len=144 | style=unspecified | cta=question
