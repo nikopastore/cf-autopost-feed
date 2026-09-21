@@ -1,19 +1,19 @@
-# Career Forge — Weekly Digest (2026-09-14)
+# Career Forge — Weekly Digest (2026-09-21)
 
 ## Top Posts
-- **⚡ Confident negotiators know their worth 💪 and articulate value clearly. Use: “I increased team efficiency by 30% through process improvements.”**  
+- **🗂️ Spot red flags in job descriptions to avoid future headaches! 🚩**  
   score=0.0 | style=unspecified | cta=question
-- **📌 Streamline your job search with a focused 30-minute daily routine. ⏰🔍**  
+- **⚡ Highlight skills over years—skills show impact, not time. ⏳💪**  
   score=0.0 | style=unspecified | cta=question
-- **Spot deal breakers early in job offers—protect your career! 🚀🔍**  
+- **✅ Turn rejection into opportunity with a strategic follow-up! 🚀**  
   score=0.0 | style=unspecified | cta=question
-- **💬 Master job searching in 30 minutes daily with a focused system! ⏰✨ 📌**  
+- **📣 Quantify your impact with clear metrics to stand out! 📊✨**  
   score=0.0 | style=unspecified | cta=question
-- **🧠 75% of workers have regrets about new jobs. Spot red flags early! 🚩**  
+- **💼 Turn job rejection into leverage by learning from feedback and showcasing growth. 🚀**  
   score=0.0 | style=unspecified | cta=question
-- **Avoid these mistakes to boost your callback rate! 🚀📞**  
+- **Master company research in 10 minutes with these quick steps! 🕒🔍**  
   score=0.0 | style=unspecified | cta=question
-- **🗂️ Highlight your unique value with a dynamic LinkedIn headline. 🚀**  
+- **Don't overemphasize flexibility in remote roles—focus on delivering results instead. 🎯💻**  
   score=0.0 | style=unspecified | cta=question
 
 ## What worked (averages)
