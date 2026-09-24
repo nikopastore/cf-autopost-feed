@@ -5,20 +5,20 @@ We generate self-contained, emoji-forward posts twice daily. Below are feature a
 ## Feature Summary (averages)
 
 - bullets :: 0 => avg_score=0.0 (n=6)
-- bullets :: 1+ => avg_score=0.0 (n=397)
-- cta :: question => avg_score=0.0 (n=382)
+- bullets :: 1+ => avg_score=0.0 (n=398)
+- cta :: question => avg_score=0.0 (n=383)
 - cta :: tip => avg_score=0.0 (n=2)
 - cta :: unknown => avg_score=0.0 (n=19)
 - emoji :: 0 => avg_score=0.0 (n=9)
-- emoji :: 2 => avg_score=0.0 (n=328)
+- emoji :: 2 => avg_score=0.0 (n=329)
 - emoji :: 3+ => avg_score=0.0 (n=66)
-- len :: <= 120 => avg_score=0.0 (n=392)
+- len :: <= 120 => avg_score=0.0 (n=393)
 - len :: <= 160 => avg_score=0.0 (n=9)
 - len :: <= 200 => avg_score=0.0 (n=1)
 - len :: <= 240 => avg_score=0.0 (n=1)
 - number :: no => avg_score=0.0 (n=172)
-- number :: yes => avg_score=0.0 (n=231)
-- question :: yes => avg_score=0.0 (n=403)
+- number :: yes => avg_score=0.0 (n=232)
+- question :: yes => avg_score=0.0 (n=404)
 - style :: challenge => avg_score=0.0 (n=5)
 - style :: checklist => avg_score=0.0 (n=6)
 - style :: coach_tip => avg_score=0.0 (n=5)
@@ -29,12 +29,12 @@ We generate self-contained, emoji-forward posts twice daily. Below are feature a
 - style :: swipe_headlines => avg_score=0.0 (n=1)
 - style :: template_drop => avg_score=0.0 (n=5)
 - style :: unknown => avg_score=0.0 (n=19)
-- style :: unspecified => avg_score=0.0 (n=343)
+- style :: unspecified => avg_score=0.0 (n=344)
 - time :: early-afternoon => avg_score=0.0 (n=34)
 - time :: early-morning => avg_score=0.0 (n=293)
 - time :: evening => avg_score=0.0 (n=18)
 - time :: late-afternoon => avg_score=0.0 (n=6)
-- time :: morning => avg_score=0.0 (n=52)
+- time :: morning => avg_score=0.0 (n=53)
 
 ## Ask ChatGPT
 
@@ -42,8 +42,8 @@ Using the summary and top posts, propose 5 editing rules to maximize engagement,
 
 ## Top Posts (samples)
 
+- 50% of workers haven't asked for a raise—don't let fear hold you back! 💼💪  | score=0.0 | emojis=2 | len=73 | style=unspecified | cta=question
 - 73% of candidates regret accepting an offer with red flags 🚩. Spot deal breakers early to avoid regret. 💼  | score=0.0 | emojis=2 | len=105 | style=unspecified | cta=question
 - ✍️ Boost your non-design portfolio in 24–48 hours! 🚀✨  | score=0.0 | emojis=4 | len=53 | style=unspecified | cta=question
 - 🗂️ Spot red flags in job descriptions to avoid future headaches! 🚩  | score=0.0 | emojis=3 | len=66 | style=unspecified | cta=question
 - ⚡ Highlight skills over years—skills show impact, not time. ⏳💪  | score=0.0 | emojis=2 | len=62 | style=unspecified | cta=question
-- ✅ Turn rejection into opportunity with a strategic follow-up! 🚀  | score=0.0 | emojis=2 | len=63 | style=unspecified | cta=question
