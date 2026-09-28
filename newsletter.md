@@ -1,19 +1,19 @@
-# Career Forge — Weekly Digest (2026-09-21)
+# Career Forge — Weekly Digest (2026-09-28)
 
 ## Top Posts
-- **🗂️ Spot red flags in job descriptions to avoid future headaches! 🚩**  
+- **💼 Maximize your job search with timeboxing—stay focused and efficient! ⏰🔍**  
   score=0.0 | style=unspecified | cta=question
-- **⚡ Highlight skills over years—skills show impact, not time. ⏳💪**  
+- **🧩 Show ownership by using quantified results in your stories—employ numbers to add impact and clarity. 📈✨**  
   score=0.0 | style=unspecified | cta=question
-- **✅ Turn rejection into opportunity with a strategic follow-up! 🚀**  
+- **Ace your interview with smart negotiation tips & save big! 💼💡**  
   score=0.0 | style=unspecified | cta=question
-- **📣 Quantify your impact with clear metrics to stand out! 📊✨**  
+- **Identify 25 target companies fast using AI prompts! 🚀🤖**  
   score=0.0 | style=unspecified | cta=question
-- **💼 Turn job rejection into leverage by learning from feedback and showcasing growth. 🚀**  
+- **50% of workers haven't asked for a raise—don't let fear hold you back! 💼💪**  
   score=0.0 | style=unspecified | cta=question
-- **Master company research in 10 minutes with these quick steps! 🕒🔍**  
+- **73% of candidates regret accepting an offer with red flags 🚩. Spot deal breakers early to avoid regret. 💼**  
   score=0.0 | style=unspecified | cta=question
-- **Don't overemphasize flexibility in remote roles—focus on delivering results instead. 🎯💻**  
+- **✍️ Boost your non-design portfolio in 24–48 hours! 🚀✨**  
   score=0.0 | style=unspecified | cta=question
 
 ## What worked (averages)
