@@ -5,20 +5,20 @@ We generate self-contained, emoji-forward posts twice daily. Below are feature a
 ## Feature Summary (averages)
 
 - bullets :: 0 => avg_score=0.0 (n=6)
-- bullets :: 1+ => avg_score=0.0 (n=407)
-- cta :: question => avg_score=0.0 (n=392)
+- bullets :: 1+ => avg_score=0.0 (n=408)
+- cta :: question => avg_score=0.0 (n=393)
 - cta :: tip => avg_score=0.0 (n=2)
 - cta :: unknown => avg_score=0.0 (n=19)
 - emoji :: 0 => avg_score=0.0 (n=9)
-- emoji :: 2 => avg_score=0.0 (n=336)
+- emoji :: 2 => avg_score=0.0 (n=337)
 - emoji :: 3+ => avg_score=0.0 (n=68)
-- len :: <= 120 => avg_score=0.0 (n=402)
+- len :: <= 120 => avg_score=0.0 (n=403)
 - len :: <= 160 => avg_score=0.0 (n=9)
 - len :: <= 200 => avg_score=0.0 (n=1)
 - len :: <= 240 => avg_score=0.0 (n=1)
 - number :: no => avg_score=0.0 (n=174)
-- number :: yes => avg_score=0.0 (n=239)
-- question :: yes => avg_score=0.0 (n=413)
+- number :: yes => avg_score=0.0 (n=240)
+- question :: yes => avg_score=0.0 (n=414)
 - style :: challenge => avg_score=0.0 (n=5)
 - style :: checklist => avg_score=0.0 (n=6)
 - style :: coach_tip => avg_score=0.0 (n=5)
@@ -29,12 +29,12 @@ We generate self-contained, emoji-forward posts twice daily. Below are feature a
 - style :: swipe_headlines => avg_score=0.0 (n=1)
 - style :: template_drop => avg_score=0.0 (n=5)
 - style :: unknown => avg_score=0.0 (n=19)
-- style :: unspecified => avg_score=0.0 (n=353)
+- style :: unspecified => avg_score=0.0 (n=354)
 - time :: early-afternoon => avg_score=0.0 (n=35)
 - time :: early-morning => avg_score=0.0 (n=293)
 - time :: evening => avg_score=0.0 (n=18)
 - time :: late-afternoon => avg_score=0.0 (n=6)
-- time :: morning => avg_score=0.0 (n=61)
+- time :: morning => avg_score=0.0 (n=62)
 
 ## Ask ChatGPT
 
@@ -42,8 +42,8 @@ Using the summary and top posts, propose 5 editing rules to maximize engagement,
 
 ## Top Posts (samples)
 
+- Projects showing a 30% efficiency boost impress hiring managers 🎯🚀.  | score=0.0 | emojis=2 | len=67 | style=unspecified | cta=question
 - Master the first 30/60/90 days with a clear plan 📅🧠.  | score=0.0 | emojis=2 | len=52 | style=unspecified | cta=question
 - 🚀 Overcome experience barriers by showcasing your unique skills! 🚀  | score=0.0 | emojis=2 | len=66 | style=unspecified | cta=question
 - Conduct a one-hour weekly career review to stay on track and grow! 🚀🗓️  | score=0.0 | emojis=3 | len=70 | style=unspecified | cta=question
 - Boost your job search with a results-driven approach 📈💼.  | score=0.0 | emojis=2 | len=56 | style=unspecified | cta=question
-- Master your story in 48 hours—create a 5-slide “About Me” for interviews! 🎯📈  | score=0.0 | emojis=2 | len=76 | style=unspecified | cta=question
