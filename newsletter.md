@@ -1,19 +1,19 @@
-# Career Forge — Weekly Digest (2026-09-28)
+# Career Forge — Weekly Digest (2026-10-05)
 
 ## Top Posts
-- **💼 Maximize your job search with timeboxing—stay focused and efficient! ⏰🔍**  
+- **🔎 Pivot careers without starting over—leverage current skills! 🚀**  
   score=0.0 | style=unspecified | cta=question
-- **🧩 Show ownership by using quantified results in your stories—employ numbers to add impact and clarity. 📈✨**  
+- **Projects showing a 30% efficiency boost impress hiring managers 🎯🚀.**  
   score=0.0 | style=unspecified | cta=question
-- **Ace your interview with smart negotiation tips & save big! 💼💡**  
+- **Master the first 30/60/90 days with a clear plan 📅🧠.**  
   score=0.0 | style=unspecified | cta=question
-- **Identify 25 target companies fast using AI prompts! 🚀🤖**  
+- **🚀 Overcome experience barriers by showcasing your unique skills! 🚀**  
   score=0.0 | style=unspecified | cta=question
-- **50% of workers haven't asked for a raise—don't let fear hold you back! 💼💪**  
+- **Conduct a one-hour weekly career review to stay on track and grow! 🚀🗓️**  
   score=0.0 | style=unspecified | cta=question
-- **73% of candidates regret accepting an offer with red flags 🚩. Spot deal breakers early to avoid regret. 💼**  
+- **Boost your job search with a results-driven approach 📈💼.**  
   score=0.0 | style=unspecified | cta=question
-- **✍️ Boost your non-design portfolio in 24–48 hours! 🚀✨**  
+- **Master your story in 48 hours—create a 5-slide “About Me” for interviews! 🎯📈**  
   score=0.0 | style=unspecified | cta=question
 
 ## What worked (averages)
