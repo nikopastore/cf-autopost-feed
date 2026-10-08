@@ -5,20 +5,20 @@ We generate self-contained, emoji-forward posts twice daily. Below are feature a
 ## Feature Summary (averages)
 
 - bullets :: 0 => avg_score=0.0 (n=6)
-- bullets :: 1+ => avg_score=0.0 (n=411)
-- cta :: question => avg_score=0.0 (n=396)
+- bullets :: 1+ => avg_score=0.0 (n=412)
+- cta :: question => avg_score=0.0 (n=397)
 - cta :: tip => avg_score=0.0 (n=2)
 - cta :: unknown => avg_score=0.0 (n=19)
 - emoji :: 0 => avg_score=0.0 (n=9)
-- emoji :: 2 => avg_score=0.0 (n=340)
+- emoji :: 2 => avg_score=0.0 (n=341)
 - emoji :: 3+ => avg_score=0.0 (n=68)
-- len :: <= 120 => avg_score=0.0 (n=406)
+- len :: <= 120 => avg_score=0.0 (n=407)
 - len :: <= 160 => avg_score=0.0 (n=9)
 - len :: <= 200 => avg_score=0.0 (n=1)
 - len :: <= 240 => avg_score=0.0 (n=1)
 - number :: no => avg_score=0.0 (n=175)
-- number :: yes => avg_score=0.0 (n=242)
-- question :: yes => avg_score=0.0 (n=417)
+- number :: yes => avg_score=0.0 (n=243)
+- question :: yes => avg_score=0.0 (n=418)
 - style :: challenge => avg_score=0.0 (n=5)
 - style :: checklist => avg_score=0.0 (n=6)
 - style :: coach_tip => avg_score=0.0 (n=5)
@@ -29,8 +29,8 @@ We generate self-contained, emoji-forward posts twice daily. Below are feature a
 - style :: swipe_headlines => avg_score=0.0 (n=1)
 - style :: template_drop => avg_score=0.0 (n=5)
 - style :: unknown => avg_score=0.0 (n=19)
-- style :: unspecified => avg_score=0.0 (n=357)
-- time :: early-afternoon => avg_score=0.0 (n=37)
+- style :: unspecified => avg_score=0.0 (n=358)
+- time :: early-afternoon => avg_score=0.0 (n=38)
 - time :: early-morning => avg_score=0.0 (n=293)
 - time :: evening => avg_score=0.0 (n=18)
 - time :: late-afternoon => avg_score=0.0 (n=6)
@@ -42,8 +42,8 @@ Using the summary and top posts, propose 5 editing rules to maximize engagement,
 
 ## Top Posts (samples)
 
+- Show ownership in interviews by highlighting your proactive actions and results! 🎯🚀  | score=0.0 | emojis=2 | len=83 | style=unspecified | cta=question
 - Transform overwhelm into action with micro-goals! 🚀 Set, act, and celebrate small wins today. 🌟  | score=0.0 | emojis=2 | len=95 | style=unspecified | cta=question
 - 📊 Misstep: Focusing on design elements in non-design portfolios. 🚫  | score=0.0 | emojis=2 | len=66 | style=unspecified | cta=question
 - 🔎 Pivot careers without starting over—leverage current skills! 🚀  | score=0.0 | emojis=2 | len=64 | style=unspecified | cta=question
 - Projects showing a 30% efficiency boost impress hiring managers 🎯🚀.  | score=0.0 | emojis=2 | len=67 | style=unspecified | cta=question
-- Master the first 30/60/90 days with a clear plan 📅🧠.  | score=0.0 | emojis=2 | len=52 | style=unspecified | cta=question
