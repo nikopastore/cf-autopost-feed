@@ -5,20 +5,20 @@ We generate self-contained, emoji-forward posts twice daily. Below are feature a
 ## Feature Summary (averages)
 
 - bullets :: 0 => avg_score=0.0 (n=6)
-- bullets :: 1+ => avg_score=0.0 (n=414)
-- cta :: question => avg_score=0.0 (n=399)
+- bullets :: 1+ => avg_score=0.0 (n=415)
+- cta :: question => avg_score=0.0 (n=400)
 - cta :: tip => avg_score=0.0 (n=2)
 - cta :: unknown => avg_score=0.0 (n=19)
 - emoji :: 0 => avg_score=0.0 (n=9)
 - emoji :: 2 => avg_score=0.0 (n=343)
-- emoji :: 3+ => avg_score=0.0 (n=68)
-- len :: <= 120 => avg_score=0.0 (n=409)
+- emoji :: 3+ => avg_score=0.0 (n=69)
+- len :: <= 120 => avg_score=0.0 (n=410)
 - len :: <= 160 => avg_score=0.0 (n=9)
 - len :: <= 200 => avg_score=0.0 (n=1)
 - len :: <= 240 => avg_score=0.0 (n=1)
 - number :: no => avg_score=0.0 (n=175)
-- number :: yes => avg_score=0.0 (n=245)
-- question :: yes => avg_score=0.0 (n=420)
+- number :: yes => avg_score=0.0 (n=246)
+- question :: yes => avg_score=0.0 (n=421)
 - style :: challenge => avg_score=0.0 (n=5)
 - style :: checklist => avg_score=0.0 (n=6)
 - style :: coach_tip => avg_score=0.0 (n=5)
@@ -29,12 +29,12 @@ We generate self-contained, emoji-forward posts twice daily. Below are feature a
 - style :: swipe_headlines => avg_score=0.0 (n=1)
 - style :: template_drop => avg_score=0.0 (n=5)
 - style :: unknown => avg_score=0.0 (n=19)
-- style :: unspecified => avg_score=0.0 (n=360)
+- style :: unspecified => avg_score=0.0 (n=361)
 - time :: early-afternoon => avg_score=0.0 (n=38)
 - time :: early-morning => avg_score=0.0 (n=293)
 - time :: evening => avg_score=0.0 (n=18)
 - time :: late-afternoon => avg_score=0.0 (n=6)
-- time :: morning => avg_score=0.0 (n=65)
+- time :: morning => avg_score=0.0 (n=66)
 
 ## Ask ChatGPT
 
@@ -42,8 +42,8 @@ Using the summary and top posts, propose 5 editing rules to maximize engagement,
 
 ## Top Posts (samples)
 
+- Don't undersell—know your worth and negotiate confidently. 💪🏾💼  | score=0.0 | emojis=3 | len=62 | style=unspecified | cta=question
 - Transform resume bullets by quantifying impact 🌟📈.  | score=0.0 | emojis=2 | len=50 | style=unspecified | cta=question
 - Don't just focus on company benefits—highlight how you help them succeed. 🎯🤝  | score=0.0 | emojis=2 | len=76 | style=unspecified | cta=question
 - Show ownership in interviews by highlighting your proactive actions and results! 🎯🚀  | score=0.0 | emojis=2 | len=83 | style=unspecified | cta=question
 - Transform overwhelm into action with micro-goals! 🚀 Set, act, and celebrate small wins today. 🌟  | score=0.0 | emojis=2 | len=95 | style=unspecified | cta=question
-- 📊 Misstep: Focusing on design elements in non-design portfolios. 🚫  | score=0.0 | emojis=2 | len=66 | style=unspecified | cta=question
