@@ -1,19 +1,19 @@
-# Career Forge — Weekly Digest (2026-10-05)
+# Career Forge — Weekly Digest (2026-10-12)
 
 ## Top Posts
-- **🔎 Pivot careers without starting over—leverage current skills! 🚀**  
+- **🤝 Identify your skill gaps—boost your career potential! 🚀**  
   score=0.0 | style=unspecified | cta=question
-- **Projects showing a 30% efficiency boost impress hiring managers 🎯🚀.**  
+- **Don't undersell—know your worth and negotiate confidently. 💪🏾💼**  
   score=0.0 | style=unspecified | cta=question
-- **Master the first 30/60/90 days with a clear plan 📅🧠.**  
+- **Transform resume bullets by quantifying impact 🌟📈.**  
   score=0.0 | style=unspecified | cta=question
-- **🚀 Overcome experience barriers by showcasing your unique skills! 🚀**  
+- **Don't just focus on company benefits—highlight how you help them succeed. 🎯🤝**  
   score=0.0 | style=unspecified | cta=question
-- **Conduct a one-hour weekly career review to stay on track and grow! 🚀🗓️**  
+- **Show ownership in interviews by highlighting your proactive actions and results! 🎯🚀**  
   score=0.0 | style=unspecified | cta=question
-- **Boost your job search with a results-driven approach 📈💼.**  
+- **Transform overwhelm into action with micro-goals! 🚀 Set, act, and celebrate small wins today. 🌟**  
   score=0.0 | style=unspecified | cta=question
-- **Master your story in 48 hours—create a 5-slide “About Me” for interviews! 🎯📈**  
+- **📊 Misstep: Focusing on design elements in non-design portfolios. 🚫**  
   score=0.0 | style=unspecified | cta=question
 
 ## What worked (averages)
