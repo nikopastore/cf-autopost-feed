@@ -1,19 +1,19 @@
-# Career Forge — Weekly Digest (2026-10-12)
+# Career Forge — Weekly Digest (2026-10-19)
 
 ## Top Posts
-- **🤝 Identify your skill gaps—boost your career potential! 🚀**  
+- **⏱️ Create a targeted 10-company pipeline this week to boost your job search! 🚀**  
   score=0.0 | style=unspecified | cta=question
-- **Don't undersell—know your worth and negotiate confidently. 💪🏾💼**  
+- **🎯 Craft a winning 30/60/90 plan to impress in your new role! 🚀**  
   score=0.0 | style=unspecified | cta=question
-- **Transform resume bullets by quantifying impact 🌟📈.**  
+- **Avoid using buzzwords—focus on tangible achievements instead. 🎯📊**  
   score=0.0 | style=unspecified | cta=question
-- **Don't just focus on company benefits—highlight how you help them succeed. 🎯🤝**  
+- **🎯 Pinpoint culture fit by asking insightful questions during interviews. 🤝✨**  
   score=0.0 | style=unspecified | cta=question
-- **Show ownership in interviews by highlighting your proactive actions and results! 🎯🚀**  
+- **Leverage your skills in a niche with 30% market growth 📈—it's profitable and sustainable! 💼**  
   score=0.0 | style=unspecified | cta=question
-- **Transform overwhelm into action with micro-goals! 🚀 Set, act, and celebrate small wins today. 🌟**  
+- **✅ Overcome experience barriers with strategic storytelling! 🚀✨**  
   score=0.0 | style=unspecified | cta=question
-- **📊 Misstep: Focusing on design elements in non-design portfolios. 🚫**  
+- **Optimize your resume's top half to grab attention fast! 🚀📄**  
   score=0.0 | style=unspecified | cta=question
 
 ## What worked (averages)
