@@ -1,19 +1,19 @@
-# Career Forge — Weekly Digest (2026-10-19)
+# Career Forge — Weekly Digest (2026-10-26)
 
 ## Top Posts
-- **⏱️ Create a targeted 10-company pipeline this week to boost your job search! 🚀**  
+- **Master your job search with timeboxing—maximize productivity! 📅🔥**  
   score=0.0 | style=unspecified | cta=question
-- **🎯 Craft a winning 30/60/90 plan to impress in your new role! 🚀**  
+- **Run a weekly career review—boost growth and clarity! 🚀📈**  
   score=0.0 | style=unspecified | cta=question
-- **Avoid using buzzwords—focus on tangible achievements instead. 🎯📊**  
+- **Negotiate salary with confidence—use these scripts to feel natural! 💼💬**  
   score=0.0 | style=unspecified | cta=question
-- **🎯 Pinpoint culture fit by asking insightful questions during interviews. 🤝✨**  
+- **Stop rambling! 🎯 Structure answers with STAR to impress and land offers. 🌟**  
   score=0.0 | style=unspecified | cta=question
-- **Leverage your skills in a niche with 30% market growth 📈—it's profitable and sustainable! 💼**  
+- **📌 Boost your ATS resume with strong AI-enhanced bullet points! 🚀**  
   score=0.0 | style=unspecified | cta=question
-- **✅ Overcome experience barriers with strategic storytelling! 🚀✨**  
+- **Showcase leadership by sharing impactful stories using STAR+L 🌟📈.**  
   score=0.0 | style=unspecified | cta=question
-- **Optimize your resume's top half to grab attention fast! 🚀📄**  
+- **Boost your earnings by mastering self-promotion in 48h! 🚀💰**  
   score=0.0 | style=unspecified | cta=question
 
 ## What worked (averages)
