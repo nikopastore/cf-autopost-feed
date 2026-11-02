@@ -1,19 +1,19 @@
-# Career Forge — Weekly Digest (2026-10-26)
+# Career Forge — Weekly Digest (2026-11-02)
 
 ## Top Posts
-- **Master your job search with timeboxing—maximize productivity! 📅🔥**  
+- **⏱️ Show coachability with feedback loops and high agency with proactive solutions. 🚀✨**  
   score=0.0 | style=unspecified | cta=question
-- **Run a weekly career review—boost growth and clarity! 🚀📈**  
+- **🌟 Find 25 target companies fast using AI prompts! 🚀✨**  
   score=0.0 | style=unspecified | cta=question
-- **Negotiate salary with confidence—use these scripts to feel natural! 💼💬**  
+- **Master salary talks with FBI tactics—unlock better offers today! 💼🗝️**  
   score=0.0 | style=unspecified | cta=question
-- **Stop rambling! 🎯 Structure answers with STAR to impress and land offers. 🌟**  
+- **Stop tracking only applications—focus on quality interactions 🎯📈.**  
   score=0.0 | style=unspecified | cta=question
-- **📌 Boost your ATS resume with strong AI-enhanced bullet points! 🚀**  
+- **✍️ Break projects into micro-goals to move from overwhelmed to shipped 🚀. Boosts productivity and showcases initiative!**  
   score=0.0 | style=unspecified | cta=question
-- **Showcase leadership by sharing impactful stories using STAR+L 🌟📈.**  
+- **📌 Identify 25 target companies quickly with AI prompts! 🚀**  
   score=0.0 | style=unspecified | cta=question
-- **Boost your earnings by mastering self-promotion in 48h! 🚀💰**  
+- **Highlight achievements over years—show impact and results! 🎯🚀**  
   score=0.0 | style=unspecified | cta=question
 
 ## What worked (averages)
