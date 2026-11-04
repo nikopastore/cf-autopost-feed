@@ -5,20 +5,20 @@ We generate self-contained, emoji-forward posts twice daily. Below are feature a
 ## Feature Summary (averages)
 
 - bullets :: 0 => avg_score=0.0 (n=6)
-- bullets :: 1+ => avg_score=0.0 (n=438)
-- cta :: question => avg_score=0.0 (n=423)
+- bullets :: 1+ => avg_score=0.0 (n=439)
+- cta :: question => avg_score=0.0 (n=424)
 - cta :: tip => avg_score=0.0 (n=2)
 - cta :: unknown => avg_score=0.0 (n=19)
 - emoji :: 0 => avg_score=0.0 (n=9)
-- emoji :: 2 => avg_score=0.0 (n=359)
+- emoji :: 2 => avg_score=0.0 (n=360)
 - emoji :: 3+ => avg_score=0.0 (n=76)
-- len :: <= 120 => avg_score=0.0 (n=433)
+- len :: <= 120 => avg_score=0.0 (n=434)
 - len :: <= 160 => avg_score=0.0 (n=9)
 - len :: <= 200 => avg_score=0.0 (n=1)
 - len :: <= 240 => avg_score=0.0 (n=1)
 - number :: no => avg_score=0.0 (n=185)
-- number :: yes => avg_score=0.0 (n=259)
-- question :: yes => avg_score=0.0 (n=444)
+- number :: yes => avg_score=0.0 (n=260)
+- question :: yes => avg_score=0.0 (n=445)
 - style :: challenge => avg_score=0.0 (n=5)
 - style :: checklist => avg_score=0.0 (n=6)
 - style :: coach_tip => avg_score=0.0 (n=5)
@@ -29,8 +29,8 @@ We generate self-contained, emoji-forward posts twice daily. Below are feature a
 - style :: swipe_headlines => avg_score=0.0 (n=1)
 - style :: template_drop => avg_score=0.0 (n=5)
 - style :: unknown => avg_score=0.0 (n=19)
-- style :: unspecified => avg_score=0.0 (n=384)
-- time :: early-afternoon => avg_score=0.0 (n=43)
+- style :: unspecified => avg_score=0.0 (n=385)
+- time :: early-afternoon => avg_score=0.0 (n=44)
 - time :: early-morning => avg_score=0.0 (n=293)
 - time :: evening => avg_score=0.0 (n=18)
 - time :: late-afternoon => avg_score=0.0 (n=7)
@@ -42,8 +42,8 @@ Using the summary and top posts, propose 5 editing rules to maximize engagement,
 
 ## Top Posts (samples)
 
+- 70% of skills are transferable—leverage them to pivot smoothly! 🔄🚀  | score=0.0 | emojis=2 | len=66 | style=unspecified | cta=question
 - ✍️ Boost momentum with a 3-task daily system 🎯—achieve more with less stress!  | score=0.0 | emojis=3 | len=77 | style=unspecified | cta=question
 - ⏱️ Show coachability with feedback loops and high agency with proactive solutions. 🚀✨  | score=0.0 | emojis=3 | len=85 | style=unspecified | cta=question
 - 🌟 Find 25 target companies fast using AI prompts! 🚀✨  | score=0.0 | emojis=3 | len=52 | style=unspecified | cta=question
 - Master salary talks with FBI tactics—unlock better offers today! 💼🗝️  | score=0.0 | emojis=3 | len=68 | style=unspecified | cta=question
-- Stop tracking only applications—focus on quality interactions 🎯📈.  | score=0.0 | emojis=2 | len=65 | style=unspecified | cta=question
