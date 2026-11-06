@@ -5,20 +5,20 @@ We generate self-contained, emoji-forward posts twice daily. Below are feature a
 ## Feature Summary (averages)
 
 - bullets :: 0 => avg_score=0.0 (n=6)
-- bullets :: 1+ => avg_score=0.0 (n=440)
-- cta :: question => avg_score=0.0 (n=425)
+- bullets :: 1+ => avg_score=0.0 (n=441)
+- cta :: question => avg_score=0.0 (n=426)
 - cta :: tip => avg_score=0.0 (n=2)
 - cta :: unknown => avg_score=0.0 (n=19)
 - emoji :: 0 => avg_score=0.0 (n=9)
-- emoji :: 2 => avg_score=0.0 (n=361)
+- emoji :: 2 => avg_score=0.0 (n=362)
 - emoji :: 3+ => avg_score=0.0 (n=76)
-- len :: <= 120 => avg_score=0.0 (n=435)
+- len :: <= 120 => avg_score=0.0 (n=436)
 - len :: <= 160 => avg_score=0.0 (n=9)
 - len :: <= 200 => avg_score=0.0 (n=1)
 - len :: <= 240 => avg_score=0.0 (n=1)
-- number :: no => avg_score=0.0 (n=186)
+- number :: no => avg_score=0.0 (n=187)
 - number :: yes => avg_score=0.0 (n=260)
-- question :: yes => avg_score=0.0 (n=446)
+- question :: yes => avg_score=0.0 (n=447)
 - style :: challenge => avg_score=0.0 (n=5)
 - style :: checklist => avg_score=0.0 (n=6)
 - style :: coach_tip => avg_score=0.0 (n=5)
@@ -29,8 +29,8 @@ We generate self-contained, emoji-forward posts twice daily. Below are feature a
 - style :: swipe_headlines => avg_score=0.0 (n=1)
 - style :: template_drop => avg_score=0.0 (n=5)
 - style :: unknown => avg_score=0.0 (n=19)
-- style :: unspecified => avg_score=0.0 (n=386)
-- time :: early-afternoon => avg_score=0.0 (n=45)
+- style :: unspecified => avg_score=0.0 (n=387)
+- time :: early-afternoon => avg_score=0.0 (n=46)
 - time :: early-morning => avg_score=0.0 (n=293)
 - time :: evening => avg_score=0.0 (n=18)
 - time :: late-afternoon => avg_score=0.0 (n=7)
@@ -42,8 +42,8 @@ Using the summary and top posts, propose 5 editing rules to maximize engagement,
 
 ## Top Posts (samples)
 
+- Spot deal breakers early in job offers to save time and avoid regret. 🚩💼  | score=0.0 | emojis=2 | len=72 | style=unspecified | cta=question
 - Track your job search like a pro—measure what matters! 📊💼  | score=0.0 | emojis=2 | len=57 | style=unspecified | cta=question
 - 70% of skills are transferable—leverage them to pivot smoothly! 🔄🚀  | score=0.0 | emojis=2 | len=66 | style=unspecified | cta=question
 - ✍️ Boost momentum with a 3-task daily system 🎯—achieve more with less stress!  | score=0.0 | emojis=3 | len=77 | style=unspecified | cta=question
 - ⏱️ Show coachability with feedback loops and high agency with proactive solutions. 🚀✨  | score=0.0 | emojis=3 | len=85 | style=unspecified | cta=question
-- 🌟 Find 25 target companies fast using AI prompts! 🚀✨  | score=0.0 | emojis=3 | len=52 | style=unspecified | cta=question
