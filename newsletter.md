@@ -1,19 +1,19 @@
-# Career Forge — Weekly Digest (2026-11-02)
+# Career Forge — Weekly Digest (2026-11-10)
 
 ## Top Posts
-- **⏱️ Show coachability with feedback loops and high agency with proactive solutions. 🚀✨**  
+- **Optimize your LinkedIn headline to boost discovery and engagement 🌟🔍.**  
   score=0.0 | style=unspecified | cta=question
-- **🌟 Find 25 target companies fast using AI prompts! 🚀✨**  
+- **Create a standout 5-slide 'About Me' presentation to ace screening calls! 🎯📊**  
   score=0.0 | style=unspecified | cta=question
-- **Master salary talks with FBI tactics—unlock better offers today! 💼🗝️**  
+- **Boost your job search by asking for referrals effectively! 🔍🤝**  
   score=0.0 | style=unspecified | cta=question
-- **Stop tracking only applications—focus on quality interactions 🎯📈.**  
+- **Spot deal breakers early in job offers to save time and avoid regret. 🚩💼**  
   score=0.0 | style=unspecified | cta=question
-- **✍️ Break projects into micro-goals to move from overwhelmed to shipped 🚀. Boosts productivity and showcases initiative!**  
+- **Track your job search like a pro—measure what matters! 📊💼**  
   score=0.0 | style=unspecified | cta=question
-- **📌 Identify 25 target companies quickly with AI prompts! 🚀**  
+- **70% of skills are transferable—leverage them to pivot smoothly! 🔄🚀**  
   score=0.0 | style=unspecified | cta=question
-- **Highlight achievements over years—show impact and results! 🎯🚀**  
+- **✍️ Boost momentum with a 3-task daily system 🎯—achieve more with less stress!**  
   score=0.0 | style=unspecified | cta=question
 
 ## What worked (averages)
