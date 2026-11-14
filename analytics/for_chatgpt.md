@@ -5,20 +5,20 @@ We generate self-contained, emoji-forward posts twice daily. Below are feature a
 ## Feature Summary (averages)
 
 - bullets :: 0 => avg_score=0.0 (n=6)
-- bullets :: 1+ => avg_score=0.0 (n=448)
-- cta :: question => avg_score=0.0 (n=433)
+- bullets :: 1+ => avg_score=0.0 (n=449)
+- cta :: question => avg_score=0.0 (n=434)
 - cta :: tip => avg_score=0.0 (n=2)
 - cta :: unknown => avg_score=0.0 (n=19)
 - emoji :: 0 => avg_score=0.0 (n=9)
 - emoji :: 2 => avg_score=0.0 (n=368)
-- emoji :: 3+ => avg_score=0.0 (n=77)
-- len :: <= 120 => avg_score=0.0 (n=443)
+- emoji :: 3+ => avg_score=0.0 (n=78)
+- len :: <= 120 => avg_score=0.0 (n=444)
 - len :: <= 160 => avg_score=0.0 (n=9)
 - len :: <= 200 => avg_score=0.0 (n=1)
 - len :: <= 240 => avg_score=0.0 (n=1)
-- number :: no => avg_score=0.0 (n=192)
+- number :: no => avg_score=0.0 (n=193)
 - number :: yes => avg_score=0.0 (n=262)
-- question :: yes => avg_score=0.0 (n=454)
+- question :: yes => avg_score=0.0 (n=455)
 - style :: challenge => avg_score=0.0 (n=5)
 - style :: checklist => avg_score=0.0 (n=6)
 - style :: coach_tip => avg_score=0.0 (n=5)
@@ -29,12 +29,12 @@ We generate self-contained, emoji-forward posts twice daily. Below are feature a
 - style :: swipe_headlines => avg_score=0.0 (n=1)
 - style :: template_drop => avg_score=0.0 (n=5)
 - style :: unknown => avg_score=0.0 (n=19)
-- style :: unspecified => avg_score=0.0 (n=394)
+- style :: unspecified => avg_score=0.0 (n=395)
 - time :: early-afternoon => avg_score=0.0 (n=50)
 - time :: early-morning => avg_score=0.0 (n=293)
 - time :: evening => avg_score=0.0 (n=18)
 - time :: late-afternoon => avg_score=0.0 (n=8)
-- time :: morning => avg_score=0.0 (n=85)
+- time :: morning => avg_score=0.0 (n=86)
 
 ## Ask ChatGPT
 
@@ -42,8 +42,8 @@ Using the summary and top posts, propose 5 editing rules to maximize engagement,
 
 ## Top Posts (samples)
 
+- Boost your portfolio with strategic insights for PM, ops, or analyst roles. 📈🗂️  | score=0.0 | emojis=3 | len=79 | style=unspecified | cta=question
 - Common mistake: focusing on quantity over quality in your job pipeline. 🎯🔍  | score=0.0 | emojis=2 | len=74 | style=unspecified | cta=question
 - Pivot careers by leveraging existing skills and experiences. 🌟🔄  | score=0.0 | emojis=2 | len=63 | style=unspecified | cta=question
 - 🔎 Overloading your response with details can overwhelm—keep it concise! 🎯  | score=0.0 | emojis=2 | len=73 | style=unspecified | cta=question
 - ✅ Ace your physician interview with confidence and clarity! 🩺✨  | score=0.0 | emojis=3 | len=62 | style=unspecified | cta=question
-- Optimize your LinkedIn headline to boost discovery and engagement 🌟🔍.  | score=0.0 | emojis=2 | len=69 | style=unspecified | cta=question
