@@ -5,20 +5,20 @@ We generate self-contained, emoji-forward posts twice daily. Below are feature a
 ## Feature Summary (averages)
 
 - bullets :: 0 => avg_score=0.0 (n=6)
-- bullets :: 1+ => avg_score=0.0 (n=451)
-- cta :: question => avg_score=0.0 (n=436)
+- bullets :: 1+ => avg_score=0.0 (n=452)
+- cta :: question => avg_score=0.0 (n=437)
 - cta :: tip => avg_score=0.0 (n=2)
 - cta :: unknown => avg_score=0.0 (n=19)
 - emoji :: 0 => avg_score=0.0 (n=9)
-- emoji :: 2 => avg_score=0.0 (n=369)
+- emoji :: 2 => avg_score=0.0 (n=370)
 - emoji :: 3+ => avg_score=0.0 (n=79)
-- len :: <= 120 => avg_score=0.0 (n=446)
+- len :: <= 120 => avg_score=0.0 (n=447)
 - len :: <= 160 => avg_score=0.0 (n=9)
 - len :: <= 200 => avg_score=0.0 (n=1)
 - len :: <= 240 => avg_score=0.0 (n=1)
-- number :: no => avg_score=0.0 (n=193)
+- number :: no => avg_score=0.0 (n=194)
 - number :: yes => avg_score=0.0 (n=264)
-- question :: yes => avg_score=0.0 (n=457)
+- question :: yes => avg_score=0.0 (n=458)
 - style :: challenge => avg_score=0.0 (n=5)
 - style :: checklist => avg_score=0.0 (n=6)
 - style :: coach_tip => avg_score=0.0 (n=5)
@@ -29,8 +29,8 @@ We generate self-contained, emoji-forward posts twice daily. Below are feature a
 - style :: swipe_headlines => avg_score=0.0 (n=1)
 - style :: template_drop => avg_score=0.0 (n=5)
 - style :: unknown => avg_score=0.0 (n=19)
-- style :: unspecified => avg_score=0.0 (n=397)
-- time :: early-afternoon => avg_score=0.0 (n=51)
+- style :: unspecified => avg_score=0.0 (n=398)
+- time :: early-afternoon => avg_score=0.0 (n=52)
 - time :: early-morning => avg_score=0.0 (n=293)
 - time :: evening => avg_score=0.0 (n=18)
 - time :: late-afternoon => avg_score=0.0 (n=9)
@@ -42,8 +42,8 @@ Using the summary and top posts, propose 5 editing rules to maximize engagement,
 
 ## Top Posts (samples)
 
+- ⚡ Prepare for behavioral interviews with structured answers. 🚀  | score=0.0 | emojis=2 | len=62 | style=unspecified | cta=question
 - Research a company in 10 minutes by focusing on key areas—mission, culture, and recent news. 🕵️‍♂️📈  | score=0.0 | emojis=6 | len=99 | style=unspecified | cta=question
 - Spot job description red flags in 24 hours! 🚩🔍  | score=0.0 | emojis=2 | len=46 | style=unspecified | cta=question
 - Boost your portfolio with strategic insights for PM, ops, or analyst roles. 📈🗂️  | score=0.0 | emojis=3 | len=79 | style=unspecified | cta=question
 - Common mistake: focusing on quantity over quality in your job pipeline. 🎯🔍  | score=0.0 | emojis=2 | len=74 | style=unspecified | cta=question
-- Pivot careers by leveraging existing skills and experiences. 🌟🔄  | score=0.0 | emojis=2 | len=63 | style=unspecified | cta=question
