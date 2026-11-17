@@ -1,19 +1,19 @@
-# Career Forge — Weekly Digest (2026-11-10)
+# Career Forge — Weekly Digest (2026-11-17)
 
 ## Top Posts
-- **Optimize your LinkedIn headline to boost discovery and engagement 🌟🔍.**  
+- **Research a company in 10 minutes by focusing on key areas—mission, culture, and recent news. 🕵️‍♂️📈**  
   score=0.0 | style=unspecified | cta=question
-- **Create a standout 5-slide 'About Me' presentation to ace screening calls! 🎯📊**  
+- **Spot job description red flags in 24 hours! 🚩🔍**  
   score=0.0 | style=unspecified | cta=question
-- **Boost your job search by asking for referrals effectively! 🔍🤝**  
+- **Boost your portfolio with strategic insights for PM, ops, or analyst roles. 📈🗂️**  
   score=0.0 | style=unspecified | cta=question
-- **Spot deal breakers early in job offers to save time and avoid regret. 🚩💼**  
+- **Common mistake: focusing on quantity over quality in your job pipeline. 🎯🔍**  
   score=0.0 | style=unspecified | cta=question
-- **Track your job search like a pro—measure what matters! 📊💼**  
+- **Pivot careers by leveraging existing skills and experiences. 🌟🔄**  
   score=0.0 | style=unspecified | cta=question
-- **70% of skills are transferable—leverage them to pivot smoothly! 🔄🚀**  
+- **🔎 Overloading your response with details can overwhelm—keep it concise! 🎯**  
   score=0.0 | style=unspecified | cta=question
-- **✍️ Boost momentum with a 3-task daily system 🎯—achieve more with less stress!**  
+- **✅ Ace your physician interview with confidence and clarity! 🩺✨**  
   score=0.0 | style=unspecified | cta=question
 
 ## What worked (averages)
