@@ -1,19 +1,19 @@
-# Career Forge — Weekly Digest (2026-11-17)
+# Career Forge — Weekly Digest (2026-11-24)
 
 ## Top Posts
-- **Research a company in 10 minutes by focusing on key areas—mission, culture, and recent news. 🕵️‍♂️📈**  
+- **Start with a strong summary statement—it's your first impression! 💡📄**  
   score=0.0 | style=unspecified | cta=question
-- **Spot job description red flags in 24 hours! 🚩🔍**  
+- **Introverts can thrive in networking by practicing scripts and setting a manageable cadence. 📅🤝**  
   score=0.0 | style=unspecified | cta=question
-- **Boost your portfolio with strategic insights for PM, ops, or analyst roles. 📈🗂️**  
+- **Capture attention in interviews with concise answers—land that offer! 🎯💡**  
   score=0.0 | style=unspecified | cta=question
-- **Common mistake: focusing on quantity over quality in your job pipeline. 🎯🔍**  
+- **🧩 Boost your career growth by dedicating one hour each week to a focused review. ⏰📈**  
   score=0.0 | style=unspecified | cta=question
-- **Pivot careers by leveraging existing skills and experiences. 🌟🔄**  
+- **Showcase impact over tenure—highlight results, not just years. 💼🚀**  
   score=0.0 | style=unspecified | cta=question
-- **🔎 Overloading your response with details can overwhelm—keep it concise! 🎯**  
+- **🎯 📉 70% of job seekers regret their decision within six months. Spot red flags early to avoid joining them.**  
   score=0.0 | style=unspecified | cta=question
-- **✅ Ace your physician interview with confidence and clarity! 🩺✨**  
+- **⚡ Prepare for behavioral interviews with structured answers. 🚀**  
   score=0.0 | style=unspecified | cta=question
 
 ## What worked (averages)
