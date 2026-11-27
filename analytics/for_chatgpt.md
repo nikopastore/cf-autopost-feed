@@ -5,20 +5,20 @@ We generate self-contained, emoji-forward posts twice daily. Below are feature a
 ## Feature Summary (averages)
 
 - bullets :: 0 => avg_score=0.0 (n=6)
-- bullets :: 1+ => avg_score=0.0 (n=461)
-- cta :: question => avg_score=0.0 (n=446)
+- bullets :: 1+ => avg_score=0.0 (n=462)
+- cta :: question => avg_score=0.0 (n=447)
 - cta :: tip => avg_score=0.0 (n=2)
 - cta :: unknown => avg_score=0.0 (n=19)
 - emoji :: 0 => avg_score=0.0 (n=9)
-- emoji :: 2 => avg_score=0.0 (n=379)
+- emoji :: 2 => avg_score=0.0 (n=380)
 - emoji :: 3+ => avg_score=0.0 (n=79)
-- len :: <= 120 => avg_score=0.0 (n=456)
+- len :: <= 120 => avg_score=0.0 (n=457)
 - len :: <= 160 => avg_score=0.0 (n=9)
 - len :: <= 200 => avg_score=0.0 (n=1)
 - len :: <= 240 => avg_score=0.0 (n=1)
 - number :: no => avg_score=0.0 (n=198)
-- number :: yes => avg_score=0.0 (n=269)
-- question :: yes => avg_score=0.0 (n=467)
+- number :: yes => avg_score=0.0 (n=270)
+- question :: yes => avg_score=0.0 (n=468)
 - style :: challenge => avg_score=0.0 (n=5)
 - style :: checklist => avg_score=0.0 (n=6)
 - style :: coach_tip => avg_score=0.0 (n=5)
@@ -29,8 +29,8 @@ We generate self-contained, emoji-forward posts twice daily. Below are feature a
 - style :: swipe_headlines => avg_score=0.0 (n=1)
 - style :: template_drop => avg_score=0.0 (n=5)
 - style :: unknown => avg_score=0.0 (n=19)
-- style :: unspecified => avg_score=0.0 (n=407)
-- time :: early-afternoon => avg_score=0.0 (n=57)
+- style :: unspecified => avg_score=0.0 (n=408)
+- time :: early-afternoon => avg_score=0.0 (n=58)
 - time :: early-morning => avg_score=0.0 (n=293)
 - time :: evening => avg_score=0.0 (n=18)
 - time :: late-afternoon => avg_score=0.0 (n=13)
@@ -42,8 +42,8 @@ Using the summary and top posts, propose 5 editing rules to maximize engagement,
 
 ## Top Posts (samples)
 
+- Optimize your resume for ATS with AI tactics 🔍🤖.  | score=0.0 | emojis=2 | len=48 | style=unspecified | cta=question
 - Craft a standout 5-slide 'About Me' for calls—showcase impact, skills, and fit! 🎯📈  | score=0.0 | emojis=2 | len=82 | style=unspecified | cta=question
 - Navigate tech layoffs with a strategic plan 🧭🚀.  | score=0.0 | emojis=2 | len=47 | style=unspecified | cta=question
 - Showcase your projects with impact and clarity 🌟📊.  | score=0.0 | emojis=2 | len=50 | style=unspecified | cta=question
 - Start with a strong summary statement—it's your first impression! 💡📄  | score=0.0 | emojis=2 | len=68 | style=unspecified | cta=question
-- Introverts can thrive in networking by practicing scripts and setting a manageable cadence. 📅🤝  | score=0.0 | emojis=2 | len=94 | style=unspecified | cta=question
